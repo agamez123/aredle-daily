@@ -115,4 +115,6 @@ https://api.aredl.net/v2/api/aredl/levels/{level-id}
 
 https://raw.githubusercontent.com/All-Rated-Extreme-Demon-List/Thumbnails/refs/heads/main/levels/full/{level-id}.webp
     - Returns thumbnails of the selected level
+
+https://raw.githubusercontent.com/All-Rated-Extreme-Demon-List/Thumbnails/refs/heads/main/levels/cards/{level-id}.webp
     - Optional /cards endpoint returns trimmed 'slit' view of the thumbnail
