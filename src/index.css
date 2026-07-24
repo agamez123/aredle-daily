@@ -49,11 +49,14 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
-  padding: 3rem 1rem;
+}
+
+.app-content {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem 3rem;
   box-sizing: border-box;
 }
 

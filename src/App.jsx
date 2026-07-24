@@ -3,10 +3,12 @@ import LevelSearch from "./components/LevelSearch"
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-      <LevelSearch />
-    </div>
+      <div className="app-content">
+        <LevelSearch />
+      </div>
+    </>
   )
 }
 

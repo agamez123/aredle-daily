@@ -8,7 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "fetch-levels": "node scripts/fetch-levels.js"
+    "fetch-levels": "node scripts/fetch-levels.js",
+    "fetch-thumbnails": "node scripts/fetch-thumbnails.js"
   },
   "dependencies": {
     "react": "^18.3.1",

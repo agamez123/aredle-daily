@@ -109,18 +109,47 @@
 }
 
 .level-table--guesses {
-  margin-top: 1.5rem;
+  margin-top: 2rem;
+  gap: 10px;
+  padding: 16px;
+  background-color: color-mix(in srgb, var(--secondary) 32%, var(--background));
+  border: 2px solid var(--primary);
+}
+
+.level-table__section-title {
+  margin: 0 0 4px;
+  padding: 0 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  text-align: left;
 }
 
 .level-table__row--guess {
-  background-color: color-mix(in srgb, var(--secondary) 12%, var(--background));
-  border: 1px solid var(--secondary);
-  border-radius: 8px;
-  padding: 8px;
+  background-color: color-mix(in srgb, var(--secondary) 16%, var(--background));
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  padding: 14px 10px;
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+.level-table__row--guess .level-table__cell {
+  font-size: 0.95rem;
+}
+
+.level-table__row--guess .level-name {
+  font-size: 1rem;
+}
+
+.level-thumb--lg {
+  width: 40px;
+  height: 40px;
 }
 
 .level-table__cell--fill {
-  padding: 6px 4px;
+  padding: 8px 6px;
   border-radius: 6px;
   font-weight: 600;
   color: var(--text);

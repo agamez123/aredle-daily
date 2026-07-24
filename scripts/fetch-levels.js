@@ -17,6 +17,7 @@ const levelUrl = (id) => `https://api.aredl.net/v2/api/aredl/levels/${id}`
 
 const CACHE_PATH = path.join(ROOT, "data", "level-cache.json")
 const OUTPUT_PATH = path.join(ROOT, "src", "data", "levels.json")
+const FULL_OUTPUT_PATH = path.join(ROOT, "data", "levels-full.json")
 
 const CONCURRENCY = 3
 const DELAY_MS = 400
@@ -179,6 +180,7 @@ async function main() {
 
     return {
       id: l.id,
+      level_id: l.level_id,
       name: l.name,
       position: l.position,
       legacy: l.legacy,
@@ -193,6 +195,40 @@ async function main() {
   await mkdir(path.dirname(OUTPUT_PATH), { recursive: true })
   await writeFile(OUTPUT_PATH, JSON.stringify(output, null, 2))
   console.log(`Wrote ${output.length} levels to ${path.relative(ROOT, OUTPUT_PATH)}`)
+
+  // The list endpoint returns several fields the frontend doesn't currently
+  // use (points, description, edel_enjoyment, etc). Keep those around too,
+  // separately, in case they're useful later.
+  const fullOutput = list.map((l) => {
+    const { version, tags } = splitVersion(l.tags)
+    const detail = cache[l.id]
+    const verifier = detail?.verifications?.[0]?.submitted_by
+
+    return {
+      id: l.id,
+      level_id: l.level_id,
+      name: l.name,
+      position: l.position,
+      points: l.points,
+      legacy: l.legacy,
+      two_player: l.two_player,
+      song: l.song,
+      description: l.description,
+      edel_enjoyment: l.edel_enjoyment,
+      is_edel_pending: l.is_edel_pending,
+      gddl_tier: l.gddl_tier,
+      nlw_tier: l.nlw_tier,
+      creator: detail?.publisher?.global_name ?? detail?.publisher?.username ?? null,
+      verifier: verifier?.global_name ?? verifier?.username ?? null,
+      verifications: detail?.verifications ?? null,
+      version,
+      tags,
+    }
+  })
+
+  await mkdir(path.dirname(FULL_OUTPUT_PATH), { recursive: true })
+  await writeFile(FULL_OUTPUT_PATH, JSON.stringify(fullOutput, null, 2))
+  console.log(`Wrote ${fullOutput.length} levels to ${path.relative(ROOT, FULL_OUTPUT_PATH)}`)
 }
 
 main().catch((err) => {

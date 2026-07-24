@@ -41,7 +41,7 @@ function GuessRow({ level, answer }) {
   return (
     <div className="level-table__row level-table__row--guess">
       <span className="level-table__cell level-table__cell--icon">
-        <span className="level-thumb" />
+        <span className="level-thumb level-thumb--lg" />
         <span className="level-name">{level.name}</span>
       </span>
 
@@ -167,6 +167,7 @@ function LevelSearch() {
 
       {guesses.length > 0 && (
         <div className="level-table level-table--guesses">
+          <p className="level-table__section-title">Your Guesses</p>
           <div className="level-table__row level-table__row--header">
             <span className="level-table__cell level-table__cell--icon">Level</span>
             {COLUMNS.map((col) => (
