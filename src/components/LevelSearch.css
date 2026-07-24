@@ -1,0 +1,198 @@
+.level-search {
+  width: min(900px, 92vw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.level-search__prompt {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.level-search__bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.level-search__input {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.65em 1em;
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: var(--text);
+  background-color: color-mix(in srgb, var(--secondary) 12%, var(--background));
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+.level-search__input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+
+.level-search__input::placeholder {
+  color: color-mix(in srgb, var(--text) 45%, transparent);
+}
+
+.level-table {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: color-mix(in srgb, var(--secondary) 20%, var(--background));
+  border: 1px solid var(--secondary);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.level-table__row {
+  display: grid;
+  grid-template-columns: 2fr repeat(6, 1fr);
+  align-items: center;
+  gap: 8px;
+}
+
+.level-table__row--header {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: color-mix(in srgb, var(--text) 55%, transparent);
+  padding: 0 6px;
+}
+
+.level-table__row--option {
+  background-color: color-mix(in srgb, var(--secondary) 12%, var(--background));
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  padding: 8px;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, background-color 0.15s;
+}
+
+.level-table__row--option:hover {
+  background-color: color-mix(in srgb, var(--secondary) 28%, var(--background));
+  border-color: var(--primary);
+}
+
+.level-table__cell {
+  font-size: 0.85rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.level-table__cell--icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.level-table__cell--tags {
+  white-space: normal;
+  font-size: 0.75rem;
+  color: color-mix(in srgb, var(--text) 65%, transparent);
+}
+
+.level-table__cell--wrap {
+  white-space: normal;
+  overflow-wrap: break-word;
+  font-size: 0.75rem;
+  line-height: 1.2;
+}
+
+.level-table--guesses {
+  margin-top: 1.5rem;
+}
+
+.level-table__row--guess {
+  background-color: color-mix(in srgb, var(--secondary) 12%, var(--background));
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.level-table__cell--fill {
+  padding: 6px 4px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+.level-table__cell--correct {
+  background-color: #37b24d;
+  color: #0b2b12;
+}
+
+.level-table__cell--wrong {
+  background-color: #e03131;
+  color: #fff5f4;
+}
+
+.level-table__cell--close {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+.level-arrow {
+  margin-left: 4px;
+  font-size: 0.7rem;
+}
+
+.tag-pill {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 2px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.tag-pill--correct {
+  background-color: #37b24d;
+  color: #0b2b12;
+}
+
+.tag-pill--wrong {
+  background-color: #e03131;
+  color: #fff5f4;
+}
+
+.level-search__win {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--primary);
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--background);
+}
+
+.level-thumb {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background: linear-gradient(135deg, var(--accent), var(--primary));
+  border: 1px solid var(--primary);
+}
+
+.level-name {
+  font-weight: 600;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.level-search__selected {
+  margin-top: 1rem;
+  color: color-mix(in srgb, var(--text) 65%, transparent);
+}
