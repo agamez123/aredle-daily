@@ -1,7 +1,11 @@
+import Header from "./components/Header"
+import LevelSearch from "./components/LevelSearch"
+
 function App() {
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <Header />
+      <LevelSearch />
     </div>
   )
 }
