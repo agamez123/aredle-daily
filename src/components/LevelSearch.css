@@ -64,19 +64,21 @@
 }
 
 .level-table__row--option {
-  background-color: color-mix(in srgb, var(--secondary) 12%, var(--background));
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.2) 100%),
+    linear-gradient(135deg, hsl(var(--row-hue, 20) 65% 45%), hsl(calc(var(--row-hue, 20) + 50) 65% 26%));
   border: 1px solid var(--secondary);
   border-radius: 8px;
   padding: 8px;
-  color: inherit;
+  color: #f5f0ec;
   font-family: inherit;
   cursor: pointer;
-  transition: border-color 0.15s, background-color 0.15s;
+  transition: border-color 0.15s, filter 0.15s;
 }
 
 .level-table__row--option:hover {
-  background-color: color-mix(in srgb, var(--secondary) 28%, var(--background));
   border-color: var(--primary);
+  filter: brightness(1.12);
 }
 
 .level-table__cell {
@@ -99,6 +101,10 @@
   white-space: normal;
   font-size: 0.75rem;
   color: color-mix(in srgb, var(--text) 65%, transparent);
+}
+
+.level-table__row--option .level-table__cell--tags {
+  color: rgba(245, 240, 236, 0.8);
 }
 
 .level-table__cell--wrap {
@@ -128,7 +134,9 @@
 }
 
 .level-table__row--guess {
-  background-color: color-mix(in srgb, var(--secondary) 16%, var(--background));
+  background-image:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.2) 100%),
+    linear-gradient(135deg, hsl(var(--row-hue, 20) 65% 45%), hsl(calc(var(--row-hue, 20) + 50) 65% 26%));
   border: 1px solid var(--primary);
   border-radius: 10px;
   padding: 14px 10px;
@@ -139,13 +147,12 @@
   font-size: 0.95rem;
 }
 
-.level-table__row--guess .level-name {
-  font-size: 1rem;
+.level-table__row--guess .level-table__cell--tags {
+  color: rgba(245, 240, 236, 0.8);
 }
 
-.level-thumb--lg {
-  width: 40px;
-  height: 40px;
+.level-table__row--guess .level-name {
+  font-size: 1rem;
 }
 
 .level-table__cell--fill {
@@ -201,24 +208,26 @@
   padding: 0.75rem 1rem;
   background-color: var(--primary);
   border-radius: 8px;
-  font-weight: 600;
   color: var(--background);
 }
 
-.level-thumb {
-  flex: none;
-  width: 32px;
-  height: 32px;
-  border-radius: 4px;
-  background: linear-gradient(135deg, var(--accent), var(--primary));
-  border: 1px solid var(--primary);
+.level-search__win-headline {
+  margin: 0;
+  font-weight: 600;
+}
+
+.level-search__win-description {
+  margin: 0.4rem 0 0;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--background) 85%, transparent);
 }
 
 .level-name {
   font-weight: 600;
-  color: var(--text);
+  color: #fff;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .level-search__selected {

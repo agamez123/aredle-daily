@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "fetch-levels": "node scripts/fetch-levels.js",
+    "fetch-songs": "node scripts/fetch-songs.js",
     "fetch-thumbnails": "node scripts/fetch-thumbnails.js"
   },
   "dependencies": {

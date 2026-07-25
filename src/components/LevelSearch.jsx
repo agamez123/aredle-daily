@@ -31,6 +31,16 @@ function exactStatus(guessVal, answerVal) {
   return guessVal === answerVal ? "correct" : "wrong"
 }
 
+// Deterministic per-level hue so each row's card background stays consistent
+// across re-renders without needing a real thumbnail image.
+function hueForLevel(level) {
+  let hash = 0
+  for (let i = 0; i < level.name.length; i++) {
+    hash = (hash * 31 + level.name.charCodeAt(i)) % 360
+  }
+  return hash
+}
+
 function GuessRow({ level, answer }) {
   const position = numericStatus("position", level, answer)
   const version = numericStatus("version", level, answer)
@@ -39,9 +49,11 @@ function GuessRow({ level, answer }) {
   const verifier = exactStatus(level.verifier, answer.verifier)
 
   return (
-    <div className="level-table__row level-table__row--guess">
+    <div
+      className="level-table__row level-table__row--guess"
+      style={{ "--row-hue": hueForLevel(level) }}
+    >
       <span className="level-table__cell level-table__cell--icon">
-        <span className="level-thumb level-thumb--lg" />
         <span className="level-name">{level.name}</span>
       </span>
 
@@ -125,10 +137,13 @@ function LevelSearch() {
       )}
 
       {hasWon && (
-        <p className="level-search__win">
-          🎉 The level was <strong>{answer.name}</strong>, guessed in {guesses.length}{" "}
-          {guesses.length === 1 ? "try" : "tries"}!
-        </p>
+        <div className="level-search__win">
+          <p className="level-search__win-headline">
+            🎉 The level was <strong>{answer.name}</strong> ({answer.points} pts), guessed in{" "}
+            {guesses.length} {guesses.length === 1 ? "try" : "tries"}!
+          </p>
+          <p className="level-search__win-description">{answer.description}</p>
+        </div>
       )}
 
       {results.length > 0 && (
@@ -146,10 +161,10 @@ function LevelSearch() {
             <button
               key={level.id}
               className="level-table__row level-table__row--option"
+              style={{ "--row-hue": hueForLevel(level) }}
               onClick={() => handleSelect(level)}
             >
               <span className="level-table__cell level-table__cell--icon">
-                <span className="level-thumb" />
                 <span className="level-name">{level.name}</span>
               </span>
               <span className="level-table__cell">{level.position}</span>
