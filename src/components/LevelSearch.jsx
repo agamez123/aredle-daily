@@ -139,10 +139,12 @@ function LevelSearch() {
       {hasWon && (
         <div className="level-search__win">
           <p className="level-search__win-headline">
-            🎉 The level was <strong>{answer.name}</strong> ({answer.points} pts), guessed in{" "}
+            🎉 The level was <strong>{answer.name}</strong>, guessed in{" "}
             {guesses.length} {guesses.length === 1 ? "try" : "tries"}!
           </p>
-          <p className="level-search__win-description">{answer.description}</p>
+          {answer.description && (
+            <p className="level-search__win-description">{answer.description}</p>
+          )}
         </div>
       )}
 
