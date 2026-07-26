@@ -31,16 +31,6 @@ function exactStatus(guessVal, answerVal) {
   return guessVal === answerVal ? "correct" : "wrong"
 }
 
-// Deterministic per-level hue so each row's card background stays consistent
-// across re-renders without needing a real thumbnail image.
-function hueForLevel(level) {
-  let hash = 0
-  for (let i = 0; i < level.name.length; i++) {
-    hash = (hash * 31 + level.name.charCodeAt(i)) % 360
-  }
-  return hash
-}
-
 function GuessRow({ level, answer }) {
   const position = numericStatus("position", level, answer)
   const version = numericStatus("version", level, answer)
@@ -51,7 +41,7 @@ function GuessRow({ level, answer }) {
   return (
     <div
       className="level-table__row level-table__row--guess"
-      style={{ "--row-hue": hueForLevel(level) }}
+      style={{ "--row-image": `url(/thumbnails/${level.level_id}.webp)` }}
     >
       <span className="level-table__cell level-table__cell--icon">
         <span className="level-name">{level.name}</span>
@@ -163,7 +153,7 @@ function LevelSearch() {
             <button
               key={level.id}
               className="level-table__row level-table__row--option"
-              style={{ "--row-hue": hueForLevel(level) }}
+              style={{ "--row-image": `url(/thumbnails/${level.level_id}.webp)` }}
               onClick={() => handleSelect(level)}
             >
               <span className="level-table__cell level-table__cell--icon">
