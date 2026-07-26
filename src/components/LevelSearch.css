@@ -50,9 +50,10 @@
 
 .level-table__row {
   display: grid;
-  grid-template-columns: 2fr repeat(6, 1fr);
+  grid-template-columns: 2fr repeat(5, 1fr) 1.6fr;
   align-items: center;
   gap: 8px;
+  box-sizing: border-box;
 }
 
 .level-table__row--header {
@@ -64,9 +65,10 @@
 }
 
 .level-table__row--option {
-  background-image:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.2) 100%),
-    linear-gradient(135deg, hsl(var(--row-hue, 20) 65% 45%), hsl(calc(var(--row-hue, 20) + 50) 65% 26%));
+  position: relative;
+  isolation: isolate;
+  height: 64px;
+  overflow: hidden;
   border: 1px solid var(--secondary);
   border-radius: 8px;
   padding: 8px;
@@ -98,6 +100,8 @@
 }
 
 .level-table__cell--tags {
+  align-self: stretch;
+  overflow-y: auto;
   white-space: normal;
   font-size: 0.75rem;
   color: color-mix(in srgb, var(--text) 65%, transparent);
@@ -108,10 +112,16 @@
 }
 
 .level-table__cell--wrap {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: auto;
   white-space: normal;
   overflow-wrap: break-word;
   font-size: 0.75rem;
   line-height: 1.2;
+  text-align: center;
 }
 
 .level-table--guesses {
@@ -134,13 +144,29 @@
 }
 
 .level-table__row--guess {
-  background-image:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.78) 0%, rgba(0, 0, 0, 0.5) 55%, rgba(0, 0, 0, 0.2) 100%),
-    linear-gradient(135deg, hsl(var(--row-hue, 20) 65% 45%), hsl(calc(var(--row-hue, 20) + 50) 65% 26%));
+  position: relative;
+  isolation: isolate;
+  height: 76px;
+  overflow: hidden;
   border: 1px solid var(--primary);
   border-radius: 10px;
   padding: 14px 10px;
   box-shadow: 0 2px 6px color-mix(in srgb, var(--text) 12%, transparent);
+}
+
+.level-table__row--option::before,
+.level-table__row--guess::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background-image: var(--row-image, none);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .level-table__row--guess .level-table__cell {
