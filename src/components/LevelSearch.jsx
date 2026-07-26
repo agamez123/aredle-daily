@@ -105,9 +105,19 @@ function LevelSearch() {
   const hasWon = guesses.some((g) => g.id === answer.id)
 
   const results = useMemo(() => {
-    if (!query.trim() || hasWon) return []
-    const q = query.toLowerCase()
+    const trimmed = query.trim()
+    if (!trimmed || hasWon) return []
     const guessedIds = new Set(guesses.map((g) => g.id))
+
+    const posMatch = trimmed.match(/^pos:\s*(\d+)$/i)
+    if (posMatch) {
+      const posQuery = posMatch[1]
+      return LEVELS.filter(
+        (level) => !guessedIds.has(level.id) && String(level.position).includes(posQuery)
+      ).slice(0, 6)
+    }
+
+    const q = trimmed.toLowerCase()
     return LEVELS.filter(
       (level) => !guessedIds.has(level.id) && level.name.toLowerCase().includes(q)
     ).slice(0, 6)
@@ -130,7 +140,7 @@ function LevelSearch() {
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Type a level name..."
+            placeholder="Type a level name... (or pos:123)"
             className="level-search__input"
           />
         </div>
