@@ -50,7 +50,7 @@
 
 .level-table__row {
   display: grid;
-  grid-template-columns: 2fr repeat(5, 1fr) 1.6fr;
+  grid-template-columns: 2fr 0.8fr 1.5fr 1fr 1fr 0.8fr 1.8fr;
   align-items: center;
   gap: 8px;
   box-sizing: border-box;
@@ -84,6 +84,7 @@
 }
 
 .level-table__cell {
+  min-width: 0;
   font-size: 0.85rem;
   text-align: center;
   overflow: hidden;
@@ -100,8 +101,10 @@
 }
 
 .level-table__cell--tags {
+  container-type: inline-size;
   align-self: stretch;
-  overflow-y: auto;
+  min-width: 0;
+  overflow: hidden;
   white-space: normal;
   font-size: 0.75rem;
   color: color-mix(in srgb, var(--text) 65%, transparent);
@@ -112,14 +115,16 @@
 }
 
 .level-table__cell--wrap {
+  container-type: inline-size;
   align-self: stretch;
+  min-width: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow-y: auto;
+  overflow: hidden;
   white-space: normal;
   overflow-wrap: break-word;
-  font-size: 0.75rem;
+  font-size: clamp(0.6rem, 2.6cqw, 0.75rem);
   line-height: 1.2;
   text-align: center;
 }
@@ -215,7 +220,7 @@
   padding: 2px 6px;
   margin: 2px;
   border-radius: 4px;
-  font-size: 0.7rem;
+  font-size: clamp(0.55rem, 2.4cqw, 0.7rem);
   font-weight: 600;
 }
 
