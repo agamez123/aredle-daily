@@ -11,6 +11,30 @@ const COLUMNS = [
   { key: "tags", label: "Tags" },
 ]
 
+const ALL_TAGS = [...new Set(LEVELS.flatMap((level) => level.tags))].sort()
+const ALL_VERSIONS = [...new Set(LEVELS.map((level) => level.version))].sort(
+  (a, b) => parseFloat(a) - parseFloat(b)
+)
+
+const EMPTY_FILTERS = {
+  positionMin: "",
+  positionMax: "",
+  song: "",
+  creator: "",
+  verifier: "",
+  version: "",
+  tags: [],
+}
+
+function hasActiveFilters(filters) {
+  return (
+    filters.tags.length > 0 ||
+    ["positionMin", "positionMax", "song", "creator", "verifier", "version"].some(
+      (key) => filters[key].trim() !== ""
+    )
+  )
+}
+
 // How far off a numeric guess can be and still count as "close" (yellow).
 const CLOSE_RANGE = { position: 2, version: 0.15 }
 
@@ -91,31 +115,75 @@ function LevelSearch() {
   const [answer] = useState(() => LEVELS[Math.floor(Math.random() * LEVELS.length)])
   const [query, setQuery] = useState("")
   const [guesses, setGuesses] = useState([])
+  const [filtersOpen, setFiltersOpen] = useState(false)
+  const [filters, setFilters] = useState(EMPTY_FILTERS)
 
   const hasWon = guesses.some((g) => g.id === answer.id)
+  const filtersActive = hasActiveFilters(filters)
+  const activeFilterCount =
+    filters.tags.length +
+    ["positionMin", "positionMax", "song", "creator", "verifier", "version"].filter(
+      (key) => filters[key].trim() !== ""
+    ).length
 
   const results = useMemo(() => {
     const trimmed = query.trim()
-    if (!trimmed || hasWon) return []
+    if (hasWon || (!trimmed && !filtersActive)) return []
     const guessedIds = new Set(guesses.map((g) => g.id))
 
-    const posMatch = trimmed.match(/^pos:\s*(\d+)$/i)
-    if (posMatch) {
-      const posQuery = posMatch[1]
-      return LEVELS.filter(
-        (level) => !guessedIds.has(level.id) && String(level.position).includes(posQuery)
-      ).slice(0, 6)
+    let pool = LEVELS.filter((level) => !guessedIds.has(level.id))
+
+    if (trimmed) {
+      const posMatch = trimmed.match(/^pos:\s*(\d+)$/i)
+      if (posMatch) {
+        const posQuery = posMatch[1]
+        pool = pool.filter((level) => String(level.position).includes(posQuery))
+      } else {
+        const q = trimmed.toLowerCase()
+        pool = pool.filter((level) => level.name.toLowerCase().includes(q))
+      }
     }
 
-    const q = trimmed.toLowerCase()
-    return LEVELS.filter(
-      (level) => !guessedIds.has(level.id) && level.name.toLowerCase().includes(q)
-    ).slice(0, 6)
-  }, [query, guesses, hasWon])
+    const { positionMin, positionMax, song, creator, verifier, version, tags } = filters
+
+    if (positionMin.trim()) pool = pool.filter((level) => level.position >= Number(positionMin))
+    if (positionMax.trim()) pool = pool.filter((level) => level.position <= Number(positionMax))
+    if (song.trim()) {
+      const q = song.trim().toLowerCase()
+      pool = pool.filter((level) => (level.song || "").toLowerCase().includes(q))
+    }
+    if (creator.trim()) {
+      const q = creator.trim().toLowerCase()
+      pool = pool.filter((level) => level.creator.toLowerCase().includes(q))
+    }
+    if (verifier.trim()) {
+      const q = verifier.trim().toLowerCase()
+      pool = pool.filter((level) => level.verifier.toLowerCase().includes(q))
+    }
+    if (version) pool = pool.filter((level) => level.version === version)
+    if (tags.length > 0) pool = pool.filter((level) => tags.every((tag) => level.tags.includes(tag)))
+
+    return pool.slice(0, 6)
+  }, [query, guesses, hasWon, filters, filtersActive])
 
   function handleSelect(level) {
     setGuesses((prev) => [...prev, level])
     setQuery("")
+  }
+
+  function updateFilter(key, value) {
+    setFilters((prev) => ({ ...prev, [key]: value }))
+  }
+
+  function toggleTagFilter(tag) {
+    setFilters((prev) => ({
+      ...prev,
+      tags: prev.tags.includes(tag) ? prev.tags.filter((t) => t !== tag) : [...prev.tags, tag],
+    }))
+  }
+
+  function clearFilters() {
+    setFilters(EMPTY_FILTERS)
   }
 
   return (
@@ -133,6 +201,115 @@ function LevelSearch() {
             placeholder="Type a level name... (or pos:123)"
             className="level-search__input"
           />
+        </div>
+      )}
+
+      {!hasWon && (
+        <div className="level-search__filters">
+          <button
+            type="button"
+            className={`level-search__filter-toggle${filtersActive ? " level-search__filter-toggle--active" : ""}`}
+            onClick={() => setFiltersOpen((open) => !open)}
+          >
+            Filters{filtersActive ? ` (${activeFilterCount})` : ""}
+            <span className="level-search__filter-caret">{filtersOpen ? "▲" : "▼"}</span>
+          </button>
+
+          {filtersOpen && (
+            <div className="level-search__filter-panel">
+              <div className="level-search__filter-field">
+                <label>Position</label>
+                <div className="level-search__filter-range">
+                  <input
+                    type="number"
+                    min="1"
+                    placeholder="Min"
+                    value={filters.positionMin}
+                    onChange={(e) => updateFilter("positionMin", e.target.value)}
+                  />
+                  <span>–</span>
+                  <input
+                    type="number"
+                    min="1"
+                    placeholder="Max"
+                    value={filters.positionMax}
+                    onChange={(e) => updateFilter("positionMax", e.target.value)}
+                  />
+                </div>
+              </div>
+
+              <div className="level-search__filter-field">
+                <label htmlFor="filter-song">Song</label>
+                <input
+                  id="filter-song"
+                  type="text"
+                  placeholder="Contains..."
+                  value={filters.song}
+                  onChange={(e) => updateFilter("song", e.target.value)}
+                />
+              </div>
+
+              <div className="level-search__filter-field">
+                <label htmlFor="filter-creator">Creator</label>
+                <input
+                  id="filter-creator"
+                  type="text"
+                  placeholder="Contains..."
+                  value={filters.creator}
+                  onChange={(e) => updateFilter("creator", e.target.value)}
+                />
+              </div>
+
+              <div className="level-search__filter-field">
+                <label htmlFor="filter-verifier">Verifier</label>
+                <input
+                  id="filter-verifier"
+                  type="text"
+                  placeholder="Contains..."
+                  value={filters.verifier}
+                  onChange={(e) => updateFilter("verifier", e.target.value)}
+                />
+              </div>
+
+              <div className="level-search__filter-field">
+                <label htmlFor="filter-version">Version</label>
+                <select
+                  id="filter-version"
+                  value={filters.version}
+                  onChange={(e) => updateFilter("version", e.target.value)}
+                >
+                  <option value="">Any</option>
+                  {ALL_VERSIONS.map((v) => (
+                    <option key={v} value={v}>
+                      {v}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="level-search__filter-field level-search__filter-field--tags">
+                <label>Tags</label>
+                <div className="level-search__filter-tags">
+                  {ALL_TAGS.map((tag) => (
+                    <button
+                      type="button"
+                      key={tag}
+                      className={`tag-pill tag-pill--filter${filters.tags.includes(tag) ? " tag-pill--filter-active" : ""}`}
+                      onClick={() => toggleTagFilter(tag)}
+                    >
+                      {tag}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {filtersActive && (
+                <button type="button" className="level-search__filter-clear" onClick={clearFilters}>
+                  Clear filters
+                </button>
+              )}
+            </div>
+          )}
         </div>
       )}
 
