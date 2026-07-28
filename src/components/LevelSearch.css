@@ -205,7 +205,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--ink-faint);
+  color: var(--ink);
   padding: 0 6px;
 }
 
@@ -228,7 +228,7 @@
 }
 
 .level-table__row--option:hover::before {
-  filter: grayscale(0.55) brightness(0.85);
+  filter: grayscale(0.25) brightness(0.95);
 }
 
 .level-table__cell {
@@ -318,10 +318,17 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  filter: grayscale(1) brightness(0.6);
   opacity: 0.6;
   pointer-events: none;
   transition: filter 0.2s;
+}
+
+.level-table__row--guess::before {
+  filter: grayscale(1) brightness(0.6);
+}
+
+.level-table__row--option::before {
+  filter: grayscale(0.7) brightness(0.7);
 }
 
 .level-table__row--option::after,
