@@ -46,7 +46,10 @@ function Header() {
   return (
     <>
       <header className="site-header">
-        <span className="site-header__title">AREDLE</span>
+        <span className="site-header__title">
+          <span className="site-header__mark" aria-hidden="true">✦</span>
+          AREDLE
+        </span>
         <div className="site-header__icons">
           <button
             className="site-header__icon-btn"
@@ -73,16 +76,16 @@ function Header() {
       </header>
 
       <Modal open={openModal === "help"} title="How to Play" onClose={() => setOpenModal(null)}>
-        <p>Guess the daily AREDL level. Each guess reveals how close you were:</p>
+        <p>Guess today's AREDL level. Each guess reveals how close you were:</p>
         <ul>
           <li>
-            <span className="legend-swatch legend-swatch--correct" /> Green — that column matches the answer.
+            <span className="legend-swatch legend-swatch--correct" /> Lit — that column matches the answer.
           </li>
           <li>
-            <span className="legend-swatch legend-swatch--close" /> Yellow with an arrow — close, the arrow points toward the answer.
+            <span className="legend-swatch legend-swatch--close" /> Amber with an arrow — close, the arrow points toward the answer.
           </li>
           <li>
-            <span className="legend-swatch legend-swatch--wrong" /> Red — no match.
+            <span className="legend-swatch legend-swatch--wrong" /> Dim — no match.
           </li>
         </ul>
       </Modal>

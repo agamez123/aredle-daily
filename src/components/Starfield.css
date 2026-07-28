@@ -1,0 +1,53 @@
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  opacity: var(--starfield-opacity);
+  transition: opacity 0.4s ease;
+  background: radial-gradient(ellipse at 50% -10%, #1a1d24 0%, var(--void) 55%);
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--star);
+  animation: star-twinkle var(--duration) ease-in-out var(--delay) infinite;
+}
+
+.star--far {
+  width: 1px;
+  height: 1px;
+  opacity: 0.35;
+}
+
+.star--mid {
+  width: 2px;
+  height: 2px;
+  opacity: 0.5;
+}
+
+.star--near {
+  width: 2px;
+  height: 2px;
+  opacity: 0.75;
+  box-shadow: 0 0 4px 1px color-mix(in srgb, var(--star) 70%, transparent);
+}
+
+@keyframes star-twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .star {
+    animation: none;
+    opacity: 0.55;
+  }
+}

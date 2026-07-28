@@ -315,13 +315,22 @@ function LevelSearch() {
 
       {hasWon && (
         <div className="level-search__win">
-          <p className="level-search__win-headline">
-            🎉 The level was <strong>{answer.name}</strong>, guessed in{" "}
-            {guesses.length} {guesses.length === 1 ? "try" : "tries"}!
-          </p>
-          {answer.description && (
-            <p className="level-search__win-description">{answer.description}</p>
-          )}
+          <img
+            className="level-search__win-image"
+            src={`/thumbnails/${answer.level_id}.webp`}
+            alt=""
+            aria-hidden="true"
+          />
+          <div className="level-search__win-body">
+            <p className="level-search__win-eyebrow">
+              <span aria-hidden="true">✦</span> Found in {guesses.length}{" "}
+              {guesses.length === 1 ? "guess" : "guesses"}
+            </p>
+            <p className="level-search__win-headline">{answer.name}</p>
+            {answer.description && (
+              <p className="level-search__win-description">{answer.description}</p>
+            )}
+          </div>
         </div>
       )}
 
