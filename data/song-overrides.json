@@ -1998,5 +1998,37 @@
     "level_id": 109978039,
     "name": "InTerFeRenCe",
     "position": 1521
+  },
+  "dc9bfee3-fb1d-4c89-a988-dc4f70287406": {
+    "song": "bossfightofficial - Bossfight - Glitch Gremlin",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 116089123,
+    "name": "Geometrical Dominato ",
+    "position": 646
+  },
+  "927d87fa-41d8-4d90-a015-df0c06bc8fc6": {
+    "song": "Fyex & Fifty Grand - Existence",
+    "source": "songfilehub (NONG)",
+    "alt": "bossfightofficial - Bossfight - Glitch Gremlin",
+    "level_id": 143457831,
+    "name": "angel",
+    "position": 826
+  },
+  "09f18f5e-7921-4594-a307-cb46162c04a2": {
+    "song": "bossfightofficial - Bossfight - Glitch Gremlin",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 52448794,
+    "name": "smohcs",
+    "position": 1423
+  },
+  "5829b4d3-07b8-4cdb-9f88-5681624e9441": {
+    "song": "bossfightofficial - Bossfight - Glitch Gremlin",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 129365037,
+    "name": "tensor",
+    "position": 1476
   }
 }
