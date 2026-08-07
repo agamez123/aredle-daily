@@ -32,6 +32,7 @@ When AREDL adds, removes, or re-positions levels, refresh the data with:
 npm run fetch-levels    # pulls the current list from api.aredl.net, caches creator/verifier detail
 npm run fetch-songs     # resolves any new song ids against boomlings
 npm run fetch-nongs     # fills in songs AREDL's API left null (see below)
+npm run fetch-thumbnails # retrieve level card thumbnails
 node scripts/gen-levels-js.mjs   # rebuilds src/data/levels.js from the sources above
 ```
 
@@ -44,4 +45,3 @@ All three fetch scripts are incremental — they only fetch what's not already c
 
 When both resolve and agree, that's used as-is. When they disagree, Song File Hub's name is preferred (it tends to be the real artist/title rather than a reupload's mislabeled one) and GD's version is kept alongside as `alt` in `data/song-overrides.json`. When only one resolves, that one is used. When neither resolves, the level is logged to the console as needing manual research — check those by hand before regenerating, since that's also where a genuinely wrong guess is most likely to hide.
 
-Run `npm run fetch-thumbnails` if new levels need thumbnail images.
