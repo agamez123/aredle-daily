@@ -31,7 +31,7 @@ function SettingsIcon() {
   )
 }
 
-function Header() {
+function Header({ mode, onGoHome }) {
   const [openModal, setOpenModal] = useState(null)
   const [theme, setTheme] = useState(
     () => document.documentElement.dataset.theme || "dark"
@@ -43,13 +43,24 @@ function Header() {
     document.documentElement.dataset.theme = next
   }
 
+  const TitleTag = onGoHome ? "button" : "span"
+
   return (
     <>
       <header className="site-header">
-        <span className="site-header__title">
+        <TitleTag
+          className="site-header__title"
+          type={onGoHome ? "button" : undefined}
+          onClick={onGoHome}
+        >
           <span className="site-header__mark" aria-hidden="true">✦</span>
           AREDLE
-        </span>
+          {mode && (
+            <span className="site-header__mode-pill">
+              {mode === "easy" ? "Easy" : "Hard"}
+            </span>
+          )}
+        </TitleTag>
         <div className="site-header__icons">
           <button
             className="site-header__icon-btn"

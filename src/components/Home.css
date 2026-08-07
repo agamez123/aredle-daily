@@ -1,0 +1,129 @@
+.home {
+  width: min(760px, 92vw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home__prompt {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin: 0 0 0.4rem;
+}
+
+.home__subtitle {
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  margin: 0 0 2rem;
+}
+
+.home__modes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+@media (max-width: 620px) {
+  .home__modes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mode-card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  height: 280px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 14px;
+  background-color: var(--surface-raised);
+  color: var(--ink);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.mode-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--mode-image, none);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(0.85) brightness(0.4);
+  transition: filter 0.25s ease, transform 0.3s ease;
+}
+
+.mode-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(10, 11, 14, 0.35) 0%, rgba(10, 11, 14, 0.8) 100%);
+}
+
+.mode-card:hover,
+.mode-card:focus-visible {
+  border-color: var(--focus);
+  transform: translateY(-3px);
+}
+
+.mode-card:hover::before,
+.mode-card:focus-visible::before {
+  filter: grayscale(0.55) brightness(0.5);
+  transform: scale(1.05);
+}
+
+.mode-card__badge {
+  padding: 0.25em 0.75em;
+  margin-bottom: 0.6rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid transparent;
+}
+
+.mode-card__badge--easy {
+  background-color: var(--feedback-correct);
+  color: var(--feedback-correct-ink);
+}
+
+.mode-card__badge--hard {
+  background-color: var(--feedback-wrong);
+  color: var(--feedback-wrong-ink);
+}
+
+.mode-card__count {
+  font-family: var(--font-mono);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+}
+
+.mode-card__label {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.mode-card__description {
+  max-width: 26ch;
+  font-size: 0.82rem;
+  color: rgba(236, 238, 241, 0.75);
+}

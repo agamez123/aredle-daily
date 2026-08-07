@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react"
-import { LEVELS } from "../data/levels"
+import { MODE_POOLS } from "../data/modes"
 import "./LevelSearch.css"
 
 const COLUMNS = [
@@ -10,11 +10,6 @@ const COLUMNS = [
   { key: "version", label: "Version" },
   { key: "tags", label: "Tags" },
 ]
-
-const ALL_TAGS = [...new Set(LEVELS.flatMap((level) => level.tags))].sort()
-const ALL_VERSIONS = [...new Set(LEVELS.map((level) => level.version))].sort(
-  (a, b) => parseFloat(a) - parseFloat(b)
-)
 
 const EMPTY_FILTERS = {
   positionMin: "",
@@ -36,19 +31,33 @@ function hasActiveFilters(filters) {
 }
 
 // How far off a numeric guess can be and still count as "close" (yellow).
-const CLOSE_RANGE = { position: 2, version: 0.15 }
+const CLOSE_RANGE = { version: 0.15 }
+
+// Position feedback fades from green (exact) to red as the guess gets
+// further away, fully red once you're this many ranks off.
+const POSITION_GRADIENT_RANGE = 500
+
+function positionGradientStyle(diff) {
+  const t = Math.min(Math.abs(diff), POSITION_GRADIENT_RANGE) / POSITION_GRADIENT_RANGE
+  // Square root spreads out the near end of the scale so close guesses read
+  // as visibly greener instead of fading toward red in a straight line.
+  const closeness = Math.round((1 - Math.sqrt(t)) * 100)
+  const color = `color-mix(in srgb, var(--feedback-correct) ${closeness}%, var(--feedback-wrong) ${100 - closeness}%)`
+  const ink = `color-mix(in srgb, var(--feedback-correct-ink) ${closeness}%, var(--feedback-wrong-ink) ${100 - closeness}%)`
+  return { backgroundColor: color, borderColor: color, color: ink }
+}
 
 function numericStatus(key, guess, answer) {
   const guessVal = key === "version" ? parseFloat(guess.version) : guess[key]
   const answerVal = key === "version" ? parseFloat(answer.version) : answer[key]
   const diff = guessVal - answerVal
   if (diff === 0) return { status: "correct" }
-  const close = Math.abs(diff) <= CLOSE_RANGE[key]
+  const close = key === "version" && Math.abs(diff) <= CLOSE_RANGE.version
   // Position is a list rank, not a plain number — #1 sits above #40, so a
   // smaller guess means you're already higher on the list and need to move down.
   const direction =
     key === "position" ? (diff < 0 ? "down" : "up") : diff < 0 ? "up" : "down"
-  return { status: close ? "close" : "wrong", direction }
+  return { status: close ? "close" : "wrong", direction, diff }
 }
 
 function exactStatus(guessVal, answerVal) {
@@ -71,7 +80,10 @@ function GuessRow({ level, answer }) {
         <span className="level-name">{level.name}</span>
       </span>
 
-      <span className={`level-table__cell level-table__cell--fill level-table__cell--${position.status}`}>
+      <span
+        className={`level-table__cell level-table__cell--fill${position.status === "correct" ? " level-table__cell--correct" : ""}`}
+        style={position.status === "correct" ? undefined : positionGradientStyle(position.diff)}
+      >
         {level.position}
         {position.status !== "correct" && (
           <span className="level-arrow">{position.direction === "up" ? "▲" : "▼"}</span>
@@ -111,8 +123,22 @@ function GuessRow({ level, answer }) {
   )
 }
 
-function LevelSearch() {
-  const [answer] = useState(() => LEVELS[Math.floor(Math.random() * LEVELS.length)])
+function LevelSearch({ mode, onChangeMode }) {
+  const levelPool = MODE_POOLS[mode] ?? MODE_POOLS.hard
+
+  const allTags = useMemo(
+    () => [...new Set(levelPool.flatMap((level) => level.tags))].sort(),
+    [levelPool]
+  )
+  const allVersions = useMemo(
+    () =>
+      [...new Set(levelPool.map((level) => level.version))].sort(
+        (a, b) => parseFloat(a) - parseFloat(b)
+      ),
+    [levelPool]
+  )
+
+  const [answer] = useState(() => levelPool[Math.floor(Math.random() * levelPool.length)])
   const [query, setQuery] = useState("")
   const [guesses, setGuesses] = useState([])
   const [filtersOpen, setFiltersOpen] = useState(false)
@@ -131,7 +157,7 @@ function LevelSearch() {
     if (hasWon || (!trimmed && !filtersActive)) return []
     const guessedIds = new Set(guesses.map((g) => g.id))
 
-    let pool = LEVELS.filter((level) => !guessedIds.has(level.id))
+    let pool = levelPool.filter((level) => !guessedIds.has(level.id))
 
     if (trimmed) {
       const posMatch = trimmed.match(/^pos:\s*(\d+)$/i)
@@ -164,7 +190,7 @@ function LevelSearch() {
     if (tags.length > 0) pool = pool.filter((level) => tags.every((tag) => level.tags.includes(tag)))
 
     return pool.slice(0, 6)
-  }, [query, guesses, hasWon, filters, filtersActive])
+  }, [query, guesses, hasWon, filters, filtersActive, levelPool])
 
   function handleSelect(level) {
     setGuesses((prev) => [...prev, level])
@@ -192,13 +218,19 @@ function LevelSearch() {
         {hasWon ? "You got it!" : "Guess today's AREDL level!"}
       </p>
 
+      {onChangeMode && (
+        <button type="button" className="level-search__mode-toggle" onClick={onChangeMode}>
+          {mode === "easy" ? "Easy Mode" : "Hard Mode"} · Change
+        </button>
+      )}
+
       {!hasWon && (
         <div className="level-search__bar">
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Type a level name... (or pos:123)"
+            placeholder="Type a level name..."
             className="level-search__input"
           />
         </div>
@@ -279,7 +311,7 @@ function LevelSearch() {
                   onChange={(e) => updateFilter("version", e.target.value)}
                 >
                   <option value="">Any</option>
-                  {ALL_VERSIONS.map((v) => (
+                  {allVersions.map((v) => (
                     <option key={v} value={v}>
                       {v}
                     </option>
@@ -290,7 +322,7 @@ function LevelSearch() {
               <div className="level-search__filter-field level-search__filter-field--tags">
                 <label>Tags</label>
                 <div className="level-search__filter-tags">
-                  {ALL_TAGS.map((tag) => (
+                  {allTags.map((tag) => (
                     <button
                       type="button"
                       key={tag}
