@@ -293,7 +293,7 @@
   overflow: hidden;
   white-space: normal;
   overflow-wrap: break-word;
-  font-size: clamp(0.6rem, 2.6cqw, 0.75rem);
+  font-size: clamp(0.5rem, 2.6cqw, 0.75rem);
   line-height: 1.2;
   text-align: center;
 }
@@ -321,8 +321,7 @@
 .level-table__row--guess {
   position: relative;
   isolation: isolate;
-  height: 76px;
-  overflow: hidden;
+  min-height: 76px;
   border: 1px solid var(--hairline-strong);
   border-radius: 10px;
   padding: 14px 10px;
@@ -363,7 +362,7 @@
   pointer-events: none;
 }
 
-.level-table__row--guess .level-table__cell {
+.level-table__row--guess .level-table__cell:not(.level-table__cell--wrap) {
   font-size: 0.95rem;
 }
 
