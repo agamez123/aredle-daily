@@ -31,7 +31,7 @@ function SettingsIcon() {
   )
 }
 
-function Header({ mode, onGoHome }) {
+function Header({ gameMode, difficulty, onGoHome }) {
   const [openModal, setOpenModal] = useState(null)
   const [theme, setTheme] = useState(
     () => document.documentElement.dataset.theme || "dark"
@@ -55,9 +55,9 @@ function Header({ mode, onGoHome }) {
         >
           <span className="site-header__mark" aria-hidden="true">✦</span>
           AREDLE
-          {mode && (
+          {gameMode && (
             <span className="site-header__mode-pill">
-              {mode === "easy" ? "Easy" : "Hard"}
+              {gameMode === "classic" ? "Classic" : "Rounds"} · {difficulty === "easy" ? "Easy" : "Hard"}
             </span>
           )}
         </TitleTag>

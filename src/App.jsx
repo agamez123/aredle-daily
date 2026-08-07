@@ -2,34 +2,41 @@ import { useRef, useState } from "react"
 import Header from "./components/Header"
 import Home from "./components/Home"
 import LevelSearch from "./components/LevelSearch"
+import RoundsMode from "./components/RoundsMode"
 import Starfield from "./components/Starfield"
 
 const TRANSITION_MS = 220
+const EMPTY_SCREEN = { gameMode: null, difficulty: null }
 
 function App() {
-  const [mode, setMode] = useState(null)
+  const [screen, setScreen] = useState(EMPTY_SCREEN)
   const [fading, setFading] = useState(false)
-  const pendingModeRef = useRef(null)
+  const pendingScreenRef = useRef(EMPTY_SCREEN)
 
-  function changeMode(nextMode) {
-    if (fading || nextMode === mode) return
-    pendingModeRef.current = nextMode
+  function changeScreen(nextGameMode, nextDifficulty) {
+    if (fading || (nextGameMode === screen.gameMode && nextDifficulty === screen.difficulty)) return
+    pendingScreenRef.current = { gameMode: nextGameMode, difficulty: nextDifficulty }
     setFading(true)
     setTimeout(() => {
-      setMode(pendingModeRef.current)
+      setScreen(pendingScreenRef.current)
       requestAnimationFrame(() => setFading(false))
     }, TRANSITION_MS)
   }
 
+  const { gameMode, difficulty } = screen
+  const goHome = () => changeScreen(null, null)
+
   return (
     <>
       <Starfield />
-      <Header mode={mode} onGoHome={mode ? () => changeMode(null) : undefined} />
+      <Header gameMode={gameMode} difficulty={difficulty} onGoHome={gameMode ? goHome : undefined} />
       <div className={`app-content${fading ? " app-content--fading" : ""}`}>
-        {mode ? (
-          <LevelSearch mode={mode} onChangeMode={() => changeMode(null)} />
+        {gameMode === "classic" ? (
+          <LevelSearch mode={difficulty} onChangeMode={goHome} />
+        ) : gameMode === "rounds" ? (
+          <RoundsMode mode={difficulty} onChangeMode={goHome} />
         ) : (
-          <Home onSelectMode={changeMode} />
+          <Home onStart={changeScreen} />
         )}
       </div>
     </>

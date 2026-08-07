@@ -1,0 +1,75 @@
+.game-result {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0.9rem;
+  text-align: left;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--focus);
+  border-radius: 10px;
+}
+
+.game-result--loss {
+  border-color: var(--feedback-wrong);
+}
+
+.game-result__image {
+  flex: none;
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: saturate(1) grayscale(0);
+}
+
+.game-result--win .game-result__image {
+  animation: game-result-reveal 0.7s ease-out;
+}
+
+@keyframes game-result-reveal {
+  0% {
+    filter: grayscale(1) brightness(0.6);
+  }
+  100% {
+    filter: grayscale(0) brightness(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-result__image {
+    animation: none;
+  }
+}
+
+.game-result__body {
+  min-width: 0;
+}
+
+.game-result__eyebrow {
+  margin: 0 0 0.3rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--focus);
+}
+
+.game-result--loss .game-result__eyebrow {
+  color: var(--feedback-wrong);
+}
+
+.game-result__headline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.game-result__description {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: var(--ink-dim);
+}

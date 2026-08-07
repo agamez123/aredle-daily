@@ -34,6 +34,16 @@ function resolveSong(songId, levelId) {
   return songOverrides[levelId]?.song ?? null
 }
 
+// Some levels have no listed GD version but carry a platformer-version tag
+// like "1.9PS" or "2.0P" — pull the version number out of that tag instead.
+const VERSION_TAG = /^(\d+(?:\.\d+)?)P[A-Za-z]*$/i
+
+function resolveVersion(version, tags) {
+  if (version !== null && version !== undefined && String(version).trim() !== "") return version
+  const match = tags.find((tag) => VERSION_TAG.test(tag))
+  return match ? match.match(VERSION_TAG)[1] : version
+}
+
 const out = levels.map((l) => ({
   id: l.id,
   level_id: l.level_id,
@@ -43,7 +53,7 @@ const out = levels.map((l) => ({
   song: resolveSong(l.song, l.id),
   creator: l.creator,
   verifier: l.verifier,
-  version: l.version,
+  version: resolveVersion(l.version, l.tags),
   tags: l.tags,
   description: fullById.get(l.id)?.description ?? null,
 }))

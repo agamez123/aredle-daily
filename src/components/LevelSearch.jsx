@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react"
 import { MODE_POOLS } from "../data/modes"
+import GameResult from "./GameResult"
 import "./LevelSearch.css"
 
 const COLUMNS = [
@@ -34,11 +35,14 @@ function hasActiveFilters(filters) {
 const CLOSE_RANGE = { version: 0.15 }
 
 // Position feedback fades from green (exact) to red as the guess gets
-// further away, fully red once you're this many ranks off.
-const POSITION_GRADIENT_RANGE = 500
+// further away, fully red once you're this many ranks off. Easy mode's pool
+// is capped at EASY_MODE_LIMIT ranks, so it needs a much tighter range than
+// hard mode to still show meaningful color spread.
+const POSITION_GRADIENT_RANGE = { easy: 50, hard: 500 }
 
-function positionGradientStyle(diff) {
-  const t = Math.min(Math.abs(diff), POSITION_GRADIENT_RANGE) / POSITION_GRADIENT_RANGE
+function positionGradientStyle(diff, mode) {
+  const range = POSITION_GRADIENT_RANGE[mode] ?? POSITION_GRADIENT_RANGE.hard
+  const t = Math.min(Math.abs(diff), range) / range
   // Square root spreads out the near end of the scale so close guesses read
   // as visibly greener instead of fading toward red in a straight line.
   const closeness = Math.round((1 - Math.sqrt(t)) * 100)
@@ -64,7 +68,7 @@ function exactStatus(guessVal, answerVal) {
   return guessVal === answerVal ? "correct" : "wrong"
 }
 
-function GuessRow({ level, answer }) {
+function GuessRow({ level, answer, mode }) {
   const position = numericStatus("position", level, answer)
   const version = numericStatus("version", level, answer)
   const song = exactStatus(level.song, answer.song)
@@ -82,7 +86,7 @@ function GuessRow({ level, answer }) {
 
       <span
         className={`level-table__cell level-table__cell--fill${position.status === "correct" ? " level-table__cell--correct" : ""}`}
-        style={position.status === "correct" ? undefined : positionGradientStyle(position.diff)}
+        style={position.status === "correct" ? undefined : positionGradientStyle(position.diff, mode)}
       >
         {level.position}
         {position.status !== "correct" && (
@@ -346,24 +350,13 @@ function LevelSearch({ mode, onChangeMode }) {
       )}
 
       {hasWon && (
-        <div className="level-search__win">
-          <img
-            className="level-search__win-image"
-            src={`/thumbnails/${answer.level_id}.webp`}
-            alt=""
-            aria-hidden="true"
-          />
-          <div className="level-search__win-body">
-            <p className="level-search__win-eyebrow">
-              <span aria-hidden="true">✦</span> Found in {guesses.length}{" "}
-              {guesses.length === 1 ? "guess" : "guesses"}
-            </p>
-            <p className="level-search__win-headline">{answer.name}</p>
-            {answer.description && (
-              <p className="level-search__win-description">{answer.description}</p>
-            )}
-          </div>
-        </div>
+        <GameResult
+          tone="win"
+          image={`/thumbnails/${answer.level_id}.webp`}
+          eyebrow={`Found in ${guesses.length} ${guesses.length === 1 ? "guess" : "guesses"}`}
+          headline={answer.name}
+          description={answer.description}
+        />
       )}
 
       {results.length > 0 && (
@@ -416,7 +409,7 @@ function LevelSearch({ mode, onChangeMode }) {
             .slice()
             .reverse()
             .map((level) => (
-              <GuessRow key={level.id} level={level} answer={answer} />
+              <GuessRow key={level.id} level={level} answer={answer} mode={mode} />
             ))}
         </div>
       )}

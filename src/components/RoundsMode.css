@@ -1,0 +1,184 @@
+.rounds-mode {
+  width: min(640px, 92vw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rounds-mode__prompt {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  margin-bottom: 1rem;
+}
+
+.rounds-mode__mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 1.5rem;
+  padding: 0.3em 0.85em;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+  background-color: transparent;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+}
+
+.rounds-mode__mode-toggle:hover {
+  color: var(--ink);
+  border-color: var(--hairline-strong);
+}
+
+.rounds-mode__round-counter {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--focus);
+  margin: 0 0 1rem;
+}
+
+.rounds-mode__bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.rounds-mode__input {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.65em 1em;
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: var(--ink);
+  background-color: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.rounds-mode__input:focus {
+  border-color: var(--focus);
+}
+
+.rounds-mode__input::placeholder {
+  color: var(--ink-faint);
+}
+
+.rounds-mode__dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 1.5rem;
+  padding: 6px;
+  background-color: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+}
+
+.rounds-mode__option {
+  padding: 0.5em 0.75em;
+  text-align: left;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background-color: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.rounds-mode__option:hover {
+  background-color: var(--surface-raised);
+  border-color: transparent;
+}
+
+.rounds-mode__hints {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 1.5rem;
+  padding: 12px;
+  background-color: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+  text-align: left;
+}
+
+.rounds-mode__hint {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  align-items: baseline;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.rounds-mode__hint:nth-child(odd) {
+  background-color: var(--surface-raised);
+}
+
+.rounds-mode__hint-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--ink-faint);
+}
+
+.rounds-mode__hint-value {
+  font-size: 0.9rem;
+  color: var(--ink);
+  overflow-wrap: break-word;
+}
+
+.rounds-mode__hint-value--locked {
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  color: var(--ink-faint);
+}
+
+.rounds-mode__guesses {
+  margin-top: 1.5rem;
+  padding: 12px;
+  text-align: left;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--hairline-strong);
+  border-radius: 10px;
+}
+
+.rounds-mode__guesses-title {
+  margin: 0 0 8px;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--focus);
+}
+
+.rounds-mode__guess-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.rounds-mode__guess-pill {
+  padding: 0.3em 0.7em;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  background-color: var(--surface);
+  border: 1px solid var(--hairline-strong);
+  text-decoration: line-through;
+  text-decoration-color: var(--feedback-wrong);
+}

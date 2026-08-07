@@ -20,6 +20,25 @@
   margin: 0 0 2rem;
 }
 
+.home__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 1.25rem;
+  padding: 0.3em 0.85em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ink-dim);
+  background-color: transparent;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+}
+
+.home__back:hover {
+  color: var(--ink);
+  border-color: var(--hairline-strong);
+}
+
 .home__modes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -103,6 +122,16 @@
 .mode-card__badge--hard {
   background-color: var(--feedback-wrong);
   color: var(--feedback-wrong-ink);
+}
+
+.mode-card__badge--classic {
+  background-color: var(--focus);
+  color: var(--void);
+}
+
+.mode-card__badge--rounds {
+  background-color: var(--feedback-close);
+  color: var(--feedback-close-ink);
 }
 
 .mode-card__count {
@@ -283,4 +312,50 @@
   background: linear-gradient(135deg, #ffb27a, var(--ar-orange) 55%, #a83000);
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Classic/Rounds backdrops: a plain icon with a soft glow behind it, lighter
+   weight than the Easy/Hard emblems above since this is a new gamemode axis,
+   not a reskin of the difficulty picker. */
+.mode-card--grid,
+.mode-card--layers {
+  background-color: var(--void);
+}
+
+.mode-card__icon-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.mode-card:hover .mode-card__icon-wrap,
+.mode-card:focus-visible .mode-card__icon-wrap {
+  transform: scale(1.05);
+}
+
+.mode-card__icon-glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+}
+
+.mode-card__icon-glow--classic {
+  background: radial-gradient(circle, rgba(185, 196, 214, 0.35) 0%, rgba(185, 196, 214, 0.08) 55%, transparent 74%);
+}
+
+.mode-card__icon-glow--rounds {
+  background: radial-gradient(circle, rgba(143, 124, 76, 0.4) 0%, rgba(143, 124, 76, 0.1) 55%, transparent 74%);
+}
+
+.mode-card__icon--classic {
+  color: var(--focus);
+}
+
+.mode-card__icon--rounds {
+  color: var(--feedback-close);
 }
