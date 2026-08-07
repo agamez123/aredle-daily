@@ -1,11 +1,5 @@
-import { LEVELS } from "../data/levels"
 import { EASY_MODE_LIMIT, MODE_POOLS } from "../data/modes"
 import "./Home.css"
-
-const HARD_PREVIEW =
-  LEVELS.find((level) => level.position === Math.round(LEVELS.length / 2)) ??
-  LEVELS[Math.floor(LEVELS.length / 2)]
-const EASY_PREVIEW = LEVELS.find((level) => level.position === 1) ?? LEVELS[0]
 
 const MODES = [
   {
@@ -14,7 +8,6 @@ const MODES = [
     tagline: "Pointercrate Top",
     count: EASY_MODE_LIMIT,
     description: "Only the demons everyone already knows.",
-    preview: EASY_PREVIEW,
     badgeClass: "mode-card__badge--easy",
   },
   {
@@ -23,10 +16,39 @@ const MODES = [
     tagline: "The Full AREDL",
     count: MODE_POOLS.hard.length,
     description: "Every level on the list, top to bottom.",
-    preview: HARD_PREVIEW,
     badgeClass: "mode-card__badge--hard",
   },
 ]
+
+// Decorative hex-emblem backdrop for Easy Mode — a nod to Pointercrate, whose
+// curated list this mode pulls from, instead of a level screenshot.
+function HexBackdrop() {
+  return (
+    <span className="mode-card__hex" aria-hidden="true">
+      <span className="mode-card__hex-ring mode-card__hex-ring--1-outer" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--1-inner" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--2-outer" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--2-inner" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--3-outer" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--3-inner" />
+      <span className="mode-card__hex-core" />
+    </span>
+  )
+}
+
+// Decorative horn-crest backdrop for Hard Mode — a nod to the devil horns
+// above the "A" in the AREDL wordmark, instead of a level screenshot.
+function HornBackdrop() {
+  return (
+    <span className="mode-card__horns" aria-hidden="true">
+      <span className="mode-card__halo-glow" />
+      <span className="mode-card__halo-ring" />
+      <span className="mode-card__horn mode-card__horn--left" />
+      <span className="mode-card__horn mode-card__horn--right" />
+      <span className="mode-card__horn-gem" />
+    </span>
+  )
+}
 
 function Home({ onSelectMode }) {
   return (
@@ -39,10 +61,10 @@ function Home({ onSelectMode }) {
           <button
             key={mode.key}
             type="button"
-            className="mode-card"
-            style={{ "--mode-image": `url(/thumbnails/${mode.preview.level_id}.webp)` }}
+            className={`mode-card mode-card--${mode.key === "easy" ? "hex" : "horns"}`}
             onClick={() => onSelectMode(mode.key)}
           >
+            {mode.key === "easy" ? <HexBackdrop /> : <HornBackdrop />}
             <span className={`mode-card__badge ${mode.badgeClass}`}>{mode.tagline}</span>
             <span className="mode-card__count">{mode.count.toLocaleString()}</span>
             <span className="mode-card__label">{mode.label}</span>
