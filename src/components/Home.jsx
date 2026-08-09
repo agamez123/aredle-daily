@@ -130,18 +130,20 @@ function Home({ onStart }) {
         <p className="home__prompt">Welcome to AREDLE!</p>
         <p className="home__subtitle">Pick a gamemode to start</p>
 
-        <div className="home__modes">
+        <div className="home__modes home__modes--row">
           {GAME_MODES.map((gm) => (
             <button
               key={gm.key}
               type="button"
-              className={`mode-card mode-card--${gm.key === "classic" ? "grid" : "layers"}`}
+              className={`mode-card mode-card--row mode-card--${gm.key === "classic" ? "grid" : "layers"}`}
               onClick={() => setPendingGameMode(gm.key)}
             >
               {gm.key === "classic" ? <GridBackdrop /> : <LayersBackdrop />}
-              <span className={`mode-card__badge ${gm.badgeClass}`}>{gm.tagline}</span>
-              <span className="mode-card__label">{gm.label}</span>
-              <span className="mode-card__description">{gm.description}</span>
+              <span className="mode-card__row-text">
+                <span className={`mode-card__badge ${gm.badgeClass}`}>{gm.tagline}</span>
+                <span className="mode-card__label">{gm.label}</span>
+                <span className="mode-card__description">{gm.description}</span>
+              </span>
             </button>
           ))}
         </div>
