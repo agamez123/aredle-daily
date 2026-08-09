@@ -1,5 +1,6 @@
 import { useRef, useState } from "react"
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 import Home from "./components/Home"
 import LevelSearch from "./components/LevelSearch"
 import RoundsMode from "./components/RoundsMode"
@@ -39,6 +40,7 @@ function App() {
           <Home onStart={changeScreen} />
         )}
       </div>
+      <Footer />
     </>
   )
 }
