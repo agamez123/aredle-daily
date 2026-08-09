@@ -5,6 +5,7 @@
   --surface-raised: #1d2025;
   --hairline: #2a2d33;
   --hairline-strong: #3a3e46;
+  --footline: #f5f6f8;
   --ink: #eceef1;
   --ink-dim: #8d919b;
   --ink-faint: #5a5e66;
@@ -80,10 +81,17 @@ body {
   background-color: var(--void);
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .app-content {
   position: relative;
   z-index: 1;
   display: flex;
+  flex: 1;
   justify-content: center;
   padding: clamp(2rem, 5vw, 4rem) 1rem 4rem;
   box-sizing: border-box;
