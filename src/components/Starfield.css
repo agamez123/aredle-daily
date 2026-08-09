@@ -6,7 +6,7 @@
   pointer-events: none;
   opacity: var(--starfield-opacity);
   transition: opacity 0.4s ease;
-  background: radial-gradient(ellipse at 50% -10%, #1a1d24 0%, var(--void) 55%);
+  background: var(--void);
 }
 
 .star {
