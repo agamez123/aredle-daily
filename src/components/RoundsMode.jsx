@@ -8,9 +8,9 @@ const MAX_ROUNDS = 6
 // Each row unlocks at a given stage (1-6). Tags and Version share stage 2 so
 // all 7 data points fit into exactly 6 rounds without doubling up elsewhere.
 const HINT_ROWS = [
-  { key: "description", label: "Description", stage: 1, value: (l) => l.description || "No description on record." },
-  { key: "tags", label: "Tags", stage: 2, value: (l) => (l.tags.length ? l.tags.join(", ") : "None") },
-  { key: "version", label: "Version", stage: 2, value: (l) => l.version },
+  { key: "tags", label: "Tags", stage: 1, value: (l) => (l.tags.length ? l.tags.join(", ") : "None") },
+  { key: "version", label: "Version", stage: 1, value: (l) => l.version },
+  { key: "description", label: "Description", stage: 2, value: (l) => l.description || "No description on record." },
   { key: "position", label: "Position", stage: 3, value: (l) => `#${l.position}` },
   { key: "creator", label: "Creator", stage: 4, value: (l) => l.creator },
   { key: "verifier", label: "Verifier", stage: 5, value: (l) => l.verifier },
