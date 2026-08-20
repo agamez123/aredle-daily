@@ -2030,5 +2030,37 @@
     "level_id": 129365037,
     "name": "tensor",
     "position": 1476
+  },
+  "7dd584da-369a-4bb8-86d3-68312926c102": {
+    "song": "ZUN - Border of Life",
+    "source": "songfilehub (NONG)",
+    "alt": "chillyborger - Yuyukos Theme (Remake)",
+    "level_id": 141052363,
+    "name": "Sacrifice",
+    "position": 38
+  },
+  "51200df7-7a51-455c-b2c8-25cc6f6f0114": {
+    "song": "Silentroom - Nhelv (Full Version, 2020 Remaster)",
+    "source": "songfilehub (NONG)",
+    "alt": "patrilily - 175.89 nhelv extension remix",
+    "level_id": 143718114,
+    "name": "NervHell",
+    "position": 53
+  },
+  "84924f0f-4cb6-4bd1-85f8-b2f379d92160": {
+    "song": "Charli xcx - House",
+    "source": "songfilehub (NONG)",
+    "alt": "Demonicity - Cyberware",
+    "level_id": 139176104,
+    "name": "Perfect Purgatory",
+    "position": 395
+  },
+  "c8011357-2895-4703-a832-dc65c4c011c7": {
+    "song": "Shahmen - Mark (EMR3YGUL Remix)",
+    "source": "both agree",
+    "alt": null,
+    "level_id": 136107494,
+    "name": "D4RK",
+    "position": 772
   }
 }
