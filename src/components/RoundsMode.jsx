@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { MODE_POOLS } from "../data/modes"
+import { dailyAnswer } from "../utils/daily"
 import WinModal from "./WinModal"
 import "./RoundsMode.css"
 
@@ -22,7 +23,7 @@ const HINT_ROWS = [
 function RoundsMode({ mode, onChangeMode }) {
   const levelPool = MODE_POOLS[mode] ?? MODE_POOLS.hard
 
-  const [answer] = useState(() => levelPool[Math.floor(Math.random() * levelPool.length)])
+  const [answer] = useState(() => dailyAnswer(levelPool, `rounds-${mode}`))
   const [query, setQuery] = useState("")
   const [guesses, setGuesses] = useState([])
   const [hasWon, setHasWon] = useState(false)
