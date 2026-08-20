@@ -1,5 +1,7 @@
 // Shared logic for the win/loss modal's shareable, Wordle-style result grid.
 
+import { puzzleNumber } from "./daily"
+
 const ATTRIBUTES = [
   { key: "position", label: "Position" },
   { key: "song", label: "Song" },
@@ -40,20 +42,12 @@ export function buildResultRows(wrongGuesses, answer, won) {
   return rows.map((guess) => guessStatuses(guess, answer))
 }
 
-// Cosmetic puzzle counter for the share text, not tied to level selection.
-const PUZZLE_EPOCH = Date.UTC(2024, 0, 1)
-const DAY_MS = 24 * 60 * 60 * 1000
-
-export function getPuzzleNumber() {
-  return Math.floor((Date.now() - PUZZLE_EPOCH) / DAY_MS)
-}
-
 export function buildShareText({ gameMode, difficulty, wrongGuesses, answer, won, maxRounds }) {
   const rows = buildResultRows(wrongGuesses, answer, won)
   const grid = rows.map((row) => row.map((cell) => statusEmoji(cell.status)).join("")).join("\n")
   const modeLabel = gameMode === "classic" ? "Classic" : "Rounds"
   const difficultyLabel = difficulty === "easy" ? "Easy" : "Hard"
-  const puzzleNumber = getPuzzleNumber().toLocaleString()
+  const puzzleNum = puzzleNumber().toLocaleString()
 
   const scoreLabel =
     gameMode === "rounds"
@@ -61,7 +55,7 @@ export function buildShareText({ gameMode, difficulty, wrongGuesses, answer, won
       : `${wrongGuesses.length + (won ? 1 : 0)} guesses`
 
   return [
-    `AREDLE ${modeLabel} #${puzzleNumber} ${scoreLabel} (${difficultyLabel})`,
+    `AREDLE ${modeLabel} #${puzzleNum} ${scoreLabel} (${difficultyLabel})`,
     "",
     grid,
     "",
