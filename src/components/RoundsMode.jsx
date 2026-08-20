@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react"
 import { MODE_POOLS } from "../data/modes"
 import { dailyAnswer } from "../utils/daily"
+import { useDailyProgress } from "../hooks/useDailyProgress"
 import WinModal from "./WinModal"
 import "./RoundsMode.css"
 
@@ -23,14 +24,16 @@ const HINT_ROWS = [
 function RoundsMode({ mode, onChangeMode }) {
   const levelPool = MODE_POOLS[mode] ?? MODE_POOLS.hard
 
-  const [answer] = useState(() => dailyAnswer(levelPool, `rounds-${mode}`))
+  const comboKey = `rounds-${mode}`
+  const [answer] = useState(() => dailyAnswer(levelPool, comboKey))
+  const { guesses, addGuess } = useDailyProgress(comboKey, levelPool)
   const [query, setQuery] = useState("")
-  const [guesses, setGuesses] = useState([])
-  const [hasWon, setHasWon] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
 
+  const hasWon = guesses.some((g) => g.id === answer.id)
   const hasLost = !hasWon && guesses.length >= MAX_ROUNDS
   const gameOver = hasWon || hasLost
+  const wrongGuesses = guesses.filter((g) => g.id !== answer.id)
 
   useEffect(() => {
     if (gameOver) setModalOpen(true)
@@ -49,11 +52,7 @@ function RoundsMode({ mode, onChangeMode }) {
   }, [query, guesses, gameOver, levelPool])
 
   function handleSelect(level) {
-    if (level.id === answer.id) {
-      setHasWon(true)
-    } else {
-      setGuesses((prev) => [...prev, level])
-    }
+    addGuess(level)
     setQuery("")
   }
 
@@ -148,11 +147,11 @@ function RoundsMode({ mode, onChangeMode }) {
         })}
       </div>
 
-      {guesses.length > 0 && (
+      {wrongGuesses.length > 0 && (
         <div className="rounds-mode__guesses">
           <p className="rounds-mode__guesses-title">Ruled Out</p>
           <div className="rounds-mode__guess-pills">
-            {guesses.map((level, i) => (
+            {wrongGuesses.map((level, i) => (
               <span key={level.id} className="rounds-mode__guess-pill">
                 <span className="rounds-mode__guess-pill-round">R{i + 1}</span>
                 <span className="rounds-mode__guess-pill-name">{level.name}</span>
@@ -175,7 +174,7 @@ function RoundsMode({ mode, onChangeMode }) {
         gameMode="rounds"
         difficulty={mode}
         answer={answer}
-        wrongGuesses={guesses}
+        wrongGuesses={wrongGuesses}
         maxRounds={MAX_ROUNDS}
         onGoHome={onChangeMode}
       />
