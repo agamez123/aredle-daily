@@ -12,6 +12,11 @@ const COLUMNS = [
   { key: "tags", label: "Tags" },
 ]
 
+// The guessing row is a fixed-height compact strip — cap visible tags so a
+// level with a long tag list still fits on one line instead of wrapping to
+// two and crowding the row edge-to-edge.
+const OPTION_TAG_LIMIT = 2
+
 const EMPTY_FILTERS = {
   positionMin: "",
   positionMax: "",
@@ -74,10 +79,11 @@ function GuessRow({ level, answer, mode }) {
   const song = exactStatus(level.song, answer.song)
   const creator = exactStatus(level.creator, answer.creator)
   const verifier = exactStatus(level.verifier, answer.verifier)
+  const isWin = level.id === answer.id
 
   return (
     <div
-      className="level-table__row level-table__row--guess"
+      className={`level-table__row level-table__row--guess${isWin ? " level-table__row--win" : ""}`}
       style={{ "--row-image": `url(/thumbnails/${level.level_id}.webp)` }}
     >
       <span className="level-table__cell level-table__cell--icon">
@@ -393,13 +399,22 @@ function LevelSearch({ mode, onChangeMode }) {
               <span className="level-table__cell level-table__cell--icon">
                 <span className="level-name">{level.name}</span>
               </span>
-              <span className="level-table__cell">{level.position}</span>
-              <span className="level-table__cell level-table__cell--wrap">{level.song}</span>
-              <span className="level-table__cell">{level.creator}</span>
-              <span className="level-table__cell">{level.verifier}</span>
-              <span className="level-table__cell">{level.version}</span>
+              <span className="level-table__cell level-table__cell--fill">{level.position}</span>
+              <span className="level-table__cell level-table__cell--fill level-table__cell--wrap">{level.song}</span>
+              <span className="level-table__cell level-table__cell--fill">{level.creator}</span>
+              <span className="level-table__cell level-table__cell--fill">{level.verifier}</span>
+              <span className="level-table__cell level-table__cell--fill">{level.version}</span>
               <span className="level-table__cell level-table__cell--tags">
-                {level.tags.join(", ")}
+                {level.tags.slice(0, OPTION_TAG_LIMIT).map((tag) => (
+                  <span key={tag} className="tag-pill tag-pill--neutral">
+                    {tag}
+                  </span>
+                ))}
+                {level.tags.length > OPTION_TAG_LIMIT && (
+                  <span className="tag-pill tag-pill--neutral">
+                    +{level.tags.length - OPTION_TAG_LIMIT}
+                  </span>
+                )}
               </span>
             </button>
           ))}
