@@ -20,23 +20,79 @@
   margin: 0 0 2rem;
 }
 
-.home__back {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 1.25rem;
-  padding: 0.3em 0.85em;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--ink-dim);
-  background-color: transparent;
-  border: 1px solid var(--hairline);
+.difficulty-toggle {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto 1.75rem;
+  padding: 4px;
+  border: 1px solid var(--hairline-strong);
   border-radius: 999px;
+  background-color: var(--surface-raised);
 }
 
-.home__back:hover {
+.difficulty-toggle__thumb {
+  position: absolute;
+  inset: 4px 50% 4px 4px;
+  border-radius: 999px;
+  background-color: var(--feedback-correct);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.difficulty-toggle__thumb--hard {
+  transform: translateX(100%);
+  background-color: var(--feedback-wrong);
+}
+
+.difficulty-toggle__option {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 0.45em 0.75em;
+  border-radius: 999px;
+  background: none;
+  border: none;
+  color: var(--ink-dim);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.difficulty-toggle__option:hover {
   color: var(--ink);
-  border-color: var(--hairline-strong);
+}
+
+.difficulty-toggle__option--active-easy {
+  color: var(--feedback-correct-ink);
+}
+
+.difficulty-toggle__option--active-hard {
+  color: var(--feedback-wrong-ink);
+}
+
+.difficulty-toggle__option--active-easy:hover {
+  color: var(--feedback-correct-ink);
+}
+
+.difficulty-toggle__option--active-hard:hover {
+  color: var(--feedback-wrong-ink);
+}
+
+.difficulty-toggle__label {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.difficulty-toggle__hint {
+  font-size: 0.66rem;
+  opacity: 0.85;
 }
 
 .home__modes {
@@ -120,16 +176,6 @@
   border: 1px solid transparent;
 }
 
-.mode-card__badge--easy {
-  background-color: var(--feedback-correct);
-  color: var(--feedback-correct-ink);
-}
-
-.mode-card__badge--hard {
-  background-color: var(--feedback-wrong);
-  color: var(--feedback-wrong-ink);
-}
-
 .mode-card__badge--classic {
   background-color: var(--focus);
   color: var(--void);
@@ -138,14 +184,6 @@
 .mode-card__badge--rounds {
   background-color: var(--feedback-close);
   color: var(--feedback-close-ink);
-}
-
-.mode-card__count {
-  font-family: var(--font-mono);
-  font-size: 2.6rem;
-  font-weight: 700;
-  line-height: 1;
-  color: #fff;
 }
 
 .mode-card__label {
@@ -210,165 +248,7 @@
   max-width: none;
 }
 
-/* Easy Mode's backdrop: a triple hex-ring emblem instead of a level screenshot,
-   nodding to Pointercrate (whose curated list this mode pulls from). Colors
-   lifted from pointercrate's own core.css / main.css. */
-.mode-card--hex {
-  --pc-blue: #0881c6;
-  --pc-blue-hover: #076696;
-  --pc-blue-click: #055075;
-  background-color: var(--void);
-}
-
-.mode-card__hex {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  transition: transform 0.3s ease;
-}
-
-.mode-card:hover .mode-card__hex,
-.mode-card:focus-visible .mode-card__hex {
-  transform: scale(1.05);
-}
-
-.mode-card__hex-ring,
-.mode-card__hex-core {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-}
-
-.mode-card__hex-ring--1-outer {
-  width: 340px;
-  height: 340px;
-  margin: -170px 0 0 -170px;
-  background: rgba(8, 129, 198, 0.14);
-  transform: rotate(6deg);
-}
-.mode-card__hex-ring--1-inner {
-  width: 326px;
-  height: 326px;
-  margin: -163px 0 0 -163px;
-  background: var(--void);
-  transform: rotate(6deg);
-}
-.mode-card__hex-ring--2-outer {
-  width: 272px;
-  height: 272px;
-  margin: -136px 0 0 -136px;
-  background: rgba(8, 129, 198, 0.26);
-  transform: rotate(-9deg);
-}
-.mode-card__hex-ring--2-inner {
-  width: 258px;
-  height: 258px;
-  margin: -129px 0 0 -129px;
-  background: var(--void);
-  transform: rotate(-9deg);
-}
-.mode-card__hex-ring--3-outer {
-  width: 206px;
-  height: 206px;
-  margin: -103px 0 0 -103px;
-  background: rgba(8, 129, 198, 0.4);
-  transform: rotate(11deg);
-}
-.mode-card__hex-ring--3-inner {
-  width: 192px;
-  height: 192px;
-  margin: -96px 0 0 -96px;
-  background: var(--void);
-  transform: rotate(11deg);
-}
-
-.mode-card__hex-core {
-  width: 128px;
-  height: 128px;
-  margin: -64px 0 0 -64px;
-  background: linear-gradient(135deg, var(--pc-blue), var(--pc-blue-click));
-  transform: rotate(-4deg);
-  box-shadow: inset 0 6px 16px rgba(255, 255, 255, 0.14), inset 0 -12px 20px rgba(0, 0, 0, 0.4);
-}
-
-/* Hard Mode's backdrop: a horned crest lit by a halo glow, echoing the little
-   devil horns above the "A" in the AREDL wordmark. Colors lifted from
-   aredl.net's own --primary / --accent custom properties. */
-.mode-card--horns {
-  --ar-orange: #ff6f00;
-  --ar-red: #d6280f;
-  background-color: var(--void);
-}
-
-.mode-card__horns {
-  position: absolute;
-  inset: 0;
-  z-index: -2;
-  transition: transform 0.3s ease;
-}
-
-.mode-card:hover .mode-card__horns,
-.mode-card:focus-visible .mode-card__horns {
-  transform: scale(1.05);
-}
-
-.mode-card__halo-glow {
-  position: absolute;
-  left: 50%;
-  top: 46%;
-  width: 224px;
-  height: 224px;
-  margin: -112px 0 0 -112px;
-  border-radius: 50%;
-}
-
-.mode-card__halo-ring {
-  position: absolute;
-  left: 50%;
-  top: 46%;
-  width: 192px;
-  height: 192px;
-  margin: -96px 0 0 -96px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255, 111, 0, 0.45);
-}
-
-.mode-card__horn {
-  position: absolute;
-  top: 26%;
-  width: 64px;
-  height: 168px;
-  background: linear-gradient(160deg, #ffb27a, var(--ar-red) 85%);
-  clip-path: polygon(46% 0%, 100% 100%, 0% 100%);
-  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.5));
-}
-
-.mode-card__horn--left {
-  left: 40%;
-  transform: translateX(-50%) rotate(-16deg);
-}
-
-.mode-card__horn--right {
-  left: 60%;
-  transform: translateX(-50%) rotate(16deg) scaleX(-1);
-}
-
-.mode-card__horn-gem {
-  position: absolute;
-  left: 50%;
-  top: 60%;
-  width: 50px;
-  height: 50px;
-  margin: -25px 0 0 -25px;
-  background: linear-gradient(135deg, #ffb27a, var(--ar-orange) 55%, #a83000);
-  clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-/* Classic/Rounds backdrops: a plain icon with a soft glow behind it, lighter
-   weight than the Easy/Hard emblems above since this is a new gamemode axis,
-   not a reskin of the difficulty picker. */
+/* Classic/Rounds backdrops: a plain icon with a soft glow behind it. */
 .mode-card--grid,
 .mode-card--layers {
   background-color: var(--void);

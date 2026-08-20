@@ -93,7 +93,7 @@ body {
   display: flex;
   flex: 1;
   justify-content: center;
-  padding: clamp(2rem, 5vw, 4rem) 1rem 4rem;
+  padding: clamp(2rem, 5vw, 4rem) 1rem calc(4rem + 96px);
   box-sizing: border-box;
   opacity: 1;
   transform: translateY(0);

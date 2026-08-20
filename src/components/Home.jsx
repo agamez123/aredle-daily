@@ -19,55 +19,6 @@ const GAME_MODES = [
   },
 ]
 
-const DIFFICULTIES = [
-  {
-    key: "easy",
-    label: "Easy Mode",
-    tagline: "Pointercrate Top",
-    count: EASY_MODE_LIMIT,
-    description: "Only the demons everyone already knows.",
-    badgeClass: "mode-card__badge--easy",
-  },
-  {
-    key: "hard",
-    label: "Hard Mode",
-    tagline: "The Full AREDL",
-    count: MODE_POOLS.hard.length,
-    description: "Every level on the list, top to bottom.",
-    badgeClass: "mode-card__badge--hard",
-  },
-]
-
-// Decorative hex-emblem backdrop for Easy Mode — a nod to Pointercrate, whose
-// curated list this mode pulls from, instead of a level screenshot.
-function HexBackdrop() {
-  return (
-    <span className="mode-card__hex" aria-hidden="true">
-      <span className="mode-card__hex-ring mode-card__hex-ring--1-outer" />
-      <span className="mode-card__hex-ring mode-card__hex-ring--1-inner" />
-      <span className="mode-card__hex-ring mode-card__hex-ring--2-outer" />
-      <span className="mode-card__hex-ring mode-card__hex-ring--2-inner" />
-      <span className="mode-card__hex-ring mode-card__hex-ring--3-outer" />
-      <span className="mode-card__hex-ring mode-card__hex-ring--3-inner" />
-      <span className="mode-card__hex-core" />
-    </span>
-  )
-}
-
-// Decorative horn-crest backdrop for Hard Mode — a nod to the devil horns
-// above the "A" in the AREDL wordmark, instead of a level screenshot.
-function HornBackdrop() {
-  return (
-    <span className="mode-card__horns" aria-hidden="true">
-      <span className="mode-card__halo-glow" />
-      <span className="mode-card__halo-ring" />
-      <span className="mode-card__horn mode-card__horn--left" />
-      <span className="mode-card__horn mode-card__horn--right" />
-      <span className="mode-card__horn-gem" />
-    </span>
-  )
-}
-
 // Classic Mode's backdrop: a 3x3 grid icon, echoing the column-by-column
 // grading grid that mode is built around.
 function GridBackdrop() {
@@ -122,56 +73,54 @@ function LayersBackdrop() {
 }
 
 function Home({ onStart }) {
-  const [pendingGameMode, setPendingGameMode] = useState(null)
-
-  if (pendingGameMode === null) {
-    return (
-      <div className="home">
-        <p className="home__prompt">Welcome to AREDLE!</p>
-        <p className="home__subtitle">Pick a gamemode to start</p>
-
-        <div className="home__modes home__modes--row">
-          {GAME_MODES.map((gm) => (
-            <button
-              key={gm.key}
-              type="button"
-              className={`mode-card mode-card--row mode-card--${gm.key === "classic" ? "grid" : "layers"}`}
-              onClick={() => setPendingGameMode(gm.key)}
-            >
-              {gm.key === "classic" ? <GridBackdrop /> : <LayersBackdrop />}
-              <span className="mode-card__row-text">
-                <span className={`mode-card__badge ${gm.badgeClass}`}>{gm.tagline}</span>
-                <span className="mode-card__label">{gm.label}</span>
-                <span className="mode-card__description">{gm.description}</span>
-              </span>
-            </button>
-          ))}
-        </div>
-      </div>
-    )
-  }
+  const [difficulty, setDifficulty] = useState("easy")
 
   return (
     <div className="home">
-      <button type="button" className="home__back" onClick={() => setPendingGameMode(null)}>
-        ← Back
-      </button>
       <p className="home__prompt">Welcome to AREDLE!</p>
-      <p className="home__subtitle">Pick a difficulty to start</p>
+      <p className="home__subtitle">Pick a difficulty, then a gamemode to start</p>
 
-      <div className="home__modes">
-        {DIFFICULTIES.map((d) => (
+      <div className="difficulty-toggle" role="tablist" aria-label="Difficulty">
+        <span
+          className={`difficulty-toggle__thumb${difficulty === "hard" ? " difficulty-toggle__thumb--hard" : ""}`}
+          aria-hidden="true"
+        />
+        <button
+          type="button"
+          role="tab"
+          aria-selected={difficulty === "easy"}
+          className={`difficulty-toggle__option${difficulty === "easy" ? " difficulty-toggle__option--active-easy" : ""}`}
+          onClick={() => setDifficulty("easy")}
+        >
+          <span className="difficulty-toggle__label">Easy Mode</span>
+          <span className="difficulty-toggle__hint">Pointercrate Top {EASY_MODE_LIMIT}</span>
+        </button>
+        <button
+          type="button"
+          role="tab"
+          aria-selected={difficulty === "hard"}
+          className={`difficulty-toggle__option${difficulty === "hard" ? " difficulty-toggle__option--active-hard" : ""}`}
+          onClick={() => setDifficulty("hard")}
+        >
+          <span className="difficulty-toggle__label">Hard Mode</span>
+          <span className="difficulty-toggle__hint">Full AREDL · {MODE_POOLS.hard.length}</span>
+        </button>
+      </div>
+
+      <div className="home__modes home__modes--row">
+        {GAME_MODES.map((gm) => (
           <button
-            key={d.key}
+            key={gm.key}
             type="button"
-            className={`mode-card mode-card--${d.key === "easy" ? "hex" : "horns"}`}
-            onClick={() => onStart(pendingGameMode, d.key)}
+            className={`mode-card mode-card--row mode-card--${gm.key === "classic" ? "grid" : "layers"}`}
+            onClick={() => onStart(gm.key, difficulty)}
           >
-            {d.key === "easy" ? <HexBackdrop /> : <HornBackdrop />}
-            <span className={`mode-card__badge ${d.badgeClass}`}>{d.tagline}</span>
-            <span className="mode-card__count">{d.count.toLocaleString()}</span>
-            <span className="mode-card__label">{d.label}</span>
-            <span className="mode-card__description">{d.description}</span>
+            {gm.key === "classic" ? <GridBackdrop /> : <LayersBackdrop />}
+            <span className="mode-card__row-text">
+              <span className={`mode-card__badge ${gm.badgeClass}`}>{gm.tagline}</span>
+              <span className="mode-card__label">{gm.label}</span>
+              <span className="mode-card__description">{gm.description}</span>
+            </span>
           </button>
         ))}
       </div>
