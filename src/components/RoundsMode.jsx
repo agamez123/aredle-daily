@@ -5,18 +5,21 @@ import "./RoundsMode.css"
 
 const MAX_ROUNDS = 6
 
-// Each row unlocks at a given stage (1-6). Tags and Version share stage 2 so
-// all 7 data points fit into exactly 6 rounds without doubling up elsewhere.
-// `mono` flags the columns that read as ledger figures (tabular monospace)
-// rather than prose, matching the Score Sheet treatment used in Classic mode.
+// Each row unlocks at a given stage (1-5); stage 6 unlocks nothing new, so
+// the final round is a last guess with every clue already on the table.
+// Description+Position, then Creator+Verifier, unlock in pairs so all 8
+// data points still clear by round 5. `mono` flags the columns that read as
+// ledger figures (tabular monospace) rather than prose, matching the Score
+// Sheet treatment used in Classic mode.
 const HINT_ROWS = [
   { key: "tags", label: "Tags", stage: 1, value: (l) => (l.tags.length ? l.tags.join(", ") : "None on record") },
   { key: "version", label: "Version", stage: 1, value: (l) => l.version, mono: true },
   { key: "description", label: "Description", stage: 2, value: (l) => l.description || "No description on record." },
-  { key: "position", label: "Position", stage: 3, value: (l) => `#${l.position}`, mono: true },
-  { key: "creator", label: "Creator", stage: 4, value: (l) => l.creator },
-  { key: "verifier", label: "Verifier", stage: 5, value: (l) => l.verifier },
-  { key: "song", label: "Song", stage: 6, value: (l) => l.song || "Unknown" },
+  { key: "position", label: "Position", stage: 2, value: (l) => `#${l.position}`, mono: true },
+  { key: "creator", label: "Creator", stage: 3, value: (l) => l.creator },
+  { key: "verifier", label: "Verifier", stage: 3, value: (l) => l.verifier },
+  { key: "song", label: "Song", stage: 4, value: (l) => l.song || "Unknown" },
+  { key: "thumbnail", label: "Thumbnail", stage: 5, value: (l) => `/thumbnails/${l.level_id}.webp` },
 ]
 
 function RoundsMode({ mode, onChangeMode }) {
@@ -135,6 +138,12 @@ function RoundsMode({ mode, onChangeMode }) {
                         {tag}
                       </span>
                     ))
+                  ) : row.key === "thumbnail" ? (
+                    <img
+                      className="rounds-mode__hint-thumb"
+                      src={row.value(answer)}
+                      alt={`${answer.name} thumbnail`}
+                    />
                   ) : (
                     row.value(answer)
                   )
