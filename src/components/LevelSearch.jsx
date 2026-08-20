@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react"
 import { MODE_POOLS } from "../data/modes"
 import { dailyAnswer } from "../utils/daily"
+import { useDailyProgress } from "../hooks/useDailyProgress"
 import WinModal from "./WinModal"
 import "./LevelSearch.css"
 
@@ -149,9 +150,10 @@ function LevelSearch({ mode, onChangeMode }) {
     [levelPool]
   )
 
-  const [answer] = useState(() => dailyAnswer(levelPool, `classic-${mode}`))
+  const comboKey = `classic-${mode}`
+  const [answer] = useState(() => dailyAnswer(levelPool, comboKey))
+  const { guesses, addGuess } = useDailyProgress(comboKey, levelPool)
   const [query, setQuery] = useState("")
-  const [guesses, setGuesses] = useState([])
   const [filtersOpen, setFiltersOpen] = useState(false)
   const [filters, setFilters] = useState(EMPTY_FILTERS)
   const [modalOpen, setModalOpen] = useState(false)
@@ -210,7 +212,7 @@ function LevelSearch({ mode, onChangeMode }) {
   }, [query, guesses, hasWon, filters, filtersActive, levelPool])
 
   function handleSelect(level) {
-    setGuesses((prev) => [...prev, level])
+    addGuess(level)
     setQuery("")
   }
 
