@@ -182,3 +182,19 @@
   text-decoration: line-through;
   text-decoration-color: var(--feedback-wrong);
 }
+
+.rounds-mode__view-results {
+  margin-top: 1.5rem;
+  padding: 0.4em 1em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--focus);
+  background-color: transparent;
+  border: 1px solid var(--focus);
+  border-radius: 999px;
+}
+
+.rounds-mode__view-results:hover {
+  color: var(--void);
+  background-color: var(--focus);
+}

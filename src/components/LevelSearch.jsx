@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { MODE_POOLS } from "../data/modes"
-import GameResult from "./GameResult"
+import WinModal from "./WinModal"
 import "./LevelSearch.css"
 
 const COLUMNS = [
@@ -147,8 +147,14 @@ function LevelSearch({ mode, onChangeMode }) {
   const [guesses, setGuesses] = useState([])
   const [filtersOpen, setFiltersOpen] = useState(false)
   const [filters, setFilters] = useState(EMPTY_FILTERS)
+  const [modalOpen, setModalOpen] = useState(false)
 
   const hasWon = guesses.some((g) => g.id === answer.id)
+  const wrongGuesses = guesses.filter((g) => g.id !== answer.id)
+
+  useEffect(() => {
+    if (hasWon) setModalOpen(true)
+  }, [hasWon])
   const filtersActive = hasActiveFilters(filters)
   const activeFilterCount =
     filters.tags.length +
@@ -349,15 +355,22 @@ function LevelSearch({ mode, onChangeMode }) {
         </div>
       )}
 
-      {hasWon && (
-        <GameResult
-          tone="win"
-          image={`/thumbnails/${answer.level_id}.webp`}
-          eyebrow={`Found in ${guesses.length} ${guesses.length === 1 ? "guess" : "guesses"}`}
-          headline={answer.name}
-          description={answer.description}
-        />
+      {hasWon && !modalOpen && (
+        <button type="button" className="level-search__view-results" onClick={() => setModalOpen(true)}>
+          View Results
+        </button>
       )}
+
+      <WinModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        tone="win"
+        gameMode="classic"
+        difficulty={mode}
+        answer={answer}
+        wrongGuesses={wrongGuesses}
+        onGoHome={onChangeMode}
+      />
 
       {results.length > 0 && (
         <div className="level-table">

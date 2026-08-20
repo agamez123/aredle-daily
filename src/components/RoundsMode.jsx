@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { MODE_POOLS } from "../data/modes"
-import GameResult from "./GameResult"
+import WinModal from "./WinModal"
 import "./RoundsMode.css"
 
 const MAX_ROUNDS = 6
@@ -24,9 +24,14 @@ function RoundsMode({ mode, onChangeMode }) {
   const [query, setQuery] = useState("")
   const [guesses, setGuesses] = useState([])
   const [hasWon, setHasWon] = useState(false)
+  const [modalOpen, setModalOpen] = useState(false)
 
   const hasLost = !hasWon && guesses.length >= MAX_ROUNDS
   const gameOver = hasWon || hasLost
+
+  useEffect(() => {
+    if (gameOver) setModalOpen(true)
+  }, [gameOver])
   const stageIndex = gameOver ? MAX_ROUNDS : Math.min(guesses.length + 1, MAX_ROUNDS)
   const roundNumber = Math.min(guesses.length + 1, MAX_ROUNDS)
 
@@ -123,26 +128,23 @@ function RoundsMode({ mode, onChangeMode }) {
         </div>
       )}
 
-      {hasWon && (
-        <GameResult
-          tone="win"
-          image={`/thumbnails/${answer.level_id}.webp`}
-          eyebrow={`Found in round ${roundNumber} of ${MAX_ROUNDS}`}
-          headline={answer.name}
-          description={answer.description}
-        />
+      {gameOver && !modalOpen && (
+        <button type="button" className="rounds-mode__view-results" onClick={() => setModalOpen(true)}>
+          View Results
+        </button>
       )}
 
-      {hasLost && (
-        <GameResult
-          tone="loss"
-          icon="✕"
-          image={`/thumbnails/${answer.level_id}.webp`}
-          eyebrow="Out of rounds"
-          headline={answer.name}
-          description={answer.description}
-        />
-      )}
+      <WinModal
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+        tone={hasWon ? "win" : "loss"}
+        gameMode="rounds"
+        difficulty={mode}
+        answer={answer}
+        wrongGuesses={guesses}
+        maxRounds={MAX_ROUNDS}
+        onGoHome={onChangeMode}
+      />
     </div>
   )
 }
