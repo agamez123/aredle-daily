@@ -234,6 +234,36 @@
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+.rounds-mode__hint-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1920 / 200;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Echoes the grayscale-to-color reveal WinModal uses for the final answer —
+   the same "photo developing" beat, here doubling as a mid-game clue. */
+.rounds-mode__hint-value--reveal .rounds-mode__hint-thumb {
+  animation: rounds-hint-thumb-reveal 0.9s ease-out;
+}
+
+@keyframes rounds-hint-thumb-reveal {
+  0% {
+    filter: grayscale(1) brightness(0.5);
+  }
+  100% {
+    filter: grayscale(0) brightness(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rounds-mode__hint-value--reveal .rounds-mode__hint-thumb {
+    animation: none;
+  }
+}
+
 .rounds-mode__sr-only {
   position: absolute;
   width: 1px;
