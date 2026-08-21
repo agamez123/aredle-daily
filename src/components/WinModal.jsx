@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { buildResultRows, buildShareText, statusEmoji } from "../utils/share"
+import { track } from "../utils/analytics"
 import "./WinModal.css"
 
 function WinModal({
@@ -36,6 +37,7 @@ function WinModal({
   const shareText = buildShareText({ gameMode, difficulty, wrongGuesses, answer, won, maxRounds })
 
   async function handleCopy() {
+    track("share_clicked", { comboKey: `${gameMode}-${difficulty}`, won })
     try {
       await navigator.clipboard.writeText(shareText)
       setCopied(true)
