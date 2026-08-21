@@ -1,11 +1,9 @@
 import { useEffect, useMemo, useState } from "react"
-import { MODE_POOLS } from "../data/modes"
+import { MODE_POOLS, ROUNDS_MAX_GUESSES as MAX_ROUNDS } from "../data/modes"
 import { dailyAnswer } from "../utils/daily"
 import { useDailyProgress } from "../hooks/useDailyProgress"
 import WinModal from "./WinModal"
 import "./RoundsMode.css"
-
-const MAX_ROUNDS = 6
 
 // Each row unlocks at a given stage (1-5); stage 6 unlocks nothing new, so
 // the final round is a last guess with every clue already on the table.
