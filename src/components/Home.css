@@ -248,6 +248,19 @@
   max-width: none;
 }
 
+.mode-card__complete {
+  flex: none;
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--feedback-correct);
+  color: var(--feedback-correct-ink);
+}
+
 /* Classic/Rounds backdrops: a plain icon with a soft glow behind it. */
 .mode-card--grid,
 .mode-card--layers {

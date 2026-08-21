@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { EASY_MODE_LIMIT, MODE_POOLS } from "../data/modes"
+import { isComboComplete } from "../utils/dailyCompletion"
 import "./Home.css"
 
 const GAME_MODES = [
@@ -43,6 +44,19 @@ function GridBackdrop() {
         <rect x="3" y="16" width="6" height="5" rx="1" />
         <rect x="9.5" y="16" width="6" height="5" rx="1" />
         <rect x="16" y="16" width="5" height="5" rx="1" />
+      </svg>
+    </span>
+  )
+}
+
+// Shown on a mode row once today's puzzle for the selected difficulty has
+// already been played — easy and hard track separately, so this reflects
+// whichever difficulty is currently toggled, not "completed at all today."
+function CompleteBadge() {
+  return (
+    <span className="mode-card__complete" role="img" aria-label="Completed today">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="20 6 9 17 4 12" />
       </svg>
     </span>
   )
@@ -121,6 +135,7 @@ function Home({ onStart }) {
               <span className="mode-card__label">{gm.label}</span>
               <span className="mode-card__description">{gm.description}</span>
             </span>
+            {isComboComplete(gm.key, difficulty) && <CompleteBadge />}
           </button>
         ))}
       </div>
