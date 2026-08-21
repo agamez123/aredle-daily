@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { MODE_POOLS } from "../data/modes"
 import { dailyAnswer } from "../utils/daily"
 import { useDailyProgress } from "../hooks/useDailyProgress"
+import { track } from "../utils/analytics"
 import WinModal from "./WinModal"
 import "./LevelSearch.css"
 
@@ -161,9 +162,26 @@ function LevelSearch({ mode, onChangeMode }) {
   const hasWon = guesses.some((g) => g.id === answer.id)
   const wrongGuesses = guesses.filter((g) => g.id !== answer.id)
 
+  // Captured once, at mount, from whatever useDailyProgress hydrated — lets
+  // the analytics effects below tell "resumed into an already-finished
+  // game" apart from "actually won just now," so reopening a completed
+  // combo doesn't recount a win that already happened.
+  const startedFresh = useRef(guesses.length === 0)
+  const wasAlreadyWon = useRef(hasWon)
+
   useEffect(() => {
     if (hasWon) setModalOpen(true)
   }, [hasWon])
+
+  useEffect(() => {
+    if (startedFresh.current) track("game_started", { comboKey })
+  }, [comboKey])
+
+  useEffect(() => {
+    if (!wasAlreadyWon.current && hasWon) {
+      track("game_won", { comboKey, guesses: guesses.length })
+    }
+  }, [hasWon, comboKey, guesses])
   const filtersActive = hasActiveFilters(filters)
   const activeFilterCount =
     filters.tags.length +
@@ -212,6 +230,7 @@ function LevelSearch({ mode, onChangeMode }) {
   }, [query, guesses, hasWon, filters, filtersActive, levelPool])
 
   function handleSelect(level) {
+    track("guess_made", { comboKey, guessNumber: guesses.length + 1, correct: level.id === answer.id })
     addGuess(level)
     setQuery("")
   }
