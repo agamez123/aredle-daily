@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { EASY_MODE_LIMIT, MODE_POOLS } from "../data/modes"
 import { isComboComplete } from "../utils/dailyCompletion"
+import { track } from "../utils/analytics"
 import "./Home.css"
 
 const GAME_MODES = [
@@ -127,7 +128,10 @@ function Home({ onStart }) {
             key={gm.key}
             type="button"
             className={`mode-card mode-card--row mode-card--${gm.key === "classic" ? "grid" : "layers"}`}
-            onClick={() => onStart(gm.key, difficulty)}
+            onClick={() => {
+              track("mode_selected", { gameMode: gm.key, difficulty })
+              onStart(gm.key, difficulty)
+            }}
           >
             {gm.key === "classic" ? <GridBackdrop /> : <LayersBackdrop />}
             <span className="mode-card__row-text">

@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { MODE_POOLS, ROUNDS_MAX_GUESSES as MAX_ROUNDS } from "../data/modes"
 import { dailyAnswer } from "../utils/daily"
 import { useDailyProgress } from "../hooks/useDailyProgress"
+import { track } from "../utils/analytics"
 import WinModal from "./WinModal"
 import "./RoundsMode.css"
 
@@ -36,9 +37,25 @@ function RoundsMode({ mode, onChangeMode }) {
   const gameOver = hasWon || hasLost
   const wrongGuesses = guesses.filter((g) => g.id !== answer.id)
 
+  // Captured once, at mount, from whatever useDailyProgress hydrated — lets
+  // the analytics effects below tell "resumed into an already-finished
+  // game" apart from "actually finished just now," so reopening a completed
+  // combo doesn't recount a win/loss that already happened.
+  const startedFresh = useRef(guesses.length === 0)
+  const wasAlreadyOver = useRef(gameOver)
+
   useEffect(() => {
     if (gameOver) setModalOpen(true)
   }, [gameOver])
+
+  useEffect(() => {
+    if (startedFresh.current) track("game_started", { comboKey })
+  }, [comboKey])
+
+  useEffect(() => {
+    if (wasAlreadyOver.current || !gameOver) return
+    track(hasWon ? "game_won" : "game_lost", { comboKey, guesses: guesses.length })
+  }, [gameOver, hasWon, comboKey, guesses])
   const stageIndex = gameOver ? MAX_ROUNDS : Math.min(guesses.length + 1, MAX_ROUNDS)
   const roundNumber = Math.min(guesses.length + 1, MAX_ROUNDS)
 
@@ -53,6 +70,7 @@ function RoundsMode({ mode, onChangeMode }) {
   }, [query, guesses, gameOver, levelPool])
 
   function handleSelect(level) {
+    track("guess_made", { comboKey, guessNumber: guesses.length + 1, correct: level.id === answer.id })
     addGuess(level)
     setQuery("")
   }
