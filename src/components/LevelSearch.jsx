@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import { MODE_POOLS } from "../data/modes"
-import { dailyAnswer } from "../utils/daily"
+import { dailyAnswer, todayUTC } from "../utils/daily"
 import { useDailyProgress } from "../hooks/useDailyProgress"
+import { recordResult } from "../utils/statsStorage"
 import { track } from "../utils/analytics"
 import WinModal from "./WinModal"
 import "./LevelSearch.css"
@@ -181,6 +182,14 @@ function LevelSearch({ mode, onChangeMode }) {
     if (!wasAlreadyWon.current && hasWon) {
       track("game_won", { comboKey, guesses: guesses.length })
     }
+  }, [hasWon, comboKey, guesses])
+
+  // Classic has no loss state — you either solve it or the day passes
+  // unrecorded — so a Classic entry is always a win. Runs on resume too;
+  // the write is idempotent.
+  useEffect(() => {
+    if (!hasWon) return
+    recordResult(comboKey, todayUTC(), { won: true, guesses: guesses.length })
   }, [hasWon, comboKey, guesses])
   const filtersActive = hasActiveFilters(filters)
   const activeFilterCount =
