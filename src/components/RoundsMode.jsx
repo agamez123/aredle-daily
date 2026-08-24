@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import { MODE_POOLS, ROUNDS_MAX_GUESSES as MAX_ROUNDS } from "../data/modes"
-import { dailyAnswer } from "../utils/daily"
+import { dailyAnswer, todayUTC } from "../utils/daily"
 import { useDailyProgress } from "../hooks/useDailyProgress"
+import { recordResult } from "../utils/statsStorage"
 import { track } from "../utils/analytics"
 import WinModal from "./WinModal"
 import "./RoundsMode.css"
@@ -55,6 +56,14 @@ function RoundsMode({ mode, onChangeMode }) {
   useEffect(() => {
     if (wasAlreadyOver.current || !gameOver) return
     track(hasWon ? "game_won" : "game_lost", { comboKey, guesses: guesses.length })
+  }, [gameOver, hasWon, comboKey, guesses])
+
+  // Unlike the analytics effect above this one runs on resume too: the
+  // write is idempotent, so re-recording a finished day is free and it
+  // backfills a result that was played before stats existed.
+  useEffect(() => {
+    if (!gameOver) return
+    recordResult(comboKey, todayUTC(), { won: hasWon, guesses: guesses.length })
   }, [gameOver, hasWon, comboKey, guesses])
   const stageIndex = gameOver ? MAX_ROUNDS : Math.min(guesses.length + 1, MAX_ROUNDS)
   const roundNumber = Math.min(guesses.length + 1, MAX_ROUNDS)

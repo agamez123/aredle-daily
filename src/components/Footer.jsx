@@ -11,7 +11,6 @@ function Footer() {
             <span className="site-footer__line-mask site-footer__line-mask--cube" aria-hidden="true" />
             <span className="site-footer__spike" aria-hidden="true" />
             <span className="site-footer__line-mask site-footer__line-mask--spike" aria-hidden="true" />
-            <span>yo</span>
         </footer>
     )
 }
