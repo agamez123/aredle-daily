@@ -40,9 +40,9 @@ function HowToPlay() {
   return (
     <div className="howto">
       <p className="howto__lede">
-        One AREDL level is chosen per day. Everyone gets the same level, and it
-        resets at midnight UTC. Pick a difficulty, then a mode — each of the four
-        combinations has its own puzzle and its own stats.
+        One AREDL level per day, the same one for everybody, reset at midnight
+        UTC. Pick a difficulty, then a mode. All four run separately, each
+        with its own puzzle and stats.
       </p>
 
       <section className="howto__section">
@@ -51,8 +51,8 @@ function HowToPlay() {
           <div className="howto__card">
             <span className="howto__card-title">Easy</span>
             <p>
-              Only the top {EASY_MODE_LIMIT} — the Pointercrate-equivalent slice
-              of the list. Levels you’ve probably heard of.
+              Only the top {EASY_MODE_LIMIT}, the Pointercrate-equivalent slice
+              of the list. Levels most people know.
             </p>
           </div>
           <div className="howto__card">
@@ -68,23 +68,23 @@ function HowToPlay() {
       <section className="howto__section">
         <h3 className="howto__heading">Classic Mode</h3>
         <p className="howto__body">
-          Unlimited guesses. Every guess is graded as a row across six columns —
-          position, song, creator, verifier, version and tags — so each one
-          narrows the field. Use the filter panel to search by those same
-          attributes once you’ve ruled things out.
+          Unlimited guesses. Each guess fills a row of six columns: position,
+          song, creator, verifier, version and tags. Every column you light up
+          rules out more of the list. The filter panel searches on those same
+          six attributes.
         </p>
         <ul className="howto__legend">
           <li>
-            <span className="legend-swatch legend-swatch--correct" /> Green — that
+            <span className="legend-swatch legend-swatch--correct" /> Green. The
             column matches exactly.
           </li>
           <li>
             <span className="legend-swatch legend-swatch--close" /> Amber with an
-            arrow — close, and the arrow points toward the answer.
+            arrow. Close, and the arrow points toward the answer.
           </li>
           <li>
-            <span className="legend-swatch legend-swatch--wrong" /> Red — no
-            match. Position fades green→red by how far off you are.
+            <span className="legend-swatch legend-swatch--wrong" /> Red. No
+            match. Position fades from green to red as you get further off.
           </li>
         </ul>
       </section>
@@ -92,10 +92,9 @@ function HowToPlay() {
       <section className="howto__section">
         <h3 className="howto__heading">Rounds Mode</h3>
         <p className="howto__body">
-          {ROUNDS_MAX_GUESSES} guesses, and that’s it. You start with almost
-          nothing; every wrong guess unlocks another clue about the level, so the
-          longer you hold out the more you know — and the fewer chances you have
-          left to use it.
+          {ROUNDS_MAX_GUESSES} guesses, no more. You start with almost nothing.
+          Every wrong guess unlocks another clue. Hold out longer and you'll
+          know more, but you'll have fewer guesses left to act on it.
         </p>
         <ol className="howto__rounds">
           <li><span className="howto__round-badge">R1</span> Tags and version</li>
