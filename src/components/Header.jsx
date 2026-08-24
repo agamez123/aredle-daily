@@ -1,5 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Modal from "./Modal"
+import { EASY_MODE_LIMIT, MODE_POOLS, ROUNDS_MAX_GUESSES } from "../data/modes"
+import { todayUTC } from "../utils/daily"
+import { clearAllData, loadStats } from "../utils/statsStorage"
 import "./Header.css"
 
 function HelpIcon() {
@@ -28,6 +31,223 @@ function SettingsIcon() {
       <circle cx="12" cy="12" r="3" />
       <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
     </svg>
+  )
+}
+
+// ---------------------------------------------------------------- How to Play
+
+function HowToPlay() {
+  return (
+    <div className="howto">
+      <p className="howto__lede">
+        One AREDL level per day, the same one for everybody, reset at midnight
+        UTC. Pick a difficulty, then a mode. All four run separately, each
+        with its own puzzle and stats.
+      </p>
+
+      <section className="howto__section">
+        <h3 className="howto__heading">Difficulty</h3>
+        <div className="howto__split">
+          <div className="howto__card">
+            <span className="howto__card-title">Easy</span>
+            <p>
+              Only the top {EASY_MODE_LIMIT}, the Pointercrate-equivalent slice
+              of the list. Levels most people know.
+            </p>
+          </div>
+          <div className="howto__card">
+            <span className="howto__card-title">Hard</span>
+            <p>
+              The full AREDL, all {MODE_POOLS.hard.length} levels. Deep cuts
+              included.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="howto__section">
+        <h3 className="howto__heading">Classic Mode</h3>
+        <p className="howto__body">
+          Unlimited guesses. Each guess fills a row of six columns: position,
+          song, creator, verifier, version and tags. Every column you light up
+          rules out more of the list. The filter panel searches on those same
+          six attributes.
+        </p>
+        <ul className="howto__legend">
+          <li>
+            <span className="legend-swatch legend-swatch--correct" /> Green. The
+            column matches exactly.
+          </li>
+          <li>
+            <span className="legend-swatch legend-swatch--close" /> Amber with an
+            arrow. Close, and the arrow points toward the answer.
+          </li>
+          <li>
+            <span className="legend-swatch legend-swatch--wrong" /> Red. No
+            match. Position fades from green to red as you get further off.
+          </li>
+        </ul>
+      </section>
+
+      <section className="howto__section">
+        <h3 className="howto__heading">Rounds Mode</h3>
+        <p className="howto__body">
+          {ROUNDS_MAX_GUESSES} guesses, no more. You start with almost nothing.
+          Every wrong guess unlocks another clue. Hold out longer and you'll
+          know more, but you'll have fewer guesses left to act on it.
+        </p>
+        <ol className="howto__rounds">
+          <li><span className="howto__round-badge">R1</span> Tags and version</li>
+          <li><span className="howto__round-badge">R2</span> Description and position</li>
+          <li><span className="howto__round-badge">R3</span> Creator and verifier</li>
+          <li><span className="howto__round-badge">R4</span> Song</li>
+          <li><span className="howto__round-badge">R5</span> Thumbnail</li>
+          <li><span className="howto__round-badge">R6</span> Last guess, everything on the table</li>
+        </ol>
+      </section>
+    </div>
+  )
+}
+
+// ------------------------------------------------------------------- Statistics
+
+function StatTile({ value, label }) {
+  return (
+    <div className="stats-grid__item">
+      <strong>{value}</strong>
+      <span>{label}</span>
+    </div>
+  )
+}
+
+// Rounds is capped at ROUNDS_MAX_GUESSES, so its win-by-round spread fits a
+// fixed set of bars. Classic is unbounded and gets average/best figures
+// instead of a chart that would need open-ended buckets.
+function GuessDistribution({ distribution }) {
+  const rounds = Array.from({ length: ROUNDS_MAX_GUESSES }, (_, i) => i + 1)
+  const peak = Math.max(1, ...rounds.map((round) => distribution[round] ?? 0))
+
+  return (
+    <div className="stats-dist">
+      <p className="stats-dist__title">Wins by round</p>
+      {rounds.map((round) => {
+        const count = distribution[round] ?? 0
+        return (
+          <div key={round} className="stats-dist__row">
+            <span className="stats-dist__round">{round}</span>
+            <span className="stats-dist__track">
+              <span
+                className={`stats-dist__bar${count ? "" : " stats-dist__bar--empty"}`}
+                style={{ width: `${(count / peak) * 100}%` }}
+              />
+            </span>
+            <span className="stats-dist__count">{count}</span>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+function Statistics() {
+  const [difficulty, setDifficulty] = useState("easy")
+  const today = todayUTC()
+
+  const classic = loadStats(`classic-${difficulty}`, today)
+  const rounds = loadStats(`rounds-${difficulty}`, today)
+  const nothingPlayed = classic.played === 0 && rounds.played === 0
+
+  return (
+    <div className="stats">
+      <div className="stats__tabs" role="tablist" aria-label="Difficulty">
+        {["easy", "hard"].map((key) => (
+          <button
+            key={key}
+            type="button"
+            role="tab"
+            aria-selected={difficulty === key}
+            className={`stats__tab${difficulty === key ? " stats__tab--active" : ""}`}
+            onClick={() => setDifficulty(key)}
+          >
+            {key === "easy" ? "Easy" : "Hard"}
+          </button>
+        ))}
+      </div>
+
+      {nothingPlayed && (
+        <p className="modal-note stats__empty">
+          No finished {difficulty === "easy" ? "Easy" : "Hard"} games yet. Play
+          one and it’ll show up here.
+        </p>
+      )}
+
+      <section className="stats__section">
+        <h3 className="stats__heading">Classic</h3>
+        <div className="stats-grid">
+          <StatTile value={classic.played} label="Solved" />
+          <StatTile value={classic.streak} label="Streak" />
+          <StatTile value={classic.maxStreak} label="Max Streak" />
+          <StatTile
+            value={classic.avgGuesses ? classic.avgGuesses.toFixed(1) : "—"}
+            label="Avg Guesses"
+          />
+        </div>
+        <p className="stats__footnote">
+          {classic.bestGuesses
+            ? `Best solve: ${classic.bestGuesses} ${classic.bestGuesses === 1 ? "guess" : "guesses"}.`
+            : "Classic has unlimited guesses, so there’s no losing — a day only counts once you solve it."}
+        </p>
+      </section>
+
+      <section className="stats__section">
+        <h3 className="stats__heading">Rounds</h3>
+        <div className="stats-grid">
+          <StatTile value={rounds.played} label="Played" />
+          <StatTile value={`${rounds.winRate}%`} label="Win Rate" />
+          <StatTile value={rounds.streak} label="Streak" />
+          <StatTile value={rounds.maxStreak} label="Max Streak" />
+        </div>
+        <GuessDistribution distribution={rounds.distribution} />
+      </section>
+    </div>
+  )
+}
+
+// --------------------------------------------------------------------- Settings
+
+function DangerZone() {
+  const [confirming, setConfirming] = useState(false)
+
+  // Arming the button is undone by anything else the user does — a stray
+  // click shouldn't leave a live wipe button sitting there.
+  useEffect(() => {
+    if (!confirming) return
+    const timer = setTimeout(() => setConfirming(false), 5000)
+    return () => clearTimeout(timer)
+  }, [confirming])
+
+  function handleClear() {
+    clearAllData()
+    // Reload rather than trying to reset every in-memory game: a mounted
+    // board would just write today's guesses straight back out.
+    window.location.reload()
+  }
+
+  return (
+    <section className="danger-zone">
+      <h3 className="danger-zone__heading">Danger Zone</h3>
+      <p className="danger-zone__body">
+        Erases every statistic and today’s progress in all four mode
+        combinations. This can’t be undone.
+      </p>
+      <button
+        type="button"
+        className={`danger-zone__btn${confirming ? " danger-zone__btn--armed" : ""}`}
+        onClick={() => (confirming ? handleClear() : setConfirming(true))}
+      >
+        {confirming ? "Tap again to erase everything" : "Clear stats & data"}
+      </button>
+    </section>
   )
 }
 
@@ -64,7 +284,7 @@ function Header({ gameMode, difficulty, onGoHome }) {
         <div className="site-header__icons">
           <button
             className="site-header__icon-btn"
-            aria-label="Help"
+            aria-label="How to play"
             onClick={() => setOpenModal("help")}
           >
             <HelpIcon />
@@ -87,40 +307,13 @@ function Header({ gameMode, difficulty, onGoHome }) {
       </header>
 
       <Modal open={openModal === "help"} title="How to Play" onClose={() => setOpenModal(null)}>
-        <p>Guess today's AREDL level. Each guess reveals how close you were:</p>
-        <ul>
-          <li>
-            <span className="legend-swatch legend-swatch--correct" /> Lit — that column matches the answer.
-          </li>
-          <li>
-            <span className="legend-swatch legend-swatch--close" /> Amber with an arrow — close, the arrow points toward the answer.
-          </li>
-          <li>
-            <span className="legend-swatch legend-swatch--wrong" /> Dim — no match.
-          </li>
-        </ul>
+        <HowToPlay />
       </Modal>
 
+      {/* Remounted per open so the tiles re-read localStorage — a game
+          finished since the last open shows up without a refresh. */}
       <Modal open={openModal === "stats"} title="Statistics" onClose={() => setOpenModal(null)}>
-        <div className="stats-grid">
-          <div className="stats-grid__item">
-            <strong>12</strong>
-            <span>Played</span>
-          </div>
-          <div className="stats-grid__item">
-            <strong>92</strong>
-            <span>Win %</span>
-          </div>
-          <div className="stats-grid__item">
-            <strong>4</strong>
-            <span>Streak</span>
-          </div>
-          <div className="stats-grid__item">
-            <strong>7</strong>
-            <span>Max Streak</span>
-          </div>
-        </div>
-        <p className="modal-note">Dummy data for now — real stats coming soon.</p>
+        <Statistics />
       </Modal>
 
       <Modal open={openModal === "settings"} title="Settings" onClose={() => setOpenModal(null)}>
@@ -135,6 +328,7 @@ function Header({ gameMode, difficulty, onGoHome }) {
             <span className={`theme-toggle__thumb ${theme === "dark" ? "theme-toggle__thumb--on" : ""}`} />
           </button>
         </div>
+        <DangerZone />
       </Modal>
     </>
   )
