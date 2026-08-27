@@ -414,7 +414,7 @@
 .home__cadence {
   display: inline-flex;
   padding: 3px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
   background-color: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: 999px;
@@ -441,10 +441,4 @@
 .home__cadence-option--active {
   color: var(--void);
   background-color: var(--focus);
-}
-
-.home__cadence-note {
-  margin: 0 0 1.5rem;
-  font-size: 0.78rem;
-  color: var(--ink-faint);
 }

@@ -17,7 +17,15 @@ export function readStats(gameMode, difficulty) {
 // Recorded exactly once per puzzle, guarded by `lastDay`: the result screen
 // re-renders (and re-mounts on refresh) long after the game ended, and without
 // the guard every one of those would count as another play.
-export function recordResult({ gameMode, difficulty, dayIndex, won, guessCount }) {
+//
+// Unlimited results are never recorded. Streaks and the distribution are only
+// meaningful for the one puzzle a day everyone shares, and an unlimited run is
+// rerollable, so counting it would let anyone farm a win rate. Callers are
+// expected to check too, but the rule lives here so no future caller can skip
+// it by forgetting.
+export function recordResult({ gameMode, difficulty, dayIndex, won, guessCount, isDaily = true }) {
+  if (!isDaily) return readStats(gameMode, difficulty)
+
   const stats = readStats(gameMode, difficulty)
   if (stats.lastDay === dayIndex) return stats
 

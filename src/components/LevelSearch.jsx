@@ -1,11 +1,10 @@
 import { useMemo, useState } from "react"
 import { useGuessGame } from "../hooks/useGuessGame"
 import { gradeGuess, positionGradientStyle } from "../lib/grade"
+import { maxGuessesFor } from "../lib/guessLimits"
 import GameOver from "./GameOver"
 import LevelAutocomplete from "./LevelAutocomplete"
 import "./LevelSearch.css"
-
-export const MAX_GUESSES = 8
 
 const COLUMNS = [
   { key: "position", label: "Position" },
@@ -148,11 +147,12 @@ function ColumnHeader() {
 }
 
 function LevelSearch({ pool, difficulty, isDaily, onChangeMode, onOpenStats }) {
+  const maxGuesses = maxGuessesFor(difficulty)
   const game = useGuessGame({
     pool,
     gameMode: "classic",
     difficulty,
-    maxGuesses: MAX_GUESSES,
+    maxGuesses,
     isDaily,
   })
   const { answer, guesses, guessedIds, gameOver, won, remaining } = game
@@ -382,7 +382,7 @@ function LevelSearch({ pool, difficulty, isDaily, onChangeMode, onOpenStats }) {
           gameMode="classic"
           difficulty={difficulty}
           dayIndex={game.dayIndex}
-          maxGuesses={MAX_GUESSES}
+          maxGuesses={maxGuesses}
           isDaily={isDaily}
           onNewGame={game.newGame}
           onOpenStats={onOpenStats}

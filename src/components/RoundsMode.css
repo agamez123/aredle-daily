@@ -179,11 +179,17 @@
 
 /* Thumbnail reveal. The image is scaled up in step with the blur so the
    softened edges stay outside the frame instead of showing a pale halo. */
+/* Thumbnails are 1920x200 banners. Showing one whole is a very wide, thin
+   strip, so the frame crops to 4/1 and takes the centre of the image instead.
+   It still breaks out of the 640px column to get some width: the negative
+   margins are the standard full-bleed trick, since percentage margins resolve
+   against the parent, so `50% - width / 2` keeps it centred as it overhangs. */
 .rounds-mode__thumb-frame {
+  --thumb-width: min(1100px, 92vw);
   position: relative;
-  width: min(420px, 100%);
-  margin: 0 auto 1.5rem;
-  aspect-ratio: 16 / 9;
+  width: var(--thumb-width);
+  margin: 0 calc(50% - var(--thumb-width) / 2) 1.5rem;
+  aspect-ratio: 4 / 1;
   overflow: hidden;
   border: 1px solid var(--hairline-strong);
   border-radius: 10px;
@@ -194,6 +200,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: filter 0.45s ease, transform 0.45s ease;
 }

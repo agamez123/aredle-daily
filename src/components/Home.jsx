@@ -25,14 +25,12 @@ const DIFFICULTIES = [
     key: "easy",
     label: "Easy Mode",
     tagline: "Pointercrate Top",
-    description: "Only the demons everyone already knows.",
     badgeClass: "mode-card__badge--easy",
   },
   {
     key: "hard",
     label: "Hard Mode",
     tagline: "The Full AREDL",
-    description: "Every level on the list, top to bottom.",
     badgeClass: "mode-card__badge--hard",
   },
 ]
@@ -186,11 +184,6 @@ function Home({ onStart, pools }) {
           Unlimited
         </button>
       </div>
-      <p className="home__cadence-note">
-        {isDaily
-          ? "One puzzle per board per day. Progress and streaks are saved."
-          : "Endless random levels. Nothing is saved and stats aren't counted."}
-      </p>
 
       <div className="home__modes">
         {DIFFICULTIES.map((d) => (
@@ -206,7 +199,6 @@ function Home({ onStart, pools }) {
               {counts[d.key] === null ? "—" : counts[d.key].toLocaleString()}
             </span>
             <span className="mode-card__label">{d.label}</span>
-            <span className="mode-card__description">{d.description}</span>
           </button>
         ))}
       </div>
