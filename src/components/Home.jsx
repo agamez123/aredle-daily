@@ -1,7 +1,6 @@
 import { useState } from "react"
-import { EASY_MODE_LIMIT, MODE_POOLS } from "../data/modes"
-import { isComboComplete } from "../utils/dailyCompletion"
-import { track } from "../utils/analytics"
+import { EASY_MODE_LIMIT } from "../data/modes"
+import { getDayIndex, getPuzzleNumber } from "../lib/daily"
 import "./Home.css"
 
 const GAME_MODES = [
@@ -20,6 +19,51 @@ const GAME_MODES = [
     badgeClass: "mode-card__badge--rounds",
   },
 ]
+
+const DIFFICULTIES = [
+  {
+    key: "easy",
+    label: "Easy Mode",
+    tagline: "Pointercrate Top",
+    badgeClass: "mode-card__badge--easy",
+  },
+  {
+    key: "hard",
+    label: "Hard Mode",
+    tagline: "The Full AREDL",
+    badgeClass: "mode-card__badge--hard",
+  },
+]
+
+// Decorative hex-emblem backdrop for Easy Mode — a nod to Pointercrate, whose
+// curated list this mode pulls from, instead of a level screenshot.
+function HexBackdrop() {
+  return (
+    <span className="mode-card__hex" aria-hidden="true">
+      <span className="mode-card__hex-ring mode-card__hex-ring--1-outer" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--1-inner" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--2-outer" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--2-inner" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--3-outer" />
+      <span className="mode-card__hex-ring mode-card__hex-ring--3-inner" />
+      <span className="mode-card__hex-core" />
+    </span>
+  )
+}
+
+// Decorative horn-crest backdrop for Hard Mode — a nod to the devil horns
+// above the "A" in the AREDL wordmark, instead of a level screenshot.
+function HornBackdrop() {
+  return (
+    <span className="mode-card__horns" aria-hidden="true">
+      <span className="mode-card__halo-glow" />
+      <span className="mode-card__halo-ring" />
+      <span className="mode-card__horn mode-card__horn--left" />
+      <span className="mode-card__horn mode-card__horn--right" />
+      <span className="mode-card__horn-gem" />
+    </span>
+  )
+}
 
 // Classic Mode's backdrop: a 3x3 grid icon, echoing the column-by-column
 // grading grid that mode is built around.
@@ -50,19 +94,6 @@ function GridBackdrop() {
   )
 }
 
-// Shown on a mode row once today's puzzle for the selected difficulty has
-// already been played — easy and hard track separately, so this reflects
-// whichever difficulty is currently toggled, not "completed at all today."
-function CompleteBadge() {
-  return (
-    <span className="mode-card__complete" role="img" aria-label="Completed today">
-      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="20 6 9 17 4 12" />
-      </svg>
-    </span>
-  )
-}
-
 // Rounds Mode's backdrop: concentric rings, echoing clues closing in on the
 // answer round by round.
 function LayersBackdrop() {
@@ -87,59 +118,87 @@ function LayersBackdrop() {
   )
 }
 
-function Home({ onStart }) {
-  const [difficulty, setDifficulty] = useState("easy")
+function Home({ onStart, pools }) {
+  const [pendingGameMode, setPendingGameMode] = useState(null)
+  const [isDaily, setIsDaily] = useState(true)
+
+  const counts = {
+    easy: pools ? pools.easy.length : EASY_MODE_LIMIT,
+    hard: pools ? pools.hard.length : null,
+  }
+
+  if (pendingGameMode === null) {
+    return (
+      <div className="home">
+        <p className="home__prompt">Welcome to AREDLE!</p>
+        <p className="home__subtitle">
+          Puzzle #{getPuzzleNumber(getDayIndex())} · pick a gamemode to start
+        </p>
+
+        <div className="home__modes home__modes--row">
+          {GAME_MODES.map((gm) => (
+            <button
+              key={gm.key}
+              type="button"
+              className={`mode-card mode-card--row mode-card--${gm.key === "classic" ? "grid" : "layers"}`}
+              onClick={() => setPendingGameMode(gm.key)}
+            >
+              {gm.key === "classic" ? <GridBackdrop /> : <LayersBackdrop />}
+              <span className="mode-card__row-text">
+                <span className={`mode-card__badge ${gm.badgeClass}`}>{gm.tagline}</span>
+                <span className="mode-card__label">{gm.label}</span>
+                <span className="mode-card__description">{gm.description}</span>
+              </span>
+            </button>
+          ))}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="home">
+      <button type="button" className="home__back" onClick={() => setPendingGameMode(null)}>
+        ← Back
+      </button>
       <p className="home__prompt">Welcome to AREDLE!</p>
-      <p className="home__subtitle">Pick a difficulty, then a gamemode to start</p>
+      <p className="home__subtitle">Pick a difficulty to start</p>
 
-      <div className="difficulty-toggle" role="tablist" aria-label="Difficulty">
-        <span
-          className={`difficulty-toggle__thumb${difficulty === "hard" ? " difficulty-toggle__thumb--hard" : ""}`}
-          aria-hidden="true"
-        />
+      {/* Daily is the default and the point of the game; Unlimited is the
+          escape hatch for anyone who wants to keep playing after it. */}
+      <div className="home__cadence" role="group" aria-label="Puzzle cadence">
         <button
           type="button"
-          role="tab"
-          aria-selected={difficulty === "easy"}
-          className={`difficulty-toggle__option${difficulty === "easy" ? " difficulty-toggle__option--active-easy" : ""}`}
-          onClick={() => setDifficulty("easy")}
+          className={`home__cadence-option${isDaily ? " home__cadence-option--active" : ""}`}
+          aria-pressed={isDaily}
+          onClick={() => setIsDaily(true)}
         >
-          <span className="difficulty-toggle__label">Easy Mode</span>
-          <span className="difficulty-toggle__hint">Pointercrate Top {EASY_MODE_LIMIT}</span>
+          Daily
         </button>
         <button
           type="button"
-          role="tab"
-          aria-selected={difficulty === "hard"}
-          className={`difficulty-toggle__option${difficulty === "hard" ? " difficulty-toggle__option--active-hard" : ""}`}
-          onClick={() => setDifficulty("hard")}
+          className={`home__cadence-option${isDaily ? "" : " home__cadence-option--active"}`}
+          aria-pressed={!isDaily}
+          onClick={() => setIsDaily(false)}
         >
-          <span className="difficulty-toggle__label">Hard Mode</span>
-          <span className="difficulty-toggle__hint">Full AREDL · {MODE_POOLS.hard.length}</span>
+          Unlimited
         </button>
       </div>
 
-      <div className="home__modes home__modes--row">
-        {GAME_MODES.map((gm) => (
+      <div className="home__modes">
+        {DIFFICULTIES.map((d) => (
           <button
-            key={gm.key}
+            key={d.key}
             type="button"
-            className={`mode-card mode-card--row mode-card--${gm.key === "classic" ? "grid" : "layers"}`}
-            onClick={() => {
-              track("mode_selected", { gameMode: gm.key, difficulty })
-              onStart(gm.key, difficulty)
-            }}
+            className={`mode-card mode-card--${d.key === "easy" ? "hex" : "horns"}`}
+            onClick={() => onStart(pendingGameMode, d.key, isDaily)}
           >
-            {gm.key === "classic" ? <GridBackdrop /> : <LayersBackdrop />}
-            <span className="mode-card__row-text">
-              <span className={`mode-card__badge ${gm.badgeClass}`}>{gm.tagline}</span>
-              <span className="mode-card__label">{gm.label}</span>
-              <span className="mode-card__description">{gm.description}</span>
+            {d.key === "easy" ? <HexBackdrop /> : <HornBackdrop />}
+            <span className={`mode-card__badge ${d.badgeClass}`}>{d.tagline}</span>
+            <span className="mode-card__count">
+              {counts[d.key] === null ? "—" : counts[d.key].toLocaleString()}
             </span>
-            {isComboComplete(gm.key, difficulty) && <CompleteBadge />}
+            <span className="mode-card__label">{d.label}</span>
           </button>
         ))}
       </div>

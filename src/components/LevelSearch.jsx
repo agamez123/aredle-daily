@@ -1,10 +1,9 @@
-import { useEffect, useMemo, useRef, useState } from "react"
-import { MODE_POOLS } from "../data/modes"
-import { dailyAnswer, todayUTC } from "../utils/daily"
-import { useDailyProgress } from "../hooks/useDailyProgress"
-import { recordResult } from "../utils/statsStorage"
-import { track } from "../utils/analytics"
-import WinModal from "./WinModal"
+import { useMemo, useState } from "react"
+import { useGuessGame } from "../hooks/useGuessGame"
+import { gradeGuess, positionGradientStyle } from "../lib/grade"
+import { maxGuessesFor } from "../lib/guessLimits"
+import GameOver from "./GameOver"
+import LevelAutocomplete from "./LevelAutocomplete"
 import "./LevelSearch.css"
 
 const COLUMNS = [
@@ -16,11 +15,6 @@ const COLUMNS = [
   { key: "tags", label: "Tags" },
 ]
 
-// The guessing row is a fixed-height compact strip — cap visible tags so a
-// level with a long tag list still fits on one line instead of wrapping to
-// two and crowding the row edge-to-edge.
-const OPTION_TAG_LIMIT = 2
-
 const EMPTY_FILTERS = {
   positionMin: "",
   positionMax: "",
@@ -31,63 +25,42 @@ const EMPTY_FILTERS = {
   tags: [],
 }
 
-function hasActiveFilters(filters) {
-  return (
-    filters.tags.length > 0 ||
-    ["positionMin", "positionMax", "song", "creator", "verifier", "version"].some(
-      (key) => filters[key].trim() !== ""
+const TEXT_FILTER_KEYS = ["positionMin", "positionMax", "song", "creator", "verifier", "version"]
+
+const TEXT_FILTER_FIELDS = [
+  { key: "song", label: "Song" },
+  { key: "creator", label: "Creator" },
+  { key: "verifier", label: "Verifier" },
+]
+
+function activeFilterCount(filters) {
+  return filters.tags.length + TEXT_FILTER_KEYS.filter((key) => filters[key].trim() !== "").length
+}
+
+// Correct cells get a tick and wrong ones an arrow, so the grid is readable
+// without relying on colour alone.
+function Verdict({ status, direction }) {
+  if (status === "correct") {
+    return (
+      <span className="level-arrow" aria-hidden="true">
+        ✓
+      </span>
     )
+  }
+  if (!direction) return null
+  return (
+    <span className="level-arrow" aria-hidden="true">
+      {direction === "up" ? "▲" : "▼"}
+    </span>
   )
 }
 
-// How far off a numeric guess can be and still count as "close" (yellow).
-const CLOSE_RANGE = { version: 0.15 }
-
-// Position feedback fades from green (exact) to red as the guess gets
-// further away, fully red once you're this many ranks off. Easy mode's pool
-// is capped at EASY_MODE_LIMIT ranks, so it needs a much tighter range than
-// hard mode to still show meaningful color spread.
-const POSITION_GRADIENT_RANGE = { easy: 50, hard: 500 }
-
-function positionGradientStyle(diff, mode) {
-  const range = POSITION_GRADIENT_RANGE[mode] ?? POSITION_GRADIENT_RANGE.hard
-  const t = Math.min(Math.abs(diff), range) / range
-  // Square root spreads out the near end of the scale so close guesses read
-  // as visibly greener instead of fading toward red in a straight line.
-  const closeness = Math.round((1 - Math.sqrt(t)) * 100)
-  const color = `color-mix(in srgb, var(--feedback-correct) ${closeness}%, var(--feedback-wrong) ${100 - closeness}%)`
-  const ink = `color-mix(in srgb, var(--feedback-correct-ink) ${closeness}%, var(--feedback-wrong-ink) ${100 - closeness}%)`
-  return { backgroundColor: color, borderColor: color, color: ink }
-}
-
-function numericStatus(key, guess, answer) {
-  const guessVal = key === "version" ? parseFloat(guess.version) : guess[key]
-  const answerVal = key === "version" ? parseFloat(answer.version) : answer[key]
-  const diff = guessVal - answerVal
-  if (diff === 0) return { status: "correct" }
-  const close = key === "version" && Math.abs(diff) <= CLOSE_RANGE.version
-  // Position is a list rank, not a plain number — #1 sits above #40, so a
-  // smaller guess means you're already higher on the list and need to move down.
-  const direction =
-    key === "position" ? (diff < 0 ? "down" : "up") : diff < 0 ? "up" : "down"
-  return { status: close ? "close" : "wrong", direction, diff }
-}
-
-function exactStatus(guessVal, answerVal) {
-  return guessVal === answerVal ? "correct" : "wrong"
-}
-
-function GuessRow({ level, answer, mode }) {
-  const position = numericStatus("position", level, answer)
-  const version = numericStatus("version", level, answer)
-  const song = exactStatus(level.song, answer.song)
-  const creator = exactStatus(level.creator, answer.creator)
-  const verifier = exactStatus(level.verifier, answer.verifier)
-  const isWin = level.id === answer.id
+function GuessRow({ level, answer, difficulty }) {
+  const graded = gradeGuess(level, answer, difficulty)
 
   return (
     <div
-      className={`level-table__row level-table__row--guess${isWin ? " level-table__row--win" : ""}`}
+      className="level-table__row level-table__row--guess"
       style={{ "--row-image": `url(/thumbnails/${level.level_id}.webp)` }}
     >
       <span className="level-table__cell level-table__cell--icon">
@@ -95,32 +68,40 @@ function GuessRow({ level, answer, mode }) {
       </span>
 
       <span
-        className={`level-table__cell level-table__cell--fill${position.status === "correct" ? " level-table__cell--correct" : ""}`}
-        style={position.status === "correct" ? undefined : positionGradientStyle(position.diff, mode)}
+        className={`level-table__cell level-table__cell--fill${graded.position.status === "correct" ? " level-table__cell--correct" : ""}`}
+        style={
+          graded.position.status === "correct"
+            ? undefined
+            : positionGradientStyle(graded.position.diff, difficulty)
+        }
       >
         {level.position}
-        {position.status !== "correct" && (
-          <span className="level-arrow">{position.direction === "up" ? "▲" : "▼"}</span>
-        )}
+        <Verdict status={graded.position.status} direction={graded.position.direction} />
       </span>
 
-      <span className={`level-table__cell level-table__cell--fill level-table__cell--wrap level-table__cell--${song}`}>
+      <span
+        className={`level-table__cell level-table__cell--fill level-table__cell--wrap level-table__cell--${graded.song.status}`}
+      >
         {level.song}
       </span>
 
-      <span className={`level-table__cell level-table__cell--fill level-table__cell--${creator}`}>
+      <span
+        className={`level-table__cell level-table__cell--fill level-table__cell--${graded.creator.status}`}
+      >
         {level.creator}
       </span>
 
-      <span className={`level-table__cell level-table__cell--fill level-table__cell--${verifier}`}>
+      <span
+        className={`level-table__cell level-table__cell--fill level-table__cell--${graded.verifier.status}`}
+      >
         {level.verifier}
       </span>
 
-      <span className={`level-table__cell level-table__cell--fill level-table__cell--${version.status}`}>
-        {level.version}
-        {version.status !== "correct" && (
-          <span className="level-arrow">{version.direction === "up" ? "▲" : "▼"}</span>
-        )}
+      <span
+        className={`level-table__cell level-table__cell--fill level-table__cell--${graded.version.status}`}
+      >
+        {level.version ?? "—"}
+        <Verdict status={graded.version.status} direction={graded.version.direction} />
       </span>
 
       <span className="level-table__cell level-table__cell--tags">
@@ -137,338 +118,291 @@ function GuessRow({ level, answer, mode }) {
   )
 }
 
-function LevelSearch({ mode, onChangeMode }) {
-  const levelPool = MODE_POOLS[mode] ?? MODE_POOLS.hard
+// Announced to screen readers after each guess. Colour is the only feedback the
+// grid gives sighted players, so the same verdicts have to exist as text.
+function describeGuess(level, answer, difficulty) {
+  if (level.id === answer.id) return `${level.name} is correct!`
+  const graded = gradeGuess(level, answer, difficulty)
+  const parts = COLUMNS.map((col) => {
+    const { status, direction } = graded[col.key]
+    if (status === "correct") return `${col.label} correct`
+    if (status === "unknown") return `${col.label} unknown`
+    if (direction) return `${col.label} ${direction === "up" ? "higher" : "lower"}`
+    return `${col.label} ${status === "close" ? "partial" : "wrong"}`
+  })
+  return `${level.name}: ${parts.join(", ")}.`
+}
 
-  const allTags = useMemo(
-    () => [...new Set(levelPool.flatMap((level) => level.tags))].sort(),
-    [levelPool]
+function ColumnHeader() {
+  return (
+    <div className="level-table__row level-table__row--header">
+      <span className="level-table__cell level-table__cell--icon">Level</span>
+      {COLUMNS.map((col) => (
+        <span key={col.key} className="level-table__cell">
+          {col.label}
+        </span>
+      ))}
+    </div>
   )
+}
+
+function LevelSearch({ pool, difficulty, isDaily, onChangeMode, onOpenStats }) {
+  const maxGuesses = maxGuessesFor(difficulty)
+  const game = useGuessGame({
+    pool,
+    gameMode: "classic",
+    difficulty,
+    maxGuesses,
+    isDaily,
+  })
+  const { answer, guesses, guessedIds, gameOver, won, remaining } = game
+
+  const allTags = useMemo(() => [...new Set(pool.flatMap((level) => level.tags))].sort(), [pool])
   const allVersions = useMemo(
     () =>
-      [...new Set(levelPool.map((level) => level.version))].sort(
+      [...new Set(pool.map((level) => level.version).filter(Boolean))].sort(
         (a, b) => parseFloat(a) - parseFloat(b)
       ),
-    [levelPool]
+    [pool]
   )
 
-  const comboKey = `classic-${mode}`
-  const [answer] = useState(() => dailyAnswer(levelPool, comboKey))
-  const { guesses, addGuess } = useDailyProgress(comboKey, levelPool)
   const [query, setQuery] = useState("")
   const [filtersOpen, setFiltersOpen] = useState(false)
   const [filters, setFilters] = useState(EMPTY_FILTERS)
-  const [modalOpen, setModalOpen] = useState(false)
 
-  const hasWon = guesses.some((g) => g.id === answer.id)
-  const wrongGuesses = guesses.filter((g) => g.id !== answer.id)
-
-  // Captured once, at mount, from whatever useDailyProgress hydrated — lets
-  // the analytics effects below tell "resumed into an already-finished
-  // game" apart from "actually won just now," so reopening a completed
-  // combo doesn't recount a win that already happened.
-  const startedFresh = useRef(guesses.length === 0)
-  const wasAlreadyWon = useRef(hasWon)
-
-  useEffect(() => {
-    if (hasWon) setModalOpen(true)
-  }, [hasWon])
-
-  useEffect(() => {
-    if (startedFresh.current) track("game_started", { comboKey })
-  }, [comboKey])
-
-  useEffect(() => {
-    if (!wasAlreadyWon.current && hasWon) {
-      track("game_won", { comboKey, guesses: guesses.length })
-    }
-  }, [hasWon, comboKey, guesses])
-
-  // Classic has no loss state — you either solve it or the day passes
-  // unrecorded — so a Classic entry is always a win. Runs on resume too;
-  // the write is idempotent.
-  useEffect(() => {
-    if (!hasWon) return
-    recordResult(comboKey, todayUTC(), { won: true, guesses: guesses.length })
-  }, [hasWon, comboKey, guesses])
-  const filtersActive = hasActiveFilters(filters)
-  const activeFilterCount =
-    filters.tags.length +
-    ["positionMin", "positionMax", "song", "creator", "verifier", "version"].filter(
-      (key) => filters[key].trim() !== ""
-    ).length
+  const filterCount = activeFilterCount(filters)
+  const filtersActive = filterCount > 0
 
   const results = useMemo(() => {
     const trimmed = query.trim()
-    if (hasWon || (!trimmed && !filtersActive)) return []
-    const guessedIds = new Set(guesses.map((g) => g.id))
+    if (gameOver || (!trimmed && !filtersActive)) return []
 
-    let pool = levelPool.filter((level) => !guessedIds.has(level.id))
+    let candidates = pool.filter((level) => !guessedIds.has(level.id))
 
     if (trimmed) {
       const posMatch = trimmed.match(/^pos:\s*(\d+)$/i)
       if (posMatch) {
-        const posQuery = posMatch[1]
-        pool = pool.filter((level) => String(level.position).includes(posQuery))
+        candidates = candidates.filter((level) => String(level.position).includes(posMatch[1]))
       } else {
         const q = trimmed.toLowerCase()
-        pool = pool.filter((level) => level.name.toLowerCase().includes(q))
+        candidates = candidates.filter((level) => level.name.toLowerCase().includes(q))
       }
     }
 
-    const { positionMin, positionMax, song, creator, verifier, version, tags } = filters
+    const { positionMin, positionMax, version, tags } = filters
+    if (positionMin.trim()) candidates = candidates.filter((l) => l.position >= Number(positionMin))
+    if (positionMax.trim()) candidates = candidates.filter((l) => l.position <= Number(positionMax))
+    for (const field of TEXT_FILTER_FIELDS) {
+      const value = filters[field.key].trim().toLowerCase()
+      if (value) candidates = candidates.filter((l) => (l[field.key] || "").toLowerCase().includes(value))
+    }
+    if (version) candidates = candidates.filter((l) => l.version === version)
+    if (tags.length) candidates = candidates.filter((l) => tags.every((tag) => l.tags.includes(tag)))
 
-    if (positionMin.trim()) pool = pool.filter((level) => level.position >= Number(positionMin))
-    if (positionMax.trim()) pool = pool.filter((level) => level.position <= Number(positionMax))
-    if (song.trim()) {
-      const q = song.trim().toLowerCase()
-      pool = pool.filter((level) => (level.song || "").toLowerCase().includes(q))
-    }
-    if (creator.trim()) {
-      const q = creator.trim().toLowerCase()
-      pool = pool.filter((level) => level.creator.toLowerCase().includes(q))
-    }
-    if (verifier.trim()) {
-      const q = verifier.trim().toLowerCase()
-      pool = pool.filter((level) => level.verifier.toLowerCase().includes(q))
-    }
-    if (version) pool = pool.filter((level) => level.version === version)
-    if (tags.length > 0) pool = pool.filter((level) => tags.every((tag) => level.tags.includes(tag)))
-
-    return pool.slice(0, 6)
-  }, [query, guesses, hasWon, filters, filtersActive, levelPool])
+    return candidates.slice(0, 6)
+  }, [query, guessedIds, gameOver, filters, filtersActive, pool])
 
   function handleSelect(level) {
-    track("guess_made", { comboKey, guessNumber: guesses.length + 1, correct: level.id === answer.id })
-    addGuess(level)
+    game.guess(level)
     setQuery("")
   }
 
-  function updateFilter(key, value) {
-    setFilters((prev) => ({ ...prev, [key]: value }))
-  }
-
-  function toggleTagFilter(tag) {
-    setFilters((prev) => ({
-      ...prev,
-      tags: prev.tags.includes(tag) ? prev.tags.filter((t) => t !== tag) : [...prev.tags, tag],
-    }))
-  }
-
-  function clearFilters() {
-    setFilters(EMPTY_FILTERS)
-  }
+  const lastGuess = guesses[guesses.length - 1]
 
   return (
     <div className="level-search">
       <p className="level-search__prompt">
-        {hasWon ? "You got it!" : "Guess today's AREDL level!"}
+        {won
+          ? "You got it!"
+          : gameOver
+            ? "Out of guesses"
+            : isDaily
+              ? "Guess today's AREDL level!"
+              : "Guess the AREDL level!"}
       </p>
 
       {onChangeMode && (
         <button type="button" className="level-search__mode-toggle" onClick={onChangeMode}>
-          {mode === "easy" ? "Easy Mode" : "Hard Mode"} · Change
+          {difficulty === "easy" ? "Easy" : "Hard"} · {isDaily ? "Daily" : "Unlimited"} · Change
         </button>
       )}
 
-      {!hasWon && (
-        <div className="level-search__bar">
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Type a level name..."
-            className="level-search__input"
-          />
-        </div>
-      )}
+      <p aria-live="polite" className="visually-hidden">
+        {lastGuess ? describeGuess(lastGuess, answer, difficulty) : ""}
+      </p>
 
-      {!hasWon && (
-        <div className="level-search__filters">
-          <button
-            type="button"
-            className={`level-search__filter-toggle${filtersActive ? " level-search__filter-toggle--active" : ""}`}
-            onClick={() => setFiltersOpen((open) => !open)}
-          >
-            Filters{filtersActive ? ` (${activeFilterCount})` : ""}
-            <span className="level-search__filter-caret">{filtersOpen ? "▲" : "▼"}</span>
-          </button>
+      {!gameOver && (
+        <>
+          <p className="level-search__round-counter">
+            {remaining} {remaining === 1 ? "guess" : "guesses"} left
+          </p>
 
-          {filtersOpen && (
-            <div className="level-search__filter-panel">
-              <div className="level-search__filter-field">
-                <label>Position</label>
-                <div className="level-search__filter-range">
-                  <input
-                    type="number"
-                    min="1"
-                    placeholder="Min"
-                    value={filters.positionMin}
-                    onChange={(e) => updateFilter("positionMin", e.target.value)}
-                  />
-                  <span>–</span>
-                  <input
-                    type="number"
-                    min="1"
-                    placeholder="Max"
-                    value={filters.positionMax}
-                    onChange={(e) => updateFilter("positionMax", e.target.value)}
-                  />
-                </div>
-              </div>
-
-              <div className="level-search__filter-field">
-                <label htmlFor="filter-song">Song</label>
-                <input
-                  id="filter-song"
-                  type="text"
-                  placeholder="Contains..."
-                  value={filters.song}
-                  onChange={(e) => updateFilter("song", e.target.value)}
-                />
-              </div>
-
-              <div className="level-search__filter-field">
-                <label htmlFor="filter-creator">Creator</label>
-                <input
-                  id="filter-creator"
-                  type="text"
-                  placeholder="Contains..."
-                  value={filters.creator}
-                  onChange={(e) => updateFilter("creator", e.target.value)}
-                />
-              </div>
-
-              <div className="level-search__filter-field">
-                <label htmlFor="filter-verifier">Verifier</label>
-                <input
-                  id="filter-verifier"
-                  type="text"
-                  placeholder="Contains..."
-                  value={filters.verifier}
-                  onChange={(e) => updateFilter("verifier", e.target.value)}
-                />
-              </div>
-
-              <div className="level-search__filter-field">
-                <label htmlFor="filter-version">Version</label>
-                <select
-                  id="filter-version"
-                  value={filters.version}
-                  onChange={(e) => updateFilter("version", e.target.value)}
-                >
-                  <option value="">Any</option>
-                  {allVersions.map((v) => (
-                    <option key={v} value={v}>
-                      {v}
-                    </option>
-                  ))}
-                </select>
-              </div>
-
-              <div className="level-search__filter-field level-search__filter-field--tags">
-                <label>Tags</label>
-                <div className="level-search__filter-tags">
-                  {allTags.map((tag) => (
-                    <button
-                      type="button"
-                      key={tag}
-                      className={`tag-pill tag-pill--filter${filters.tags.includes(tag) ? " tag-pill--filter-active" : ""}`}
-                      onClick={() => toggleTagFilter(tag)}
-                    >
-                      {tag}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {filtersActive && (
-                <button type="button" className="level-search__filter-clear" onClick={clearFilters}>
-                  Clear filters
-                </button>
-              )}
-            </div>
-          )}
-        </div>
-      )}
-
-      {hasWon && !modalOpen && (
-        <button type="button" className="level-search__view-results" onClick={() => setModalOpen(true)}>
-          View Results
-        </button>
-      )}
-
-      <WinModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        tone="win"
-        gameMode="classic"
-        difficulty={mode}
-        answer={answer}
-        wrongGuesses={wrongGuesses}
-        onGoHome={onChangeMode}
-      />
-
-      {results.length > 0 && (
-        <div className="level-table">
-          <div className="level-table__row level-table__row--header">
-            <span className="level-table__cell level-table__cell--icon">Level</span>
-            {COLUMNS.map((col) => (
-              <span key={col.key} className="level-table__cell">
-                {col.label}
-              </span>
-            ))}
+          <div className="level-search__bar">
+            <LevelAutocomplete
+              query={query}
+              onQueryChange={setQuery}
+              results={results}
+              onSelect={handleSelect}
+              inputClassName="level-search__input"
+              listClassName="level-table level-table--results"
+              listHeader={<ColumnHeader />}
+              renderOption={(level) => ({
+                className: "level-table__row level-table__row--option",
+                style: { "--row-image": `url(/thumbnails/${level.level_id}.webp)` },
+                content: (
+                  <>
+                    <span className="level-table__cell level-table__cell--icon">
+                      <span className="level-name">{level.name}</span>
+                    </span>
+                    <span className="level-table__cell">{level.position}</span>
+                    <span className="level-table__cell level-table__cell--wrap">{level.song}</span>
+                    <span className="level-table__cell">{level.creator}</span>
+                    <span className="level-table__cell">{level.verifier}</span>
+                    <span className="level-table__cell">{level.version ?? "—"}</span>
+                    <span className="level-table__cell level-table__cell--tags">
+                      {level.tags.join(", ")}
+                    </span>
+                  </>
+                ),
+              })}
+            />
           </div>
 
-          {results.map((level) => (
+          <div className="level-search__filters">
             <button
-              key={level.id}
-              className="level-table__row level-table__row--option"
-              style={{ "--row-image": `url(/thumbnails/${level.level_id}.webp)` }}
-              onClick={() => handleSelect(level)}
+              type="button"
+              className={`level-search__filter-toggle${filtersActive ? " level-search__filter-toggle--active" : ""}`}
+              aria-expanded={filtersOpen}
+              onClick={() => setFiltersOpen((open) => !open)}
             >
-              <span className="level-table__cell level-table__cell--icon">
-                <span className="level-name">{level.name}</span>
-              </span>
-              <span className="level-table__cell level-table__cell--fill">{level.position}</span>
-              <span className="level-table__cell level-table__cell--fill level-table__cell--wrap">{level.song}</span>
-              <span className="level-table__cell level-table__cell--fill">{level.creator}</span>
-              <span className="level-table__cell level-table__cell--fill">{level.verifier}</span>
-              <span className="level-table__cell level-table__cell--fill">{level.version}</span>
-              <span className="level-table__cell level-table__cell--tags">
-                {level.tags.slice(0, OPTION_TAG_LIMIT).map((tag) => (
-                  <span key={tag} className="tag-pill tag-pill--neutral">
-                    {tag}
-                  </span>
-                ))}
-                {level.tags.length > OPTION_TAG_LIMIT && (
-                  <span className="tag-pill tag-pill--neutral">
-                    +{level.tags.length - OPTION_TAG_LIMIT}
-                  </span>
-                )}
+              Filters{filtersActive ? ` (${filterCount})` : ""}
+              <span className="level-search__filter-caret" aria-hidden="true">
+                {filtersOpen ? "▲" : "▼"}
               </span>
             </button>
-          ))}
-        </div>
+
+            {filtersOpen && (
+              <div className="level-search__filter-panel">
+                <div className="level-search__filter-field">
+                  <label>Position</label>
+                  <div className="level-search__filter-range">
+                    <input
+                      type="number"
+                      min="1"
+                      placeholder="Min"
+                      aria-label="Minimum position"
+                      value={filters.positionMin}
+                      onChange={(e) => setFilters((f) => ({ ...f, positionMin: e.target.value }))}
+                    />
+                    <span>–</span>
+                    <input
+                      type="number"
+                      min="1"
+                      placeholder="Max"
+                      aria-label="Maximum position"
+                      value={filters.positionMax}
+                      onChange={(e) => setFilters((f) => ({ ...f, positionMax: e.target.value }))}
+                    />
+                  </div>
+                </div>
+
+                {TEXT_FILTER_FIELDS.map((field) => (
+                  <div key={field.key} className="level-search__filter-field">
+                    <label htmlFor={`filter-${field.key}`}>{field.label}</label>
+                    <input
+                      id={`filter-${field.key}`}
+                      type="text"
+                      placeholder="Contains..."
+                      value={filters[field.key]}
+                      onChange={(e) => setFilters((f) => ({ ...f, [field.key]: e.target.value }))}
+                    />
+                  </div>
+                ))}
+
+                <div className="level-search__filter-field">
+                  <label htmlFor="filter-version">Version</label>
+                  <select
+                    id="filter-version"
+                    value={filters.version}
+                    onChange={(e) => setFilters((f) => ({ ...f, version: e.target.value }))}
+                  >
+                    <option value="">Any</option>
+                    {allVersions.map((v) => (
+                      <option key={v} value={v}>
+                        {v}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="level-search__filter-field level-search__filter-field--tags">
+                  <label>Tags</label>
+                  <div className="level-search__filter-tags">
+                    {allTags.map((tag) => (
+                      <button
+                        type="button"
+                        key={tag}
+                        aria-pressed={filters.tags.includes(tag)}
+                        className={`tag-pill tag-pill--filter${filters.tags.includes(tag) ? " tag-pill--filter-active" : ""}`}
+                        onClick={() =>
+                          setFilters((f) => ({
+                            ...f,
+                            tags: f.tags.includes(tag)
+                              ? f.tags.filter((t) => t !== tag)
+                              : [...f.tags, tag],
+                          }))
+                        }
+                      >
+                        {tag}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {filtersActive && (
+                  <button
+                    type="button"
+                    className="level-search__filter-clear"
+                    onClick={() => setFilters(EMPTY_FILTERS)}
+                  >
+                    Clear filters
+                  </button>
+                )}
+              </div>
+            )}
+          </div>
+        </>
+      )}
+
+      {gameOver && (
+        <GameOver
+          won={won}
+          answer={answer}
+          guesses={guesses}
+          gameMode="classic"
+          difficulty={difficulty}
+          dayIndex={game.dayIndex}
+          maxGuesses={maxGuesses}
+          isDaily={isDaily}
+          onNewGame={game.newGame}
+          onOpenStats={onOpenStats}
+          eyebrow={
+            won
+              ? `Found in ${guesses.length} ${guesses.length === 1 ? "guess" : "guesses"}`
+              : "Out of guesses"
+          }
+        />
       )}
 
       {guesses.length > 0 && (
         <div className="level-table level-table--guesses">
           <p className="level-table__section-title">Your Guesses</p>
-          <div className="level-table__row level-table__row--header">
-            <span className="level-table__cell level-table__cell--icon">Level</span>
-            {COLUMNS.map((col) => (
-              <span key={col.key} className="level-table__cell">
-                {col.label}
-              </span>
-            ))}
-          </div>
-
+          <ColumnHeader />
           {guesses
             .slice()
             .reverse()
             .map((level) => (
-              <GuessRow key={level.id} level={level} answer={answer} mode={mode} />
+              <GuessRow key={level.id} level={level} answer={answer} difficulty={difficulty} />
             ))}
         </div>
       )}

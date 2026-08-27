@@ -1,100 +1,127 @@
-import { useEffect, useMemo, useRef, useState } from "react"
-import { MODE_POOLS, ROUNDS_MAX_GUESSES as MAX_ROUNDS } from "../data/modes"
-import { dailyAnswer, todayUTC } from "../utils/daily"
-import { useDailyProgress } from "../hooks/useDailyProgress"
-import { recordResult } from "../utils/statsStorage"
-import { track } from "../utils/analytics"
-import WinModal from "./WinModal"
+import { useMemo, useState } from "react"
+import { useGuessGame } from "../hooks/useGuessGame"
+import GameOver from "./GameOver"
+import LevelAutocomplete from "./LevelAutocomplete"
 import "./RoundsMode.css"
 
-// Each row unlocks at a given stage (1-5); stage 6 unlocks nothing new, so
-// the final round is a last guess with every clue already on the table.
-// Description+Position, then Creator+Verifier, unlock in pairs so all 8
-// data points still clear by round 5. `mono` flags the columns that read as
-// ledger figures (tabular monospace) rather than prose, matching the Score
-// Sheet treatment used in Classic mode.
+export const MAX_ROUNDS = 6
+
+// Candidate hints in reveal order. `available` lets a row drop out when the
+// level simply has no such data — 843 of the 1,553 levels carry no description,
+// and a round spent on "No description on record" is a wasted round.
 const HINT_ROWS = [
-  { key: "tags", label: "Tags", stage: 1, value: (l) => (l.tags.length ? l.tags.join(", ") : "None on record") },
-  { key: "version", label: "Version", stage: 1, value: (l) => l.version, mono: true },
-  { key: "description", label: "Description", stage: 2, value: (l) => l.description || "No description on record." },
-  { key: "position", label: "Position", stage: 2, value: (l) => `#${l.position}`, mono: true },
-  { key: "creator", label: "Creator", stage: 3, value: (l) => l.creator },
-  { key: "verifier", label: "Verifier", stage: 3, value: (l) => l.verifier },
-  { key: "song", label: "Song", stage: 4, value: (l) => l.song || "Unknown" },
-  { key: "thumbnail", label: "Thumbnail", stage: 5, value: (l) => `/thumbnails/${l.level_id}.webp` },
+  {
+    key: "tags",
+    label: "Tags",
+    available: (l) => l.tags.length > 0,
+    value: (l) => l.tags.join(", "),
+  },
+  {
+    key: "version",
+    label: "Version",
+    available: (l) => Boolean(l.version),
+    value: (l) => l.version,
+  },
+  {
+    key: "description",
+    label: "Description",
+    available: (l) => Boolean(l.description),
+    value: (l) => l.description,
+  },
+  { key: "position", label: "Position", available: () => true, value: (l) => `#${l.position}` },
+  { key: "creator", label: "Creator", available: () => true, value: (l) => l.creator },
+  { key: "verifier", label: "Verifier", available: () => true, value: (l) => l.verifier },
+  {
+    key: "song",
+    label: "Song",
+    available: (l) => Boolean(l.song),
+    value: (l) => l.song,
+  },
 ]
 
-function RoundsMode({ mode, onChangeMode }) {
-  const levelPool = MODE_POOLS[mode] ?? MODE_POOLS.hard
+// Spreads whatever rows survived across the six rounds, so the last hint always
+// lands on the final round no matter how many the level actually has.
+function buildHintRows(answer) {
+  const rows = HINT_ROWS.filter((row) => row.available(answer))
+  return rows.map((row, i) => ({
+    ...row,
+    stage: rows.length === 1 ? 1 : 1 + Math.round((i * (MAX_ROUNDS - 1)) / (rows.length - 1)),
+  }))
+}
 
-  const comboKey = `rounds-${mode}`
-  const [answer] = useState(() => dailyAnswer(levelPool, comboKey))
-  const { guesses, addGuess } = useDailyProgress(comboKey, levelPool)
+// The thumbnail is the one clue every level has. It starts unreadable and
+// sharpens each round, so there is always something happening even when the
+// text hints run thin.
+const BLUR_STEPS = [26, 20, 15, 10, 6, 3]
+
+function RoundsMode({ pool, difficulty, isDaily, onChangeMode, onOpenStats }) {
+  const game = useGuessGame({
+    pool,
+    gameMode: "rounds",
+    difficulty,
+    maxGuesses: MAX_ROUNDS,
+    isDaily,
+  })
+  const { answer, guesses, wrongGuesses, guessedIds, gameOver, won } = game
+
   const [query, setQuery] = useState("")
-  const [modalOpen, setModalOpen] = useState(false)
 
-  const hasWon = guesses.some((g) => g.id === answer.id)
-  const hasLost = !hasWon && guesses.length >= MAX_ROUNDS
-  const gameOver = hasWon || hasLost
-  const wrongGuesses = guesses.filter((g) => g.id !== answer.id)
+  const hintRows = useMemo(() => buildHintRows(answer), [answer])
 
-  // Captured once, at mount, from whatever useDailyProgress hydrated — lets
-  // the analytics effects below tell "resumed into an already-finished
-  // game" apart from "actually finished just now," so reopening a completed
-  // combo doesn't recount a win/loss that already happened.
-  const startedFresh = useRef(guesses.length === 0)
-  const wasAlreadyOver = useRef(gameOver)
-
-  useEffect(() => {
-    if (gameOver) setModalOpen(true)
-  }, [gameOver])
-
-  useEffect(() => {
-    if (startedFresh.current) track("game_started", { comboKey })
-  }, [comboKey])
-
-  useEffect(() => {
-    if (wasAlreadyOver.current || !gameOver) return
-    track(hasWon ? "game_won" : "game_lost", { comboKey, guesses: guesses.length })
-  }, [gameOver, hasWon, comboKey, guesses])
-
-  // Unlike the analytics effect above this one runs on resume too: the
-  // write is idempotent, so re-recording a finished day is free and it
-  // backfills a result that was played before stats existed.
-  useEffect(() => {
-    if (!gameOver) return
-    recordResult(comboKey, todayUTC(), { won: hasWon, guesses: guesses.length })
-  }, [gameOver, hasWon, comboKey, guesses])
   const stageIndex = gameOver ? MAX_ROUNDS : Math.min(guesses.length + 1, MAX_ROUNDS)
   const roundNumber = Math.min(guesses.length + 1, MAX_ROUNDS)
+  const blur = gameOver ? 0 : BLUR_STEPS[Math.min(stageIndex - 1, BLUR_STEPS.length - 1)]
 
   const results = useMemo(() => {
     const trimmed = query.trim()
     if (gameOver || !trimmed) return []
-    const guessedIds = new Set(guesses.map((g) => g.id))
     const q = trimmed.toLowerCase()
-    return levelPool
+    return pool
       .filter((level) => !guessedIds.has(level.id) && level.name.toLowerCase().includes(q))
       .slice(0, 6)
-  }, [query, guesses, gameOver, levelPool])
+  }, [query, guessedIds, gameOver, pool])
 
   function handleSelect(level) {
-    track("guess_made", { comboKey, guessNumber: guesses.length + 1, correct: level.id === answer.id })
-    addGuess(level)
+    game.guess(level)
     setQuery("")
   }
+
+  const lastGuess = guesses[guesses.length - 1]
 
   return (
     <div className="rounds-mode">
       <p className="rounds-mode__prompt">
-        {hasWon ? "You got it!" : hasLost ? "Out of rounds" : "Guess today's AREDL level!"}
+        {won
+          ? "You got it!"
+          : gameOver
+            ? "Out of rounds"
+            : isDaily
+              ? "Guess today's AREDL level!"
+              : "Guess the AREDL level!"}
       </p>
 
       {onChangeMode && (
         <button type="button" className="rounds-mode__mode-toggle" onClick={onChangeMode}>
-          {mode === "easy" ? "Easy Mode" : "Hard Mode"} · Change
+          {difficulty === "easy" ? "Easy" : "Hard"} · {isDaily ? "Daily" : "Unlimited"} · Change
         </button>
       )}
+
+      <p aria-live="polite" className="visually-hidden">
+        {lastGuess
+          ? lastGuess.id === answer.id
+            ? `${lastGuess.name} is correct!`
+            : `${lastGuess.name} is wrong. Round ${roundNumber} of ${MAX_ROUNDS}.`
+          : ""}
+      </p>
+
+      <div className="rounds-mode__thumb-frame">
+        <img
+          className="rounds-mode__thumb"
+          src={`/thumbnails/${answer.level_id}.webp`}
+          alt={gameOver ? answer.name : "Blurred thumbnail of the level to guess"}
+          style={{ filter: `blur(${blur}px)`, transform: `scale(${1 + blur / 100})` }}
+        />
+      </div>
 
       {!gameOver && (
         <>
@@ -103,78 +130,37 @@ function RoundsMode({ mode, onChangeMode }) {
           </p>
 
           <div className="rounds-mode__bar">
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Type a level name..."
-              className="rounds-mode__input"
+            <LevelAutocomplete
+              query={query}
+              onQueryChange={setQuery}
+              results={results}
+              onSelect={handleSelect}
+              inputClassName="rounds-mode__input"
+              listClassName="rounds-mode__dropdown"
+              renderOption={(level) => ({
+                className: "rounds-mode__option",
+                content: (
+                  <>
+                    <span>{level.name}</span>
+                    <span className="rounds-mode__option-meta">#{level.position}</span>
+                  </>
+                ),
+              })}
             />
           </div>
-
-          {results.length > 0 && (
-            <div className="rounds-mode__dropdown">
-              {results.map((level) => (
-                <button
-                  key={level.id}
-                  type="button"
-                  className="rounds-mode__option"
-                  onClick={() => handleSelect(level)}
-                >
-                  {level.name}
-                </button>
-              ))}
-            </div>
-          )}
         </>
       )}
 
       <div className="rounds-mode__hints">
-        <div className="rounds-mode__hints-header">
-          <span>Clue</span>
-          <span>Entry</span>
-        </div>
-        {HINT_ROWS.map((row) => {
+        {hintRows.map((row) => {
           const unlocked = row.stage <= stageIndex
-          const valueClass = [
-            "rounds-mode__hint-value",
-            unlocked ? "rounds-mode__hint-value--reveal" : "rounds-mode__hint-value--locked",
-            row.mono ? "rounds-mode__hint-value--mono" : "",
-          ]
-            .filter(Boolean)
-            .join(" ")
-
           return (
             <div key={row.key} className="rounds-mode__hint">
-              <span className="rounds-mode__hint-label">
-                <span className={`rounds-mode__hint-badge${unlocked ? " rounds-mode__hint-badge--lit" : ""}`}>
-                  R{row.stage}
-                </span>
-                {row.label}
-              </span>
-
-              {/* Keying on lock state remounts the value on unlock, replaying
-                  the reveal animation exactly once instead of on every render. */}
-              <span key={unlocked ? "on" : "off"} className={valueClass}>
-                {unlocked ? (
-                  row.key === "tags" && answer.tags.length ? (
-                    answer.tags.map((tag) => (
-                      <span key={tag} className="tag-pill tag-pill--neutral">
-                        {tag}
-                      </span>
-                    ))
-                  ) : row.key === "thumbnail" ? (
-                    <img
-                      className="rounds-mode__hint-thumb"
-                      src={row.value(answer)}
-                      alt={`${answer.name} thumbnail`}
-                    />
-                  ) : (
-                    row.value(answer)
-                  )
-                ) : (
-                  <span className="rounds-mode__sr-only">Locked — unlocks round {row.stage}</span>
-                )}
+              <span className="rounds-mode__hint-label">{row.label}</span>
+              <span
+                className={`rounds-mode__hint-value${unlocked ? "" : " rounds-mode__hint-value--locked"}`}
+              >
+                {unlocked ? row.value(answer) : `Unlocks in round ${row.stage}`}
               </span>
             </div>
           )
@@ -183,35 +169,32 @@ function RoundsMode({ mode, onChangeMode }) {
 
       {wrongGuesses.length > 0 && (
         <div className="rounds-mode__guesses">
-          <p className="rounds-mode__guesses-title">Ruled Out</p>
+          <p className="rounds-mode__guesses-title">Wrong Guesses</p>
           <div className="rounds-mode__guess-pills">
-            {wrongGuesses.map((level, i) => (
+            {wrongGuesses.map((level) => (
               <span key={level.id} className="rounds-mode__guess-pill">
-                <span className="rounds-mode__guess-pill-round">R{i + 1}</span>
-                <span className="rounds-mode__guess-pill-name">{level.name}</span>
+                {level.name}
               </span>
             ))}
           </div>
         </div>
       )}
 
-      {gameOver && !modalOpen && (
-        <button type="button" className="rounds-mode__view-results" onClick={() => setModalOpen(true)}>
-          View Results
-        </button>
+      {gameOver && (
+        <GameOver
+          won={won}
+          answer={answer}
+          guesses={guesses}
+          gameMode="rounds"
+          difficulty={difficulty}
+          dayIndex={game.dayIndex}
+          maxGuesses={MAX_ROUNDS}
+          isDaily={isDaily}
+          onNewGame={game.newGame}
+          onOpenStats={onOpenStats}
+          eyebrow={won ? `Found in round ${guesses.length} of ${MAX_ROUNDS}` : "Out of rounds"}
+        />
       )}
-
-      <WinModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        tone={hasWon ? "win" : "loss"}
-        gameMode="rounds"
-        difficulty={mode}
-        answer={answer}
-        wrongGuesses={wrongGuesses}
-        maxRounds={MAX_ROUNDS}
-        onGoHome={onChangeMode}
-      />
     </div>
   )
 }

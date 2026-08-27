@@ -6,8 +6,18 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
   { ignores: ['dist'] },
+  // The data-fetching scripts run under Node, not in the browser.
   {
-    files: ['**/*.{js,jsx}'],
+    files: ['scripts/**/*.{js,mjs}'],
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: globals.node,
+    },
+    rules: js.configs.recommended.rules,
+  },
+  {
+    files: ['src/**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -29,6 +39,9 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
+      // This is a plain JS app with no PropTypes anywhere; the rule only ever
+      // fired on every component signature in the codebase.
+      'react/prop-types': 'off',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },
