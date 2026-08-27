@@ -41,26 +41,23 @@
   margin-bottom: 1.5rem;
 }
 
+.level-search__round-counter {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--focus);
+  margin: 0 0 1rem;
+}
+
+/* Base input styling lives in LevelAutocomplete.css; this only widens it to
+   match the grid the results are shown in. */
 .level-search__input {
+  max-width: 560px;
+}
+
+.level-table--results {
   width: 100%;
-  max-width: 480px;
-  padding: 0.65em 1em;
-  font-size: 1.1rem;
-  font-family: inherit;
-  color: var(--ink);
-  background-color: var(--surface);
-  border: 1px solid var(--hairline);
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.15s;
-}
-
-.level-search__input:focus {
-  border-color: var(--focus);
-}
-
-.level-search__input::placeholder {
-  color: var(--ink-faint);
 }
 
 .level-search__filters {

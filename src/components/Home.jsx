@@ -1,5 +1,6 @@
 import { useState } from "react"
-import { EASY_MODE_LIMIT, MODE_POOLS } from "../data/modes"
+import { EASY_MODE_LIMIT } from "../data/modes"
+import { getDayIndex, getPuzzleNumber } from "../lib/daily"
 import "./Home.css"
 
 const GAME_MODES = [
@@ -24,7 +25,6 @@ const DIFFICULTIES = [
     key: "easy",
     label: "Easy Mode",
     tagline: "Pointercrate Top",
-    count: EASY_MODE_LIMIT,
     description: "Only the demons everyone already knows.",
     badgeClass: "mode-card__badge--easy",
   },
@@ -32,7 +32,6 @@ const DIFFICULTIES = [
     key: "hard",
     label: "Hard Mode",
     tagline: "The Full AREDL",
-    count: MODE_POOLS.hard.length,
     description: "Every level on the list, top to bottom.",
     badgeClass: "mode-card__badge--hard",
   },
@@ -121,14 +120,22 @@ function LayersBackdrop() {
   )
 }
 
-function Home({ onStart }) {
+function Home({ onStart, pools }) {
   const [pendingGameMode, setPendingGameMode] = useState(null)
+  const [isDaily, setIsDaily] = useState(true)
+
+  const counts = {
+    easy: pools ? pools.easy.length : EASY_MODE_LIMIT,
+    hard: pools ? pools.hard.length : null,
+  }
 
   if (pendingGameMode === null) {
     return (
       <div className="home">
         <p className="home__prompt">Welcome to AREDLE!</p>
-        <p className="home__subtitle">Pick a gamemode to start</p>
+        <p className="home__subtitle">
+          Puzzle #{getPuzzleNumber(getDayIndex())} · pick a gamemode to start
+        </p>
 
         <div className="home__modes home__modes--row">
           {GAME_MODES.map((gm) => (
@@ -159,17 +166,45 @@ function Home({ onStart }) {
       <p className="home__prompt">Welcome to AREDLE!</p>
       <p className="home__subtitle">Pick a difficulty to start</p>
 
+      {/* Daily is the default and the point of the game; Unlimited is the
+          escape hatch for anyone who wants to keep playing after it. */}
+      <div className="home__cadence" role="group" aria-label="Puzzle cadence">
+        <button
+          type="button"
+          className={`home__cadence-option${isDaily ? " home__cadence-option--active" : ""}`}
+          aria-pressed={isDaily}
+          onClick={() => setIsDaily(true)}
+        >
+          Daily
+        </button>
+        <button
+          type="button"
+          className={`home__cadence-option${isDaily ? "" : " home__cadence-option--active"}`}
+          aria-pressed={!isDaily}
+          onClick={() => setIsDaily(false)}
+        >
+          Unlimited
+        </button>
+      </div>
+      <p className="home__cadence-note">
+        {isDaily
+          ? "One puzzle per board per day. Progress and streaks are saved."
+          : "Endless random levels. Nothing is saved and stats aren't counted."}
+      </p>
+
       <div className="home__modes">
         {DIFFICULTIES.map((d) => (
           <button
             key={d.key}
             type="button"
             className={`mode-card mode-card--${d.key === "easy" ? "hex" : "horns"}`}
-            onClick={() => onStart(pendingGameMode, d.key)}
+            onClick={() => onStart(pendingGameMode, d.key, isDaily)}
           >
             {d.key === "easy" ? <HexBackdrop /> : <HornBackdrop />}
             <span className={`mode-card__badge ${d.badgeClass}`}>{d.tagline}</span>
-            <span className="mode-card__count">{d.count.toLocaleString()}</span>
+            <span className="mode-card__count">
+              {counts[d.key] === null ? "—" : counts[d.key].toLocaleString()}
+            </span>
             <span className="mode-card__label">{d.label}</span>
             <span className="mode-card__description">{d.description}</span>
           </button>

@@ -4,6 +4,36 @@ A daily guessing game built around the [AREDL](https://aredl.net) (All Rate Extr
 
 Built with React + Vite.
 
+## How the game is put together
+
+Every mode is a thin view over one shared core:
+
+| Piece | What it owns |
+| --- | --- |
+| `src/hooks/useGuessGame.js` | Answer selection, guess list, win/loss, daily persistence, stat recording |
+| `src/components/LevelAutocomplete.jsx` | The search box, its keyboard navigation and combobox wiring |
+| `src/lib/grade.js` | Classic's per-column verdicts — shared by the grid and the share string |
+| `src/lib/daily.js` | Day index, the seeded puzzle rotation, the next-puzzle countdown |
+| `src/lib/stats.js`, `src/lib/storage.js` | Streaks, distribution, and every localStorage touch |
+
+### Daily puzzles
+
+The day rolls over at **local** midnight, with puzzle #1 on 2026-01-01. Each
+(game mode, difficulty) pair walks its own seeded permutation of its pool rather
+than hashing straight to an index, so a level never repeats until the pool has
+been used up — Easy Mode cycles cleanly every 150 days. Nothing about a day's
+answer is stored server-side; every client derives the same one.
+
+Progress, stats and theme live in `localStorage` under `aredle:v1:*`. Unlimited
+mode is deliberately not persisted.
+
+### Level data at runtime
+
+`src/data/levels.js` is ~670KB, so `src/data/modes.js` pulls it in through a
+dynamic `import()`. The app shell paints first and the level chunk arrives while
+the player is still on the mode picker. Legacy (demoted) levels are filtered out
+of both pools.
+
 ## Development
 
 ```bash

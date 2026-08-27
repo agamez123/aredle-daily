@@ -1,5 +1,10 @@
 import { useState } from "react"
 import Modal from "./Modal"
+import StatsPanel from "./StatsPanel"
+import { MAX_GUESSES } from "./LevelSearch"
+import { MAX_ROUNDS } from "./RoundsMode"
+import { currentTheme, setTheme as persistTheme } from "../lib/theme"
+import { getDayIndex, getPuzzleNumber } from "../lib/daily"
 import "./Header.css"
 
 function HelpIcon() {
@@ -31,19 +36,100 @@ function SettingsIcon() {
   )
 }
 
-function Header({ gameMode, difficulty, onGoHome }) {
-  const [openModal, setOpenModal] = useState(null)
-  const [theme, setTheme] = useState(
-    () => document.documentElement.dataset.theme || "dark"
+function ClassicHelp() {
+  return (
+    <>
+      <p>
+        Name the AREDL level in {MAX_GUESSES} guesses. Every guess is graded column by column
+        against the answer:
+      </p>
+      <ul>
+        <li>
+          <span className="legend-swatch legend-swatch--correct" /> Green — that column matches
+          exactly.
+        </li>
+        <li>
+          <span className="legend-swatch legend-swatch--close" /> Amber — partly right. Tags share
+          some of the answer&apos;s, a version is within one release.
+        </li>
+        <li>
+          <span className="legend-swatch legend-swatch--wrong" /> Red — no match.
+        </li>
+      </ul>
+      <p>
+        Position is graded on a sliding scale rather than three colours: the closer your guess sits
+        to the answer&apos;s rank, the greener the cell. ▲ means the answer is further down the list
+        (a bigger number), ▼ means it&apos;s further up.
+      </p>
+      <p className="modal-note">
+        Tip: type <code>pos:120</code> to search by list position instead of name. Use ↑ ↓ and Enter
+        to pick without reaching for the mouse.
+      </p>
+    </>
   )
+}
+
+function RoundsHelp() {
+  return (
+    <>
+      <p>
+        Name the AREDL level in {MAX_ROUNDS} rounds. You get no per-column feedback here — instead,
+        every wrong guess unlocks another clue and sharpens the thumbnail.
+      </p>
+      <ul>
+        <li>Round 1 opens with the level&apos;s tags and a heavily blurred thumbnail.</li>
+        <li>
+          Later rounds reveal position, creator, verifier and song. Clues a level doesn&apos;t have
+          are skipped, so the reveals always fill all {MAX_ROUNDS} rounds.
+        </li>
+      </ul>
+      <p className="modal-note">Use ↑ ↓ and Enter to pick without reaching for the mouse.</p>
+    </>
+  )
+}
+
+function GeneralHelp() {
+  return (
+    <>
+      <p>
+        AREDLE is a daily guessing game built on the{" "}
+        <a href="https://aredl.net" target="_blank" rel="noreferrer">
+          All Rated Extreme Demon List
+        </a>
+        . Pick a game mode to start.
+      </p>
+      <ul>
+        <li>
+          <strong>Classic</strong> — grid guesser. Each guess grades position, song, creator,
+          verifier, version and tags.
+        </li>
+        <li>
+          <strong>Rounds</strong> — one clue unlocked per wrong guess, {MAX_ROUNDS} rounds to get it.
+        </li>
+      </ul>
+      <p>
+        <strong>Easy</strong> draws only from the top 150 — the demons everyone already knows.{" "}
+        <strong>Hard</strong> uses the entire list.
+      </p>
+      <p className="modal-note">
+        Each board has its own puzzle every day, plus an Unlimited option if you want to keep going.
+      </p>
+    </>
+  )
+}
+
+function Header({ gameMode, difficulty, isDaily, onGoHome, openModal, onOpenModal, statsToken }) {
+  const [theme, setTheme] = useState(currentTheme)
 
   function toggleTheme() {
     const next = theme === "dark" ? "light" : "dark"
     setTheme(next)
-    document.documentElement.dataset.theme = next
+    persistTheme(next)
   }
 
+  const close = () => onOpenModal(null)
   const TitleTag = onGoHome ? "button" : "span"
+  const puzzleNumber = getPuzzleNumber(getDayIndex())
 
   return (
     <>
@@ -57,7 +143,9 @@ function Header({ gameMode, difficulty, onGoHome }) {
           AREDLE
           {gameMode && (
             <span className="site-header__mode-pill">
-              {gameMode === "classic" ? "Classic" : "Rounds"} · {difficulty === "easy" ? "Easy" : "Hard"}
+              {gameMode === "classic" ? "Classic" : "Rounds"} ·{" "}
+              {difficulty === "easy" ? "Easy" : "Hard"}
+              {isDaily ? ` · #${puzzleNumber}` : " · ∞"}
             </span>
           )}
         </TitleTag>
@@ -65,76 +153,62 @@ function Header({ gameMode, difficulty, onGoHome }) {
           <button
             className="site-header__icon-btn"
             aria-label="Help"
-            onClick={() => setOpenModal("help")}
+            onClick={() => onOpenModal("help")}
           >
             <HelpIcon />
           </button>
           <button
             className="site-header__icon-btn"
             aria-label="Statistics"
-            onClick={() => setOpenModal("stats")}
+            onClick={() => onOpenModal("stats")}
           >
             <StatsIcon />
           </button>
           <button
             className="site-header__icon-btn"
             aria-label="Settings"
-            onClick={() => setOpenModal("settings")}
+            onClick={() => onOpenModal("settings")}
           >
             <SettingsIcon />
           </button>
         </div>
       </header>
 
-      <Modal open={openModal === "help"} title="How to Play" onClose={() => setOpenModal(null)}>
-        <p>Guess today's AREDL level. Each guess reveals how close you were:</p>
-        <ul>
-          <li>
-            <span className="legend-swatch legend-swatch--correct" /> Lit — that column matches the answer.
-          </li>
-          <li>
-            <span className="legend-swatch legend-swatch--close" /> Amber with an arrow — close, the arrow points toward the answer.
-          </li>
-          <li>
-            <span className="legend-swatch legend-swatch--wrong" /> Dim — no match.
-          </li>
-        </ul>
+      <Modal open={openModal === "help"} title="How to Play" onClose={close}>
+        {gameMode === "classic" ? (
+          <ClassicHelp />
+        ) : gameMode === "rounds" ? (
+          <RoundsHelp />
+        ) : (
+          <GeneralHelp />
+        )}
       </Modal>
 
-      <Modal open={openModal === "stats"} title="Statistics" onClose={() => setOpenModal(null)}>
-        <div className="stats-grid">
-          <div className="stats-grid__item">
-            <strong>12</strong>
-            <span>Played</span>
-          </div>
-          <div className="stats-grid__item">
-            <strong>92</strong>
-            <span>Win %</span>
-          </div>
-          <div className="stats-grid__item">
-            <strong>4</strong>
-            <span>Streak</span>
-          </div>
-          <div className="stats-grid__item">
-            <strong>7</strong>
-            <span>Max Streak</span>
-          </div>
-        </div>
-        <p className="modal-note">Dummy data for now — real stats coming soon.</p>
+      <Modal open={openModal === "stats"} title="Statistics" onClose={close}>
+        <StatsPanel
+          gameMode={gameMode ?? "classic"}
+          difficulty={difficulty ?? "hard"}
+          maxGuesses={MAX_GUESSES}
+          refreshToken={statsToken}
+        />
       </Modal>
 
-      <Modal open={openModal === "settings"} title="Settings" onClose={() => setOpenModal(null)}>
+      <Modal open={openModal === "settings"} title="Settings" onClose={close}>
         <div className="settings-row">
           <span>Dark Mode</span>
           <button
             className="theme-toggle"
             role="switch"
             aria-checked={theme === "dark"}
+            aria-label="Dark mode"
             onClick={toggleTheme}
           >
             <span className={`theme-toggle__thumb ${theme === "dark" ? "theme-toggle__thumb--on" : ""}`} />
           </button>
         </div>
+        <p className="modal-note">
+          Progress and stats are stored in this browser only — clearing site data resets them.
+        </p>
       </Modal>
     </>
   )

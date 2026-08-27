@@ -1,0 +1,54 @@
+.game-over {
+  margin-top: 1rem;
+}
+
+.game-over__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 0.9rem;
+}
+
+.game-over__share {
+  padding: 0.55em 1.4em;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--feedback-correct-ink);
+  background-color: var(--feedback-correct);
+  border-color: var(--feedback-correct);
+}
+
+.game-over__share:hover {
+  filter: brightness(1.12);
+  border-color: var(--feedback-correct);
+}
+
+.game-over__secondary {
+  padding: 0.55em 1.2em;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-dim);
+  background-color: transparent;
+}
+
+.game-over__secondary:hover {
+  color: var(--ink);
+}
+
+.game-over__countdown {
+  margin: 0.9rem 0 0;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.game-over__clock {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--ink-dim);
+}
