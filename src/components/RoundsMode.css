@@ -50,26 +50,9 @@
   margin-bottom: 0.5rem;
 }
 
+/* Base input styling lives in LevelAutocomplete.css. */
 .rounds-mode__input {
-  width: 100%;
   max-width: 420px;
-  padding: 0.65em 1em;
-  font-size: 1.1rem;
-  font-family: inherit;
-  color: var(--ink);
-  background-color: var(--surface);
-  border: 1px solid var(--hairline);
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.15s;
-}
-
-.rounds-mode__input:focus {
-  border-color: var(--focus);
-}
-
-.rounds-mode__input::placeholder {
-  color: var(--ink-faint);
 }
 
 .rounds-mode__dropdown {
@@ -86,20 +69,31 @@
 }
 
 .rounds-mode__option {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
   padding: 0.5em 0.75em;
   text-align: left;
   font-family: inherit;
   font-size: 0.9rem;
   color: var(--ink);
   background-color: transparent;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.rounds-mode__option:hover {
+.rounds-mode__option:hover,
+.rounds-mode__option.is-active {
   background-color: var(--surface-raised);
-  border-color: transparent;
+}
+
+.rounds-mode__option-meta {
+  flex: none;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-faint);
 }
 
 .rounds-mode__hints {
@@ -181,4 +175,36 @@
   border: 1px solid var(--hairline-strong);
   text-decoration: line-through;
   text-decoration-color: var(--feedback-wrong);
+}
+
+/* Thumbnail reveal. The image is scaled up in step with the blur so the
+   softened edges stay outside the frame instead of showing a pale halo. */
+.rounds-mode__thumb-frame {
+  position: relative;
+  width: min(420px, 100%);
+  margin: 0 auto 1.5rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 10px;
+  background-color: var(--surface);
+}
+
+.rounds-mode__thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.45s ease, transform 0.45s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rounds-mode__thumb {
+    transition: none;
+  }
+}
+
+.rounds-mode__hint-value--locked {
+  font-size: 0.75rem;
+  text-transform: uppercase;
 }

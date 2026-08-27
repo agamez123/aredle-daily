@@ -409,3 +409,42 @@
 .mode-card__icon--rounds {
   color: var(--feedback-close);
 }
+
+/* Daily / Unlimited switch above the difficulty cards. */
+.home__cadence {
+  display: inline-flex;
+  padding: 3px;
+  margin-bottom: 0.5rem;
+  background-color: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+}
+
+.home__cadence-option {
+  padding: 0.35em 1.1em;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  background: none;
+  border: none;
+  border-radius: 999px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.home__cadence-option:hover {
+  color: var(--ink-dim);
+}
+
+.home__cadence-option--active {
+  color: var(--void);
+  background-color: var(--focus);
+}
+
+.home__cadence-note {
+  margin: 0 0 1.5rem;
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+}

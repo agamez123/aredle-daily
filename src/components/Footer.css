@@ -4,6 +4,7 @@
     box-sizing: border-box;
     width: 100%;
     padding: 2.0rem;
+    text-align: center;
     background-color: var(--void);
     border-top: 1px solid var(--footline);
 }
@@ -84,4 +85,18 @@
     background-color: var(--void);
     clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
     transform: translateX(-50%);
+}
+.site-footer__text {
+  font-size: 0.75rem;
+  color: var(--ink-faint);
+  text-align: center;
+}
+
+.site-footer__text a {
+  color: var(--ink-dim);
+  text-decoration-color: var(--hairline-strong);
+}
+
+.site-footer__text a:hover {
+  color: var(--focus);
 }
