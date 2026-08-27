@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Modal from "./Modal"
 import StatsPanel from "./StatsPanel"
-import { MAX_GUESSES } from "./LevelSearch"
+import { maxGuessesFor } from "../lib/guessLimits"
 import { MAX_ROUNDS } from "./RoundsMode"
 import { currentTheme, setTheme as persistTheme } from "../lib/theme"
 import { getDayIndex, getPuzzleNumber } from "../lib/daily"
@@ -36,34 +36,34 @@ function SettingsIcon() {
   )
 }
 
-function ClassicHelp() {
+function ClassicHelp({ difficulty }) {
   return (
     <>
       <p>
-        Name the AREDL level in {MAX_GUESSES} guesses. Every guess is graded column by column
-        against the answer:
+        Name the AREDL level in {maxGuessesFor(difficulty)} guesses. Every guess is graded column by
+        column against the answer.
       </p>
       <ul>
         <li>
-          <span className="legend-swatch legend-swatch--correct" /> Green — that column matches
+          <span className="legend-swatch legend-swatch--correct" /> Green means that column matches
           exactly.
         </li>
         <li>
-          <span className="legend-swatch legend-swatch--close" /> Amber — partly right. Tags share
-          some of the answer&apos;s, a version is within one release.
+          <span className="legend-swatch legend-swatch--close" /> Amber means partly right. Your tags
+          overlap the answer&apos;s, or your version is within one release.
         </li>
         <li>
-          <span className="legend-swatch legend-swatch--wrong" /> Red — no match.
+          <span className="legend-swatch legend-swatch--wrong" /> Red means no match.
         </li>
       </ul>
       <p>
-        Position is graded on a sliding scale rather than three colours: the closer your guess sits
-        to the answer&apos;s rank, the greener the cell. ▲ means the answer is further down the list
-        (a bigger number), ▼ means it&apos;s further up.
+        Position uses a sliding scale instead of three colours. The closer your guess sits to the
+        answer&apos;s rank, the greener the cell. ▲ means the answer is further down the list, a
+        bigger number. ▼ means it&apos;s further up.
       </p>
       <p className="modal-note">
-        Tip: type <code>pos:120</code> to search by list position instead of name. Use ↑ ↓ and Enter
-        to pick without reaching for the mouse.
+        Type <code>pos:120</code> to search by list position instead of name. Use ↑ ↓ and Enter to
+        pick from the keyboard.
       </p>
     </>
   )
@@ -73,17 +73,17 @@ function RoundsHelp() {
   return (
     <>
       <p>
-        Name the AREDL level in {MAX_ROUNDS} rounds. You get no per-column feedback here — instead,
-        every wrong guess unlocks another clue and sharpens the thumbnail.
+        Name the AREDL level in {MAX_ROUNDS} rounds. There is no per-column feedback. Every wrong
+        guess unlocks another clue and sharpens the thumbnail.
       </p>
       <ul>
-        <li>Round 1 opens with the level&apos;s tags and a heavily blurred thumbnail.</li>
+        <li>Round 1 opens with the level&apos;s tags and a blurred thumbnail.</li>
         <li>
           Later rounds reveal position, creator, verifier and song. Clues a level doesn&apos;t have
           are skipped, so the reveals always fill all {MAX_ROUNDS} rounds.
         </li>
       </ul>
-      <p className="modal-note">Use ↑ ↓ and Enter to pick without reaching for the mouse.</p>
+      <p className="modal-note">Use ↑ ↓ and Enter to pick from the keyboard.</p>
     </>
   )
 }
@@ -100,19 +100,19 @@ function GeneralHelp() {
       </p>
       <ul>
         <li>
-          <strong>Classic</strong> — grid guesser. Each guess grades position, song, creator,
+          <strong>Classic</strong> is a grid guesser. Each guess grades position, song, creator,
           verifier, version and tags.
         </li>
         <li>
-          <strong>Rounds</strong> — one clue unlocked per wrong guess, {MAX_ROUNDS} rounds to get it.
+          <strong>Rounds</strong> unlocks one clue per wrong guess, {MAX_ROUNDS} rounds to get it.
         </li>
       </ul>
       <p>
-        <strong>Easy</strong> draws only from the top 150 — the demons everyone already knows.{" "}
-        <strong>Hard</strong> uses the entire list.
+        <strong>Easy</strong> draws only from the top 150. <strong>Hard</strong> uses the entire
+        list.
       </p>
       <p className="modal-note">
-        Each board has its own puzzle every day, plus an Unlimited option if you want to keep going.
+        Each board has its own puzzle every day, plus an Unlimited mode if you want to keep playing.
       </p>
     </>
   )
@@ -174,9 +174,9 @@ function Header({ gameMode, difficulty, isDaily, onGoHome, openModal, onOpenModa
         </div>
       </header>
 
-      <Modal open={openModal === "help"} title="How to Play" onClose={close}>
+      <Modal open={openModal === "help"} title="How to play" onClose={close}>
         {gameMode === "classic" ? (
-          <ClassicHelp />
+          <ClassicHelp difficulty={difficulty ?? "hard"} />
         ) : gameMode === "rounds" ? (
           <RoundsHelp />
         ) : (
@@ -188,14 +188,13 @@ function Header({ gameMode, difficulty, isDaily, onGoHome, openModal, onOpenModa
         <StatsPanel
           gameMode={gameMode ?? "classic"}
           difficulty={difficulty ?? "hard"}
-          maxGuesses={MAX_GUESSES}
           refreshToken={statsToken}
         />
       </Modal>
 
       <Modal open={openModal === "settings"} title="Settings" onClose={close}>
         <div className="settings-row">
-          <span>Dark Mode</span>
+          <span>Dark mode</span>
           <button
             className="theme-toggle"
             role="switch"
@@ -207,7 +206,7 @@ function Header({ gameMode, difficulty, isDaily, onGoHome, openModal, onOpenModa
           </button>
         </div>
         <p className="modal-note">
-          Progress and stats are stored in this browser only — clearing site data resets them.
+          Progress and stats are stored in this browser only. Clearing site data resets them.
         </p>
       </Modal>
     </>

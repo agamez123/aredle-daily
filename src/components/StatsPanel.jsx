@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { readStats, resetStats, winPercent } from "../lib/stats"
+import { maxGuessesFor } from "../lib/guessLimits"
 import "./StatsPanel.css"
 
 const GAME_MODES = [
@@ -11,22 +12,24 @@ const DIFFICULTIES = [
   { key: "hard", label: "Hard" },
 ]
 
-// Stats are tracked per (game mode, difficulty) — a Rounds-Hard streak has
-// nothing to do with a Classic-Easy one — so the panel is a small browser over
-// the four boards rather than a single set of numbers.
-function StatsPanel({ gameMode = "classic", difficulty = "hard", maxGuesses = 8, refreshToken }) {
+// Stats are tracked per (game mode, difficulty). A Rounds-Hard streak is
+// separate from a Classic-Easy one, so the panel lets you switch between the
+// four boards instead of showing one set of numbers.
+function StatsPanel({ gameMode = "classic", difficulty = "hard", refreshToken }) {
   const [viewGameMode, setViewGameMode] = useState(gameMode)
   const [viewDifficulty, setViewDifficulty] = useState(difficulty)
   const [version, setVersion] = useState(0)
 
-  // Read straight through on every render — it is a single localStorage hit,
-  // and memoising it would only mean inventing cache keys for the two things
-  // that invalidate it (`version` after a reset, `refreshToken` after a game).
+  // Read straight through on every render. It is a single localStorage hit, and
+  // memoising it would only mean inventing cache keys for the two things that
+  // invalidate it, namely `version` after a reset and `refreshToken` after a game.
   void version
   void refreshToken
   const stats = readStats(viewGameMode, viewDifficulty)
 
-  const rounds = viewGameMode === "rounds" ? 6 : maxGuesses
+  // Classic's guess budget depends on the difficulty being viewed, not the one
+  // the player is currently on.
+  const rounds = viewGameMode === "rounds" ? 6 : maxGuessesFor(viewDifficulty)
   const distribution = Array.from({ length: rounds }, (_, i) => stats.distribution[i + 1] ?? 0)
   const peak = Math.max(1, ...distribution)
 
@@ -80,7 +83,7 @@ function StatsPanel({ gameMode = "classic", difficulty = "hard", maxGuesses = 8,
         </div>
       </div>
 
-      <p className="stats-panel__title">Guess Distribution</p>
+      <p className="stats-panel__title">Guess distribution</p>
       {stats.wins === 0 ? (
         <p className="modal-note">No wins on this board yet.</p>
       ) : (

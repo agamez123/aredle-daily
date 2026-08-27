@@ -65,7 +65,7 @@ export function useGuessGame({ pool, gameMode, difficulty, maxGuesses, isDaily }
     if (!isDaily || !gameOver || recordedRef.current) return
     recordedRef.current = true
     setStats(
-      recordResult({ gameMode, difficulty, dayIndex, won, guessCount: guesses.length })
+      recordResult({ gameMode, difficulty, dayIndex, won, guessCount: guesses.length, isDaily })
     )
   }, [isDaily, gameOver, won, guesses.length, gameMode, difficulty, dayIndex])
 
