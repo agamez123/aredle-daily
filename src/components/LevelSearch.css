@@ -41,26 +41,23 @@
   margin-bottom: 1.5rem;
 }
 
+.level-search__round-counter {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--focus);
+  margin: 0 0 1rem;
+}
+
+/* Base input styling lives in LevelAutocomplete.css; this only widens it to
+   match the grid the results are shown in. */
 .level-search__input {
+  max-width: 560px;
+}
+
+.level-table--results {
   width: 100%;
-  max-width: 480px;
-  padding: 0.65em 1em;
-  font-size: 1.1rem;
-  font-family: inherit;
-  color: var(--ink);
-  background-color: var(--surface);
-  border: 1px solid var(--hairline);
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.15s;
-}
-
-.level-search__input:focus {
-  border-color: var(--focus);
-}
-
-.level-search__input::placeholder {
-  color: var(--ink-faint);
 }
 
 .level-search__filters {
@@ -204,34 +201,13 @@
 }
 
 .level-table {
-  /* Score Sheet ledger chrome. The rows below sit on their own photo, so
-     their chips/rules/feedback hues stay fixed regardless of site theme —
-     same reasoning the old hardcoded image scrim already relied on. Only
-     the container itself (bg/border) follows the app's light/dark tokens. */
-  --ss-rule: #2a2c30;
-  --ss-rule-accent: #caa46a;
-  --ss-ink-dim: #9a978f;
-  --ss-chip-bg: rgba(9, 10, 11, 0.74);
-  --ss-chip-bg-soft: rgba(9, 10, 11, 0.58);
-  box-sizing: border-box;
-  width: 88%;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
   background-color: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: 10px;
   padding: 12px;
-}
-
-:root:not([data-theme="light"]) .level-table {
-  --feedback-correct: #7fa374;
-  --feedback-correct-ink: #eaf1e6;
-  --feedback-close: #c3944f;
-  --feedback-close-ink: #251c0d;
-  --feedback-wrong: #5c574e;
-  --feedback-wrong-ink: #d8d4cb;
 }
 
 .level-table__row {
@@ -243,26 +219,22 @@
 }
 
 .level-table__row--header {
-  padding: 0 10px 0.5rem;
-  border-bottom: 1px solid var(--ss-rule-accent);
-}
-
-.level-table__row--header .level-table__cell {
-  font-size: 0.64rem;
-  font-weight: 700;
+  font-size: 0.75rem;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--ink-dim);
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  padding: 0 6px;
 }
 
 .level-table__row--option {
   position: relative;
   isolation: isolate;
-  height: 48px;
+  height: 64px;
   overflow: hidden;
-  border: 1px solid var(--ss-rule);
-  border-radius: 6px;
-  padding: 0 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 8px;
+  padding: 8px;
   color: var(--ink);
   font-family: inherit;
   cursor: pointer;
@@ -270,28 +242,11 @@
 }
 
 .level-table__row--option:hover {
-  border-color: var(--ss-rule-accent);
+  border-color: var(--hairline-strong);
 }
 
 .level-table__row--option:hover::before {
   filter: grayscale(0.25) brightness(0.95);
-}
-
-.level-table__row--option .level-table__cell {
-  font-size: 0.74rem;
-}
-
-.level-table__row--option .level-name {
-  font-size: 0.84rem;
-}
-
-.level-table__row--option .level-table__cell--fill {
-  padding: 2px 7px;
-}
-
-.level-table__row--option .tag-pill {
-  font-size: 0.6rem;
-  padding: 1px 6px;
 }
 
 .level-table__cell {
@@ -301,18 +256,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.level-table__row > .level-table__cell:nth-child(2),
-.level-table__row > .level-table__cell:nth-child(6) {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-.level-table__row > .level-table__cell:nth-child(3),
-.level-table__row > .level-table__cell:nth-child(4),
-.level-table__row > .level-table__cell:nth-child(5) {
-  text-align: left;
 }
 
 .level-table__cell--icon {
@@ -327,12 +270,8 @@
   container-type: inline-size;
   align-self: stretch;
   min-width: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: flex-end;
-  gap: 4px;
   overflow: hidden;
+  white-space: normal;
   font-size: 0.75rem;
   color: var(--ink-dim);
 }
@@ -347,18 +286,18 @@
   min-width: 0;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   overflow: hidden;
   white-space: normal;
   overflow-wrap: break-word;
   font-size: clamp(0.5rem, 2.6cqw, 0.75rem);
   line-height: 1.2;
-  text-align: left;
+  text-align: center;
 }
 
 .level-table--guesses {
-  width: 100%;
   margin-top: 2rem;
+  gap: 10px;
   padding: 16px;
   background-color: var(--surface-raised);
   border: 1px solid var(--hairline-strong);
@@ -379,15 +318,10 @@
 .level-table__row--guess {
   position: relative;
   isolation: isolate;
-  min-height: 96px;
-  border: 1px solid var(--ss-rule);
-  border-radius: 6px;
-  padding: 1rem 18px;
-}
-
-.level-table__row--win {
-  border-color: var(--feedback-correct);
-  box-shadow: 0 0 0 1px var(--feedback-correct) inset;
+  min-height: 76px;
+  border: 1px solid var(--hairline-strong);
+  border-radius: 10px;
+  padding: 14px 10px;
 }
 
 .level-table__row--option::before,
@@ -421,51 +355,36 @@
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  background: rgba(9, 10, 11, 0.42);
+  background: linear-gradient(180deg, rgba(10, 11, 14, 0.15) 0%, rgba(10, 11, 14, 0.55) 100%);
   pointer-events: none;
 }
 
 .level-table__row--guess .level-table__cell:not(.level-table__cell--wrap) {
-  font-size: 0.92rem;
-}
-
-.level-table__row--guess .level-table__cell--fill {
-  padding: 4px 10px;
-}
-
-.level-table__row--guess .level-table__cell--fill:nth-child(2),
-.level-table__row--guess .level-table__cell--fill:nth-child(6) {
-  font-size: 1.05rem;
-  font-weight: 700;
+  font-size: 0.95rem;
 }
 
 .level-table__row--guess .level-table__cell--tags {
   color: rgba(236, 238, 241, 0.75);
 }
 
-.level-table__row--guess .tag-pill {
-  font-size: 0.7rem;
-  padding: 2px 7px;
-}
-
 .level-table__row--guess .level-name {
-  font-size: 1.12rem;
-  font-weight: 700;
-  letter-spacing: -0.005em;
+  font-size: 1rem;
 }
 
 .level-table__cell--fill {
-  border-radius: 4px;
+  padding: 8px 6px;
+  border-radius: 6px;
   font-family: var(--font-mono);
   font-weight: 600;
-  color: var(--ss-ink-dim);
-  background-color: var(--ss-chip-bg);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 3px 8px;
+  color: var(--ink);
+  white-space: normal;
+  overflow-wrap: break-word;
+  background-color: var(--surface-raised);
+  border: 1px solid var(--hairline-strong);
 }
 
 .level-table__cell--wrong {
-  color: var(--ss-ink-dim);
+  color: var(--ink-dim);
 }
 
 .level-table__cell--correct {
@@ -481,19 +400,18 @@
 }
 
 .level-arrow {
-  margin-left: 3px;
-  font-size: 0.85em;
-  opacity: 0.85;
+  margin-left: 4px;
+  font-size: 0.7rem;
 }
 
 .tag-pill {
   display: inline-block;
   padding: 2px 6px;
-  border-radius: 3px;
+  margin: 2px;
+  border-radius: 4px;
   font-size: clamp(0.55rem, 2.4cqw, 0.7rem);
   font-weight: 600;
   border: 1px solid transparent;
-  white-space: nowrap;
 }
 
 .tag-pill--correct {
@@ -507,12 +425,6 @@
   border-color: var(--hairline-strong);
 }
 
-.tag-pill--neutral {
-  background-color: var(--ss-chip-bg-soft);
-  color: var(--ss-ink-dim);
-  border-color: rgba(255, 255, 255, 0.08);
-}
-
 .level-name {
   font-weight: 600;
   color: var(--ink);
@@ -524,20 +436,4 @@
 .level-search__selected {
   margin-top: 1rem;
   color: var(--ink-dim);
-}
-
-.level-search__view-results {
-  margin-top: 1rem;
-  padding: 0.4em 1em;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--focus);
-  background-color: transparent;
-  border: 1px solid var(--focus);
-  border-radius: 999px;
-}
-
-.level-search__view-results:hover {
-  color: var(--void);
-  background-color: var(--focus);
 }

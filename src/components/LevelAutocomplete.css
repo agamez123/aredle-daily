@@ -1,0 +1,52 @@
+.level-autocomplete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.level-autocomplete__input {
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+  padding: 0.65em 1em;
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: var(--ink);
+  background-color: var(--surface);
+  border: 1px solid var(--hairline);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.level-autocomplete__input:focus {
+  border-color: var(--focus);
+}
+
+.level-autocomplete__input::placeholder {
+  color: var(--ink-faint);
+}
+
+.level-autocomplete__input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.level-autocomplete__empty {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
+/* The keyboard cursor. Deliberately louder than :hover so it stays findable
+   while tabbing through a long result list. */
+.level-autocomplete [role="option"].is-active {
+  border-color: var(--focus);
+  box-shadow: 0 0 0 1px var(--focus);
+}
+
+.level-autocomplete [role="option"] {
+  cursor: pointer;
+}
