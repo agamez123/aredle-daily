@@ -1,6 +1,6 @@
 # Aredle Daily
 
-A daily guessing game built around the [AREDL](https://aredl.net) (All Rate Extreme Demon List) — guess the Geometry Dash extreme demon level, Wordle-style, using clues like creator, verifier, position, and tags.
+A daily guessing game built around the [AREDL](https://aredl.net) (All Rated Extreme Demon List) — guess the Geometry Dash extreme demon level, Wordle-style, using clues like creator, verifier, position, and tags.
 
 Built with React + Vite.
 
@@ -33,6 +33,34 @@ mode is deliberately not persisted.
 dynamic `import()`. The app shell paints first and the level chunk arrives while
 the player is still on the mode picker. Legacy (demoted) levels are filtered out
 of both pools.
+
+## Analytics
+
+Gameplay is reported to [Umami](https://umami.is) through `src/lib/telemetry.js`.
+The tracking script is injected at startup **only** when `VITE_UMAMI_WEBSITE_ID`
+is set, so local dev and any deploy without it configured no-op rather than
+pointing traffic at someone else's dashboard. `track()` never throws — analytics
+must not break gameplay.
+
+To view the data: create a website on [cloud.umami.is](https://cloud.umami.is)
+(or your own instance), copy its website ID into `VITE_UMAMI_WEBSITE_ID` as a
+build-time env var on the host, and redeploy. `VITE_` vars are inlined at build
+time, so setting one after a deploy does nothing until the next build. The
+custom events below show up under **Events** on that website's dashboard;
+`combo` and the other props are readable via the event's property breakdown.
+
+| Event | Fired when | Props |
+| --- | --- | --- |
+| `mode_selected` | A difficulty card is clicked on Home | `gameMode`, `difficulty`, `daily` |
+| `game_started` | A board is opened with no guesses on it | `combo`, `gameMode`, `difficulty`, `daily`, `day` |
+| `guess_made` | A guess is accepted onto the board | `combo`, `guessNumber`, `correct` |
+| `game_won` / `game_lost` | A board resolves | `combo`, `guesses`, `daily`, `day` |
+| `share_clicked` | Share result on the game-over card | `combo`, `won`, `guesses`, `copied` |
+
+`combo` is `gameMode:difficulty:daily|unlimited`. Every guard is keyed on the
+game's seed, so resuming or reopening a daily board never re-reports a start,
+its restored guesses, or its result, while an unlimited reroll counts as a new
+game. See `.env.example` for the variables.
 
 ## Development
 

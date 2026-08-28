@@ -207,6 +207,8 @@ function Header({ gameMode, difficulty, isDaily, onGoHome, openModal, onOpenModa
         </div>
         <p className="modal-note">
           Progress and stats are stored in this browser only. Clearing site data resets them.
+          Anonymous usage events (mode picked, game started, guesses, result, share) are sent to
+          Umami analytics. No account, no personal data, and nothing that identifies your device.
         </p>
       </Modal>
     </>

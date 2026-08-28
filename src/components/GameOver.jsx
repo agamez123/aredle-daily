@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import GameResult from "./GameResult"
 import { formatCountdown, msUntilNextPuzzle } from "../lib/daily"
 import { buildShareText, copyText } from "../lib/share"
+import { comboKey, track } from "../lib/telemetry"
 import "./GameOver.css"
 
 function useCountdown(active) {
@@ -50,7 +51,14 @@ function GameOver({
       maxGuesses,
       isDaily,
     })
-    setCopied(await copyText(text))
+    const ok = await copyText(text)
+    track("share_clicked", {
+      combo: comboKey(gameMode, difficulty, isDaily),
+      won,
+      guesses: guesses.length,
+      copied: ok,
+    })
+    setCopied(ok)
   }
 
   return (
