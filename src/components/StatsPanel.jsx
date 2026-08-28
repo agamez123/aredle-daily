@@ -85,7 +85,7 @@ function StatsPanel({ gameMode = "classic", difficulty = "hard", refreshToken })
 
       <p className="stats-panel__title">Guess distribution</p>
       {stats.wins === 0 ? (
-        <p className="modal-note">No wins on this board yet.</p>
+        <p className="modal-note">No wins in this mode yet.</p>
       ) : (
         <div className="stats-panel__dist">
           {distribution.map((count, i) => (
@@ -110,7 +110,7 @@ function StatsPanel({ gameMode = "classic", difficulty = "hard", refreshToken })
           setVersion((v) => v + 1)
         }}
       >
-        Reset this board
+        Reset this mode&apos;s stats
       </button>
     </div>
   )

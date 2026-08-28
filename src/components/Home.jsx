@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { EASY_MODE_LIMIT } from "../data/modes"
 import { getDayIndex, getPuzzleNumber } from "../lib/daily"
+import { track } from "../lib/telemetry"
 import "./Home.css"
 
 const GAME_MODES = [
@@ -191,7 +192,14 @@ function Home({ onStart, pools }) {
             key={d.key}
             type="button"
             className={`mode-card mode-card--${d.key === "easy" ? "hex" : "horns"}`}
-            onClick={() => onStart(pendingGameMode, d.key, isDaily)}
+            onClick={() => {
+              track("mode_selected", {
+                gameMode: pendingGameMode,
+                difficulty: d.key,
+                daily: isDaily,
+              })
+              onStart(pendingGameMode, d.key, isDaily)
+            }}
           >
             {d.key === "easy" ? <HexBackdrop /> : <HornBackdrop />}
             <span className={`mode-card__badge ${d.badgeClass}`}>{d.tagline}</span>
