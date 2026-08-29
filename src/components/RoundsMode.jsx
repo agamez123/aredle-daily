@@ -21,6 +21,7 @@ const HINT_ROWS = [
     label: "Version",
     available: (l) => Boolean(l.version),
     value: (l) => l.version,
+    mono: true,
   },
   {
     key: "description",
@@ -28,7 +29,13 @@ const HINT_ROWS = [
     available: (l) => Boolean(l.description),
     value: (l) => l.description,
   },
-  { key: "position", label: "Position", available: () => true, value: (l) => `#${l.position}` },
+  {
+    key: "position",
+    label: "Position",
+    available: () => true,
+    value: (l) => `#${l.position}`,
+    mono: true,
+  },
   { key: "creator", label: "Creator", available: () => true, value: (l) => l.creator },
   { key: "verifier", label: "Verifier", available: () => true, value: (l) => l.verifier },
   {
@@ -152,15 +159,47 @@ function RoundsMode({ pool, difficulty, isDaily, onChangeMode, onOpenStats }) {
       )}
 
       <div className="rounds-mode__hints">
+        <div className="rounds-mode__hints-header">
+          <span>Clue</span>
+          <span>Entry</span>
+        </div>
         {hintRows.map((row) => {
           const unlocked = row.stage <= stageIndex
+          const valueClass = [
+            "rounds-mode__hint-value",
+            unlocked ? "rounds-mode__hint-value--reveal" : "rounds-mode__hint-value--locked",
+            row.mono ? "rounds-mode__hint-value--mono" : "",
+          ]
+            .filter(Boolean)
+            .join(" ")
+
           return (
             <div key={row.key} className="rounds-mode__hint">
-              <span className="rounds-mode__hint-label">{row.label}</span>
-              <span
-                className={`rounds-mode__hint-value${unlocked ? "" : " rounds-mode__hint-value--locked"}`}
-              >
-                {unlocked ? row.value(answer) : `Unlocks in round ${row.stage}`}
+              <span className="rounds-mode__hint-label">
+                <span
+                  className={`rounds-mode__hint-badge${unlocked ? " rounds-mode__hint-badge--lit" : ""}`}
+                >
+                  R{row.stage}
+                </span>
+                {row.label}
+              </span>
+
+              {/* Keying on lock state remounts the value when it unlocks, so the
+                  reveal plays exactly once instead of on every re-render. */}
+              <span key={unlocked ? "on" : "off"} className={valueClass}>
+                {unlocked ? (
+                  row.key === "tags" ? (
+                    answer.tags.map((tag) => (
+                      <span key={tag} className="tag-pill tag-pill--neutral">
+                        {tag}
+                      </span>
+                    ))
+                  ) : (
+                    row.value(answer)
+                  )
+                ) : (
+                  <span className="visually-hidden">Locked — unlocks in round {row.stage}</span>
+                )}
               </span>
             </div>
           )
@@ -169,11 +208,14 @@ function RoundsMode({ pool, difficulty, isDaily, onChangeMode, onOpenStats }) {
 
       {wrongGuesses.length > 0 && (
         <div className="rounds-mode__guesses">
-          <p className="rounds-mode__guesses-title">Wrong Guesses</p>
+          <p className="rounds-mode__guesses-title">Ruled Out</p>
           <div className="rounds-mode__guess-pills">
-            {wrongGuesses.map((level) => (
+            {/* A wrong guess can only be followed by the winning one, so its
+                index is the round it was spent on. */}
+            {wrongGuesses.map((level, i) => (
               <span key={level.id} className="rounds-mode__guess-pill">
-                {level.name}
+                <span className="rounds-mode__guess-pill-round">R{i + 1}</span>
+                <span className="rounds-mode__guess-pill-name">{level.name}</span>
               </span>
             ))}
           </div>

@@ -6,14 +6,19 @@ import GameOver from "./GameOver"
 import LevelAutocomplete from "./LevelAutocomplete"
 import "./LevelSearch.css"
 
+// `short` is the ledger's column head — the numeric columns sit flush right
+// against a flush-left neighbour, so a long word would crowd the gap. `label`
+// stays the full word for the screen-reader announcement.
 const COLUMNS = [
-  { key: "position", label: "Position" },
+  { key: "position", label: "Position", short: "Pos" },
   { key: "song", label: "Song" },
   { key: "creator", label: "Creator" },
   { key: "verifier", label: "Verifier" },
-  { key: "version", label: "Version" },
+  { key: "version", label: "Version", short: "Ver" },
   { key: "tags", label: "Tags" },
 ]
+
+const OPTION_TAG_LIMIT = 2
 
 const EMPTY_FILTERS = {
   positionMin: "",
@@ -57,10 +62,11 @@ function Verdict({ status, direction }) {
 
 function GuessRow({ level, answer, difficulty }) {
   const graded = gradeGuess(level, answer, difficulty)
+  const isWin = level.id === answer.id
 
   return (
     <div
-      className="level-table__row level-table__row--guess"
+      className={`level-table__row level-table__row--guess${isWin ? " level-table__row--win" : ""}`}
       style={{ "--row-image": `url(/thumbnails/${level.level_id}.webp)` }}
     >
       <span className="level-table__cell level-table__cell--icon">
@@ -139,7 +145,7 @@ function ColumnHeader() {
       <span className="level-table__cell level-table__cell--icon">Level</span>
       {COLUMNS.map((col) => (
         <span key={col.key} className="level-table__cell">
-          {col.label}
+          {col.short ?? col.label}
         </span>
       ))}
     </div>
@@ -254,13 +260,32 @@ function LevelSearch({ pool, difficulty, isDaily, onChangeMode, onOpenStats }) {
                     <span className="level-table__cell level-table__cell--icon">
                       <span className="level-name">{level.name}</span>
                     </span>
-                    <span className="level-table__cell">{level.position}</span>
-                    <span className="level-table__cell level-table__cell--wrap">{level.song}</span>
-                    <span className="level-table__cell">{level.creator}</span>
-                    <span className="level-table__cell">{level.verifier}</span>
-                    <span className="level-table__cell">{level.version ?? "—"}</span>
+                    <span className="level-table__cell level-table__cell--fill">
+                      {level.position}
+                    </span>
+                    <span className="level-table__cell level-table__cell--fill level-table__cell--wrap">
+                      {level.song}
+                    </span>
+                    <span className="level-table__cell level-table__cell--fill">{level.creator}</span>
+                    <span className="level-table__cell level-table__cell--fill">
+                      {level.verifier}
+                    </span>
+                    <span className="level-table__cell level-table__cell--fill">
+                      {level.version ?? "—"}
+                    </span>
+                    {/* A candidate row is one line tall, so tags are capped and
+                        the remainder collapses into a count. */}
                     <span className="level-table__cell level-table__cell--tags">
-                      {level.tags.join(", ")}
+                      {level.tags.slice(0, OPTION_TAG_LIMIT).map((tag) => (
+                        <span key={tag} className="tag-pill tag-pill--neutral">
+                          {tag}
+                        </span>
+                      ))}
+                      {level.tags.length > OPTION_TAG_LIMIT && (
+                        <span className="tag-pill tag-pill--neutral">
+                          +{level.tags.length - OPTION_TAG_LIMIT}
+                        </span>
+                      )}
                     </span>
                   </>
                 ),
