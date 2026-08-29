@@ -162,8 +162,7 @@ function Home({ onStart, pools }) {
       <button type="button" className="home__back" onClick={() => setPendingGameMode(null)}>
         ← Back
       </button>
-      <p className="home__prompt">Welcome to AREDLE!</p>
-      <p className="home__subtitle">Pick a difficulty to start</p>
+      <p className="home__subtitle home__subtitle--lead">Pick a difficulty to start</p>
 
       {/* Daily is the default and the point of the game; Unlimited is the
           escape hatch for anyone who wants to keep playing after it. */}

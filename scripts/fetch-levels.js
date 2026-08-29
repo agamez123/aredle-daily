@@ -131,7 +131,11 @@ function splitVersion(tags) {
 async function main() {
   console.log("Fetching level list...")
   const list = await fetchJson(LIST_URL)
-  console.log(`Got ${list.length} levels.`)
+  // The endpoint returns the legacy list too (status "Legacy"), numbered
+  // straight on from the main list, so their positions look like real placements
+  // even though the site never shows them. The game only wants the main list.
+  const mainList = list.filter((l) => l.status === "MainList")
+  console.log(`Got ${list.length} levels (${mainList.length} main list, ${list.length - mainList.length} legacy).`)
 
   const cache = await loadCache()
   // Safety net: if something crashes the process outright (e.g. an
@@ -147,7 +151,7 @@ async function main() {
     await saveCache(cache)
     process.exitCode = 1
   })
-  const missingIds = list.map((l) => l.id).filter((id) => !cache[id]).slice(0, LIMIT)
+  const missingIds = mainList.map((l) => l.id).filter((id) => !cache[id]).slice(0, LIMIT)
   console.log(`${missingIds.length} levels need a detail fetch (not cached yet).`)
 
   if (missingIds.length > 0) {
@@ -173,7 +177,7 @@ async function main() {
     }
   }
 
-  const output = list.map((l) => {
+  const output = mainList.map((l) => {
     const { version, tags } = splitVersion(l.tags)
     const detail = cache[l.id]
     const verifier = detail?.verifications?.[0]?.submitted_by
@@ -183,7 +187,7 @@ async function main() {
       level_id: l.level_id,
       name: l.name,
       position: l.position,
-      legacy: l.legacy,
+      status: l.status,
       song: l.song,
       creator: detail?.publisher?.global_name ?? detail?.publisher?.username ?? null,
       verifier: verifier?.global_name ?? verifier?.username ?? null,
@@ -198,7 +202,8 @@ async function main() {
 
   // The list endpoint returns several fields the frontend doesn't currently
   // use (points, description, edel_enjoyment, etc). Keep those around too,
-  // separately, in case they're useful later.
+  // separately, in case they're useful later. This one keeps the legacy
+  // levels as well, tagged by `status`.
   const fullOutput = list.map((l) => {
     const { version, tags } = splitVersion(l.tags)
     const detail = cache[l.id]
@@ -210,7 +215,7 @@ async function main() {
       name: l.name,
       position: l.position,
       points: l.points,
-      legacy: l.legacy,
+      status: l.status,
       two_player: l.two_player,
       song: l.song,
       description: l.description,
