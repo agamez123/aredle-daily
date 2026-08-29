@@ -39464,5 +39464,29 @@
       }
     ],
     "fetchedAt": "2026-08-28T03:12:47.487Z"
+  },
+  "e1ac9cab-8dd7-438e-98c9-fd844b1f3da3": {
+    "publisher": {
+      "id": "317ec6e4-3309-4275-aa18-eb0a6fff98fd",
+      "username": "6de7a2580",
+      "global_name": "TheRealXFuture"
+    },
+    "verifications": [
+      {
+        "id": "a7e22e1f-23ec-49e3-8ff8-6270b6caca1e",
+        "submitted_by": {
+          "id": "019ece95-4f2e-4bec-b5b3-52be98b5e29f",
+          "username": "nqrwhal",
+          "global_name": "Riley"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=WECBlbM0LJk",
+        "hide_video": false,
+        "achieved_at": "2026-02-04T02:18:50Z",
+        "created_at": "2026-08-16T00:23:49.583428Z",
+        "updated_at": "2026-08-16T00:23:49.583428Z"
+      }
+    ],
+    "fetchedAt": "2026-08-29T20:23:42.296Z"
   }
 }

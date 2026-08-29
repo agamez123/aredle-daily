@@ -29,6 +29,9 @@ function Footer() {
         ))}
         . Not affiliated with RobTop Games.
       </span>
+      <span className="site-footer__credit">
+        made with <span aria-label="love">❤️</span> by agamez
+      </span>
     </footer>
   )
 }

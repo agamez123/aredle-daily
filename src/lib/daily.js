@@ -1,8 +1,10 @@
 import { hashString, shuffle } from "./random"
 
-// Puzzle #1 is 2026-01-01, local time. Rollover is local midnight (like Wordle)
+// Puzzle #1 is 2026-08-29, local time. Rollover is local midnight (like Wordle)
 // rather than UTC, so "today's puzzle" always matches the player's own date.
-const EPOCH = Date.UTC(2026, 0, 1)
+// Moving this date renumbers every puzzle and reshuffles which level lands on
+// which day, so it should only change before a launch, never after one.
+const EPOCH = Date.UTC(2026, 7, 29)
 const DAY_MS = 86400000
 
 // Days since the epoch for a given local date. Built from local Y/M/D pushed

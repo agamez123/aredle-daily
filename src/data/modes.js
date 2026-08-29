@@ -11,12 +11,11 @@ let poolsPromise = null
 export function loadPools() {
   if (!poolsPromise) {
     poolsPromise = import("./levels.js").then(({ LEVELS }) => {
-      // Legacy levels have been demoted off the main list — they're still in
-      // the dataset for reference, but they aren't valid answers.
-      const active = LEVELS.filter((level) => !level.legacy)
+      // levels.js is main-list only — the legacy levels the AREDL API also
+      // returns are filtered out at fetch time (scripts/fetch-levels.js).
       return {
-        hard: active,
-        easy: active.filter((level) => level.position <= EASY_MODE_LIMIT),
+        hard: LEVELS,
+        easy: LEVELS.filter((level) => level.position <= EASY_MODE_LIMIT),
       }
     })
   }

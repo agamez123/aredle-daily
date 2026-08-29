@@ -20,6 +20,13 @@
   margin: 0 0 2rem;
 }
 
+/* On the difficulty screen this line stands alone with no prompt above it, so
+   it carries the heading weight instead of sitting as a caption. */
+.home__subtitle--lead {
+  font-size: 1.05rem;
+  color: var(--ink-dim);
+}
+
 .home__back {
   display: inline-flex;
   align-items: center;
