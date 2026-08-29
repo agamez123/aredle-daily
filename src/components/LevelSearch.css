@@ -201,13 +201,32 @@
 }
 
 .level-table {
+  /* Score Sheet ledger chrome. Rows sit on their own level photo, so their
+     chips, rules and feedback hues are pinned rather than themed — the same
+     reasoning the image scrim already relied on. Only the container itself
+     (background/border) follows the app's light/dark tokens. */
+  --ss-rule: #2a2c30;
+  --ss-rule-accent: #caa46a;
+  --ss-ink-dim: #9a978f;
+  --ss-chip-bg: rgba(9, 10, 11, 0.74);
+  --ss-chip-bg-soft: rgba(9, 10, 11, 0.58);
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
   background-color: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: 10px;
   padding: 12px;
+  box-sizing: border-box;
+}
+
+:root:not([data-theme="light"]) .level-table {
+  --feedback-correct: #7fa374;
+  --feedback-correct-ink: #eaf1e6;
+  --feedback-close: #c3944f;
+  --feedback-close-ink: #251c0d;
+  --feedback-wrong: #5c574e;
+  --feedback-wrong-ink: #d8d4cb;
 }
 
 .level-table__row {
@@ -219,22 +238,42 @@
 }
 
 .level-table__row--header {
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--ink);
-  padding: 0 6px;
+  padding: 0 10px 0.5rem;
+  border-bottom: 1px solid var(--ss-rule-accent);
 }
 
+.level-table__row--header .level-table__cell {
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
+}
+
+/* A ledger reads down its columns: counts flush right on tabular figures,
+   text flush left. */
+.level-table__row > .level-table__cell:nth-child(2),
+.level-table__row > .level-table__cell:nth-child(6) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.level-table__row > .level-table__cell:nth-child(3),
+.level-table__row > .level-table__cell:nth-child(4),
+.level-table__row > .level-table__cell:nth-child(5) {
+  text-align: left;
+}
+
+/* Guessing: a compact index strip. You are skimming candidates, so the row
+   stays light — deliberately about half the height of a settled guess. */
 .level-table__row--option {
   position: relative;
   isolation: isolate;
-  height: 64px;
+  height: 48px;
   overflow: hidden;
-  border: 1px solid var(--hairline);
-  border-radius: 8px;
-  padding: 8px;
+  border: 1px solid var(--ss-rule);
+  border-radius: 6px;
+  padding: 0 12px;
   color: var(--ink);
   font-family: inherit;
   cursor: pointer;
@@ -242,11 +281,28 @@
 }
 
 .level-table__row--option:hover {
-  border-color: var(--hairline-strong);
+  border-color: var(--ss-rule-accent);
 }
 
 .level-table__row--option:hover::before {
   filter: grayscale(0.25) brightness(0.95);
+}
+
+.level-table__row--option .level-table__cell {
+  font-size: 0.74rem;
+}
+
+.level-table__row--option .level-name {
+  font-size: 0.84rem;
+}
+
+.level-table__row--option .level-table__cell--fill {
+  padding: 2px 7px;
+}
+
+.level-table__row--option .tag-pill {
+  font-size: 0.6rem;
+  padding: 1px 6px;
 }
 
 .level-table__cell {
@@ -270,13 +326,18 @@
   container-type: inline-size;
   align-self: stretch;
   min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  gap: 4px;
   overflow: hidden;
-  white-space: normal;
   font-size: 0.75rem;
   color: var(--ink-dim);
 }
 
-.level-table__row--option .level-table__cell--tags {
+.level-table__row--option .level-table__cell--tags,
+.level-table__row--guess .level-table__cell--tags {
   color: rgba(236, 238, 241, 0.75);
 }
 
@@ -286,18 +347,23 @@
   min-width: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
   white-space: normal;
   overflow-wrap: break-word;
   font-size: clamp(0.5rem, 2.6cqw, 0.75rem);
   line-height: 1.2;
-  text-align: center;
+  text-align: left;
 }
 
+/* Seven columns of ledger need more room than the search column gives, so the
+   table breaks out of it — the same full-bleed trick the Rounds thumbnail
+   uses: percentage margins resolve against the parent, so `50% - width / 2`
+   keeps it centred while it overhangs. */
 .level-table--guesses {
-  margin-top: 2rem;
-  gap: 10px;
+  --guesses-width: min(1180px, 94vw);
+  width: var(--guesses-width);
+  margin: 2rem calc(50% - var(--guesses-width) / 2) 0;
   padding: 16px;
   background-color: var(--surface-raised);
   border: 1px solid var(--hairline-strong);
@@ -315,13 +381,20 @@
   text-align: left;
 }
 
+/* Guessed: a heavier ledger stamp. Each row is a settled result, so it gets
+   twice the height and a larger type scale than a candidate. */
 .level-table__row--guess {
   position: relative;
   isolation: isolate;
-  min-height: 76px;
-  border: 1px solid var(--hairline-strong);
-  border-radius: 10px;
-  padding: 14px 10px;
+  min-height: 96px;
+  border: 1px solid var(--ss-rule);
+  border-radius: 6px;
+  padding: 1rem 18px;
+}
+
+.level-table__row--win {
+  border-color: var(--feedback-correct);
+  box-shadow: 0 0 0 1px var(--feedback-correct) inset;
 }
 
 .level-table__row--option::before,
@@ -355,36 +428,50 @@
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  background: linear-gradient(180deg, rgba(10, 11, 14, 0.15) 0%, rgba(10, 11, 14, 0.55) 100%);
+  background: rgba(9, 10, 11, 0.42);
   pointer-events: none;
 }
 
 .level-table__row--guess .level-table__cell:not(.level-table__cell--wrap) {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
-.level-table__row--guess .level-table__cell--tags {
-  color: rgba(236, 238, 241, 0.75);
+.level-table__row--guess .level-table__cell--fill {
+  padding: 4px 10px;
+}
+
+.level-table__row--guess .level-table__cell--fill:nth-child(2),
+.level-table__row--guess .level-table__cell--fill:nth-child(6) {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.level-table__row--guess .tag-pill {
+  font-size: 0.7rem;
+  padding: 2px 7px;
 }
 
 .level-table__row--guess .level-name {
-  font-size: 1rem;
+  font-size: 1.12rem;
+  font-weight: 700;
+  letter-spacing: -0.005em;
 }
 
+/* Data rides in solid mono chips so it stays legible over any photo. */
 .level-table__cell--fill {
-  padding: 8px 6px;
-  border-radius: 6px;
+  padding: 3px 8px;
+  border-radius: 4px;
   font-family: var(--font-mono);
   font-weight: 600;
-  color: var(--ink);
+  color: var(--ss-ink-dim);
+  background-color: var(--ss-chip-bg);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   white-space: normal;
   overflow-wrap: break-word;
-  background-color: var(--surface-raised);
-  border: 1px solid var(--hairline-strong);
 }
 
 .level-table__cell--wrong {
-  color: var(--ink-dim);
+  color: var(--ss-ink-dim);
 }
 
 .level-table__cell--correct {
@@ -400,18 +487,19 @@
 }
 
 .level-arrow {
-  margin-left: 4px;
-  font-size: 0.7rem;
+  margin-left: 3px;
+  font-size: 0.85em;
+  opacity: 0.85;
 }
 
 .tag-pill {
   display: inline-block;
   padding: 2px 6px;
-  margin: 2px;
-  border-radius: 4px;
+  border-radius: 3px;
   font-size: clamp(0.55rem, 2.4cqw, 0.7rem);
   font-weight: 600;
   border: 1px solid transparent;
+  white-space: nowrap;
 }
 
 .tag-pill--correct {
@@ -423,6 +511,13 @@
   background-color: transparent;
   color: var(--ink-faint);
   border-color: var(--hairline-strong);
+}
+
+/* Candidate rows have no verdict to show yet, so their tags stay neutral. */
+.tag-pill--neutral {
+  background-color: var(--ss-chip-bg-soft);
+  color: var(--ss-ink-dim);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .level-name {

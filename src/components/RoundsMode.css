@@ -36,12 +36,18 @@
 }
 
 .rounds-mode__round-counter {
+  display: inline-block;
+  margin: 0 0 1.25rem;
+  padding: 0.3em 0.9em;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--focus);
-  margin: 0 0 1rem;
+  background-color: var(--surface);
+  border: 1px solid var(--focus);
+  border-radius: 999px;
 }
 
 .rounds-mode__bar {
@@ -97,48 +103,134 @@
 }
 
 .rounds-mode__hints {
+  /* Same Score Sheet ledger chrome as Classic mode's guess table: dark chips,
+     a gold rule accent, tabular figures — pinned regardless of site theme,
+     matching that table's own local override. The tag pills below borrow
+     these tokens, which is why they live on the panel rather than a row. */
+  --ss-rule: #2a2c30;
+  --ss-rule-accent: #caa46a;
+  --ss-ink-dim: #9a978f;
+  --ss-chip-bg: rgba(9, 10, 11, 0.74);
+  --ss-chip-bg-soft: rgba(9, 10, 11, 0.58);
   display: flex;
   flex-direction: column;
-  gap: 6px;
   margin-top: 1.5rem;
-  padding: 12px;
+  padding: 4px 14px 6px;
   background-color: var(--surface);
   border: 1px solid var(--hairline);
   border-radius: 10px;
   text-align: left;
 }
 
-.rounds-mode__hint {
+.rounds-mode__hints-header {
   display: grid;
-  grid-template-columns: 110px 1fr;
-  align-items: baseline;
+  grid-template-columns: 130px 1fr;
   gap: 10px;
-  padding: 6px 8px;
-  border-radius: 6px;
+  padding: 10px 6px 0.6rem;
+  border-bottom: 1px solid var(--ss-rule-accent);
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-dim);
 }
 
-.rounds-mode__hint:nth-child(odd) {
-  background-color: var(--surface-raised);
+.rounds-mode__hint {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 6px;
+  border-bottom: 1px solid var(--ss-rule);
+}
+
+.rounds-mode__hint:last-child {
+  border-bottom: none;
 }
 
 .rounds-mode__hint-label {
-  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.03em;
   color: var(--ink-faint);
 }
 
+/* The unlock order is a real sequence worth showing, so each clue carries the
+   round it lands on — lit once that round arrives. */
+.rounds-mode__hint-badge {
+  flex: none;
+  padding: 1px 5px;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--ss-ink-dim);
+  background-color: var(--ss-chip-bg-soft);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+}
+
+.rounds-mode__hint-badge--lit {
+  color: #1a1508;
+  background-color: var(--ss-rule-accent);
+  border-color: var(--ss-rule-accent);
+}
+
 .rounds-mode__hint-value {
-  font-size: 0.9rem;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.88rem;
   color: var(--ink);
   overflow-wrap: break-word;
 }
 
-.rounds-mode__hint-value--locked {
+.rounds-mode__hint-value--mono {
   font-family: var(--font-mono);
-  letter-spacing: 0.1em;
-  color: var(--ink-faint);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.rounds-mode__hint-value--reveal {
+  animation: rounds-hint-reveal 0.7s ease-out;
+}
+
+@keyframes rounds-hint-reveal {
+  0% {
+    color: var(--ss-rule-accent);
+    transform: translateX(-4px);
+  }
+  100% {
+    color: var(--ink);
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rounds-mode__hint-value--reveal {
+    animation: none;
+  }
+}
+
+/* A locked clue is redacted rather than spelled out — the round it unlocks in
+   is already on its badge, and the bar reads as withheld at a glance. */
+.rounds-mode__hint-value--locked {
+  align-self: stretch;
+  min-height: 20px;
+  border-radius: 3px;
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--ss-chip-bg) 0px,
+    var(--ss-chip-bg) 6px,
+    rgba(255, 255, 255, 0.035) 6px,
+    rgba(255, 255, 255, 0.035) 12px
+  );
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .rounds-mode__guesses {
@@ -167,12 +259,28 @@
 }
 
 .rounds-mode__guess-pill {
-  padding: 0.3em 0.7em;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.28em 0.7em 0.28em 0.4em;
   border-radius: 999px;
   font-size: 0.8rem;
   color: var(--ink-faint);
   background-color: var(--surface);
   border: 1px solid var(--hairline-strong);
+}
+
+.rounds-mode__guess-pill-round {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 1px 5px;
+  color: var(--void);
+  background-color: var(--ink-faint);
+  border-radius: 3px;
+}
+
+.rounds-mode__guess-pill-name {
   text-decoration: line-through;
   text-decoration-color: var(--feedback-wrong);
 }
@@ -209,9 +317,4 @@
   .rounds-mode__thumb {
     transition: none;
   }
-}
-
-.rounds-mode__hint-value--locked {
-  font-size: 0.75rem;
-  text-transform: uppercase;
 }
