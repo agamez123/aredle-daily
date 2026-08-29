@@ -92,7 +92,7 @@
   background-image: var(--mode-image, none);
   background-size: cover;
   background-position: center;
-  filter: grayscale(0.85) brightness(0.4);
+  filter: var(--media-dim);
   transition: filter 0.25s ease, transform 0.3s ease;
 }
 
@@ -101,7 +101,7 @@
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(10, 11, 14, 0.35) 0%, rgba(10, 11, 14, 0.8) 100%);
+  background: var(--card-scrim);
 }
 
 .mode-card:hover,
@@ -112,7 +112,7 @@
 
 .mode-card:hover::before,
 .mode-card:focus-visible::before {
-  filter: grayscale(0.55) brightness(0.5);
+  filter: var(--media-dim-hover);
   transform: scale(1.05);
 }
 
@@ -152,7 +152,8 @@
   font-size: 2.6rem;
   font-weight: 700;
   line-height: 1;
-  color: #fff;
+  color: var(--on-media);
+  text-shadow: var(--on-media-shadow);
 }
 
 .mode-card__label {
@@ -161,13 +162,14 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--on-media);
+  text-shadow: var(--on-media-shadow);
 }
 
 .mode-card__description {
   max-width: 26ch;
   font-size: 0.82rem;
-  color: rgba(236, 238, 241, 0.75);
+  color: var(--on-media-dim);
 }
 
 /* Compact horizontal list style used for the gamemode picker: icon on the
@@ -348,7 +350,7 @@
   height: 168px;
   background: linear-gradient(160deg, #ffb27a, var(--ar-red) 85%);
   clip-path: polygon(46% 0%, 100% 100%, 0% 100%);
-  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0 10px 16px var(--emblem-shadow));
 }
 
 .mode-card__horn--left {
@@ -370,7 +372,7 @@
   margin: -25px 0 0 -25px;
   background: linear-gradient(135deg, #ffb27a, var(--ar-orange) 55%, #a83000);
   clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 16px var(--emblem-shadow);
 }
 
 /* Classic/Rounds backdrops: a plain icon with a soft glow behind it, lighter

@@ -201,15 +201,16 @@
 }
 
 .level-table {
-  /* Score Sheet ledger chrome. Rows sit on their own level photo, so their
-     chips, rules and feedback hues are pinned rather than themed — the same
-     reasoning the image scrim already relied on. Only the container itself
-     (background/border) follows the app's light/dark tokens. */
-  --ss-rule: #2a2c30;
-  --ss-rule-accent: #caa46a;
-  --ss-ink-dim: #9a978f;
-  --ss-chip-bg: rgba(9, 10, 11, 0.74);
-  --ss-chip-bg-soft: rgba(9, 10, 11, 0.58);
+  /* Score Sheet ledger chrome, aliased onto the app's themed chrome tokens.
+     Rows sit on their own level photo, so the scrim and the chips have to move
+     together with the theme — a dark chip under dark type was what made light
+     mode unreadable. Feedback hues are still retuned per theme below, since
+     over artwork they need to be quieter than the app's base ones. */
+  --ss-rule: var(--rule);
+  --ss-rule-accent: var(--rule-accent);
+  --ss-ink-dim: var(--chip-ink);
+  --ss-chip-bg: var(--chip-bg);
+  --ss-chip-bg-soft: var(--chip-bg-soft);
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -227,6 +228,18 @@
   --feedback-close-ink: #251c0d;
   --feedback-wrong: #5c574e;
   --feedback-wrong-ink: #d8d4cb;
+}
+
+/* Same idea in reverse. "Wrong" is a warm neutral rather than a red so a far
+   guess reads as cold on the position gradient instead of shouting, and the
+   greens and golds are darkened enough to hold white-ish chip ink. */
+:root[data-theme="light"] .level-table {
+  --feedback-correct: #5d8a68;
+  --feedback-correct-ink: #f2f7f3;
+  --feedback-close: #a8823f;
+  --feedback-close-ink: #fdf6e6;
+  --feedback-wrong: #cfcac1;
+  --feedback-wrong-ink: #4a463e;
 }
 
 .level-table__row {
@@ -274,7 +287,7 @@
   border: 1px solid var(--ss-rule);
   border-radius: 6px;
   padding: 0 12px;
-  color: var(--ink);
+  color: var(--on-media);
   font-family: inherit;
   cursor: pointer;
   transition: border-color 0.15s, filter 0.2s;
@@ -285,7 +298,7 @@
 }
 
 .level-table__row--option:hover::before {
-  filter: grayscale(0.25) brightness(0.95);
+  filter: var(--media-dim-hover);
 }
 
 .level-table__row--option .level-table__cell {
@@ -338,7 +351,7 @@
 
 .level-table__row--option .level-table__cell--tags,
 .level-table__row--guess .level-table__cell--tags {
-  color: rgba(236, 238, 241, 0.75);
+  color: var(--on-media-dim);
 }
 
 .level-table__cell--wrap {
@@ -414,11 +427,11 @@
 }
 
 .level-table__row--guess::before {
-  filter: grayscale(1) brightness(0.6);
+  filter: var(--media-dim);
 }
 
 .level-table__row--option::before {
-  filter: grayscale(0.7) brightness(0.7);
+  filter: var(--media-dim-soft);
 }
 
 .level-table__row--option::after,
@@ -428,7 +441,7 @@
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  background: rgba(9, 10, 11, 0.42);
+  background: var(--media-scrim);
   pointer-events: none;
 }
 
@@ -465,7 +478,7 @@
   font-weight: 600;
   color: var(--ss-ink-dim);
   background-color: var(--ss-chip-bg);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--chip-border);
   white-space: normal;
   overflow-wrap: break-word;
 }
@@ -509,23 +522,23 @@
 
 .tag-pill--wrong {
   background-color: transparent;
-  color: var(--ink-faint);
-  border-color: var(--hairline-strong);
+  color: var(--on-media-dim);
+  border-color: var(--chip-border);
 }
 
 /* Candidate rows have no verdict to show yet, so their tags stay neutral. */
 .tag-pill--neutral {
   background-color: var(--ss-chip-bg-soft);
   color: var(--ss-ink-dim);
-  border-color: rgba(255, 255, 255, 0.08);
+  border-color: var(--chip-border);
 }
 
 .level-name {
   font-weight: 600;
-  color: var(--ink);
+  color: var(--on-media);
   overflow: hidden;
   text-overflow: ellipsis;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  text-shadow: var(--on-media-shadow);
 }
 
 .level-search__selected {
