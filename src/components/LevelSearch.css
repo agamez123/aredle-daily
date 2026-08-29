@@ -545,3 +545,148 @@
   margin-top: 1rem;
   color: var(--ink-dim);
 }
+
+/* Below this width the seven-column ledger stops being readable: a 390px phone
+   leaves each column about 40px, which chops names to "Slau…" and stacks song
+   titles one letter per line. Guess rows become a labelled card instead, and
+   candidate rows drop to the name and its rank. */
+@media (max-width: 720px) {
+  .level-table__row--header {
+    display: none;
+  }
+
+  .level-table--guesses {
+    padding: 10px;
+  }
+
+  .level-table__row--guess {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "name name"
+      "pos ver"
+      "creator verifier"
+      "song song"
+      "tags tags";
+    gap: 6px;
+    min-height: 0;
+    padding: 12px;
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(1) {
+    grid-area: name;
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(2) {
+    grid-area: pos;
+    text-align: left;
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(3) {
+    grid-area: song;
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(4) {
+    grid-area: creator;
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(5) {
+    grid-area: verifier;
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(6) {
+    grid-area: ver;
+    text-align: left;
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(7) {
+    grid-area: tags;
+    justify-content: flex-start;
+  }
+
+  /* With the header row gone, each chip has to name its own column. */
+  .level-table__row--guess > .level-table__cell--fill::before {
+    align-self: center;
+    flex: none;
+    margin-right: 6px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(2)::before {
+    content: "Pos";
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(3)::before {
+    content: "Song";
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(4)::before {
+    content: "Creator";
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(5)::before {
+    content: "Verifier";
+  }
+
+  .level-table__row--guess > .level-table__cell:nth-child(6)::before {
+    content: "Ver";
+  }
+
+  .level-table__row--guess .level-table__cell:not(.level-table__cell--wrap) {
+    font-size: 0.85rem;
+  }
+
+  .level-table__row--guess .level-table__cell--fill:nth-child(2),
+  .level-table__row--guess .level-table__cell--fill:nth-child(6) {
+    font-size: 0.9rem;
+  }
+
+  .level-table__row--guess .level-name {
+    font-size: 1rem;
+  }
+
+  .level-table__row--option {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+  }
+
+  .level-table__row--option > .level-table__cell:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+/* Phone widths: a creator like "OniLinkGD" already breaks mid-word in a half
+   row, so creator and verifier get a line each. */
+@media (max-width: 480px) {
+  .level-table__row--guess {
+    grid-template-areas:
+      "name name"
+      "pos ver"
+      "creator creator"
+      "verifier verifier"
+      "song song"
+      "tags tags";
+  }
+}
+
+/* Touch sizing for the filter panel: iOS Safari zooms the page in on any input
+   under 16px and never zooms back out, and a 20px-tall tag is a poor tap
+   target. */
+@media (max-width: 720px) {
+  .level-search__filter-field input,
+  .level-search__filter-field select {
+    font-size: 16px;
+  }
+
+  .level-search__filter-tags .tag-pill--filter {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+  }
+
+  .level-search__filter-clear {
+    padding: 0.5em 1em;
+  }
+}
