@@ -103,15 +103,16 @@
 }
 
 .rounds-mode__hints {
-  /* Same Score Sheet ledger chrome as Classic mode's guess table: dark chips,
-     a gold rule accent, tabular figures — pinned regardless of site theme,
-     matching that table's own local override. The tag pills below borrow
-     these tokens, which is why they live on the panel rather than a row. */
-  --ss-rule: #2a2c30;
-  --ss-rule-accent: #caa46a;
-  --ss-ink-dim: #9a978f;
-  --ss-chip-bg: rgba(9, 10, 11, 0.74);
-  --ss-chip-bg-soft: rgba(9, 10, 11, 0.58);
+  /* Same Score Sheet ledger chrome as Classic mode's guess table — chips, a
+     gold rule accent, tabular figures — aliased onto the themed chrome tokens
+     so the panel follows light/dark instead of staying dark on a white page.
+     The tag pills below borrow these tokens, which is why they live on the
+     panel rather than a row. */
+  --ss-rule: var(--rule);
+  --ss-rule-accent: var(--rule-accent);
+  --ss-ink-dim: var(--chip-ink);
+  --ss-chip-bg: var(--chip-bg);
+  --ss-chip-bg-soft: var(--chip-bg-soft);
   display: flex;
   flex-direction: column;
   margin-top: 1.5rem;
@@ -169,7 +170,7 @@
   font-weight: 700;
   color: var(--ss-ink-dim);
   background-color: var(--ss-chip-bg-soft);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--chip-border);
   border-radius: 3px;
 }
 
@@ -227,10 +228,10 @@
     135deg,
     var(--ss-chip-bg) 0px,
     var(--ss-chip-bg) 6px,
-    rgba(255, 255, 255, 0.035) 6px,
-    rgba(255, 255, 255, 0.035) 12px
+    var(--chip-stripe) 6px,
+    var(--chip-stripe) 12px
   );
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--chip-border);
 }
 
 .rounds-mode__guesses {
@@ -275,8 +276,8 @@
   font-size: 0.6rem;
   font-weight: 700;
   padding: 1px 5px;
-  color: var(--void);
-  background-color: var(--ink-faint);
+  color: var(--surface);
+  background-color: var(--ink-dim);
   border-radius: 3px;
 }
 

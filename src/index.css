@@ -18,6 +18,34 @@
   --feedback-wrong: #8f4c4c;
   --feedback-wrong-ink: #f4dcdc;
 
+  /* Media surfaces. Guess rows sit on a level thumbnail and mode cards sit on
+     an emblem, so both need the artwork knocked back far enough for text to
+     survive on top of it. Dark mode dims towards black and writes in white;
+     light mode veils towards white and writes in ink. Keeping that as tokens
+     is what stops light mode from inheriting a dark scrim under dark type. */
+  --media-scrim: rgba(9, 10, 11, 0.42);
+  --media-dim: grayscale(1) brightness(0.6);
+  --media-dim-soft: grayscale(0.7) brightness(0.7);
+  --media-dim-hover: grayscale(0.25) brightness(0.95);
+  --card-scrim: linear-gradient(180deg, rgba(10, 11, 14, 0.35) 0%, rgba(10, 11, 14, 0.8) 100%);
+  --on-media: #ffffff;
+  --on-media-dim: rgba(236, 238, 241, 0.75);
+  --on-media-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  --emblem-shadow: rgba(0, 0, 0, 0.5);
+
+  /* Score Sheet ledger chrome, shared by Classic's guess table and Rounds'
+     hint panel: the rules that divide rows and the chips data rides in. */
+  --rule: #2a2c30;
+  --rule-accent: #caa46a;
+  --chip-bg: rgba(9, 10, 11, 0.74);
+  --chip-bg-soft: rgba(9, 10, 11, 0.58);
+  --chip-border: rgba(255, 255, 255, 0.08);
+  --chip-stripe: rgba(255, 255, 255, 0.035);
+  --chip-ink: #9a978f;
+
+  --overlay: rgba(4, 5, 6, 0.65);
+  --shadow-modal: 0 20px 60px rgba(0, 0, 0, 0.45);
+
   --starfield-opacity: 1;
 
   --font-display: "Space Grotesk", system-ui, sans-serif;
@@ -59,6 +87,33 @@
   --feedback-close-ink: #241d0a;
   --feedback-wrong: #b35f5f;
   --feedback-wrong-ink: #2a1212;
+
+  /* The light-mode counterparts. Artwork is brightened rather than crushed and
+     sits under a white veil, so rows and cards read as paper the same way the
+     rest of the page does. */
+  --media-scrim: rgba(255, 255, 255, 0.66);
+  --media-dim: grayscale(0.85) brightness(1.16);
+  --media-dim-soft: grayscale(0.6) brightness(1.12);
+  --media-dim-hover: grayscale(0.2) brightness(1.04);
+  --card-scrim: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.58) 100%);
+  --on-media: #14161a;
+  --on-media-dim: rgba(20, 22, 26, 0.66);
+  --on-media-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+  --emblem-shadow: rgba(20, 22, 26, 0.22);
+
+  /* Chips stay near-white so dark type reads on them, which leaves them nearly
+     invisible against a white panel — the border is what draws them, so it is
+     a step stronger here than the alpha-white one dark mode gets away with. */
+  --rule: #dcdfe4;
+  --rule-accent: #b08b47;
+  --chip-bg: rgba(246, 247, 249, 0.92);
+  --chip-bg-soft: rgba(246, 247, 249, 0.78);
+  --chip-border: rgba(20, 22, 26, 0.14);
+  --chip-stripe: rgba(20, 22, 26, 0.07);
+  --chip-ink: #4c515a;
+
+  --overlay: rgba(20, 22, 26, 0.32);
+  --shadow-modal: 0 20px 50px rgba(20, 22, 26, 0.18);
 
   --starfield-opacity: 0;
   color-scheme: light;

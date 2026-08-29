@@ -7,7 +7,7 @@ import "./RoundsMode.css"
 export const MAX_ROUNDS = 6
 
 // Candidate hints in reveal order. `available` lets a row drop out when the
-// level simply has no such data — 843 of the 1,553 levels carry no description,
+// level simply has no such data — 791 of the 1,570 levels carry no description,
 // and a round spent on "No description on record" is a wasted round.
 const HINT_ROWS = [
   {
