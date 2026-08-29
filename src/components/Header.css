@@ -14,6 +14,9 @@
 .site-header__title {
   display: inline-flex;
   align-items: center;
+  /* Once the row runs out of width the pill takes its own line rather than
+     breaking "Classic" across three of them. */
+  flex-wrap: wrap;
   gap: 0.5em;
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -35,6 +38,7 @@ button.site-header__title:hover {
 }
 
 .site-header__mode-pill {
+  white-space: nowrap;
   padding: 0.15em 0.6em;
   font-size: 0.6rem;
   font-weight: 700;
@@ -150,4 +154,10 @@ button.site-header__title:hover {
 
 .theme-toggle__thumb--on {
   transform: translateX(20px);
+}
+
+@media (max-width: 430px) {
+  .site-header {
+    padding: 0.9rem 1rem;
+  }
 }
