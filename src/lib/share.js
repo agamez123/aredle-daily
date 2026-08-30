@@ -41,7 +41,7 @@ export function buildShareText({
     ? `AREDLE #${getPuzzleNumber(dayIndex)} · ${labelFor(gameMode, difficulty)}`
     : `AREDLE Unlimited · ${labelFor(gameMode, difficulty)}`
 
-  return [heading, `${scored}/${maxGuesses}`, "", buildGrid({ gameMode, difficulty, guesses, answer, won })]
+  return [heading, `${scored}/${maxGuesses}`, "", buildGrid({ gameMode, difficulty, guesses, answer, won }),`https://aredle.net`]
     .join("\n")
     .trimEnd()
 }
