@@ -36,3 +36,9 @@ export function gameKey(gameMode, difficulty) {
 export function statsKey(gameMode, difficulty) {
   return `stats:${gameMode}:${difficulty}`
 }
+
+// Holds the day index we last emitted a game_started event for, so reloading or
+// reopening a daily board that hasn't been guessed on yet doesn't re-report it.
+export function startedKey(gameMode, difficulty) {
+  return `started:${gameMode}:${difficulty}`
+}

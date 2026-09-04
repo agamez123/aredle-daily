@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { getDayIndex, pickDailyLevel, pickRandomLevel } from "../lib/daily"
-import { gameKey, readJson, removeKey, writeJson } from "../lib/storage"
+import { gameKey, readJson, removeKey, startedKey, writeJson } from "../lib/storage"
 import { recordResult } from "../lib/stats"
 import { comboKey, track } from "../lib/telemetry"
 
@@ -48,16 +48,28 @@ export function useGuessGame({ pool, gameMode, difficulty, maxGuesses, isDaily }
 
   const combo = comboKey(gameMode, difficulty, isDaily)
 
-  // Every analytics guard is keyed on the seed rather than a plain boolean, so
-  // an unlimited reroll reports the new board while a remount — StrictMode's
-  // double-invoked effects in dev, or reopening today's daily — does not
-  // replay what the last session already sent.
+  // The in-memory analytics guards are keyed on the seed rather than a plain
+  // boolean, so an unlimited reroll reports the new board while other dep
+  // changes within the same mount don't replay what was already sent. A seed
+  // ref alone can't survive a remount, though — it comes back null — so any
+  // guard that has to hold across a reload is backed by stored state instead.
 
-  // A board that already has guesses on it was resumed, not started.
+  // A board that already has guesses on it was resumed, not started. For daily
+  // boards the guard also has to survive a reload or a reopen with zero guesses
+  // on it, where the seed ref is no help, so it's backed by localStorage:
+  // game_started fires at most once per day per mode. Unlimited runs aren't
+  // persisted (and a reload drops you at the mode picker), so the seed ref is
+  // enough there.
   const startedSeedRef = useRef(null)
   useEffect(() => {
     if (startedSeedRef.current === seed || guesses.length > 0) return
     startedSeedRef.current = seed
+
+    if (isDaily) {
+      if (readJson(startedKey(gameMode, difficulty)) === dayIndex) return
+      writeJson(startedKey(gameMode, difficulty), dayIndex)
+    }
+
     track("game_started", { combo, gameMode, difficulty, daily: isDaily, day: dayIndex })
   }, [combo, gameMode, difficulty, isDaily, dayIndex, guesses.length, seed])
 
