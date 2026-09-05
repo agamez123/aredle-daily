@@ -5,7 +5,7 @@ const answer = {
     position: 100, version: '2.1', song: 'A', creator: 'X', verifier: 'Y', tags: ['a','b']
 }
 
-it('marks an exact match correct across all colunms', () => {
+it('marks an exact match correct across all columns', () => {
     const g = gradeGuess({ ...answer }, answer, 'hard')
     expect(g.position.status).toBe('correct')
     expect(g.song.status).toBe('correct')
@@ -18,7 +18,7 @@ it('points the arrow the right way for position (list rankings)', () => {
     expect(g.position.direction).toBe('down')
 })
 
-it('treats a missing version as unkown or NaN', () => {
+it('treats a missing version as unknown or NaN', () => {
     const g = gradeGuess({ ...answer, version: '' }, answer, 'hard')
     expect(g.version.status).toBe('unknown')
 })

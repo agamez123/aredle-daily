@@ -35,7 +35,7 @@ describe('pickDailyLevel', () => {
         expect(seq('classic')).not.toEqual(seq('rounds'))
      })
 
-     it('handles negative day inidices (pre-epoch)', () => {
+     it('handles negative day indices (pre-epoch)', () => {
         expect(pickDailyLevel(pool, 'classic', 'hard', -1)).toBeDefined()
      })
 
