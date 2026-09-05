@@ -1,0 +1,66 @@
+name: Refresh level data
+
+on:
+  schedule:
+    # 04:15 UTC daily. Off the hour to avoid GitHub's peak-of-hour queue.
+    - cron: "15 4 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: refresh-levels
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Fetch AREDL levels
+        run: npm run fetch-levels
+
+      - name: Resolve song names
+        run: npm run fetch-songs
+
+      # These two are best-effort. A rate limit or a flaky upstream
+      # shouldn't block a level-position refresh from landing.
+      - name: Resolve NONGs
+        continue-on-error: true
+        run: npm run fetch-nongs
+
+      - name: Fetch thumbnails
+        continue-on-error: true
+        run: npm run fetch-thumbnails
+
+      - name: Regenerate src/data/levels.js
+        run: node scripts/gen-levels-js.mjs
+
+      # Verify the regenerated data before committing it.
+      - run: npm run test
+      - run: npm run build
+
+      - name: Commit and push
+        run: |
+          if git diff --quiet -- data src/data public/thumbnails; then
+            echo "No level data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data src/data public/thumbnails
+          git commit -m "chore(data): refresh AREDL level data
+
+          Automated run of the fetch scripts and gen-levels-js.mjs."
+          git push origin HEAD:master
