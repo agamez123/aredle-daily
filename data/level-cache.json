@@ -39488,5 +39488,29 @@
       }
     ],
     "fetchedAt": "2026-08-29T20:23:42.296Z"
+  },
+  "a94a4e9e-c3e6-4d65-a77d-1533b33cd05d": {
+    "publisher": {
+      "id": "d59c0175-5b7d-4aec-a716-ba692a976c35",
+      "username": "1e9a7faeb",
+      "global_name": "Bimms"
+    },
+    "verifications": [
+      {
+        "id": "c3ca93ed-4247-4006-94ab-bef18bd3f200",
+        "submitted_by": {
+          "id": "99d53816-1a55-4faf-a7c2-22e2f189e9bd",
+          "username": "brian_cheese",
+          "global_name": "Brian_Cheese 🧀"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=WJYh3dW8Bfo",
+        "hide_video": false,
+        "achieved_at": "2026-07-26T20:00:05Z",
+        "created_at": "2026-08-16T00:23:52.401778Z",
+        "updated_at": "2026-08-16T00:23:52.401778Z"
+      }
+    ],
+    "fetchedAt": "2026-09-06T08:39:36.347Z"
   }
 }
