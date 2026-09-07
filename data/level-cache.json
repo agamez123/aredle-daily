@@ -39512,5 +39512,67 @@
       }
     ],
     "fetchedAt": "2026-09-06T08:39:36.347Z"
+  },
+  "e8c10226-96df-4139-94cb-b09758444ce2": {
+    "publisher": {
+      "id": "feb85d02-352a-4daa-8bf5-df64a34bdaa7",
+      "username": "relicsong",
+      "global_name": "spark"
+    },
+    "verifications": [
+      {
+        "id": "9dd7026e-3c74-41aa-9147-7d6765527b3f",
+        "submitted_by": {
+          "id": "af57c25a-4877-4223-b8b6-b89b917e4359",
+          "username": "whizkid05",
+          "global_name": "Whizkid05"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=_5DDOxkhBhI",
+        "hide_video": false,
+        "achieved_at": "2026-07-31T21:32:58Z",
+        "created_at": "2026-08-16T00:23:53.948330Z",
+        "updated_at": "2026-08-16T00:23:53.948330Z"
+      }
+    ],
+    "fetchedAt": "2026-09-07T09:19:42.998Z"
+  },
+  "fedf5860-8cb3-44e0-976e-c8a46caa6fbc": {
+    "publisher": {
+      "id": "feb85d02-352a-4daa-8bf5-df64a34bdaa7",
+      "username": "relicsong",
+      "global_name": "spark"
+    },
+    "verifications": [
+      {
+        "id": "5a2b0742-6d57-449a-8270-0c483a7b51f0",
+        "submitted_by": {
+          "id": "8ac70ca8-c8f1-4fd4-887c-9f7c52535b41",
+          "username": "jessalli",
+          "global_name": "Hypno"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=5gf38BGDjpE",
+        "hide_video": false,
+        "achieved_at": "2026-07-21T15:41:40Z",
+        "created_at": "2026-08-16T00:23:53.178233Z",
+        "updated_at": "2026-08-16T00:23:53.178233Z"
+      },
+      {
+        "id": "def01f8d-8270-4f20-a20d-11039222453a",
+        "submitted_by": {
+          "id": "f2f36549-b155-4336-8617-8096bac419f5",
+          "username": "3287b83c3",
+          "global_name": "Koopazu"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=5gf38BGDjpE",
+        "hide_video": false,
+        "achieved_at": "2026-07-21T15:41:40Z",
+        "created_at": "2026-08-16T00:23:53.378122Z",
+        "updated_at": "2026-08-16T00:23:53.378122Z"
+      }
+    ],
+    "fetchedAt": "2026-09-07T09:19:43.048Z"
   }
 }
