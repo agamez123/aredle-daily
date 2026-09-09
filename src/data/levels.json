@@ -574,7 +574,8 @@
     "tags": [
       "Long",
       "Learny",
-      "High CPS"
+      "High CPS",
+      "Gimmicky"
     ]
   },
   {
@@ -1162,9 +1163,11 @@
     "song": 1585216,
     "creator": "AWESOMEME360",
     "verifier": "Gnamolor",
-    "version": null,
+    "version": "2.2",
     "tags": [
-      "NONG"
+      "Long",
+      "NONG",
+      "Timings"
     ]
   },
   {
@@ -4558,6 +4561,7 @@
       "Long",
       "Timings",
       "Chokepoints",
+      "Gimmicky",
       "Cube"
     ]
   },
@@ -5279,9 +5283,8 @@
     "song": null,
     "creator": "Metalface221",
     "verifier": "Metalface221",
-    "version": null,
+    "version": "2.1",
     "tags": [
-      "1.9PS",
       "Long",
       "NONG",
       "Clicksync",
@@ -19627,12 +19630,13 @@
     "name": "Sides Of My Mind (2P)",
     "position": 1088,
     "status": "MainList",
-    "song": 811165,
+    "song": null,
     "creator": "MaxxoRMeN",
     "verifier": "Polyatomic",
     "version": "2.1",
     "tags": [
       "Long",
+      "NONG",
       "2P",
       "Learny"
     ]
@@ -20217,12 +20221,13 @@
     "name": "Welcome To GD News",
     "position": 1121,
     "status": "MainList",
-    "song": 850510,
+    "song": null,
     "creator": "vortrox",
     "verifier": "Technical",
     "version": "2.1",
     "tags": [
       "Long",
+      "NONG",
       "Flow",
       "Overall"
     ]
@@ -21473,6 +21478,7 @@
     "tags": [
       "Medium",
       "Chokepoints",
+      "Gimmicky",
       "Wave"
     ]
   },
@@ -22765,12 +22771,13 @@
     "name": "SMARTISH MODE",
     "position": 1265,
     "status": "MainList",
-    "song": 811165,
+    "song": null,
     "creator": "Enfur",
     "verifier": "whit",
     "version": "2.2",
     "tags": [
       "Long",
+      "NONG",
       "Fast-Paced",
       "Learny",
       "Gimmicky",
@@ -24126,12 +24133,13 @@
     "name": "Beyond the summit",
     "position": 1341,
     "status": "MainList",
-    "song": 850510,
+    "song": null,
     "creator": "MCres",
     "verifier": "MCres",
     "version": "2.1",
     "tags": [
       "XXL",
+      "NONG",
       "Fast-Paced",
       "Timings",
       "Cube",
