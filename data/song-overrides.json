@@ -2198,5 +2198,37 @@
     "level_id": 100041767,
     "name": "encroaching dark",
     "position": 1483
+  },
+  "f3fcd4b7-bbd4-494a-8364-33eca6672b5a": {
+    "song": "Koraii - Scarlet",
+    "source": "both agree",
+    "alt": null,
+    "level_id": 91042484,
+    "name": "Sides Of My Mind (2P)",
+    "position": 1088
+  },
+  "8e420a9e-f7f3-4d1d-be50-6ee6d75a1989": {
+    "song": "Koraii - Crystal River",
+    "source": "both agree",
+    "alt": null,
+    "level_id": 87072454,
+    "name": "Welcome To GD News",
+    "position": 1121
+  },
+  "b2eca6ca-8b56-4bcb-973d-9ef10327344b": {
+    "song": "Koraii - Scarlet",
+    "source": "both agree",
+    "alt": null,
+    "level_id": 89901532,
+    "name": "SMARTISH MODE",
+    "position": 1265
+  },
+  "a56d5c3d-9f73-406c-819d-85cc9acda8eb": {
+    "song": "Koraii - Crystal River",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 94839390,
+    "name": "Beyond the summit",
+    "position": 1341
   }
 }
