@@ -4001,31 +4001,10 @@
     ]
   },
   {
-    "id": "90ff0da8-1c4b-4ae0-8cb0-41b78cbc3327",
-    "level_id": 57571983,
-    "name": "SUPERHATEMEWORLD",
-    "position": 222,
-    "status": "MainList",
-    "song": null,
-    "creator": "icedcave",
-    "verifier": "Cursed",
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "NONG",
-      "Timings",
-      "Chokepoints",
-      "High CPS",
-      "Slow-Paced",
-      "Ship",
-      "Ball"
-    ]
-  },
-  {
     "id": "93c30030-8c59-412f-8b3d-dcb280d2df55",
     "level_id": 127336234,
     "name": "obsession",
-    "position": 223,
+    "position": 222,
     "status": "MainList",
     "song": 1324223,
     "creator": "jbooster",
@@ -4042,7 +4021,7 @@
     "id": "7cc25551-d5d3-40d3-b4f6-420e4c9110d0",
     "level_id": 64100176,
     "name": "Tenkai (Solo)",
-    "position": 224,
+    "position": 223,
     "status": "MainList",
     "song": 436911,
     "creator": "HidekiX",
@@ -4052,6 +4031,27 @@
       "XL",
       "2P",
       "Wave"
+    ]
+  },
+  {
+    "id": "90ff0da8-1c4b-4ae0-8cb0-41b78cbc3327",
+    "level_id": 57571983,
+    "name": "SUPERHATEMEWORLD",
+    "position": 224,
+    "status": "MainList",
+    "song": null,
+    "creator": "icedcave",
+    "verifier": "Cursed",
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "NONG",
+      "Timings",
+      "Chokepoints",
+      "High CPS",
+      "Slow-Paced",
+      "Ship",
+      "Ball"
     ]
   },
   {
@@ -15116,7 +15116,8 @@
       "Timings",
       "Chokepoints",
       "Nerve Control",
-      "Ship"
+      "Ship",
+      "UFO"
     ]
   },
   {
@@ -23347,7 +23348,7 @@
   {
     "id": "3611a7d6-a6a5-43e3-a649-5dae5fa3a778",
     "level_id": 25241513,
-    "name": "Breakout",
+    "name": "Breakout (Surv)",
     "position": 1298,
     "status": "MainList",
     "song": 561277,
@@ -23356,8 +23357,9 @@
     "version": "2.0",
     "tags": [
       "Long",
-      "Overall",
-      "Duals"
+      "Chokepoints",
+      "Duals",
+      "Overall"
     ]
   },
   {
