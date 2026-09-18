@@ -1126,7 +1126,7 @@ export const LEVELS = [
     creator: "Laranjoo",
     verifier: "mariner",
     version: "2.2",
-    tags: ["Long","Timings"],
+    tags: ["Long","Timings","Chokepoints"],
     description: null,
   },
   {
@@ -1930,7 +1930,7 @@ export const LEVELS = [
     creator: "Komp",
     verifier: "Varium",
     version: "2.1",
-    tags: ["Long","Timings","Ship"],
+    tags: ["Long","Timings","Chokepoints","Ship"],
     description: "Iconic design level with unchanged gameplay originally made in 1.8 in an effort to be harder than ICE Carbon Diablo X. Infamous for its 46% \"shalom\" mini-ufo spam among other difficult sections.",
   },
   {
@@ -1942,7 +1942,7 @@ export const LEVELS = [
     creator: "ivyteal",
     verifier: "zSquidKnight",
     version: "2.2",
-    tags: ["Long","Timings","Learny","Gimmicky","Slow-Paced","Ship","Wave","Robot","Overall"],
+    tags: ["Long","Timings","Learny","Gimmicky","Slow-Paced","Ship","Wave","Overall"],
     description: "A solo effect level created to match its dissonant song, standing out amongst other levels around its difficulty with its slow, precision-based gameplay and bizarre effects. Received a legendary rating from RobTop.",
   },
   {
@@ -2398,7 +2398,7 @@ export const LEVELS = [
     creator: "Endlevel",
     verifier: "nSwish",
     version: "2.1",
-    tags: ["Long","NONG","Fast-Paced","Timings","Overall"],
+    tags: ["Long","NONG","Fast-Paced","Timings","Learny","Cube","Overall"],
     description: "Iconic claustrophobic former top 3 extreme with an old fashioned song featuring Charlie Chaplin's speech from The Great Dictator. Known for its incredibly precise gameplay, monochromatic visuals and dark atmosphere.",
   },
   {
@@ -2602,7 +2602,7 @@ export const LEVELS = [
     creator: "NineDice",
     verifier: "Cursed",
     version: "2.2",
-    tags: ["Medium","NONG","Fast-Paced","Learny","High CPS","Overall"],
+    tags: ["Medium","NONG","Fast-Paced","Learny","High CPS","Wave","Overall"],
     description: null,
   },
   {
@@ -2878,7 +2878,7 @@ export const LEVELS = [
     creator: "TheLasaga",
     verifier: "nac",
     version: "2.2",
-    tags: ["XL","Clicksync","Fast-Paced","Learny","High CPS","Nerve Control","Wave","Overall"],
+    tags: ["XXL","NONG","Clicksync","Fast-Paced","Learny","High CPS","Nerve Control","Wave","Overall"],
     description: null,
   },
   {
@@ -3370,7 +3370,7 @@ export const LEVELS = [
     creator: "Xav",
     verifier: "Xav",
     version: "2.2",
-    tags: ["Long","Fast-Paced","Learny","High CPS","Wave","Duals"],
+    tags: ["Long","Fast-Paced","Learny","High CPS","Flow","Wave","Duals"],
     description: "Extremely fast-paced & high cps extreme with an intense Camellia song. Memorable for its relentlessly learny but renowned gameplay, paired with jittery effects and flashes. Could be described as \"Xronier's distant cousin.\"",
   },
   {
@@ -3394,7 +3394,7 @@ export const LEVELS = [
     creator: "notes",
     verifier: "Kaza",
     version: "2.1",
-    tags: ["Long","Clicksync","Fast-Paced","Timings","Chokepoints","High CPS","Cube"],
+    tags: ["Long","Clicksync","Fast-Paced","Timings","Chokepoints","Learny","High CPS","Cube"],
     description: "Very well received foggy level with fast muscle memory based gameplay and a simple randomiser at the end",
   },
   {
@@ -4330,7 +4330,7 @@ export const LEVELS = [
     creator: "Helpegasus",
     verifier: "VaporWubz",
     version: "2.1",
-    tags: ["Medium","NONG","Fast-Paced","Timings","Chokepoints","High CPS","Flow"],
+    tags: ["Medium","NONG","Fast-Paced","Timings","Chokepoints","Learny","High CPS","Flow"],
     description: "A purple \"reta-styled\" level recognisable for its flow gameplay style, difficult wave sections and extremely high-CPS click patterns. Its emphasis on muscle memory has made it relatively accessible for its difficulty and hence its popularity among extreme demon players.",
   },
   {
@@ -4498,7 +4498,7 @@ export const LEVELS = [
     creator: "nSwish",
     verifier: "nSwish",
     version: "2.1",
-    tags: ["Long","High CPS","Ship","Overall"],
+    tags: ["Long","Timings","Learny","High CPS","Ship","Overall"],
     description: "A high-CPS level with 7 sections, one for each gamemode. The colour scheme for each section is based on the gamemode’s portal.",
   },
   {
@@ -4510,7 +4510,7 @@ export const LEVELS = [
     creator: "Swib",
     verifier: "Swib",
     version: "2.2",
-    tags: ["Long","Fast-Paced","Learny","High CPS"],
+    tags: ["Long","Fast-Paced","Learny","High CPS","Wave"],
     description: "Well received sequel to Ellipsism with a satisfying click pattern and very bright drop sections. The waves in the first drop are notably unbalanced, and the last click is a major chokepoint. Despite this, the level remains very well received.",
   },
   {
@@ -4654,7 +4654,7 @@ export const LEVELS = [
     creator: "TrusTa",
     verifier: "Kandai",
     version: "2.0",
-    tags: ["XL","Timings","Overall","Chokepoints","Old Swing","Nerve Control"],
+    tags: ["XL","Timings","Chokepoints","Nerve Control","Ship","Old Swing","Overall"],
     description: "One of the most iconic 2.0 megacollabs, and one of the most memorable Top 1s of all time despite only dethroning Sonic Wave for a short time.  Contains 3 minutes of stressful gameplay from start to finish, including an incredibly difficult predrop, and chokepoints throughout, including Michigun's famous \"bird click\". Member of the first RGB trilogy.",
   },
   {
@@ -4858,7 +4858,7 @@ export const LEVELS = [
     creator: "Zipixbox",
     verifier: "spcreat",
     version: "2.2",
-    tags: ["XXL","Chokepoints","Learny","Nerve Control","Overall"],
+    tags: ["XXL","Chokepoints","Learny","High CPS","Nerve Control","New Swing","Overall"],
     description: "Vibrant red & green 2.0-esque masterpiece. Memorable for its incredibly well-executed gameplay gimmicks and consistent, high-quality designs. Includes numerous instances of creatively moving and interactive gameplay as well as immersive technology-inspired backgrounds.",
   },
   {
@@ -5566,7 +5566,7 @@ export const LEVELS = [
     creator: "Lemons",
     verifier: "Mix991",
     version: "2.1",
-    tags: ["Long","Timings","Overall"],
+    tags: ["Long","Timings","Chokepoints","Overall"],
     description: null,
   },
   {
@@ -6250,7 +6250,7 @@ export const LEVELS = [
     creator: "qalli",
     verifier: "qalli",
     version: "2.2",
-    tags: ["XL","Learny","Gimmicky","Nerve Control","Duals"],
+    tags: ["XL","Clicksync","Learny","Gimmicky","Nerve Control","Duals"],
     description: "A solo extreme demon made by qalli, which uses a follow trigger setup to make new and intuitive dual gameplay that has never been seen before!!!",
   },
   {
@@ -6322,7 +6322,7 @@ export const LEVELS = [
     creator: "nikoberry",
     verifier: "MyntiFresh",
     version: "2.1",
-    tags: ["Long","NONG","Fast-Paced","Learny"],
+    tags: ["Long","NONG","Clicksync","Fast-Paced","Chokepoints","Learny","Nerve Control"],
     description: "Zeronium CC entry that uses a Tally Hall song about puberty. The predrop and intermission are shrouded in darkness to match the name (someone turned the lights off). Said parts are also the hardest.",
   },
   {
@@ -6754,7 +6754,7 @@ export const LEVELS = [
     creator: "KrmaL",
     verifier: "KrmaL",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Timings","Duals","Overall"],
+    tags: ["Long","Fast-Paced","Timings","Chokepoints","Gimmicky","Duals","Overall"],
     description: "Former top 10 solo level by KrmaL. Initially this level was harder and being verified in secret, but after the level was leaked through a hack, KrmaL verified and released a nerfed version. This level got Creo well known within the community. The gameplay is gimmicky and extremely predrop carried.",
   },
   {
@@ -8433,7 +8433,7 @@ export const LEVELS = [
     song: "Perfect Storm",
     creator: "SeptaGon7",
     verifier: "SeptaGon7",
-    version: "2.0",
+    version: "2.1",
     tags: ["Long","Chokepoints","Ship","Wave"],
     description: null,
   },
@@ -9538,7 +9538,7 @@ export const LEVELS = [
     creator: "Havok",
     verifier: "Gizbro",
     version: "2.1",
-    tags: ["Long","Timings","Cube"],
+    tags: ["Long","Timings","Chokepoints","Slow-Paced","Cube","Ship","Ball"],
     description: null,
   },
   {
@@ -11098,7 +11098,7 @@ export const LEVELS = [
     creator: "CherryTeam",
     verifier: "Dorami",
     version: "2.1",
-    tags: ["XL","Fast-Paced","Flow","Duals","Overall"],
+    tags: ["XL","Fast-Paced","Learny","Flow","Duals","Overall"],
     description: null,
   },
   {
@@ -11206,7 +11206,7 @@ export const LEVELS = [
     creator: "Artu",
     verifier: "Artu",
     version: "2.1",
-    tags: ["XXL","NONG","Chokepoints","Flow","Nerve Control"],
+    tags: ["XL","NONG","Chokepoints","Flow","Nerve Control"],
     description: null,
   },
   {
@@ -11578,7 +11578,7 @@ export const LEVELS = [
     creator: "NeyvaShift",
     verifier: "Neoraptor",
     version: "2.1",
-    tags: ["XL","Overall"],
+    tags: ["XL","Ship","Overall"],
     description: null,
   },
   {
@@ -11962,7 +11962,7 @@ export const LEVELS = [
     creator: "AWESOMEME360",
     verifier: "Nsaynchkn",
     version: "2.2",
-    tags: ["Long","NONG","Clicksync","Timings","Learny"],
+    tags: ["Long","NONG","Clicksync","Timings","Learny","New Swing"],
     description: "Unconventional breakup themed design level with unorthodox orb combinations and psychedelic visuals. Unfortunately the platformer checkpoint at 88% does not let you respawn...",
   },
   {
@@ -18646,7 +18646,7 @@ export const LEVELS = [
     creator: "nickxd",
     verifier: "-",
     version: "2.1",
-    tags: ["Long","Ship","Learny","NONG"],
+    tags: ["Long","NONG","Learny","Flow","Ship"],
     description: "\nA sequel to insane demon Lin Anya. Features mostly all-around learny gameplay, though the ship is more prominent than the other gamemodes. The level mixes design, art and effect decoration with its vibrant and colorful glow style.",
   },
   {

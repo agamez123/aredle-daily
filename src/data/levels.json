@@ -1681,7 +1681,8 @@
     "version": "2.2",
     "tags": [
       "Long",
-      "Timings"
+      "Timings",
+      "Chokepoints"
     ]
   },
   {
@@ -2885,6 +2886,7 @@
     "tags": [
       "Long",
       "Timings",
+      "Chokepoints",
       "Ship"
     ]
   },
@@ -2906,7 +2908,6 @@
       "Slow-Paced",
       "Ship",
       "Wave",
-      "Robot",
       "Overall"
     ]
   },
@@ -3612,6 +3613,8 @@
       "NONG",
       "Fast-Paced",
       "Timings",
+      "Learny",
+      "Cube",
       "Overall"
     ]
   },
@@ -3928,6 +3931,7 @@
       "Fast-Paced",
       "Learny",
       "High CPS",
+      "Wave",
       "Overall"
     ]
   },
@@ -4344,7 +4348,8 @@
     "verifier": "nac",
     "version": "2.2",
     "tags": [
-      "XL",
+      "XXL",
+      "NONG",
       "Clicksync",
       "Fast-Paced",
       "Learny",
@@ -5112,6 +5117,7 @@
       "Fast-Paced",
       "Learny",
       "High CPS",
+      "Flow",
       "Wave",
       "Duals"
     ]
@@ -5151,6 +5157,7 @@
       "Fast-Paced",
       "Timings",
       "Chokepoints",
+      "Learny",
       "High CPS",
       "Cube"
     ]
@@ -6569,6 +6576,7 @@
       "Fast-Paced",
       "Timings",
       "Chokepoints",
+      "Learny",
       "High CPS",
       "Flow"
     ]
@@ -6823,6 +6831,8 @@
     "version": "2.1",
     "tags": [
       "Long",
+      "Timings",
+      "Learny",
       "High CPS",
       "Ship",
       "Overall"
@@ -6842,7 +6852,8 @@
       "Long",
       "Fast-Paced",
       "Learny",
-      "High CPS"
+      "High CPS",
+      "Wave"
     ]
   },
   {
@@ -7051,10 +7062,11 @@
     "tags": [
       "XL",
       "Timings",
-      "Overall",
       "Chokepoints",
+      "Nerve Control",
+      "Ship",
       "Old Swing",
-      "Nerve Control"
+      "Overall"
     ]
   },
   {
@@ -7365,7 +7377,9 @@
       "XXL",
       "Chokepoints",
       "Learny",
+      "High CPS",
       "Nerve Control",
+      "New Swing",
       "Overall"
     ]
   },
@@ -8423,6 +8437,7 @@
     "tags": [
       "Long",
       "Timings",
+      "Chokepoints",
       "Overall"
     ]
   },
@@ -9454,6 +9469,7 @@
     "version": "2.2",
     "tags": [
       "XL",
+      "Clicksync",
       "Learny",
       "Gimmicky",
       "Nerve Control",
@@ -9562,8 +9578,11 @@
     "tags": [
       "Long",
       "NONG",
+      "Clicksync",
       "Fast-Paced",
-      "Learny"
+      "Chokepoints",
+      "Learny",
+      "Nerve Control"
     ]
   },
   {
@@ -10223,6 +10242,8 @@
       "Long",
       "Fast-Paced",
       "Timings",
+      "Chokepoints",
+      "Gimmicky",
       "Duals",
       "Overall"
     ]
@@ -12729,7 +12750,7 @@
     "song": 516709,
     "creator": "SeptaGon7",
     "verifier": "SeptaGon7",
-    "version": "2.0",
+    "version": "2.1",
     "tags": [
       "Long",
       "Chokepoints",
@@ -14377,7 +14398,11 @@
     "tags": [
       "Long",
       "Timings",
-      "Cube"
+      "Chokepoints",
+      "Slow-Paced",
+      "Cube",
+      "Ship",
+      "Ball"
     ]
   },
   {
@@ -16739,6 +16764,7 @@
     "tags": [
       "XL",
       "Fast-Paced",
+      "Learny",
       "Flow",
       "Duals",
       "Overall"
@@ -16889,7 +16915,7 @@
     "verifier": "Artu",
     "version": "2.1",
     "tags": [
-      "XXL",
+      "XL",
       "NONG",
       "Chokepoints",
       "Flow",
@@ -17445,6 +17471,7 @@
     "version": "2.1",
     "tags": [
       "XL",
+      "Ship",
       "Overall"
     ]
   },
@@ -18021,7 +18048,8 @@
       "NONG",
       "Clicksync",
       "Timings",
-      "Learny"
+      "Learny",
+      "New Swing"
     ]
   },
   {
@@ -27935,9 +27963,10 @@
     "version": "2.1",
     "tags": [
       "Long",
-      "Ship",
+      "NONG",
       "Learny",
-      "NONG"
+      "Flow",
+      "Ship"
     ]
   },
   {
