@@ -1326,7 +1326,8 @@
       "Chokepoints",
       "Memory",
       "Gimmicky",
-      "Nerve Control"
+      "Nerve Control",
+      "Overall"
     ]
   },
   {
@@ -3856,6 +3857,7 @@
       "Fast-Paced",
       "Timings",
       "Flow",
+      "Wave",
       "Overall"
     ]
   },
@@ -5799,6 +5801,8 @@
     "tags": [
       "Long",
       "Timings",
+      "Chokepoints",
+      "Ship",
       "Duals"
     ]
   },
@@ -7488,8 +7492,7 @@
       "Wave",
       "Circles",
       "Fast-Paced",
-      "High CPS",
-      "Learny"
+      "High CPS"
     ]
   },
   {
@@ -7597,6 +7600,7 @@
       "1.9PS",
       "Medium",
       "Clicksync",
+      "Chokepoints",
       "Wave"
     ]
   },
@@ -8236,8 +8240,9 @@
     "tags": [
       "XL",
       "Timings",
+      "High CPS",
       "Nerve Control",
-      "High CPS"
+      "Overall"
     ]
   },
   {
@@ -9489,6 +9494,8 @@
     "tags": [
       "XL",
       "Fast-Paced",
+      "Timings",
+      "Chokepoints",
       "Overall"
     ]
   },
@@ -10023,6 +10030,9 @@
     "tags": [
       "XL",
       "Clicksync",
+      "Learny",
+      "High CPS",
+      "Nerve Control",
       "UFO",
       "Spider"
     ]
@@ -10206,8 +10216,9 @@
     "version": "2.1",
     "tags": [
       "Long",
-      "Gimmicky",
+      "Chokepoints",
       "Memory",
+      "Gimmicky",
       "Overall"
     ]
   },
@@ -10244,6 +10255,7 @@
       "Timings",
       "Chokepoints",
       "Gimmicky",
+      "Cube",
       "Duals",
       "Overall"
     ]
@@ -11247,9 +11259,10 @@
     "version": "2.1",
     "tags": [
       "Long",
-      "Overall",
       "Chokepoints",
-      "Duals"
+      "Ship",
+      "Duals",
+      "Overall"
     ]
   },
   {
@@ -11267,7 +11280,9 @@
       "Fast-Paced",
       "Chokepoints",
       "Learny",
-      "Wave"
+      "High CPS",
+      "Wave",
+      "Overall"
     ]
   },
   {
@@ -12164,6 +12179,7 @@
     "tags": [
       "Long",
       "Fast-Paced",
+      "Chokepoints",
       "Learny",
       "Flow",
       "Overall"
@@ -12432,10 +12448,11 @@
     "tags": [
       "1.9PS",
       "Long",
-      "Overall",
       "Timings",
+      "Chokepoints",
+      "Ship",
       "Wave",
-      "Ship"
+      "Overall"
     ]
   },
   {
@@ -12788,6 +12805,7 @@
     "version": "2.1",
     "tags": [
       "Long",
+      "Timings",
       "Chokepoints",
       "Memory"
     ]
@@ -13008,11 +13026,9 @@
       "Long",
       "Timings",
       "Chokepoints",
-      "Gimmicky",
       "Nerve Control",
       "Ship",
       "UFO",
-      "Wave",
       "Overall"
     ]
   },
@@ -13029,6 +13045,7 @@
     "tags": [
       "Long",
       "NONG",
+      "Ship",
       "Overall"
     ]
   },
@@ -13870,6 +13887,7 @@
       "Timings",
       "Chokepoints",
       "Learny",
+      "Flow",
       "Overall"
     ]
   },
@@ -13885,8 +13903,12 @@
     "version": "2.2",
     "tags": [
       "Long",
+      "Timings",
+      "Learny",
       "Gimmicky",
-      "Slow-Paced"
+      "Slow-Paced",
+      "Ship",
+      "Spider"
     ]
   },
   {
@@ -15031,7 +15053,8 @@
       "Fast-Paced",
       "Chokepoints",
       "Memory",
-      "Mirror"
+      "Mirror",
+      "Duals"
     ]
   },
   {
@@ -15176,6 +15199,7 @@
     "version": "2.2",
     "tags": [
       "XXL+",
+      "Chokepoints",
       "Gimmicky",
       "Nerve Control",
       "Overall"
@@ -15843,10 +15867,11 @@
     "version": "2.1",
     "tags": [
       "XXL",
-      "Overall",
       "Clicksync",
       "Fast-Paced",
-      "High CPS"
+      "High CPS",
+      "Nerve Control",
+      "Overall"
     ]
   },
   {
@@ -16491,8 +16516,8 @@
       "Clicksync",
       "Fast-Paced",
       "Timings",
+      "Chokepoints",
       "Learny",
-      "High CPS",
       "Ship",
       "Wave"
     ]
@@ -16545,8 +16570,10 @@
     "tags": [
       "Long",
       "NONG",
+      "Fast-Paced",
       "Chokepoints",
-      "Learny"
+      "Learny",
+      "Overall"
     ]
   },
   {
@@ -16724,12 +16751,14 @@
     "version": "2.1",
     "tags": [
       "Long",
-      "Overall",
       "Clicksync",
       "Fast-Paced",
       "Learny",
       "High CPS",
-      "Flow"
+      "Gimmicky",
+      "Flow",
+      "Duals",
+      "Overall"
     ]
   },
   {
@@ -18495,6 +18524,8 @@
     "tags": [
       "Long",
       "NONG",
+      "Clicksync",
+      "Fast-Paced",
       "Chokepoints",
       "Ship",
       "Wave"
@@ -20457,7 +20488,7 @@
     "song": 850267,
     "creator": "wokecat",
     "verifier": "lazer",
-    "version": "2.1",
+    "version": "2.2",
     "tags": [
       "Long",
       "Learny",
@@ -22031,6 +22062,7 @@
     "version": "2.1",
     "tags": [
       "Long",
+      "Timings",
       "Learny",
       "Duals"
     ]
@@ -22270,6 +22302,7 @@
     "tags": [
       "Long",
       "NONG",
+      "Clicksync",
       "Chokepoints",
       "High CPS",
       "UFO"
@@ -24003,6 +24036,7 @@
       "Long",
       "NONG",
       "Clicksync",
+      "Fast-Paced",
       "Chokepoints",
       "High CPS",
       "Flow",
@@ -24288,7 +24322,6 @@
     "version": "2.2",
     "tags": [
       "Long",
-      "Learny",
       "Wave"
     ]
   },
@@ -24629,10 +24662,11 @@
     "version": "2.1",
     "tags": [
       "Long",
+      "NONG",
       "Fast-Paced",
       "Flow",
-      "Overall",
-      "NONG"
+      "Wave",
+      "Overall"
     ]
   },
   {
@@ -24650,6 +24684,7 @@
       "Clicksync",
       "Timings",
       "Memory",
+      "Slow-Paced",
       "Cube",
       "Duals"
     ]
@@ -25322,6 +25357,7 @@
     "version": "2.2",
     "tags": [
       "Long",
+      "Fast-Paced",
       "Timings",
       "Learny"
     ]
@@ -25965,6 +26001,7 @@
     "tags": [
       "Long",
       "Circles",
+      "Clicksync",
       "Fast-Paced",
       "Wave"
     ]
@@ -27375,6 +27412,7 @@
     "tags": [
       "Long",
       "Timings",
+      "Chokepoints",
       "Nerve Control",
       "Cube",
       "Ship"
@@ -28295,6 +28333,7 @@
     "version": "2.2",
     "tags": [
       "XL",
+      "Clicksync",
       "Timings",
       "Duals"
     ]
