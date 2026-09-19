@@ -886,7 +886,7 @@ export const LEVELS = [
     creator: "MindCap",
     verifier: "BGram",
     version: "2.1",
-    tags: ["XXL","Timings","Chokepoints","Memory","Gimmicky","Nerve Control"],
+    tags: ["XXL","Timings","Chokepoints","Memory","Gimmicky","Nerve Control","Overall"],
     description: "Legendary memory level hosted by MindCap. Built with the intention of providing a unique, different experience to players. The randomised key maze is perhaps most iconic ending in any extreme. One of the first extremes to have merch.",
   },
   {
@@ -2554,7 +2554,7 @@ export const LEVELS = [
     creator: "VoTcHi",
     verifier: "VoTcHi",
     version: "2.1",
-    tags: ["XL","Fast-Paced","Timings","Flow","Overall"],
+    tags: ["XL","Fast-Paced","Timings","Flow","Wave","Overall"],
     description: null,
   },
   {
@@ -3814,7 +3814,7 @@ export const LEVELS = [
     creator: "fil",
     verifier: "Bread Demon",
     version: "2.1",
-    tags: ["Long","Timings","Duals"],
+    tags: ["Long","Timings","Chokepoints","Ship","Duals"],
     description: null,
   },
   {
@@ -4930,7 +4930,7 @@ export const LEVELS = [
     creator: "Janucha",
     verifier: "Lucidium",
     version: "2.1",
-    tags: ["Long","Wave","Circles","Fast-Paced","High CPS","Learny"],
+    tags: ["Long","Wave","Circles","Fast-Paced","High CPS"],
     description: null,
   },
   {
@@ -5002,7 +5002,7 @@ export const LEVELS = [
     creator: "Cersia",
     verifier: "Slithium",
     version: "1.9",
-    tags: ["1.9PS","Medium","Clicksync","Wave"],
+    tags: ["1.9PS","Medium","Clicksync","Chokepoints","Wave"],
     description: null,
   },
   {
@@ -5434,7 +5434,7 @@ export const LEVELS = [
     creator: "CairoX",
     verifier: "Colorbolt",
     version: "2.1",
-    tags: ["XL","Timings","Nerve Control","High CPS"],
+    tags: ["XL","Timings","High CPS","Nerve Control","Overall"],
     description: null,
   },
   {
@@ -6262,7 +6262,7 @@ export const LEVELS = [
     creator: "-",
     verifier: "combi",
     version: "2.0",
-    tags: ["XL","Fast-Paced","Overall"],
+    tags: ["XL","Fast-Paced","Timings","Chokepoints","Overall"],
     description: "An extremely popular former top 1 megacollab made in 2.0, initially hosted by LmAnubis and finished by Viprin. The level contains a variety of fast-paced gameplay parts made by 18 different creators, spanning almost 2 and a half minutes. It went on to have multiple remakes and sequels, becoming the first installment of the Technology Trilogy.",
   },
   {
@@ -6610,7 +6610,7 @@ export const LEVELS = [
     creator: "NEKONGAMES",
     verifier: "Asuith",
     version: "2.1",
-    tags: ["XL","Clicksync","UFO","Spider"],
+    tags: ["XL","Clicksync","Learny","High CPS","Nerve Control","UFO","Spider"],
     description: null,
   },
   {
@@ -6730,7 +6730,7 @@ export const LEVELS = [
     creator: "Lia",
     verifier: "Lia",
     version: "2.1",
-    tags: ["Long","Gimmicky","Memory","Overall"],
+    tags: ["Long","Chokepoints","Memory","Gimmicky","Overall"],
     description: null,
   },
   {
@@ -6754,7 +6754,7 @@ export const LEVELS = [
     creator: "KrmaL",
     verifier: "KrmaL",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Timings","Chokepoints","Gimmicky","Duals","Overall"],
+    tags: ["Long","Fast-Paced","Timings","Chokepoints","Gimmicky","Cube","Duals","Overall"],
     description: "Former top 10 solo level by KrmaL. Initially this level was harder and being verified in secret, but after the level was leaked through a hack, KrmaL verified and released a nerfed version. This level got Creo well known within the community. The gameplay is gimmicky and extremely predrop carried.",
   },
   {
@@ -7426,7 +7426,7 @@ export const LEVELS = [
     creator: "Waivve",
     verifier: "Waivve",
     version: "2.1",
-    tags: ["Long","Overall","Chokepoints","Duals"],
+    tags: ["Long","Chokepoints","Ship","Duals","Overall"],
     description: null,
   },
   {
@@ -7438,7 +7438,7 @@ export const LEVELS = [
     creator: "androgyny",
     verifier: "androgyny",
     version: "2.2",
-    tags: ["Long","Fast-Paced","Chokepoints","Learny","Wave"],
+    tags: ["Long","Fast-Paced","Chokepoints","Learny","High CPS","Wave","Overall"],
     description: null,
   },
   {
@@ -8050,7 +8050,7 @@ export const LEVELS = [
     creator: "josi",
     verifier: "snowkeo",
     version: "2.2",
-    tags: ["Long","Fast-Paced","Learny","Flow","Overall"],
+    tags: ["Long","Fast-Paced","Chokepoints","Learny","Flow","Overall"],
     description: "The sequel to the Insane Demon Apache, featuring blinding decoration with an extremely intense song. Started in 2018 and was reworked multiple times.",
   },
   {
@@ -8230,7 +8230,7 @@ export const LEVELS = [
     creator: "nab",
     verifier: "-",
     version: "1.9",
-    tags: ["1.9PS","Long","Overall","Timings","Wave","Ship"],
+    tags: ["1.9PS","Long","Timings","Chokepoints","Ship","Wave","Overall"],
     description: null,
   },
   {
@@ -8458,7 +8458,7 @@ export const LEVELS = [
     creator: "akunakun",
     verifier: "moisty",
     version: "2.1",
-    tags: ["Long","Chokepoints","Memory"],
+    tags: ["Long","Timings","Chokepoints","Memory"],
     description: null,
   },
   {
@@ -8602,7 +8602,7 @@ export const LEVELS = [
     creator: "GgB0y",
     verifier: "BlassCFB",
     version: "2.0",
-    tags: ["Long","Timings","Chokepoints","Gimmicky","Nerve Control","Ship","UFO","Wave","Overall"],
+    tags: ["Long","Timings","Chokepoints","Nerve Control","Ship","UFO","Overall"],
     description: " Forgotten sequel to Cataclysm. Hack verified like its predecessor. Infamous for a really difficult UFO at 65%, and a difficult coin at the last ship.",
   },
   {
@@ -8614,7 +8614,7 @@ export const LEVELS = [
     creator: "vRidge",
     verifier: "48",
     version: "2.2",
-    tags: ["Long","NONG","Overall"],
+    tags: ["Long","NONG","Ship","Overall"],
     description: "An open ended solo level that is intended to run alongside vRidge's other extreme To The Blue Moon.",
   },
   {
@@ -9178,7 +9178,7 @@ export const LEVELS = [
     creator: "exofr",
     verifier: "Nickname",
     version: "2.2",
-    tags: ["Long","NONG","Timings","Chokepoints","Learny","Overall"],
+    tags: ["Long","NONG","Timings","Chokepoints","Learny","Flow","Overall"],
     description: null,
   },
   {
@@ -9190,7 +9190,7 @@ export const LEVELS = [
     creator: "kyubd",
     verifier: "kyubd",
     version: "2.2",
-    tags: ["Long","Gimmicky","Slow-Paced"],
+    tags: ["Long","Timings","Learny","Gimmicky","Slow-Paced","Ship","Spider"],
     description: null,
   },
   {
@@ -9958,7 +9958,7 @@ export const LEVELS = [
     creator: "shmigels",
     verifier: "shmigels",
     version: "2.1",
-    tags: ["Medium","Fast-Paced","Chokepoints","Memory","Mirror"],
+    tags: ["Medium","Fast-Paced","Chokepoints","Memory","Mirror","Duals"],
     description: "geometry dash map that shmigels created using the level editor",
   },
   {
@@ -10054,7 +10054,7 @@ export const LEVELS = [
     creator: "Renn241",
     verifier: "Blankb",
     version: "2.2",
-    tags: ["XXL+","Gimmicky","Nerve Control","Overall"],
+    tags: ["XXL+","Chokepoints","Gimmicky","Nerve Control","Overall"],
     description: "A 55-minute level that features mostly 6-7 star gameplay over its extremely long runtime, with decoration built using 2.2 effects and triggers to avoid a high object count. It changes themes and energy a lot throughout to represent the song, and increases in difficulty during the final 12%.",
   },
   {
@@ -10486,7 +10486,7 @@ export const LEVELS = [
     creator: "Metalface221",
     verifier: "Miro",
     version: "2.1",
-    tags: ["XXL","Overall","Clicksync","Fast-Paced","High CPS"],
+    tags: ["XXL","Clicksync","Fast-Paced","High CPS","Nerve Control","Overall"],
     description: null,
   },
   {
@@ -10918,7 +10918,7 @@ export const LEVELS = [
     creator: "MothEye",
     verifier: "swiborg",
     version: "2.1",
-    tags: ["XL","NONG","Clicksync","Fast-Paced","Timings","Learny","High CPS","Ship","Wave"],
+    tags: ["XL","NONG","Clicksync","Fast-Paced","Timings","Chokepoints","Learny","Ship","Wave"],
     description: null,
   },
   {
@@ -10954,7 +10954,7 @@ export const LEVELS = [
     creator: "crazyllama",
     verifier: "crumche",
     version: "2.1",
-    tags: ["Long","NONG","Chokepoints","Learny"],
+    tags: ["Long","NONG","Fast-Paced","Chokepoints","Learny","Overall"],
     description: "1.9 styled memory level.",
   },
   {
@@ -11074,7 +11074,7 @@ export const LEVELS = [
     creator: "valentine",
     verifier: "Pipz",
     version: "2.1",
-    tags: ["Long","Overall","Clicksync","Fast-Paced","Learny","High CPS","Flow"],
+    tags: ["Long","Clicksync","Fast-Paced","Learny","High CPS","Gimmicky","Flow","Duals","Overall"],
     description: null,
   },
   {
@@ -12274,7 +12274,7 @@ export const LEVELS = [
     creator: "MothEye",
     verifier: "Baeru",
     version: "2.1",
-    tags: ["Long","NONG","Chokepoints","Ship","Wave"],
+    tags: ["Long","NONG","Clicksync","Fast-Paced","Chokepoints","Ship","Wave"],
     description: "We are experiencing technical difficulties displaying this level's video, due to Sony Music Entertainment blocking it. Please replace or mute the song in your record if you plan on beating this level, as we can't look at your record if we can't see the video. ",
   },
   {
@@ -13593,7 +13593,7 @@ export const LEVELS = [
     song: "underscores - the city with no wind",
     creator: "wokecat",
     verifier: "lazer",
-    version: "2.1",
+    version: "2.2",
     tags: ["Long","Learny","Gimmicky","Wave"],
     description: null,
   },
@@ -14650,7 +14650,7 @@ export const LEVELS = [
     creator: "TheRealXFuture",
     verifier: "klnxt",
     version: "2.1",
-    tags: ["Long","Learny","Duals"],
+    tags: ["Long","Timings","Learny","Duals"],
     description: ";3",
   },
   {
@@ -14818,7 +14818,7 @@ export const LEVELS = [
     creator: "Shebam",
     verifier: "sneze",
     version: "2.1",
-    tags: ["Long","NONG","Chokepoints","High CPS","UFO"],
+    tags: ["Long","NONG","Clicksync","Chokepoints","High CPS","UFO"],
     description: null,
   },
   {
@@ -15982,7 +15982,7 @@ export const LEVELS = [
     creator: "TROLLM4CHINE",
     verifier: "> x <",
     version: "2.1",
-    tags: ["Long","NONG","Clicksync","Chokepoints","High CPS","Flow","Duals"],
+    tags: ["Long","NONG","Clicksync","Fast-Paced","Chokepoints","High CPS","Flow","Duals"],
     description: "Red glow layout style clicksync level, based on phonk memes and as such featuring a lot of trollfaces. Very tightly synced, and known for it's hard duals.",
   },
   {
@@ -16174,7 +16174,7 @@ export const LEVELS = [
     creator: "sock",
     verifier: "sock",
     version: "2.2",
-    tags: ["Long","Learny","Wave"],
+    tags: ["Long","Wave"],
     description: "",
   },
   {
@@ -16402,7 +16402,7 @@ export const LEVELS = [
     creator: "AWESOMEME360",
     verifier: "AWESOMEME360",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Flow","Overall","NONG"],
+    tags: ["Long","NONG","Fast-Paced","Flow","Wave","Overall"],
     description: null,
   },
   {
@@ -16414,7 +16414,7 @@ export const LEVELS = [
     creator: "ThePurgatory115",
     verifier: "TheGroz",
     version: "2.2",
-    tags: ["Long","Clicksync","Timings","Memory","Cube","Duals"],
+    tags: ["Long","Clicksync","Timings","Memory","Slow-Paced","Cube","Duals"],
     description: null,
   },
   {
@@ -16870,7 +16870,7 @@ export const LEVELS = [
     creator: "ZeroSR",
     verifier: "ZeroSR",
     version: "2.2",
-    tags: ["Long","Timings","Learny"],
+    tags: ["Long","Fast-Paced","Timings","Learny"],
     description: null,
   },
   {
@@ -17302,7 +17302,7 @@ export const LEVELS = [
     creator: "LP44",
     verifier: "PersonHuman42",
     version: "2.2",
-    tags: ["Long","Circles","Fast-Paced","Wave"],
+    tags: ["Long","Circles","Clicksync","Fast-Paced","Wave"],
     description: null,
   },
   {
@@ -18250,7 +18250,7 @@ export const LEVELS = [
     creator: "hasuopf",
     verifier: "cobblestone",
     version: "2.2",
-    tags: ["Long","Timings","Nerve Control","Cube","Ship"],
+    tags: ["Long","Timings","Chokepoints","Nerve Control","Cube","Ship"],
     description: null,
   },
   {
@@ -18862,7 +18862,7 @@ export const LEVELS = [
     creator: "AlvaroPaws :3",
     verifier: "YraX",
     version: "2.2",
-    tags: ["XL","Timings","Duals"],
+    tags: ["XL","Clicksync","Timings","Duals"],
     description: "The sequel to the insane demon DESTROYED which expands on its dual gameplay with a longer level length and has an overall higher CPS. Its high-quality design decoration features a very similar theme to its predecessor where you flee a burning facility that's being destroyed.",
   },
   {
