@@ -5835,9 +5835,10 @@
     "version": "2.1",
     "tags": [
       "Long",
+      "Fast-Paced",
+      "Chokepoints",
       "UFO",
-      "Overall",
-      "Fast-Paced"
+      "Overall"
     ]
   },
   {
@@ -6582,7 +6583,8 @@
       "Chokepoints",
       "Learny",
       "High CPS",
-      "Flow"
+      "Flow",
+      "Overall"
     ]
   },
   {
@@ -8841,6 +8843,8 @@
     "tags": [
       "Long",
       "Fast-Paced",
+      "Chokepoints",
+      "High CPS",
       "Wave"
     ]
   },
@@ -9293,6 +9297,7 @@
       "Long",
       "Chokepoints",
       "Cube",
+      "Ship",
       "UFO",
       "Wave",
       "Old Swing"
@@ -10275,12 +10280,11 @@
       "Fast-Paced",
       "Timings",
       "Chokepoints",
-      "Gimmicky",
+      "Learny",
+      "High CPS",
       "Cube",
       "Ship",
-      "Wave",
-      "Overall",
-      "High CPS"
+      "Wave"
     ]
   },
   {
@@ -10613,6 +10617,8 @@
     "version": "2.1",
     "tags": [
       "Long",
+      "Fast-Paced",
+      "Chokepoints",
       "Wave"
     ]
   },
@@ -11810,6 +11816,7 @@
     "version": "2.1",
     "tags": [
       "Long",
+      "Timings",
       "Chokepoints",
       "Ship",
       "Wave"
@@ -13520,8 +13527,11 @@
     "tags": [
       "Long",
       "Clicksync",
+      "Fast-Paced",
+      "Chokepoints",
+      "Learny",
       "Flow",
-      "Overall"
+      "Wave"
     ]
   },
   {
@@ -15902,8 +15912,8 @@
       "XL",
       "NONG",
       "Clicksync",
+      "Timings",
       "Learny",
-      "High CPS",
       "Nerve Control"
     ]
   },
@@ -17249,8 +17259,9 @@
     "tags": [
       "Long",
       "Fast-Paced",
-      "Wave",
-      "Ship"
+      "Ship",
+      "UFO",
+      "Wave"
     ]
   },
   {
@@ -17954,6 +17965,7 @@
       "XL",
       "NONG",
       "Timings",
+      "Chokepoints",
       "Slow-Paced",
       "Nerve Control",
       "Robot"
@@ -18388,7 +18400,9 @@
     "tags": [
       "Long",
       "NONG",
-      "Timings"
+      "Timings",
+      "Chokepoints",
+      "Nerve Control"
     ]
   },
   {
@@ -18865,6 +18879,7 @@
       "Long",
       "Fast-Paced",
       "Learny",
+      "Wave",
       "Duals",
       "Overall"
     ]
@@ -19392,6 +19407,7 @@
       "Timings",
       "Memory",
       "Cube",
+      "Ship",
       "Overall"
     ]
   },
@@ -19870,6 +19886,7 @@
     "tags": [
       "Long",
       "Chokepoints",
+      "Slow-Paced",
       "Nerve Control",
       "Ship"
     ]
@@ -19921,8 +19938,10 @@
     "version": "2.1",
     "tags": [
       "Long",
-      "Overall",
-      "Timings"
+      "Timings",
+      "Chokepoints",
+      "Nerve Control",
+      "Overall"
     ]
   },
   {
@@ -20704,6 +20723,7 @@
     "version": "2.2",
     "tags": [
       "Medium",
+      "Timings",
       "Chokepoints",
       "Cube",
       "Ship"
@@ -21639,6 +21659,7 @@
     "tags": [
       "Medium",
       "Timings",
+      "Chokepoints",
       "Slow-Paced",
       "Wave"
     ]
@@ -21705,6 +21726,7 @@
     "version": "2.2",
     "tags": [
       "Long",
+      "Clicksync",
       "Timings",
       "UFO"
     ]
@@ -22340,8 +22362,8 @@
       "Long",
       "Timings",
       "Learny",
-      "Memory",
-      "Nerve Control"
+      "Nerve Control",
+      "Duals"
     ]
   },
   {
@@ -22852,7 +22874,8 @@
       "Clicksync",
       "Timings",
       "Nerve Control",
-      "Ship"
+      "Ship",
+      "Wave"
     ]
   },
   {
@@ -23714,7 +23737,8 @@
       "Fast-Paced",
       "Timings",
       "Cube",
-      "Robot",
+      "Ship",
+      "Wave",
       "Overall"
     ]
   },
@@ -25745,6 +25769,7 @@
       "Long",
       "Fast-Paced",
       "Timings",
+      "Chokepoints",
       "Gimmicky",
       "Overall"
     ]
@@ -25818,7 +25843,9 @@
       "Fast-Paced",
       "Timings",
       "Learny",
-      "Cube"
+      "Cube",
+      "UFO",
+      "Wave"
     ]
   },
   {
@@ -26189,6 +26216,7 @@
     "tags": [
       "Long",
       "Fast-Paced",
+      "Chokepoints",
       "Ship",
       "UFO"
     ]
@@ -26399,9 +26427,11 @@
     "version": "2.1",
     "tags": [
       "XXL+",
+      "Timings",
       "Chokepoints",
       "Slow-Paced",
-      "Nerve Control"
+      "Nerve Control",
+      "Overall"
     ]
   },
   {

@@ -3838,7 +3838,7 @@ export const LEVELS = [
     creator: "4yoet",
     verifier: "teraaa",
     version: "2.1",
-    tags: ["Long","UFO","Overall","Fast-Paced"],
+    tags: ["Long","Fast-Paced","Chokepoints","UFO","Overall"],
     description: null,
   },
   {
@@ -4330,7 +4330,7 @@ export const LEVELS = [
     creator: "Helpegasus",
     verifier: "VaporWubz",
     version: "2.1",
-    tags: ["Medium","NONG","Fast-Paced","Timings","Chokepoints","Learny","High CPS","Flow"],
+    tags: ["Medium","NONG","Fast-Paced","Timings","Chokepoints","Learny","High CPS","Flow","Overall"],
     description: "A purple \"reta-styled\" level recognisable for its flow gameplay style, difficult wave sections and extremely high-CPS click patterns. Its emphasis on muscle memory has made it relatively accessible for its difficulty and hence its popularity among extreme demon players.",
   },
   {
@@ -5830,7 +5830,7 @@ export const LEVELS = [
     creator: "Cinny",
     verifier: "saturn",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Wave"],
+    tags: ["Long","Fast-Paced","Chokepoints","High CPS","Wave"],
     description: "A joke level Renn241 created for the player Cinny. The gameplay is made up of super fast flow gameplay and extremely difficult wave sections.",
   },
   {
@@ -6130,7 +6130,7 @@ export const LEVELS = [
     creator: "ZephiroX",
     verifier: "Kevelia",
     version: "2.0",
-    tags: ["Long","Chokepoints","Cube","UFO","Wave","Old Swing"],
+    tags: ["Long","Chokepoints","Cube","Ship","UFO","Wave","Old Swing"],
     description: null,
   },
   {
@@ -6766,7 +6766,7 @@ export const LEVELS = [
     creator: "Alkali",
     verifier: "TGI",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Timings","Chokepoints","Gimmicky","Cube","Ship","Wave","Overall","High CPS"],
+    tags: ["Long","Fast-Paced","Timings","Chokepoints","Learny","High CPS","Cube","Ship","Wave"],
     description: null,
   },
   {
@@ -6994,7 +6994,7 @@ export const LEVELS = [
     creator: "Rwse",
     verifier: "Rwse",
     version: "2.1",
-    tags: ["Long","Wave"],
+    tags: ["Long","Fast-Paced","Chokepoints","Wave"],
     description: null,
   },
   {
@@ -7798,7 +7798,7 @@ export const LEVELS = [
     creator: "Snarlax523",
     verifier: "ysj1005",
     version: "2.1",
-    tags: ["Long","Chokepoints","Ship","Wave"],
+    tags: ["Long","Timings","Chokepoints","Ship","Wave"],
     description: "A level that was hack-verified, and as such has a lot of chokepoints, such as many parts in the pre-drop and the section around 42%. The gameplay is timing-based and gimmicky, with a repeated ship control section in the last 25%.",
   },
   {
@@ -8938,7 +8938,7 @@ export const LEVELS = [
     creator: "Tabgnid",
     verifier: "Tabgnid",
     version: "2.2",
-    tags: ["Long","Clicksync","Flow","Overall"],
+    tags: ["Long","Clicksync","Fast-Paced","Chokepoints","Learny","Flow","Wave"],
     description: "Tabgnid's first solo level, a 1.9-style extreme with flow gameplay inspired by Prismatic Haze.",
   },
   {
@@ -10510,7 +10510,7 @@ export const LEVELS = [
     creator: "TMco",
     verifier: "Wesp",
     version: "2.1",
-    tags: ["XL","NONG","Clicksync","Learny","High CPS","Nerve Control"],
+    tags: ["XL","NONG","Clicksync","Timings","Learny","Nerve Control"],
     description: "TMco collab themed around the I Wanna Be The Guy needle games. Mostly black and white with small amounts of rainbow coloration and a heaven theme. The gameplay is very learny and increases in intensity throughout the level.",
   },
   {
@@ -10775,7 +10775,7 @@ export const LEVELS = [
     verifier: "Sdslayer",
     version: "2.2",
     tags: ["XL","Clicksync","Timings","Overall"],
-    description: "Fully solo made level by Sdslayer that changes decoration style every couple parts. Gameplay is mostly carried by click-sync but has a few notable chokepoints scattered throughout.",
+    description: "Fully solo made level by AREDL List Helper and YouTuber Sdslayer that changes decoration style every couple parts. Gameplay is mostly carried by click-sync but has a few notable chokepoints scattered throughout.",
   },
   {
     id: "5450a6b1-b9ff-4da3-b8f8-5d0738e3baf6",
@@ -11410,7 +11410,7 @@ export const LEVELS = [
     creator: "Bontic",
     verifier: "rWooshi",
     version: "2.2",
-    tags: ["Long","Fast-Paced","Wave","Ship"],
+    tags: ["Long","Fast-Paced","Ship","UFO","Wave"],
     description: null,
   },
   {
@@ -11878,7 +11878,7 @@ export const LEVELS = [
     creator: "korviid",
     verifier: "SlightliFizzi",
     version: "2.1",
-    tags: ["XL","NONG","Timings","Slow-Paced","Nerve Control","Robot"],
+    tags: ["XL","NONG","Timings","Chokepoints","Slow-Paced","Nerve Control","Robot"],
     description: "Atmospheric & monochromatic robot-only extreme with a gloomy song by The Neighborhood. Takes subtle inspiration from Zylenox, featuring a fast-paced climax.",
   },
   {
@@ -12178,7 +12178,7 @@ export const LEVELS = [
     creator: "skywalker14",
     verifier: "TeaWide",
     version: "2.1",
-    tags: ["Long","NONG","Timings"],
+    tags: ["Long","NONG","Timings","Chokepoints","Nerve Control"],
     description: "",
   },
   {
@@ -12502,7 +12502,7 @@ export const LEVELS = [
     creator: "ArtaxFerSarh",
     verifier: "Gizbro",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Learny","Duals","Overall"],
+    tags: ["Long","Fast-Paced","Learny","Wave","Duals","Overall"],
     description: "Well-received dual-based megacollab featuring a consistent green and yellow palette and great gameplay. Memorable for its flashy effects and learny duals",
   },
   {
@@ -12850,7 +12850,7 @@ export const LEVELS = [
     creator: "Fourtex",
     verifier: "AWESOMEME360",
     version: "2.1",
-    tags: ["Long","Timings","Memory","Cube","Overall"],
+    tags: ["Long","Timings","Memory","Cube","Ship","Overall"],
     description: null,
   },
   {
@@ -13174,7 +13174,7 @@ export const LEVELS = [
     creator: "N R G",
     verifier: "Dorami",
     version: "2.1",
-    tags: ["Long","Chokepoints","Nerve Control","Ship"],
+    tags: ["Long","Chokepoints","Slow-Paced","Nerve Control","Ship"],
     description: null,
   },
   {
@@ -13210,7 +13210,7 @@ export const LEVELS = [
     creator: "Ellisha",
     verifier: "MrSpaghetti",
     version: "2.1",
-    tags: ["Long","Overall","Timings"],
+    tags: ["Long","Timings","Chokepoints","Nerve Control","Overall"],
     description: null,
   },
   {
@@ -13738,7 +13738,7 @@ export const LEVELS = [
     creator: "KZLR",
     verifier: "Neeple",
     version: "2.2",
-    tags: ["Medium","Chokepoints","Cube","Ship"],
+    tags: ["Medium","Timings","Chokepoints","Cube","Ship"],
     description: "Remake of Thinking Space II, rated as a low end extreme demon. It was created as a solo level by KZLR at the request of his friend Neeple, who wanted to verify an extreme demon level. Features fast paced cube and ship gameplay with an infamously difficult last jump.",
   },
   {
@@ -14362,7 +14362,7 @@ export const LEVELS = [
     creator: "Shrympo",
     verifier: "exerity",
     version: "2.2",
-    tags: ["Medium","Timings","Slow-Paced","Wave"],
+    tags: ["Medium","Timings","Chokepoints","Slow-Paced","Wave"],
     description: "Graphic design style collab and sequel to Unfair Evening. Notable for being extremely short at only 35 seconds long, and features a tough randomised angled wave spam at the end. ",
   },
   {
@@ -14410,7 +14410,7 @@ export const LEVELS = [
     creator: "ernack",
     verifier: "ernack",
     version: "2.2",
-    tags: ["Long","Timings","UFO"],
+    tags: ["Long","Clicksync","Timings","UFO"],
     description: null,
   },
   {
@@ -14842,7 +14842,7 @@ export const LEVELS = [
     creator: "madamEllyza",
     verifier: "madamEllyza",
     version: "2.1",
-    tags: ["Long","Timings","Learny","Memory","Nerve Control"],
+    tags: ["Long","Timings","Learny","Nerve Control","Duals"],
     description: null,
   },
   {
@@ -15190,7 +15190,7 @@ export const LEVELS = [
     creator: "MercuryDT",
     verifier: "Blankb",
     version: "2.2",
-    tags: ["Long","Clicksync","Timings","Nerve Control","Ship"],
+    tags: ["Long","Clicksync","Timings","Nerve Control","Ship","Wave"],
     description: null,
   },
   {
@@ -15766,7 +15766,7 @@ export const LEVELS = [
     creator: "Deadlox",
     verifier: "xander",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Timings","Cube","Robot","Overall"],
+    tags: ["Long","Fast-Paced","Timings","Cube","Ship","Wave","Overall"],
     description: "Iconic for its challenging wave in the beginning, and very precise ship.",
   },
   {
@@ -17134,7 +17134,7 @@ export const LEVELS = [
     creator: "whoiskeve",
     verifier: "skzyl",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Timings","Gimmicky","Overall"],
+    tags: ["Long","Fast-Paced","Timings","Chokepoints","Gimmicky","Overall"],
     description: null,
   },
   {
@@ -17182,7 +17182,7 @@ export const LEVELS = [
     creator: "Turtl123",
     verifier: "Turtl123",
     version: "2.1",
-    tags: ["Medium","Fast-Paced","Timings","Learny","Cube"],
+    tags: ["Medium","Fast-Paced","Timings","Learny","Cube","UFO","Wave"],
     description: "Short and fairly learny level that was placed at #3 on IDL when it got rated. Features a fast paced rainbow first half and a monochrome ending with some tricky timings.",
   },
   {
@@ -17434,7 +17434,7 @@ export const LEVELS = [
     creator: "f3lixsram",
     verifier: "f3lixsram",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Ship","UFO"],
+    tags: ["Long","Fast-Paced","Chokepoints","Ship","UFO"],
     description: "A harder remake of 8o, keeping the same formatting as the original level. The decoration features more glow and effects, while keeping the same simplistic block design.",
   },
   {
@@ -17578,7 +17578,7 @@ export const LEVELS = [
     creator: "JonathanGD",
     verifier: "Luqualizer",
     version: "2.1",
-    tags: ["XXL+","Chokepoints","Slow-Paced","Nerve Control"],
+    tags: ["XXL+","Timings","Chokepoints","Slow-Paced","Nerve Control","Overall"],
     description: "A 5 minute XL level created for the #levelution movement during 2.1. The gameplay is mostly comprised of timings and clicksync with a sharp difficulty spike in the middle of the level.",
   },
   {
