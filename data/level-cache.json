@@ -39818,5 +39818,125 @@
       }
     ],
     "fetchedAt": "2026-09-13T09:32:49.506Z"
+  },
+  "f4535ed1-d971-455c-b6a6-7a6e84ba9254": {
+    "publisher": {
+      "id": "f4f7fee6-e2eb-425a-b06d-89a3ea40de7e",
+      "username": "516049de6",
+      "global_name": "Nerhy"
+    },
+    "verifications": [
+      {
+        "id": "6dea1444-a94e-4401-b9ea-d00dddaa2b86",
+        "submitted_by": {
+          "id": "efbb258c-c4af-4d31-9334-42fb69c398af",
+          "username": "pop_cat_8_bit",
+          "global_name": "Pop-cat_8-bit"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=Nzu969SwqkM",
+        "hide_video": false,
+        "achieved_at": "2025-11-28T12:22:39Z",
+        "created_at": "2026-08-16T00:23:11.700035Z",
+        "updated_at": "2026-08-16T00:23:11.700035Z"
+      }
+    ],
+    "fetchedAt": "2026-09-21T09:54:57.947Z"
+  },
+  "499fce6d-efcd-416a-8e72-3559f359287a": {
+    "publisher": {
+      "id": "aeb0d733-1171-4ea6-ab5b-00e13a3dd047",
+      "username": "4128cffe9",
+      "global_name": "NesiaL"
+    },
+    "verifications": [
+      {
+        "id": "25cf997e-106f-4246-b299-c93b0559d387",
+        "submitted_by": {
+          "id": "1b2f8a70-5d1a-44f0-875a-3a51999fcc7b",
+          "username": "467967fb2",
+          "global_name": "Baeru"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=hENb4PNL2hk",
+        "hide_video": false,
+        "achieved_at": "2026-08-16T01:55:06.216715Z",
+        "created_at": "2026-08-16T01:55:06.216715Z",
+        "updated_at": "2026-08-16T01:55:06.216715Z"
+      }
+    ],
+    "fetchedAt": "2026-09-21T09:54:57.958Z"
+  },
+  "4dd48c90-a173-43e4-989c-bc5f61ae521e": {
+    "publisher": {
+      "id": "4a4617d2-6f45-42d8-89c1-ce5ea00e076b",
+      "username": "octoangel",
+      "global_name": "angel"
+    },
+    "verifications": [
+      {
+        "id": "78e5e489-49a2-4824-854b-5129d8fc3f9c",
+        "submitted_by": {
+          "id": "4a4617d2-6f45-42d8-89c1-ce5ea00e076b",
+          "username": "octoangel",
+          "global_name": "angel"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=rbDuYLlxzy4",
+        "hide_video": false,
+        "achieved_at": "2026-03-18T04:24:46Z",
+        "created_at": "2026-08-16T00:23:33.236096Z",
+        "updated_at": "2026-08-16T00:23:33.236096Z"
+      }
+    ],
+    "fetchedAt": "2026-09-21T09:54:57.980Z"
+  },
+  "8b6214c6-a724-448a-b721-300736e1e467": {
+    "publisher": {
+      "id": "e6bb3e6a-4271-4764-ab17-22cc0ee56dcf",
+      "username": "bf84df5bc",
+      "global_name": "Olinolivia"
+    },
+    "verifications": [
+      {
+        "id": "7f13a9e4-0cdb-46c0-a70f-556ab7943e82",
+        "submitted_by": {
+          "id": "186b0c91-5b8a-4283-b7d7-6ee82933fb32",
+          "username": "qwaibm7",
+          "global_name": "Qwaibm7"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=oLnvanNlhbY",
+        "hide_video": false,
+        "achieved_at": "2026-04-06T03:56:20Z",
+        "created_at": "2026-08-16T00:23:39.749673Z",
+        "updated_at": "2026-08-16T00:23:39.749673Z"
+      }
+    ],
+    "fetchedAt": "2026-09-21T09:54:58.398Z"
+  },
+  "d8e4fd8a-2678-4e99-b921-9c9bd778ee0b": {
+    "publisher": {
+      "id": "da360d58-7fb7-43b6-a57b-b51de63301b9",
+      "username": "0ba1df8b2",
+      "global_name": "MineCat9000"
+    },
+    "verifications": [
+      {
+        "id": "ada14fd5-4cbd-4e80-84d6-1219a99e9f78",
+        "submitted_by": {
+          "id": "da360d58-7fb7-43b6-a57b-b51de63301b9",
+          "username": "0ba1df8b2",
+          "global_name": "MineCat9000"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=c3tS9NxsvKU",
+        "hide_video": false,
+        "achieved_at": "2026-09-10T12:18:59.852120Z",
+        "created_at": "2026-09-10T12:18:59.852120Z",
+        "updated_at": "2026-09-10T12:18:59.852120Z"
+      }
+    ],
+    "fetchedAt": "2026-09-21T09:54:58.406Z"
   }
 }
