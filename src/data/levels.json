@@ -8875,6 +8875,7 @@
       "Long",
       "Fast-Paced",
       "Chokepoints",
+      "Unbalanced",
       "High CPS",
       "Wave"
     ]
@@ -14812,8 +14813,8 @@
       "XL",
       "Fast-Paced",
       "Chokepoints",
+      "Unbalanced",
       "Learny",
-      "Memory",
       "Gimmicky",
       "Bossfight",
       "Duals"
@@ -26731,10 +26732,10 @@
     "version": "2.1",
     "tags": [
       "Long",
-      "Cube",
       "Timings",
+      "Unbalanced",
       "Slow-Paced",
-      "Chokepoints"
+      "Cube"
     ]
   },
   {
@@ -27435,9 +27436,10 @@
     "version": "2.1",
     "tags": [
       "Long",
-      "Wave",
       "Timings",
-      "Nerve Control"
+      "Unbalanced",
+      "Nerve Control",
+      "Wave"
     ]
   },
   {
@@ -27939,7 +27941,7 @@
     "tags": [
       "XL",
       "Timings",
-      "Chokepoints",
+      "Unbalanced",
       "Nerve Control",
       "Duals"
     ]
