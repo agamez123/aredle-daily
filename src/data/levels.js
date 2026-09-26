@@ -5830,7 +5830,7 @@ export const LEVELS = [
     creator: "Cinny",
     verifier: "saturn",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Chokepoints","High CPS","Wave"],
+    tags: ["Long","Fast-Paced","Chokepoints","Unbalanced","High CPS","Wave"],
     description: "A joke level Renn241 created for the player Cinny. The gameplay is made up of super fast flow gameplay and extremely difficult wave sections.",
   },
   {
@@ -9766,7 +9766,7 @@ export const LEVELS = [
     creator: "HHyper",
     verifier: "Floppy",
     version: "2.1",
-    tags: ["XL","Fast-Paced","Chokepoints","Learny","Memory","Gimmicky","Bossfight","Duals"],
+    tags: ["XL","Fast-Paced","Chokepoints","Unbalanced","Learny","Gimmicky","Bossfight","Duals"],
     description: "Effect layout by HHyper, with an iconic bossfight at the end. The gameplay is gimmicky and learny.",
   },
   {
@@ -17722,7 +17722,7 @@ export const LEVELS = [
     creator: "Bratki",
     verifier: "luminovsky",
     version: "2.1",
-    tags: ["Long","Cube","Timings","Slow-Paced","Chokepoints"],
+    tags: ["Long","Timings","Unbalanced","Slow-Paced","Cube"],
     description: null,
   },
   {
@@ -18190,7 +18190,7 @@ export const LEVELS = [
     creator: "SpergQuos",
     verifier: "SleyGD",
     version: "2.1",
-    tags: ["Long","Wave","Timings","Nerve Control"],
+    tags: ["Long","Timings","Unbalanced","Nerve Control","Wave"],
     description: null,
   },
   {
@@ -18526,7 +18526,7 @@ export const LEVELS = [
     creator: "We4therMan",
     verifier: "We4therMan",
     version: "2.1",
-    tags: ["XL","Timings","Chokepoints","Nerve Control","Duals"],
+    tags: ["XL","Timings","Unbalanced","Nerve Control","Duals"],
     description: "Well known atmospheric XL level with generally slow low cps timing based gameplay and a dual at the end. Has a long cutscene at the start.",
   },
   {
