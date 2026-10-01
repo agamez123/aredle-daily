@@ -298,7 +298,7 @@ export const LEVELS = [
     creator: "Arraegen",
     verifier: "Whizkid05",
     version: "2.2",
-    tags: ["XXL","Timings","Learny","Gimmicky","New Swing","Duals"],
+    tags: ["XXL","Timings","Learny","Gimmicky","Nerve Control","New Swing","Duals"],
     description: "White, orange and black effect level with plenty of lore and an entire poem within it. Includes some incredibly unorthodox gameplay. The level's song was also created by the creator, Arraegen, specifically for this project.",
   },
   {
@@ -550,7 +550,7 @@ export const LEVELS = [
     creator: "TheZinkYT",
     verifier: "Scotchtape",
     version: "2.2",
-    tags: ["XXL+"],
+    tags: ["XXL+","Nerve Control"],
     description: null,
   },
   {
@@ -1834,7 +1834,7 @@ export const LEVELS = [
     creator: "DreamTide",
     verifier: "LordVadercraft",
     version: "2.2",
-    tags: ["XXL+"],
+    tags: ["XXL+","Nerve Control"],
     description: "XXXL 70-person megacollab hosted by DreamTide. Originally was intended to be a joke level, but ended up being higher quality than expected. Consists of loosely 2.0 design styled decoration with relentlessly high energy gameplay and limited breaks. Notably uses the entirety of its song while taking pride in its inclusivity and well-playtested gameplay. Reportedly captures the difficulty of trying not to laugh during a Silent Lunch.",
   },
   {
@@ -2302,7 +2302,7 @@ export const LEVELS = [
     creator: "Dorvict",
     verifier: "Dorvict",
     version: "1.9",
-    tags: ["1.9PS","Long","Clicksync","Timings","Chokepoints","Ship","UFO","Wave"],
+    tags: ["1.9PS","Long","Clicksync","Timings","Chokepoints","Unbalanced","Ship","UFO","Wave"],
     description: "Formerly the hardest 1.9GDPS extreme. Mostly monochromatic and remains high-energy through most of the level, with difficult ship and wave parts. The name comes from a Bloons TD 6 Monkey Ace upgrade. \"The bloons will wish they had never come...\"",
   },
   {
@@ -3422,22 +3422,10 @@ export const LEVELS = [
     description: null,
   },
   {
-    id: "b382cf9a-6efb-4b2e-9dc0-735f295d9553",
-    level_id: 96590328,
-    name: "Ploink",
-    position: 286,
-    song: "Garden Party",
-    creator: "Goobfrudla",
-    verifier: "rWooshi",
-    version: "2.1",
-    tags: ["Long","Cube","Timings","Fast-Paced","Learny"],
-    description: "Short, unserious level with a rainbow colour scheme and many jokes and references sprinkled throughout. Its gameplay is somewhat learny with its difficulty primarily coming from timing-based cube sections.",
-  },
-  {
     id: "4c7a6a86-cfbd-49de-aad3-3210e3d9d821",
     level_id: 127865552,
     name: "Strabit",
-    position: 287,
+    position: 286,
     song: "Strawberry",
     creator: "MyCatsHellaFat",
     verifier: "MyCatsHellaFat",
@@ -3449,7 +3437,7 @@ export const LEVELS = [
     id: "09a64e60-b0a5-4fdf-a813-8ade83f9a5ea",
     level_id: 135703625,
     name: "Astrion",
-    position: 288,
+    position: 287,
     song: "Call Of The Abyss",
     creator: "fil",
     verifier: "whim.",
@@ -3461,7 +3449,7 @@ export const LEVELS = [
     id: "512b2e17-5e29-440f-b065-4666721f7b01",
     level_id: 128938821,
     name: "Ari Om",
-    position: 289,
+    position: 288,
     song: "DYNAMICDREAM",
     creator: "SnowEye",
     verifier: "Knicide",
@@ -3473,7 +3461,7 @@ export const LEVELS = [
     id: "e25a2ddb-46ce-4fa6-961a-f016e0b9ce9b",
     level_id: 124006227,
     name: "SEVENTY SEVEN",
-    position: 290,
+    position: 289,
     song: "Vigor",
     creator: "InfernuZ",
     verifier: "nilscoef",
@@ -3485,13 +3473,25 @@ export const LEVELS = [
     id: "1c0e4eab-c699-4c3d-912b-8904e2da20ab",
     level_id: 71571300,
     name: "Fragmented",
-    position: 291,
+    position: 290,
     song: "Far Too Loud - 600 Years",
     creator: "Cersia",
     verifier: "TGM05",
     version: "1.9",
     tags: ["1.9PS","Long","NONG","Fast-Paced","Nerve Control","Wave"],
     description: null,
+  },
+  {
+    id: "b382cf9a-6efb-4b2e-9dc0-735f295d9553",
+    level_id: 96590328,
+    name: "Ploink",
+    position: 291,
+    song: "Garden Party",
+    creator: "Goobfrudla",
+    verifier: "rWooshi",
+    version: "2.1",
+    tags: ["Long","Cube","Timings","Fast-Paced","Learny"],
+    description: "Short, unserious level with a rainbow colour scheme and many jokes and references sprinkled throughout. Its gameplay is somewhat learny with its difficulty primarily coming from timing-based cube sections.",
   },
   {
     id: "8d895121-2d7c-4d1b-9a0d-4798659f8e7a",
@@ -4426,7 +4426,7 @@ export const LEVELS = [
     creator: "Awedsy",
     verifier: "nac",
     version: "1.9",
-    tags: ["1.9PS","Long","NONG","Clicksync","Timings","Ship","Wave"],
+    tags: ["1.9PS","Long","NONG","Clicksync","Timings","Unbalanced","Ship","Wave"],
     description: "A purple and orange extreme demon combining modern creating techniques and ideas with 1.9 editor limitations in the 1.9GDPS. Its gameplay mostly revolves around clicksync with the first two sections bearing a big chunk of the level's difficulty.",
   },
   {
@@ -5686,7 +5686,7 @@ export const LEVELS = [
     creator: "Sillow",
     verifier: "Sillow",
     version: "2.1",
-    tags: ["XL","Circles","Wave","Nerve Control","Duals","Fast-Paced","Old Swing","Learny","Ship","Overall"],
+    tags: ["XL","Circles","Unbalanced","Learny","Nerve Control","Wave","Old Swing","Duals","Overall"],
     description: "One of the longest nine circles extremes with a highly diverse skillset range. Has a high quality orange design style with a lot of character, featuring many creatures and monsters, and even has a snake that you fly through. Gets gradually harder and faster paced as the level progresses, and features hard asymmetrical duals.",
   },
   {
@@ -5794,7 +5794,7 @@ export const LEVELS = [
     creator: "AleeXhey",
     verifier: "TheyCallMeEvan",
     version: "2.2",
-    tags: ["XXL+","Slow-Paced","Nerve Control","Memory","Overall"],
+    tags: ["XXL+","Unbalanced","Memory","Slow-Paced","Nerve Control","Overall"],
     description: "A nine minute long emotionally powerful level that took over six years to complete. The first third is noticeably harder, but there is still tough gameplay very far into the level. A tribute to TSGuy, may he rest in peace.",
   },
   {
@@ -6069,7 +6069,7 @@ export const LEVELS = [
     song: "Creo - We Can Dream",
     creator: "Hero3210",
     verifier: "MikeTheMagicMan",
-    version: "2.2",
+    version: "2.1",
     tags: ["Long","Timings","Chokepoints","Learny","Duals","Overall"],
     description: null,
   },
@@ -6251,7 +6251,7 @@ export const LEVELS = [
     verifier: "qalli",
     version: "2.2",
     tags: ["XL","Clicksync","Learny","Gimmicky","Nerve Control","Ship","Spider","Duals"],
-    description: "A solo extreme demon made by qalli, which uses a follow trigger setup to make new and intuitive dual gameplay that has never been seen before!!!",
+    description: "A solo extreme demon made by qalli, which uses a follow trigger setup to make unusual offset dual gameplay, along with other gimmicky gameplay throughout.",
   },
   {
     id: "2e3ab25d-7517-48f4-a319-0dcaee9dd55e",
@@ -6514,7 +6514,7 @@ export const LEVELS = [
     creator: "idleunam",
     verifier: "idleunam",
     version: "2.2",
-    tags: ["XXL","Memory","Mirror","Nerve Control","Duals","Overall"],
+    tags: ["XXL","Unbalanced","Memory","Mirror","Nerve Control","Duals","Overall"],
     description: "A three minute long 1.9 effect style solo level that took over two years to create, with parts very reminiscent of Lightwave. The difficulty increases as the level progresses, and the second half features some beautifully janky duals and the infamous Lightwave wave. Has become an insider meme in Aredl for its 1.9 fever dream-like style and low victor count.",
   },
   {
@@ -6766,7 +6766,7 @@ export const LEVELS = [
     creator: "KrmaL",
     verifier: "KrmaL",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Timings","Chokepoints","Gimmicky","Nerve Control","Cube","Duals","Overall"],
+    tags: ["Long","Fast-Paced","Timings","Chokepoints","Unbalanced","Gimmicky","Nerve Control","Cube","Duals","Overall"],
     description: "Former top 10 solo level by KrmaL. Initially this level was harder and being verified in secret, but after the level was leaked through a hack, KrmaL verified and released a nerfed version. This level got Creo well known within the community. The gameplay is gimmicky and extremely predrop carried.",
   },
   {
@@ -6874,7 +6874,7 @@ export const LEVELS = [
     creator: "surveyor23",
     verifier: "surveyor23",
     version: "2.2",
-    tags: ["XXL+","Chokepoints","Learny","Gimmicky","Nerve Control","Ship"],
+    tags: ["XXL+","Unbalanced","Learny","Gimmicky","Nerve Control","Ship"],
     description: "A 7 minute long extreme where giant humanoid spirits are released from their tombs, destroying the earth as they ascend. Widely praised for its atmosphere, storytelling, and song representation. The gameplay is very gimmicky, and features a very hard central section and an asymmetrical ship dual at the end.",
   },
   {
@@ -7966,7 +7966,7 @@ export const LEVELS = [
     creator: "DigitalZero",
     verifier: "GPC Ashe",
     version: "2.1",
-    tags: ["Overall","Chokepoints","NONG","XXL+"],
+    tags: ["XXL+","NONG","Chokepoints","Nerve Control","Overall"],
     description: null,
   },
   {
@@ -8074,7 +8074,7 @@ export const LEVELS = [
     creator: "wapon77",
     verifier: "MrSpaghetti",
     version: "2.1",
-    tags: ["XXL+","Clicksync","Fast-Paced","Learny","Overall"],
+    tags: ["XXL+","Clicksync","Fast-Paced","Learny","Nerve Control","Overall"],
     description: null,
   },
   {
@@ -8590,7 +8590,7 @@ export const LEVELS = [
     creator: "KrmaL",
     verifier: "KrmaL",
     version: "2.0",
-    tags: ["XL","Timings","Chokepoints","Overall","Nerve Control"],
+    tags: ["XL","Timings","Chokepoints","Unbalanced","Nerve Control","Overall"],
     description: "1.9/2.0 megacollab that was initially hack-verified in a much harder state, but was reverified in an easier form by KrmaL. The level doesn't have a very high enjoyment, and contains a lot of difficulty spikes.",
   },
   {
@@ -9190,7 +9190,7 @@ export const LEVELS = [
     creator: "TrusTa",
     verifier: "TrusTa",
     version: "2.0",
-    tags: ["Medium","Fast-Paced","Chokepoints","Ship","Wave"],
+    tags: ["Medium","Fast-Paced","Chokepoints","Unbalanced","Ship","Wave"],
     description: "Famous for being the level to take the #1 spot away from Bloodbath. Known to be very imbalanced, with the majority of the difficulty coming from the waves. It's also the shortest former top 1 in terms of level length, with the gameplay lasting under 50 seconds.",
   },
   {
@@ -9310,7 +9310,7 @@ export const LEVELS = [
     creator: "angel",
     verifier: "angel",
     version: "2.2",
-    tags: ["XXL+"],
+    tags: ["XXL+","Nerve Control"],
     description: null,
   },
   {
@@ -9682,7 +9682,7 @@ export const LEVELS = [
     creator: "akunakun",
     verifier: "Amber ✿",
     version: "2.1",
-    tags: ["XXL","Chokepoints","Memory","Nerve Control","Cube"],
+    tags: ["XXL","Unbalanced","Memory","Nerve Control","Cube"],
     description: "A three minute long non stop memory level. Gets gradually harder as the level progresses, with a very hard wave near the end. Received a balance update in late 2024 which both buffed the first half and nerfed the second half, easing the difficulty increase through the level.",
   },
   {
@@ -10102,7 +10102,7 @@ export const LEVELS = [
     creator: "Renn241",
     verifier: "Blankb",
     version: "2.2",
-    tags: ["XXL+","Chokepoints","Gimmicky","Nerve Control","Overall"],
+    tags: ["XXL+","Chokepoints","Unbalanced","Gimmicky","Nerve Control","Overall"],
     description: "A 55-minute level that features mostly 6-7 star gameplay over its extremely long runtime, with decoration built using 2.2 effects and triggers to avoid a high object count. It changes themes and energy a lot throughout to represent the song, and increases in difficulty during the final 12%.",
   },
   {
@@ -10162,7 +10162,7 @@ export const LEVELS = [
     creator: "Blueskii",
     verifier: "Nexus",
     version: "2.2",
-    tags: ["XXL+","NONG","Clicksync","Chokepoints","Learny","Nerve Control"],
+    tags: ["XXL","NONG","Clicksync","Chokepoints","Learny","Nerve Control"],
     description: "A faithful OMORI-themed megacollab hosted by Blueskii featuring tons of personality and references galore, including hidden cutscenes and a secret epilogue. The player traverses through various environments from the game, meeting friends and foes along the way. Contains spoilers for OMORI.",
   },
   {
@@ -10498,7 +10498,7 @@ export const LEVELS = [
     creator: "-",
     verifier: "Moosh",
     version: "2.1",
-    tags: ["Long","Learny","High CPS","Nerve Control","Wave","Timings","Clicksync","Flow"],
+    tags: ["Long","Clicksync","Timings","Chokepoints","Learny","High CPS","Flow","Nerve Control","Wave"],
     description: "An extremely well known and influential clicksync wave/timing level. Has some very narrow but well synced wave parts, and a slow but very hard ending. Beware of the fish...",
   },
   {
@@ -10570,7 +10570,7 @@ export const LEVELS = [
     creator: "TeamN2",
     verifier: "GoodSmile",
     version: "2.0",
-    tags: ["Long","Memory","Wave"],
+    tags: ["Long","Chokepoints","Memory","Wave"],
     description: "A classic 2.0 level with challenging, diverse gameplay and icy blue theming. Has an infamous memory part near the end requiring the player to collect 21 keys in a specific order.",
   },
   {
@@ -10894,7 +10894,7 @@ export const LEVELS = [
     creator: "RelayX",
     verifier: "Dorami",
     version: "2.1",
-    tags: ["XXL+","Fast-Paced","Timings","Overall"],
+    tags: ["XXL+","Fast-Paced","Timings","Nerve Control","Overall"],
     description: null,
   },
   {
@@ -12298,7 +12298,7 @@ export const LEVELS = [
     creator: "Vismuth",
     verifier: "Koreaqwer",
     version: "2.1",
-    tags: ["XL","Timings","Chokepoints","Learny","Ball"],
+    tags: ["Long","Timings","Unbalanced","Learny","Nerve Control","Ball"],
     description: "An old 2.0 pseudo-memory level featuring unique designs and moving objects, very hard ball timings, and lots of text portals. LDM ball cube ball big cube ball next...",
   },
   {
@@ -12646,7 +12646,7 @@ export const LEVELS = [
     creator: "arplight",
     verifier: "Coheton",
     version: "2.1",
-    tags: ["Long","Chokepoints","High CPS","Fast-Paced"],
+    tags: ["Long","Fast-Paced","Unbalanced","High CPS"],
     description: "A collage style fast paced level that switches style with each part. The difficulty is ending carried, and the level features many bursts of high cps gameplay.",
   },
   {
@@ -13534,7 +13534,7 @@ export const LEVELS = [
     creator: "QuazeryIceCube",
     verifier: "QuazeryIceCube",
     version: "2.2",
-    tags: ["XL","Chokepoints","Memory","Gimmicky","Nerve Control","Cube"],
+    tags: ["XL","Chokepoints","Unbalanced","Memory","Gimmicky","Nerve Control","Cube"],
     description: "Memory extreme with QuazeryIceCube's signature freeform gameplay with many possible routes, and simple but effective decoration. The first half contains most of the difficulty, and a handful of timing chokepoints.",
   },
   {
@@ -14038,7 +14038,7 @@ export const LEVELS = [
     creator: "Norbex",
     verifier: "KyrdaX16 - Noire",
     version: "2.2",
-    tags: ["Long","Chokepoints","Overall"],
+    tags: ["Long","Chokepoints","Learny","Nerve Control","Overall"],
     description: null,
   },
   {
@@ -14986,7 +14986,7 @@ export const LEVELS = [
     creator: "Metalface221",
     verifier: "Metalface221",
     version: "2.1",
-    tags: ["Long","Timings","Wave","Ship","Chokepoints"],
+    tags: ["Long","Timings","Chokepoints","Unbalanced","Ship","Wave"],
     description: "Easy extreme demon most notable for the extremely hard wave in the mid points. The rest of the level is considerably easier except for a few hard ship gaps.",
   },
   {
@@ -15058,7 +15058,7 @@ export const LEVELS = [
     creator: "DrCuber",
     verifier: "saturn",
     version: "2.1",
-    tags: ["Medium","Timings","Learny","Gimmicky","Cube"],
+    tags: ["Medium","Timings","Unbalanced","Learny","Gimmicky","Cube"],
     description: "Solo level by DrCuber. As the name implies, this level is purely cube gameplay with various timing gimmicks. Has a notoriously hard first part, and two parts with an orb that follows the player.",
   },
   {
@@ -15190,7 +15190,7 @@ export const LEVELS = [
     creator: "ClingingBog",
     verifier: "SoggyCat",
     version: "2.2",
-    tags: ["Long","Clicksync","High CPS","Duals"],
+    tags: ["Long","Clicksync","Timings","Learny","High CPS","Duals"],
     description: "The prequel to STARCRASH with gameplay made by SoggyCat and decorated by ClingingBog. Set in an abandoned city, where a star creation experiment is left unmaintained. The player must reach the top of the factory to stop this experiment, or the star will collapse. Notable for its high-CPS clicksync dual gameplay throughout the drop.",
   },
   {
@@ -15214,7 +15214,7 @@ export const LEVELS = [
     creator: "WOOGI1411",
     verifier: "WOOGI1411",
     version: "2.0",
-    tags: ["Long","Duals","Learny","Timings"],
+    tags: ["Long","Timings","Chokepoints","Learny","Duals"],
     description: "One of the first dual heavy extreme demons to exist. Overall pretty fun and very learny, especially the cube at 65%.",
   },
   {
@@ -16270,7 +16270,7 @@ export const LEVELS = [
     creator: "Darwin",
     verifier: "Nexus",
     version: "2.1",
-    tags: ["XXL+","Fast-Paced","Timings","Learny","Overall"],
+    tags: ["XXL+","Fast-Paced","Timings","Learny","Nerve Control","Overall"],
     description: "An effect layout masterpiece spanning over 7 minutes long. The gameplay is mostly comprised of learny clicksync, which intensifies as the level progresses. The level is themed around an unsolved internet ARG, Cicada 3301, with many easter eggs and QR codes scattered throughout the level referencing the puzzles. Received a bugfix update which made it become one of the most enjoyed extremes in the game.",
   },
   {
@@ -16294,7 +16294,7 @@ export const LEVELS = [
     creator: "Bizaare",
     verifier: "Bizaare",
     version: "2.2",
-    tags: ["XL","Fast-Paced","Memory","Nerve Control","Overall"],
+    tags: ["XL","Fast-Paced","Unbalanced","Memory","Nerve Control","Overall"],
     description: "Bizaare's ode to the simpler side of Geometry Dash. An xl memory level using deliberately simple designs and subtle effects, and prioritising song representation above all else. ",
   },
   {
@@ -16342,7 +16342,7 @@ export const LEVELS = [
     creator: "nikroplays",
     verifier: "Endlevel",
     version: "2.0",
-    tags: ["Long","Timings","Chokepoints","Ship","Overall"],
+    tags: ["Long","Timings","Chokepoints","Unbalanced","Ship","Overall"],
     description: "Colorful dark level and the second level of the Dedication Series, with most of its difficulty in the middle parts.",
   },
   {
@@ -16498,7 +16498,7 @@ export const LEVELS = [
     creator: "MaxxoRMeN",
     verifier: "ivyteal",
     version: "2.2",
-    tags: ["XXL+","NONG","Clicksync","Unbalanced","Learny","Gimmicky","Slow-Paced","Nerve Control","Cube"],
+    tags: ["XXL+","NONG","Unbalanced","Gimmicky","Slow-Paced","Nerve Control","Cube"],
     description: "A city themed level with unusual dreamy landscapes and whimsical nature. Very chill but nerve racking gameplay with a vertical part and a fully randomised part in the middle of the level. Enjoy the walk before those beautiful cities get destroyed in the disaster!",
   },
   {
@@ -16594,7 +16594,7 @@ export const LEVELS = [
     creator: "dongchi",
     verifier: "dongchi",
     version: "2.1",
-    tags: ["XXL+","Chokepoints","Learny","Slow-Paced","Nerve Control","Duals","Overall"],
+    tags: ["XXL+","Learny","Slow-Paced","Nerve Control","Duals","Overall"],
     description: "A nine minute long extreme with simple but very effective yellow decoration and great song representation. Contains mostly slow paced and easy gameplay, but has some difficult dual parts, a hard last wave, and lots of fixed hitboxes. A true test of endurance and nerve control.",
   },
   {
@@ -17170,7 +17170,7 @@ export const LEVELS = [
     creator: "kaacu",
     verifier: "Criko",
     version: "2.2",
-    tags: ["XL","Fast-Paced","Learny","Nerve Control","Overall"],
+    tags: ["XL","Fast-Paced","Unbalanced","Learny","Nerve Control","Overall"],
     description: "1.9 styled Flamewall inspired extreme, now in violet! Uses the final two minutes of the song, and features near non-stop fast paced gameplay, with a difficulty increase in the second half. Activating the LDM makes the decoration pure 1.9, while the full detail version has some 2.2 features. Enable shake at own risk...",
   },
   {
@@ -17218,7 +17218,7 @@ export const LEVELS = [
     creator: "Hypno",
     verifier: "Hypno",
     version: "2.2",
-    tags: ["Long","NONG","Clicksync","Learny","Gimmicky","Duals","Overall"],
+    tags: ["Long","NONG","Clicksync","Unbalanced","Learny","Gimmicky","Duals","Overall"],
     description: "An upbeat solo extreme taking inspiration from numerous design creators and featuring the popular pop song of the same name. Has some learny and unusual but well synced gameplay and a very complex dual at the end. ",
   },
   {
@@ -17266,7 +17266,7 @@ export const LEVELS = [
     creator: "Pennutoh",
     verifier: "Sebquero11",
     version: "2.0",
-    tags: ["Long","Duals","Clicksync","Wave","Ship"],
+    tags: ["Long","Clicksync","Unbalanced","Ship","Wave","Duals"],
     description: "A very old 2.0 level with poorly aged decoration but better gameplay. Has a complex asymmetrical dual in the first half. One of the oldest sync focused extremes.",
   },
   {
@@ -17470,7 +17470,7 @@ export const LEVELS = [
     creator: "GaidenHertuny",
     verifier: "Technical",
     version: "2.1",
-    tags: ["Long","Fast-Paced","Chokepoints","Learny","High CPS","Ship","Overall"],
+    tags: ["Long","Fast-Paced","Unbalanced","Learny","High CPS","Ship","Overall"],
     description: "The first part of the Ocular Miracle Trilogy, featuring stunning decoration for the time and fast paced gameplay. Has some janky sections in the mid parts and most notably entirely lacks a drop. A former misrated insane demon until 2024, it reigned as a formidable IDL top 5, including time at top 1, for many years before being finally promoted.",
   },
   {
@@ -17518,7 +17518,7 @@ export const LEVELS = [
     creator: "shmigels",
     verifier: "Hypno",
     version: "2.2",
-    tags: ["Long","Ship","Duals","Overall"],
+    tags: ["Long","Unbalanced","Ship","Duals","Overall"],
     description: "A 1.6 styled level started in early 2.1 and finished in 2.2. Known for being one of the best ship based beginner extremes. Has an asymmetrical dual in the middle and a hard Electrodynamix / 8o style ending ship.",
   },
   {
@@ -17638,7 +17638,7 @@ export const LEVELS = [
     creator: "JonathanGD",
     verifier: "Luqualizer",
     version: "2.1",
-    tags: ["XXL+","Timings","Unbalanced","Slow-Paced","Nerve Control","Overall"],
+    tags: ["XXL+","Timings","Chokepoints","Unbalanced","Slow-Paced","Nerve Control","Overall"],
     description: "A 5 minute XL level created for the #levelution movement during 2.1. The gameplay is mostly comprised of timings and clicksync with a sharp difficulty spike in the middle of the level.",
   },
   {
@@ -17770,7 +17770,7 @@ export const LEVELS = [
     creator: "QuazeryIceCube",
     verifier: "QuazeryIceCube",
     version: "2.2",
-    tags: ["XL","Timings","Memory","Gimmicky","Slow-Paced","Nerve Control","Robot"],
+    tags: ["XL","Timings","Unbalanced","Memory","Gimmicky","Slow-Paced","Nerve Control","Robot"],
     description: "A unique minimalistic memory level using simple but effective block structures on a dark background. The gameplay is very freeform, and the large maze at the end has an immeasurable number of possible routes.",
   },
   {
@@ -17878,7 +17878,7 @@ export const LEVELS = [
     creator: "GgB0y",
     verifier: "Riot",
     version: "2.0",
-    tags: ["Long","Unbalanced","Ship","Wave","Overall"],
+    tags: ["Long","Chokepoints","Unbalanced","Ship","Wave","Overall"],
     description: "One of the most well known extreme demons. The first level in the Apocalyptic trilogy. Consists of a lot of difficult ship parts and an extremely hard beginning wave.",
   },
   {
@@ -17974,7 +17974,7 @@ export const LEVELS = [
     creator: "Shulkern",
     verifier: "Shulkern",
     version: "2.2",
-    tags: ["XXL+","Timings","Chokepoints","Nerve Control"],
+    tags: ["XXL+","Timings","Nerve Control","Overall"],
     description: "Dark and emotional XXL+ solo level with minimalistic but effective decoration. Nearly entirely greyscale, but gains a small but meaningful amount of colour at the second drop. The gameplay is heavily endurance based, and has multiple split paths and frequent timings. Took 4 years to get featured.",
   },
   {
@@ -18057,8 +18057,8 @@ export const LEVELS = [
     song: "bossfightofficial - Bossfight - Glitch Gremlin",
     creator: "SkorchXP",
     verifier: "Zyphur",
-    version: "1.9",
-    tags: ["1.9PS","XXL","NONG","Chokepoints","Nerve Control","Overall"],
+    version: "2.2",
+    tags: ["XXL","NONG","Chokepoints","Nerve Control","Overall"],
     description: "Oppa Gangnam Style! Traditional 1.9 style megacollab using the full song, making it over 3 minutes long and tough on the nerves. Features a rather mean last click...",
   },
   {
@@ -18202,7 +18202,7 @@ export const LEVELS = [
     creator: "vit12",
     verifier: "vit12",
     version: "2.2",
-    tags: ["Long","Timings","Ship","Wave"],
+    tags: ["Long","Timings","Chokepoints","Ship","Wave"],
     description: " Very bright and intense space rainbow level in Vit12's signature style. Also contains Vit's signature simple, skillbased gameplay style which can be divisive, though this time with better transitions and playtesting.",
   },
   {
@@ -18526,7 +18526,7 @@ export const LEVELS = [
     creator: "We4therMan",
     verifier: "We4therMan",
     version: "2.1",
-    tags: ["XL","Timings","Unbalanced","Nerve Control","Duals"],
+    tags: ["XL","Timings","Chokepoints","Unbalanced","Nerve Control","Duals"],
     description: "Well known atmospheric XL level with generally slow low cps timing based gameplay and a dual at the end. Has a long cutscene at the start.",
   },
   {
@@ -18586,7 +18586,7 @@ export const LEVELS = [
     creator: "Lebi06",
     verifier: "Jawv",
     version: "2.1",
-    tags: ["Long","Timings","Wave","Chokepoints","Clicksync"],
+    tags: ["Long","Clicksync","Timings","Chokepoints","Unbalanced","Wave"],
     description: "Electricity themed solo with simple design and effects, and a mixture of clicksync and timing based gameplay. Despite receiving a large nerf, it is highly unbalanced. Most of the difficulty comes from the middle sections and the very hard wave near the end. (verification video was privated/deleted)",
   },
   {
@@ -18778,7 +18778,7 @@ export const LEVELS = [
     creator: "Tshack",
     verifier: "airless",
     version: "2.2",
-    tags: ["Medium","NONG","Clicksync","Fast-Paced","Chokepoints","High CPS","Flow","Ship","Wave"],
+    tags: ["Medium","NONG","Chokepoints","High CPS","Flow","Ship","Wave"],
     description: "Very short, looksmaxxing-themed beginner extreme, barely over half a minute long. Inspired by Cobwebs and Future Chaos, it features fast-paced flow gameplay with some tough ship and wave parts and high-quality design deco. Has quickly become one of the most popular extremes in the game despite still being very new.",
   },
   {
@@ -19006,7 +19006,7 @@ export const LEVELS = [
     creator: "spark",
     verifier: "spark",
     version: "2.2",
-    tags: ["Long","Timings","Slow-Paced","Cube","Spider"],
+    tags: ["Long","Timings","Unbalanced","Slow-Paced","Cube","Spider"],
     description: "A slow and peaceful minimalistic level themed around a set of ruins that was impressively built in only 2 hours. Features precision timing gameplay throughout, with lots of corner block jumps.",
   },
   {
