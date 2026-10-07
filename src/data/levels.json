@@ -11,7 +11,6 @@
     "version": "2.2",
     "tags": [
       "XL",
-      "2P",
       "Fast-Paced",
       "High CPS",
       "Nerve Control",
@@ -3284,11 +3283,12 @@
       "1.9PS",
       "XL",
       "NONG",
-      "Overall",
+      "Timings",
       "Nerve Control",
       "Cube",
       "Ship",
-      "Ball"
+      "Ball",
+      "Overall"
     ]
   },
   {
@@ -5061,6 +5061,7 @@
     "tags": [
       "XXL",
       "NONG",
+      "Clicksync",
       "Timings",
       "Nerve Control",
       "Cube",
@@ -8929,13 +8930,14 @@
     "verifier": "Technical",
     "version": "2.2",
     "tags": [
-      "NONG",
       "XL",
+      "NONG",
+      "Clicksync",
+      "Fast-Paced",
       "Timings",
       "Chokepoints",
+      "Unbalanced",
       "High CPS",
-      "Fast-Paced",
-      "Clicksync",
       "Overall"
     ]
   },
