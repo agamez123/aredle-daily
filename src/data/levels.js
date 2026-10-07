@@ -10,7 +10,7 @@ export const LEVELS = [
     creator: "icedcave",
     verifier: "Doggie",
     version: "2.2",
-    tags: ["XL","2P","Fast-Paced","High CPS","Nerve Control","Ship","Wave"],
+    tags: ["XL","Fast-Paced","High CPS","Nerve Control","Ship","Wave"],
     description: "The End.",
   },
   {
@@ -2158,7 +2158,7 @@ export const LEVELS = [
     creator: "Quaybus",
     verifier: "Varium",
     version: "1.9",
-    tags: ["1.9PS","XL","NONG","Overall","Nerve Control","Cube","Ship","Ball"],
+    tags: ["1.9PS","XL","NONG","Timings","Nerve Control","Cube","Ship","Ball","Overall"],
     description: "XL 1.9 styled extreme excellently capturing an icy cold environment within it's restrictions. The levels difficulty is primarily in its difficult cube and ship sections. Level name and song are from Tower Defense Simulator on Roblox.",
   },
   {
@@ -2711,7 +2711,7 @@ export const LEVELS = [
     verifier: "Cursed",
     version: "2.1",
     tags: ["Long","NONG","Timings","Chokepoints","Unbalanced","High CPS","Slow-Paced","Ship","Ball"],
-    description: "Redecorated version of a 1.9GDPS impossible level by Icedcave. Generic hell-themed extreme but memorable due to its awkward, slow and precise gameplay. The majority of the difficulty lies in the ship and ball sections. Designed intentionally to make the player hate it.",
+    description: "Redecorated version of a 1.9GDPS impossible level by Icedcave which uses the main theme to Resident Evil. Generic hell-themed extreme but memorable due to its awkward, slow and precise gameplay. The majority of the difficulty lies in the ship and ball sections. Designed intentionally to make the player hate it.",
   },
   {
     id: "9cd69551-5af8-4ba2-bf38-36dab4a58ccc",
@@ -3286,7 +3286,7 @@ export const LEVELS = [
     creator: "Presta",
     verifier: "Floofle",
     version: "2.1",
-    tags: ["XXL","NONG","Timings","Nerve Control","Cube","Ball","Robot"],
+    tags: ["XXL","NONG","Clicksync","Timings","Nerve Control","Cube","Ball","Robot"],
     description: "A 3 minute long timing-based level with a long, slow-paced buildup and an intense, fast-paced climax whilst also having the lowest object density of any 2.1 extreme at the time. Due to its progression-based approach and its required skillsets, it became very devisive both in deco and difficulty opinions. Its sudden drop at 42% is extremely well known in the community and has made the level one of the most recognizable extremes of all time.",
   },
   {
@@ -5818,7 +5818,7 @@ export const LEVELS = [
     creator: "deactive",
     verifier: "Technical",
     version: "2.2",
-    tags: ["NONG","XL","Timings","Chokepoints","High CPS","Fast-Paced","Clicksync","Overall"],
+    tags: ["XL","NONG","Clicksync","Fast-Paced","Timings","Chokepoints","Unbalanced","High CPS","Overall"],
     description: "Super spammy level that is the sequel to WOW",
   },
   {
