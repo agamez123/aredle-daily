@@ -11,7 +11,7 @@ export const LEVELS = [
     verifier: "Doggie",
     version: "2.2",
     tags: ["XL","Fast-Paced","High CPS","Nerve Control","Ship","Wave"],
-    description: "The End.",
+    description: "One of the most anticipated top 1s in the game's history, with a verification process spanning 396 streams with a cumulative playtime of 922 hours. Being a decorated, extended remake of Old Slaughterhouse, an impossible level from 2015, it is the official prequel to Slaughterhouse. The level contains some of the hardest high-CPS wave gameplay in the game, with an extension spanning half the level featuring Greafer's and GrenadeofTacos's infamous 4x speed final drop and the Old Slaughterhouse monster being incorporated into the gameplay at 99%. Welcome to a new era of Geometry Dash.",
   },
   {
     id: "94fddf8f-5edf-4db6-8ba7-9106d5b67d08",
