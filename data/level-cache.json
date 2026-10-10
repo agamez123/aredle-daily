@@ -40130,5 +40130,29 @@
       }
     ],
     "fetchedAt": "2026-10-05T11:26:36.807Z"
+  },
+  "05c75b96-b138-47d7-847d-c13fb2650a41": {
+    "publisher": {
+      "id": "215abb59-451d-448e-8aef-0baf05e83c61",
+      "username": "woofelgd",
+      "global_name": "Woofel GD"
+    },
+    "verifications": [
+      {
+        "id": "cd3f8f96-78cf-47ae-83e2-a9a66053a7ba",
+        "submitted_by": {
+          "id": "7eea9372-f4e6-402e-9753-0278f241a537",
+          "username": "breakcore11",
+          "global_name": "Breakcore"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=_H3KOVLE6gs",
+        "hide_video": false,
+        "achieved_at": "2026-09-10T12:13:57.791078Z",
+        "created_at": "2026-09-10T12:13:57.791077Z",
+        "updated_at": "2026-09-10T12:13:57.791077Z"
+      }
+    ],
+    "fetchedAt": "2026-10-10T10:35:44.740Z"
   }
 }
