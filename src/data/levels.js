@@ -18851,7 +18851,7 @@ export const LEVELS = [
     verifier: "Koopazu",
     version: "2.1",
     tags: ["Long","2P","Fast-Paced","Unbalanced","Bossfight","Ship","Wave"],
-    description: "A 2-player level that takes inspiration from Bang Gang. In order to make it more feasible to do solo, as the final 20% can be nerfed in exchange for not getting the coin.",
+    description: "A 2-player level that takes inspiration from Bang Gang. In order to make it more feasible to beat it solo, the final 20% can be nerfed in exchange for not getting the coin.",
   },
   {
     id: "c5dc63c8-d4b6-453d-b40d-1b68c8311446",
