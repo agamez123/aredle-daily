@@ -40154,5 +40154,125 @@
       }
     ],
     "fetchedAt": "2026-10-10T10:35:44.740Z"
+  },
+  "9580ea60-3790-4b8b-aadc-05b8fadc6a6b": {
+    "publisher": {
+      "id": "3b79a553-a097-471e-b374-19f22cd055d4",
+      "username": "b62255f0d",
+      "global_name": "TheBigCheese69"
+    },
+    "verifications": [
+      {
+        "id": "807bc87b-f9d3-4b70-a4cc-559adccfe67a",
+        "submitted_by": {
+          "id": "3b79a553-a097-471e-b374-19f22cd055d4",
+          "username": "b62255f0d",
+          "global_name": "TheBigCheese69"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=n2zUHKccYow",
+        "hide_video": false,
+        "achieved_at": "2025-07-14T23:08:13Z",
+        "created_at": "2026-08-16T00:23:37.672696Z",
+        "updated_at": "2026-08-16T00:23:37.672696Z"
+      }
+    ],
+    "fetchedAt": "2026-10-12T11:56:36.604Z"
+  },
+  "7c25f995-49f8-4aa9-85a5-4885a8c269ea": {
+    "publisher": {
+      "id": "41927437-acc4-426e-8484-635476be12df",
+      "username": "ciphaa",
+      "global_name": "Cipha"
+    },
+    "verifications": [
+      {
+        "id": "26e8f2fb-549b-4038-9332-75acc1fdb948",
+        "submitted_by": {
+          "id": "1f9f4e17-51b6-44bc-89cb-a5a0867ecddb",
+          "username": "cfdc4b468",
+          "global_name": "OneAlphaHelix"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=oWoG41aSl_s",
+        "hide_video": false,
+        "achieved_at": "2024-08-13T21:08:30Z",
+        "created_at": "2026-08-16T00:23:40.692555Z",
+        "updated_at": "2026-08-16T00:23:40.692555Z"
+      }
+    ],
+    "fetchedAt": "2026-10-12T11:56:36.644Z"
+  },
+  "e6a982ea-19a3-4bbe-ad0d-8d2155ef13f4": {
+    "publisher": {
+      "id": "68c54a36-6521-41c5-bb37-4e61acc73d9e",
+      "username": "konterrr123_.",
+      "global_name": "Konter"
+    },
+    "verifications": [
+      {
+        "id": "87bf4f0b-5ae0-484b-ba36-70e238f4f3f6",
+        "submitted_by": {
+          "id": "4e24998c-406d-4f8b-be42-00a5a16f0226",
+          "username": "8mbps2",
+          "global_name": "Sloudy"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=xL2OiGklDBU",
+        "hide_video": false,
+        "achieved_at": "2026-01-12T17:52:24Z",
+        "created_at": "2026-08-16T00:23:23.976984Z",
+        "updated_at": "2026-08-16T00:23:23.976984Z"
+      }
+    ],
+    "fetchedAt": "2026-10-12T11:56:36.651Z"
+  },
+  "f883a194-b8c5-4b78-9f61-41bee33277e3": {
+    "publisher": {
+      "id": "fcdec005-0f2f-449e-ad4a-e7f62a45794b",
+      "username": "20944d3a7",
+      "global_name": "SantiXgh"
+    },
+    "verifications": [
+      {
+        "id": "c399c48f-69e1-41fe-aec5-607305dda6e6",
+        "submitted_by": {
+          "id": "8e3ddb2f-6d29-459a-8abe-44dab427454d",
+          "username": "calo946",
+          "global_name": "Calo"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=6wXFMarfAXg",
+        "hide_video": false,
+        "achieved_at": "2026-05-01T09:41:50Z",
+        "created_at": "2026-08-16T00:23:40.240242Z",
+        "updated_at": "2026-08-16T00:23:40.240242Z"
+      }
+    ],
+    "fetchedAt": "2026-10-12T11:56:37.067Z"
+  },
+  "0d51b3d6-635b-4702-8207-e61ea6c2702f": {
+    "publisher": {
+      "id": "f912f227-dd09-4303-b0c6-e7cccbd2ba1c",
+      "username": "58abe1ea3",
+      "global_name": "AtomicC83"
+    },
+    "verifications": [
+      {
+        "id": "c0e28dcf-7146-4030-ba83-4f1869055bcc",
+        "submitted_by": {
+          "id": "f912f227-dd09-4303-b0c6-e7cccbd2ba1c",
+          "username": "58abe1ea3",
+          "global_name": "AtomicC83"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=dPnVDX-Unm8",
+        "hide_video": false,
+        "achieved_at": "2026-09-28T19:12:29.336816Z",
+        "created_at": "2026-09-28T19:12:29.336816Z",
+        "updated_at": "2026-09-28T19:12:29.336816Z"
+      }
+    ],
+    "fetchedAt": "2026-10-12T11:56:37.105Z"
   }
 }
