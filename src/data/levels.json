@@ -2324,10 +2324,29 @@
     ]
   },
   {
+    "id": "d53edfd9-3a71-48f4-8c44-862cd83fccf3",
+    "level_id": 105748155,
+    "name": "Checked Steam",
+    "position": 128,
+    "status": "MainList",
+    "song": 1258403,
+    "creator": "gruzy",
+    "verifier": "Whizkid05",
+    "version": "2.2",
+    "tags": [
+      "Long",
+      "Chokepoints",
+      "High CPS",
+      "Gimmicky",
+      "Slow-Paced",
+      "Wave"
+    ]
+  },
+  {
     "id": "aea0cadd-9429-4f79-9d6d-8179bb518d73",
     "level_id": 123467310,
     "name": "Heavenly Sakupen",
-    "position": 128,
+    "position": 129,
     "status": "MainList",
     "song": 60919,
     "creator": "YouknowwhoGD",
@@ -2348,7 +2367,7 @@
     "id": "20c0ea80-99d8-4474-87c8-2bd814a1ea73",
     "level_id": 88203501,
     "name": "UNKNOWN",
-    "position": 129,
+    "position": 130,
     "status": "MainList",
     "song": null,
     "creator": "NineDice",
@@ -2368,7 +2387,7 @@
     "id": "e1ac9cab-8dd7-438e-98c9-fd844b1f3da3",
     "level_id": 132751236,
     "name": "SPIRIT OVERCLOCK",
-    "position": 130,
+    "position": 131,
     "status": "MainList",
     "song": 677798,
     "creator": "TheRealXFuture",
@@ -2384,7 +2403,7 @@
     "id": "c28f68fa-f20c-40ed-a2fc-d3ac7e4634cc",
     "level_id": 75286957,
     "name": "Shukketsu",
-    "position": 131,
+    "position": 132,
     "status": "MainList",
     "song": null,
     "creator": "MadisonYuko",
@@ -2405,7 +2424,7 @@
     "id": "05c75b96-b138-47d7-847d-c13fb2650a41",
     "level_id": 123674931,
     "name": "Breakcore",
-    "position": 132,
+    "position": 133,
     "status": "MainList",
     "song": 1042067,
     "creator": "Woofel GD",
@@ -2424,7 +2443,7 @@
     "id": "b158e365-0f31-485e-816d-be35f8623bf2",
     "level_id": 137334994,
     "name": "idontknowwhatthisis",
-    "position": 133,
+    "position": 134,
     "status": "MainList",
     "song": 755193,
     "creator": "YeldA",
@@ -2432,25 +2451,6 @@
     "version": "2.2",
     "tags": [
       "Medium"
-    ]
-  },
-  {
-    "id": "d53edfd9-3a71-48f4-8c44-862cd83fccf3",
-    "level_id": 105748155,
-    "name": "Checked Steam",
-    "position": 134,
-    "status": "MainList",
-    "song": 1258403,
-    "creator": "gruzy",
-    "verifier": "Whizkid05",
-    "version": "2.2",
-    "tags": [
-      "Long",
-      "Chokepoints",
-      "High CPS",
-      "Gimmicky",
-      "Slow-Paced",
-      "Wave"
     ]
   },
   {
