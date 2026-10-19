@@ -40274,5 +40274,29 @@
       }
     ],
     "fetchedAt": "2026-10-12T11:56:37.105Z"
+  },
+  "034634f7-f216-4f34-82dd-003eebd2897e": {
+    "publisher": {
+      "id": "08a39dcc-ed4a-46b1-a018-fcddfa443b7a",
+      "username": "mvngos",
+      "global_name": "mango"
+    },
+    "verifications": [
+      {
+        "id": "43f82aeb-a80f-47ee-a9ad-1fc45c689682",
+        "submitted_by": {
+          "id": "bd3100d4-4bc7-48f8-bbb8-b3732ed0a799",
+          "username": "zoinkgd",
+          "global_name": "Zoink"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=FgjOM0ef1N8",
+        "hide_video": false,
+        "achieved_at": "2026-09-19T18:44:37.071458Z",
+        "created_at": "2026-09-19T18:44:37.071458Z",
+        "updated_at": "2026-09-19T18:44:37.071458Z"
+      }
+    ],
+    "fetchedAt": "2026-10-19T09:52:04.671Z"
   }
 }

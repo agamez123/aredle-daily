@@ -2238,5 +2238,109 @@
     "level_id": 102898797,
     "name": "Bleed",
     "position": 1580
+  },
+  "034634f7-f216-4f34-82dd-003eebd2897e": {
+    "song": "Astronaut - 13 (Rukkus Remix)",
+    "source": "both agree",
+    "alt": null,
+    "level_id": 148598469,
+    "name": "Artemis 13",
+    "position": 2
+  },
+  "70810896-8147-445f-82d0-028cce2297da": {
+    "song": "Metallica - Master of Puppets",
+    "source": "songfilehub (NONG)",
+    "alt": "nebunyx - Master of Dashers",
+    "level_id": 136396693,
+    "name": "Master of Puppets",
+    "position": 48
+  },
+  "b158e365-0f31-485e-816d-be35f8623bf2": {
+    "song": "Zooloo75 - another cookie",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 137334994,
+    "name": "idontknowwhatthisis",
+    "position": 135
+  },
+  "ecabf47d-a7fb-4eaf-90fb-0737e5452e5a": {
+    "song": "Xorberax - so good <loop>",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 122389640,
+    "name": "in this",
+    "position": 159
+  },
+  "7a2b622a-0ae5-4ad0-aaa4-379b71c0351b": {
+    "song": "WaxTerK - EarthBounce",
+    "source": "both agree",
+    "alt": null,
+    "level_id": 130183035,
+    "name": "Goober Rage Stage",
+    "position": 176
+  },
+  "1f42a361-5393-4a82-b172-2c34aeb945c1": {
+    "song": "Katy Perry - Last Friday Night (NIGHTkilla Remix)",
+    "source": "songfilehub (NONG)",
+    "alt": "Rukkus - NK - Poltergeist (OLD mix)",
+    "level_id": 96383663,
+    "name": "Deep Bass",
+    "position": 238
+  },
+  "72134ba7-8852-4983-bcf9-c43aa0617fc5": {
+    "song": "Zooloo75 - 1-14-2017 WIP",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 107226949,
+    "name": "Unfair Evening",
+    "position": 661
+  },
+  "362d360a-8ed6-4554-9d30-e30a62dc8de6": {
+    "song": "Xorberax - swans have no teeth",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 78007735,
+    "name": "ruber cash 22",
+    "position": 693
+  },
+  "c0e74888-b5c6-4bdc-9378-b200874a3eea": {
+    "song": "Xorberax - this is the beat",
+    "source": "both agree",
+    "alt": null,
+    "level_id": 96846935,
+    "name": "Redemption Arc",
+    "position": 1060
+  },
+  "85d9e4c1-2a0e-477b-93b5-3f024aded8a1": {
+    "song": "Xorberax - the tale of zooloo75 (loop)",
+    "source": "both agree",
+    "alt": null,
+    "level_id": 131654854,
+    "name": "Just A Bunch Of Idea",
+    "position": 1098
+  },
+  "d89bd3e7-796d-423c-8612-680f45628782": {
+    "song": "Xorberax - the inevitable end",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 130554006,
+    "name": "Fair Morning",
+    "position": 1212
+  },
+  "50566ded-580a-40aa-b0aa-1aa9bee8bb71": {
+    "song": "Xorberax - Horses Galloping Through Space <Extended>",
+    "source": "GD server",
+    "alt": null,
+    "level_id": 94587757,
+    "name": "verisimilitude",
+    "position": 1494
+  },
+  "58611459-9957-4307-b326-c6c7c49f6879": {
+    "song": "Xorberax - so good (loop)",
+    "source": "both agree",
+    "alt": null,
+    "level_id": 76670086,
+    "name": "phantasmagoria (whlt)",
+    "position": 1498
   }
 }
