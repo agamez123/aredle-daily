@@ -12550,6 +12550,7 @@
       "XL",
       "Circles",
       "Fast-Paced",
+      "Chokepoints",
       "Wave"
     ]
   },
@@ -24072,7 +24073,8 @@
       "1.9PS",
       "Long",
       "Ship",
-      "Wave"
+      "Wave",
+      "Overall"
     ]
   },
   {
@@ -26724,10 +26726,28 @@
     ]
   },
   {
+    "id": "981217ce-69a0-44ce-9776-f6306ef1ef64",
+    "level_id": 69010770,
+    "name": "Dark Odyssey",
+    "position": 1453,
+    "status": "MainList",
+    "song": 693041,
+    "creator": "JonathanGD",
+    "verifier": "JonathanGD",
+    "version": "2.1",
+    "tags": [
+      "XXL+",
+      "Gimmicky",
+      "Nerve Control",
+      "Duals",
+      "Overall"
+    ]
+  },
+  {
     "id": "154af01f-c897-4523-880b-6dbf7797e9bb",
     "level_id": 21604884,
     "name": "Cosmorush 21",
-    "position": 1453,
+    "position": 1454,
     "status": "MainList",
     "song": 462046,
     "creator": "Pennutoh",
@@ -26746,7 +26766,7 @@
     "id": "3af81501-249a-41fb-afd6-f0b5e2cb829f",
     "level_id": 59535791,
     "name": "Brimtanic Paradise",
-    "position": 1454,
+    "position": 1455,
     "status": "MainList",
     "song": 793249,
     "creator": "MadisonYuko",
@@ -26763,7 +26783,7 @@
     "id": "f68a3b09-a09f-4a9e-9472-406e6bd6ef74",
     "level_id": 75518661,
     "name": "Make It Drop",
-    "position": 1455,
+    "position": 1456,
     "status": "MainList",
     "song": 469143,
     "creator": "ryamu",
@@ -26781,7 +26801,7 @@
     "id": "d923688c-5f32-4144-b94c-f8bbab1a8fc0",
     "level_id": 92093417,
     "name": "TerrorCore",
-    "position": 1456,
+    "position": 1457,
     "status": "MainList",
     "song": 772538,
     "creator": "Loogiah",
@@ -26799,7 +26819,7 @@
     "id": "274ae935-4297-41ab-ae86-8daf2d96e10f",
     "level_id": 108212471,
     "name": "Stop Breathing",
-    "position": 1457,
+    "position": 1458,
     "status": "MainList",
     "song": null,
     "creator": "NikVer",
@@ -26818,7 +26838,7 @@
     "id": "57bc5f18-c287-4385-b323-27a0c89c9698",
     "level_id": 95565191,
     "name": "Plasmatic",
-    "position": 1458,
+    "position": 1459,
     "status": "MainList",
     "song": 1034997,
     "creator": "JumpingTheory",
@@ -26836,7 +26856,7 @@
     "id": "ff7dfdf9-49d4-442d-8c4c-962f26eb6620",
     "level_id": 73837161,
     "name": "Lights Out",
-    "position": 1459,
+    "position": 1460,
     "status": "MainList",
     "song": 1061701,
     "creator": "Dashiell10",
@@ -26853,7 +26873,7 @@
     "id": "e0d81e78-95b8-4a76-bb04-3b07c8778dbe",
     "level_id": 112515547,
     "name": "Bangarang",
-    "position": 1460,
+    "position": 1461,
     "status": "MainList",
     "song": 541786,
     "creator": "LP44",
@@ -26871,7 +26891,7 @@
     "id": "bf0c0ffe-47ac-4031-9c8d-edc6e2ffc087",
     "level_id": 111880610,
     "name": "BOOST",
-    "position": 1461,
+    "position": 1462,
     "status": "MainList",
     "song": null,
     "creator": "Azuvy",
@@ -26882,24 +26902,6 @@
       "NONG",
       "Learny",
       "Flow"
-    ]
-  },
-  {
-    "id": "981217ce-69a0-44ce-9776-f6306ef1ef64",
-    "level_id": 69010770,
-    "name": "Dark Odyssey",
-    "position": 1462,
-    "status": "MainList",
-    "song": 693041,
-    "creator": "JonathanGD",
-    "verifier": "JonathanGD",
-    "version": "2.1",
-    "tags": [
-      "XXL+",
-      "Gimmicky",
-      "Nerve Control",
-      "Duals",
-      "Overall"
     ]
   },
   {
