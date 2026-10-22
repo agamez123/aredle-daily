@@ -40298,5 +40298,29 @@
       }
     ],
     "fetchedAt": "2026-10-19T09:52:04.671Z"
+  },
+  "566541dc-d103-4e51-b378-a867817635a4": {
+    "publisher": {
+      "id": "186a529a-137a-44b8-8dcb-3d6f88cf4581",
+      "username": "ciibule",
+      "global_name": "ciibule"
+    },
+    "verifications": [
+      {
+        "id": "f816764f-527e-454f-bef7-28b6b62cc46d",
+        "submitted_by": {
+          "id": "387c8036-1169-499a-811a-2466b49521ac",
+          "username": "6d79683d9",
+          "global_name": "Crazyguy30"
+        },
+        "mobile": false,
+        "video_url": "https://youtu.be/m2BaOz_fLSE?si=cmA8EXTCd2TWENlq",
+        "hide_video": false,
+        "achieved_at": "2026-10-16T02:36:27.969321Z",
+        "created_at": "2026-10-16T02:36:27.969320Z",
+        "updated_at": "2026-10-16T02:36:27.969320Z"
+      }
+    ],
+    "fetchedAt": "2026-10-22T09:23:37.498Z"
   }
 }
