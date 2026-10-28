@@ -384,6 +384,7 @@
     "tags": [
       "XXL",
       "Fast-Paced",
+      "Learny",
       "Nerve Control",
       "Overall"
     ]
@@ -1738,6 +1739,7 @@
       "XXL+",
       "Fast-Paced",
       "Chokepoints",
+      "Unbalanced",
       "Nerve Control",
       "Overall"
     ]
@@ -2537,7 +2539,8 @@
       "Timings",
       "Chokepoints",
       "Learny",
-      "High CPS"
+      "High CPS",
+      "Overall"
     ]
   },
   {
@@ -2641,7 +2644,7 @@
     "verifier": "ViperVenom95",
     "version": "2.2",
     "tags": [
-      "XL",
+      "Long",
       "Fast-Paced",
       "Learny",
       "Memory",
@@ -2663,7 +2666,14 @@
     "version": "2.1",
     "tags": [
       "XL",
+      "Timings",
       "Chokepoints",
+      "Unbalanced",
+      "Learny",
+      "Slow-Paced",
+      "Nerve Control",
+      "Ship",
+      "Wave",
       "Duals",
       "Overall"
     ]
@@ -19194,8 +19204,9 @@
     "version": "2.1",
     "tags": [
       "XL",
-      "Chokepoints",
       "Timings",
+      "Chokepoints",
+      "Unbalanced",
       "Nerve Control"
     ]
   },
