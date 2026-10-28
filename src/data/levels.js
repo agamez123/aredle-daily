@@ -250,7 +250,7 @@ export const LEVELS = [
     creator: "Rynoxious",
     verifier: "kloone",
     version: "2.2",
-    tags: ["XXL","Fast-Paced","Nerve Control","Overall"],
+    tags: ["XXL","Fast-Paced","Learny","Nerve Control","Overall"],
     description: "An old XXL+ mega-collab that began way back in 2020 and was finished and verified more than half a decade later. The gameplay features many epic, but nerve-racking and learny parts, including the last ship closing in at the end. Despite its age, the gameplay is really well done and polished for its time, especially the decoration and song representation.",
   },
   {
@@ -1090,7 +1090,7 @@ export const LEVELS = [
     creator: "Dzeser",
     verifier: "Timo",
     version: "2.1",
-    tags: ["XXL+","Fast-Paced","Chokepoints","Nerve Control","Overall"],
+    tags: ["XXL+","Fast-Paced","Chokepoints","Unbalanced","Nerve Control","Overall"],
     description: "Incredibly large megacollab 3 years in the making in which many classic creators (such as Tygrysek and Rob Buck) would remake their own most important level to them as their part. A level serving as a collage of diverse creating styles and scattered memories over the years, and was fittingly released on Geometry Dash's 10 year anniversary.",
   },
   {
@@ -1594,7 +1594,7 @@ export const LEVELS = [
     creator: "MadisonYuko",
     verifier: "Baeru",
     version: "2.1",
-    tags: ["Long","NONG","Clicksync","Fast-Paced","Timings","Chokepoints","Learny","High CPS"],
+    tags: ["Long","NONG","Clicksync","Fast-Paced","Timings","Chokepoints","Learny","High CPS","Overall"],
     description: "Learny Kowareta inspired \"art-core\" level with a groovy breakbeat song and colorful desaturated visuals. Features a slight garden theme and is flooded with community inside jokes and memes. The gameplay itself is clicksync and fast paced, with many chokepoints throughout the level. ",
   },
   {
@@ -1666,7 +1666,7 @@ export const LEVELS = [
     creator: "akunakun",
     verifier: "ViperVenom95",
     version: "2.2",
-    tags: ["XL","Fast-Paced","Learny","Memory","Gimmicky","Nerve Control","Wave","Duals"],
+    tags: ["Long","Fast-Paced","Learny","Memory","Gimmicky","Nerve Control","Wave","Duals"],
     description: "Really bright and blinding rainbow level with a crazy wave teleporting maze at the end of it. ",
   },
   {
@@ -1678,7 +1678,7 @@ export const LEVELS = [
     creator: "D a G",
     verifier: "D a G",
     version: "2.1",
-    tags: ["XL","Chokepoints","Duals","Overall"],
+    tags: ["XL","Timings","Chokepoints","Unbalanced","Learny","Slow-Paced","Nerve Control","Ship","Wave","Duals","Overall"],
     description: "",
   },
   {
@@ -12418,7 +12418,7 @@ export const LEVELS = [
     creator: "-",
     verifier: "-",
     version: "2.1",
-    tags: ["XL","Chokepoints","Timings","Nerve Control"],
+    tags: ["XL","Timings","Chokepoints","Unbalanced","Nerve Control"],
     description: "Early 2.1 megacollab with a lot of varying decoration styles and incredibly poorly received gameplay. Became the first Extreme Demon moved to TheShadowRealm after the host/verifier was exposed for incredibly inappropriate acts.",
   },
   {
