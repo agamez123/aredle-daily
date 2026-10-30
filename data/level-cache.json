@@ -40490,5 +40490,29 @@
       }
     ],
     "fetchedAt": "2026-10-27T09:47:42.376Z"
+  },
+  "cced5037-1c78-4ea0-a65c-40af4671497b": {
+    "publisher": {
+      "id": "f2ddaa97-7ccf-4db0-862f-6abbf6f44116",
+      "username": "thazm",
+      "global_name": "thazm"
+    },
+    "verifications": [
+      {
+        "id": "d1321f19-5eff-4610-8091-25f125eff738",
+        "submitted_by": {
+          "id": "f2ddaa97-7ccf-4db0-862f-6abbf6f44116",
+          "username": "thazm",
+          "global_name": "thazm"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=9QK07IA3VNQ",
+        "hide_video": false,
+        "achieved_at": "2025-11-05T02:56:30Z",
+        "created_at": "2026-08-16T00:23:12.132215Z",
+        "updated_at": "2026-08-16T00:23:12.132215Z"
+      }
+    ],
+    "fetchedAt": "2026-10-30T10:51:09.774Z"
   }
 }
