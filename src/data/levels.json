@@ -936,29 +936,10 @@
     ]
   },
   {
-    "id": "72bf2c18-1299-408b-bca2-3da986956632",
-    "level_id": 109439644,
-    "name": "KOSETSU",
-    "position": 51,
-    "status": "MainList",
-    "song": 971534,
-    "creator": "fwefwe",
-    "verifier": "taiago",
-    "version": "2.2",
-    "tags": [
-      "Long",
-      "Timings",
-      "Chokepoints",
-      "Slow-Paced",
-      "Ship",
-      "Wave"
-    ]
-  },
-  {
     "id": "1178244d-6482-4ef5-a299-c022eb193757",
     "level_id": 113322063,
     "name": "CONVULSION",
-    "position": 52,
+    "position": 51,
     "status": "MainList",
     "song": null,
     "creator": "Stellar",
@@ -973,6 +954,24 @@
       "High CPS",
       "Ship",
       "UFO"
+    ]
+  },
+  {
+    "id": "007000f3-c6b4-440a-a4b3-af7e86e132e9",
+    "level_id": 75206202,
+    "name": "Firework",
+    "position": 52,
+    "status": "MainList",
+    "song": 502268,
+    "creator": "Trick",
+    "verifier": "Trick",
+    "version": "2.1",
+    "tags": [
+      "XL",
+      "Fast-Paced",
+      "Timings",
+      "Nerve Control",
+      "Overall"
     ]
   },
   {
@@ -1000,21 +999,22 @@
     ]
   },
   {
-    "id": "007000f3-c6b4-440a-a4b3-af7e86e132e9",
-    "level_id": 75206202,
-    "name": "Firework",
+    "id": "72bf2c18-1299-408b-bca2-3da986956632",
+    "level_id": 109439644,
+    "name": "KOSETSU",
     "position": 54,
     "status": "MainList",
-    "song": 502268,
-    "creator": "Trick",
-    "verifier": "Trick",
-    "version": "2.1",
+    "song": 971534,
+    "creator": "fwefwe",
+    "verifier": "taiago",
+    "version": "2.2",
     "tags": [
-      "XL",
-      "Fast-Paced",
+      "Long",
       "Timings",
-      "Nerve Control",
-      "Overall"
+      "Chokepoints",
+      "Slow-Paced",
+      "Ship",
+      "Wave"
     ]
   },
   {
@@ -1541,28 +1541,10 @@
     ]
   },
   {
-    "id": "46351fca-4eee-46c3-a8ac-c9f3d930e89d",
-    "level_id": 94969889,
-    "name": "Belladonna",
-    "position": 81,
-    "status": "MainList",
-    "song": 1221726,
-    "creator": "CherryTeam",
-    "verifier": "exsii",
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "Fast-Paced",
-      "Timings",
-      "High CPS",
-      "Overall"
-    ]
-  },
-  {
     "id": "0029b449-c191-4a9b-91a2-40a3c96037f6",
     "level_id": 62556400,
     "name": "Codependence (Solo)",
-    "position": 82,
+    "position": 81,
     "status": "MainList",
     "song": 727020,
     "creator": "TCTeam",
@@ -1581,7 +1563,7 @@
     "id": "33f22458-6142-45b2-a45e-9cc488be8304",
     "level_id": 113256247,
     "name": "Collapse (Nexel)",
-    "position": 83,
+    "position": 82,
     "status": "MainList",
     "song": 64842,
     "creator": "Nexel",
@@ -1596,6 +1578,24 @@
       "Nerve Control",
       "Wave",
       "New Swing",
+      "Overall"
+    ]
+  },
+  {
+    "id": "46351fca-4eee-46c3-a8ac-c9f3d930e89d",
+    "level_id": 94969889,
+    "name": "Belladonna",
+    "position": 83,
+    "status": "MainList",
+    "song": 1221726,
+    "creator": "CherryTeam",
+    "verifier": "exsii",
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "Fast-Paced",
+      "Timings",
+      "High CPS",
       "Overall"
     ]
   },
