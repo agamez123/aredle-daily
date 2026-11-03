@@ -41,6 +41,9 @@ export function initTelemetry() {
   script.defer = true
   script.src = SCRIPT_SRC
   script.dataset.websiteId = WEBSITE_ID
+  // Copies of the site rehosted elsewhere (S3 buckets, CloudFront mirrors) run
+  // this same bundle; without this they'd report into our quota.
+  script.dataset.domains = "www.aredle.net,aredle.net"
   script.addEventListener("load", flushQueue)
   script.addEventListener("error", () => {
     // A blocked or failed script is never coming back — drop the backlog so it
