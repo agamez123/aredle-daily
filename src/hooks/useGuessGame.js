@@ -70,25 +70,8 @@ export function useGuessGame({ pool, gameMode, difficulty, maxGuesses, isDaily }
       writeJson(startedKey(gameMode, difficulty), dayIndex)
     }
 
-    track("game_started", { combo, gameMode, difficulty, daily: isDaily, day: dayIndex })
+    track("game_started", { combo, day: dayIndex })
   }, [combo, gameMode, difficulty, isDaily, dayIndex, guesses.length, seed])
-
-  // Tracked off the guess list rather than from inside guess(), so a rejected
-  // guess (a duplicate, or one made after the board resolved) never counts.
-  // Restored guesses are seeded in at mount so they aren't re-reported.
-  const trackedGuessesRef = useRef({ seed, count: guesses.length })
-  useEffect(() => {
-    const tracked = trackedGuessesRef.current
-    const from = tracked.seed === seed ? tracked.count : 0
-    for (let i = from; i < guesses.length; i += 1) {
-      track("guess_made", {
-        combo,
-        guessNumber: i + 1,
-        correct: guesses[i].id === answer.id,
-      })
-    }
-    trackedGuessesRef.current = { seed, count: guesses.length }
-  }, [guesses, answer, combo, seed])
 
   // Persist daily progress on every change. Unlimited runs are deliberately
   // ephemeral — otherwise a refresh would restore a puzzle the player was free
@@ -104,6 +87,8 @@ export function useGuessGame({ pool, gameMode, difficulty, maxGuesses, isDaily }
 
   // One outcome event per board played to its end. A board that was already
   // over at mount — today's daily, reopened — is counted as reported.
+  // There's no per-guess event: Umami bills each prop as an event, and per-guess
+  // tracking was most of the monthly quota. `guesses` here covers it.
   const outcomeSeedRef = useRef(gameOver ? seed : null)
   useEffect(() => {
     if (!gameOver || outcomeSeedRef.current === seed) return
@@ -111,7 +96,6 @@ export function useGuessGame({ pool, gameMode, difficulty, maxGuesses, isDaily }
     track(won ? "game_won" : "game_lost", {
       combo,
       guesses: guesses.length,
-      daily: isDaily,
       day: dayIndex,
     })
   }, [gameOver, won, guesses.length, combo, isDaily, dayIndex, seed])
