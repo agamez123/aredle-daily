@@ -51,15 +51,18 @@ props are readable in the event's property breakdown.
 
 | Event | Fired when | Props |
 | --- | --- | --- |
-| `mode_selected` | A difficulty card is clicked on Home | `gameMode`, `difficulty`, `daily` |
-| `game_started` | A board is opened with no guesses on it | `combo`, `gameMode`, `difficulty`, `daily`, `day` |
-| `guess_made` | A guess is accepted onto the board | `combo`, `guessNumber`, `correct` |
-| `game_won` / `game_lost` | A board resolves | `combo`, `guesses`, `daily`, `day` |
+| `game_started` | A board is opened with no guesses on it | `combo`, `day` |
+| `game_won` / `game_lost` | A board resolves | `combo`, `guesses`, `day` |
 | `share_clicked` | Share result on the game-over card | `combo`, `won`, `guesses`, `copied` |
 
 `combo` is `gameMode:difficulty:daily|unlimited`. Every guard is keyed on the
-game's seed, so resuming or reopening a daily board never re-reports a start, its
-restored guesses, or its result. An unlimited reroll does count as a new game.
+game's seed, so resuming or reopening a daily board never re-reports a start or
+its result. An unlimited reroll does count as a new game.
+
+Umami Cloud's monthly quota counts every prop as an event too, so an event with
+three props costs four. Keep props to the minimum and don't add one that `combo`
+already encodes. The script only reports from `www.aredle.net`/`aredle.net`
+(`data-domains`), so mirrors of the site don't spend the quota.
 See `.env.example` for the variables.
 
 ## Development
