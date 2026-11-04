@@ -10150,7 +10150,7 @@ export const LEVELS = [
     creator: "Hypno",
     verifier: "Hypno",
     version: "2.2",
-    tags: ["XL","NONG","Fast-Paced","Learny","Duals","Overall"],
+    tags: ["XL","NONG","Learny","Duals","Overall"],
     description: "Hypno's second solo Extreme Demon project, inspired by the rhythm game Sayonara Wild Hearts. It showcases Hypno's signature gameplay style: learny yet intuitive, focused on unique structuring. Noteworthy for its difficult duals, exceptional song representation and simplistic neon designs.",
   },
   {
@@ -17482,7 +17482,7 @@ export const LEVELS = [
     creator: "Hypno",
     verifier: "Hypno",
     version: "2.2",
-    tags: ["Long","NONG","Clicksync","Learny","Gimmicky","Duals","Overall"],
+    tags: ["Long","NONG","Clicksync","Fast-Paced","Learny","Gimmicky","Duals","Overall"],
     description: "An upbeat solo extreme taking inspiration from numerous design creators and featuring the popular pop song of the same name. Has some learny and unusual but well synced gameplay and a very complex dual at the end. ",
   },
   {
