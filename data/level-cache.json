@@ -40514,5 +40514,101 @@
       }
     ],
     "fetchedAt": "2026-10-30T10:51:09.774Z"
+  },
+  "d1fd0b90-9a66-4f23-b57d-256f24c047ee": {
+    "publisher": {
+      "id": "94cf22f5-08c4-4e09-8b42-b4f0b83ca446",
+      "username": "8022b64e7",
+      "global_name": "Zisthik"
+    },
+    "verifications": [
+      {
+        "id": "cd837cbb-ea40-407a-843f-897f59ea1f56",
+        "submitted_by": {
+          "id": "7f1da0e3-0397-4349-9dee-1964eb82ed71",
+          "username": "_icarox",
+          "global_name": "IcaroX"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=n3cdX8Pr8Hc",
+        "hide_video": false,
+        "achieved_at": "2024-07-20T10:51:48Z",
+        "created_at": "2026-08-16T00:23:20.699326Z",
+        "updated_at": "2026-08-16T00:23:20.699326Z"
+      }
+    ],
+    "fetchedAt": "2026-11-05T12:17:49.311Z"
+  },
+  "12d93f10-6dda-43f2-90db-2a8862cb0a82": {
+    "publisher": {
+      "id": "ef2070ea-9bfa-4239-a9c0-52820f50aefb",
+      "username": "d67dbbdbd",
+      "global_name": "nothawkyre"
+    },
+    "verifications": [
+      {
+        "id": "3ca93305-2678-4068-8ebd-c682445f7a23",
+        "submitted_by": {
+          "id": "79b54d1c-5bcb-440a-ab73-1ed66ade014a",
+          "username": "exsii",
+          "global_name": "exsii"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=Kxx28QBnl4g",
+        "hide_video": false,
+        "achieved_at": "2022-05-16T15:57:53Z",
+        "created_at": "2026-08-16T00:23:28.171823Z",
+        "updated_at": "2026-08-16T00:23:28.171823Z"
+      }
+    ],
+    "fetchedAt": "2026-11-05T12:17:49.315Z"
+  },
+  "6df7212b-87c2-46f8-968d-982382ce3bef": {
+    "publisher": {
+      "id": "be4c3511-b572-4be8-9ea0-5784913a7539",
+      "username": "karllao",
+      "global_name": "paranoiac"
+    },
+    "verifications": [
+      {
+        "id": "a8b6ac50-6700-4f33-967d-7c688f5d12de",
+        "submitted_by": {
+          "id": "be4c3511-b572-4be8-9ea0-5784913a7539",
+          "username": "karllao",
+          "global_name": "paranoiac"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=Y9CWBzfQygc",
+        "hide_video": false,
+        "achieved_at": "2025-06-25T16:00:06Z",
+        "created_at": "2026-08-16T00:24:04.445281Z",
+        "updated_at": "2026-08-16T00:24:04.445281Z"
+      }
+    ],
+    "fetchedAt": "2026-11-05T12:17:49.321Z"
+  },
+  "20a1f03a-87b3-42cd-8856-5a7ef79daf25": {
+    "publisher": {
+      "id": "38210c64-db75-428b-bc6d-c5b521784916",
+      "username": "trashthrasher",
+      "global_name": "TrashThrasher "
+    },
+    "verifications": [
+      {
+        "id": "5538f44d-932a-4e68-88d1-0e5620005356",
+        "submitted_by": {
+          "id": "38210c64-db75-428b-bc6d-c5b521784916",
+          "username": "trashthrasher",
+          "global_name": "TrashThrasher "
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=-0N0FyyFJns",
+        "hide_video": false,
+        "achieved_at": "2026-04-23T16:47:00Z",
+        "created_at": "2026-08-16T00:23:55.909095Z",
+        "updated_at": "2026-08-16T00:23:55.909095Z"
+      }
+    ],
+    "fetchedAt": "2026-11-05T12:17:49.834Z"
   }
 }
