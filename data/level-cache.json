@@ -40610,5 +40610,101 @@
       }
     ],
     "fetchedAt": "2026-11-05T12:17:49.834Z"
+  },
+  "bc9d4984-6fa4-4f61-9bf8-10b57b198ef9": {
+    "publisher": {
+      "id": "4ad95982-ef86-4d34-b509-0bda1272934c",
+      "username": "26d034f25",
+      "global_name": "BangoDack"
+    },
+    "verifications": [
+      {
+        "id": "dddeb8c7-cfcd-45d0-ac4e-8fd0108d679f",
+        "submitted_by": {
+          "id": "2cf3924f-f97c-43c5-b105-167fcf728c0c",
+          "username": "d646715fd",
+          "global_name": "zLui"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=fHbJJsyqFpg",
+        "hide_video": false,
+        "achieved_at": "2026-10-22T19:52:40.125701Z",
+        "created_at": "2026-10-22T19:52:40.125701Z",
+        "updated_at": "2026-10-22T19:52:40.125701Z"
+      }
+    ],
+    "fetchedAt": "2026-11-08T11:15:17.895Z"
+  },
+  "9ef4571c-8348-409d-a538-39f073b8c54a": {
+    "publisher": {
+      "id": "190cdeef-8ac7-4b77-a4ce-fda8bbfdcfd0",
+      "username": "bv57_",
+      "global_name": "BV57"
+    },
+    "verifications": [
+      {
+        "id": "01c940ec-5c72-46bb-a430-664819c5c4b5",
+        "submitted_by": {
+          "id": "78ba2310-1843-4b3a-a125-05a572d780f6",
+          "username": "andyinho",
+          "global_name": "andygds"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=AhK4Kwc-UfU",
+        "hide_video": false,
+        "achieved_at": "2026-11-03T21:42:18.609652Z",
+        "created_at": "2026-11-03T21:42:18.609652Z",
+        "updated_at": "2026-11-03T21:42:18.609652Z"
+      }
+    ],
+    "fetchedAt": "2026-11-08T11:15:17.924Z"
+  },
+  "323af988-b222-4575-9ed5-3cf2d5ed82cd": {
+    "publisher": {
+      "id": "c88cc947-49bf-4800-be7a-88dd3cd0a90f",
+      "username": "interstellar_ca",
+      "global_name": "Interstellar"
+    },
+    "verifications": [
+      {
+        "id": "3985ca40-7246-4df1-9277-de010f83dc15",
+        "submitted_by": {
+          "id": "c88cc947-49bf-4800-be7a-88dd3cd0a90f",
+          "username": "interstellar_ca",
+          "global_name": "Interstellar"
+        },
+        "mobile": false,
+        "video_url": "https://youtu.be/Ps1Tre6Re8U?si=b6hlWj_aMc8SwN7x",
+        "hide_video": false,
+        "achieved_at": "2026-10-24T15:20:31.445012Z",
+        "created_at": "2026-10-24T15:20:31.445012Z",
+        "updated_at": "2026-10-24T15:20:31.445012Z"
+      }
+    ],
+    "fetchedAt": "2026-11-08T11:15:17.931Z"
+  },
+  "21fe55c1-aae2-4009-84db-26339e39fc38": {
+    "publisher": {
+      "id": "309bf5e2-b3ca-4fb0-a1cd-6ec02b214fa6",
+      "username": "0dd3f22da",
+      "global_name": "MrSpaghetti"
+    },
+    "verifications": [
+      {
+        "id": "2b593aee-ab2d-4728-8434-c9d3935a68df",
+        "submitted_by": {
+          "id": "309bf5e2-b3ca-4fb0-a1cd-6ec02b214fa6",
+          "username": "0dd3f22da",
+          "global_name": "MrSpaghetti"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=OOUiOAR-jT0",
+        "hide_video": false,
+        "achieved_at": "2026-11-05T06:40:26.324445Z",
+        "created_at": "2026-11-05T06:40:26.324445Z",
+        "updated_at": "2026-11-05T06:40:26.324445Z"
+      }
+    ],
+    "fetchedAt": "2026-11-08T11:15:18.398Z"
   }
 }
