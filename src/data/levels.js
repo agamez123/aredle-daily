@@ -107,7 +107,7 @@ export const LEVELS = [
     verifier: "Zoink",
     version: "2.2",
     tags: ["XL","Fast-Paced","Timings","Learny","Gimmicky","Nerve Control","Cube"],
-    description: "One of Mindcap's most ambitious projects to date, filled with over 2 minutes of fast-paced timings, all of which are orb clicks. Due to these limitations the vast majority of the level is cube gameplay, with a brief ship and ball interlude just over halfway through. The decoration is themed around space and gravity with depictions of celestial objects, black holes, and a ship part where you travel through a wormhole. It was built to such a high standard that the decoration process took nearly 3 years with countless dropped and replaced parts from even the most experienced creators. Don't fall into The Ball Pit™.",
+    description: "One of Mindcap's most ambitious projects to date, filled with over 2 minutes of fast-paced timings, all of which are orb clicks. The decoration is themed around space and gravity with depictions of celestial objects, black holes, and a ship part where you travel through a wormhole. Don't fall into The Ball Pit™.",
   },
   {
     id: "b55de8a2-94d8-41c1-a933-17124e4461e9",
@@ -11087,7 +11087,7 @@ export const LEVELS = [
     verifier: "Sdslayer",
     version: "2.2",
     tags: ["XL","Clicksync","Timings","Overall"],
-    description: "Fully solo made level by AREDL List Helper and YouTuber Sdslayer that changes decoration style every couple parts. Gameplay is mostly carried by click-sync but has a few notable chokepoints scattered throughout.",
+    description: "Fully solo made level by List Helper and YouTuber Sdslayer that changes decoration style every couple parts. Gameplay is mostly carried by click-sync but has a few notable chokepoints scattered throughout.",
   },
   {
     id: "5450a6b1-b9ff-4da3-b8f8-5d0738e3baf6",
@@ -12227,7 +12227,7 @@ export const LEVELS = [
     verifier: "Technical",
     version: "2.1",
     tags: ["Long","Timings","Chokepoints","Slow-Paced","Wave","Old Swing"],
-    description: "Has a very chill atmosphere and gameplay that is mostly timings, wave, and ship. Was supposed to have an extension but was released early.",
+    description: "The second level in Platnuu's Interface trilogy. Has a very chill atmosphere and gameplay that is mostly timings, wave, and ship. Was supposed to have an extension but was released early.",
   },
   {
     id: "f297c22c-5e49-4c5a-843f-e62bcf2bbd94",
