@@ -40706,5 +40706,29 @@
       }
     ],
     "fetchedAt": "2026-11-08T11:15:18.398Z"
+  },
+  "db14f08e-b813-475f-8518-6cdcd7db20b9": {
+    "publisher": {
+      "id": "876e4a2c-d236-4892-86fd-c645e720bb53",
+      "username": "b751c9097",
+      "global_name": "rollthedice666"
+    },
+    "verifications": [
+      {
+        "id": "025da27c-8a8d-4c8a-912d-4a5914404e88",
+        "submitted_by": {
+          "id": "38af9fac-2ba2-4229-b66b-7d47107b866e",
+          "username": "0d96d7ae6",
+          "global_name": "Turtel"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=WFUJ7Tc3FPM",
+        "hide_video": false,
+        "achieved_at": "2026-10-12T16:57:09.071029Z",
+        "created_at": "2026-10-12T16:57:09.071029Z",
+        "updated_at": "2026-10-12T16:57:09.071029Z"
+      }
+    ],
+    "fetchedAt": "2026-11-12T12:40:29.166Z"
   }
 }
