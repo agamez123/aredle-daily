@@ -259,7 +259,7 @@
     "level_id": 86407629,
     "name": "Tidal Wave",
     "position": 7,
-    "points": 4651,
+    "points": 4652,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -382,7 +382,7 @@
     "level_id": 144988390,
     "name": "Antarctic Lights",
     "position": 10,
-    "points": 4498,
+    "points": 4499,
     "status": "MainList",
     "two_player": false,
     "song": 428157,
@@ -505,7 +505,7 @@
     "level_id": 110816181,
     "name": "BOOBAWAMBA",
     "position": 13,
-    "points": 4357,
+    "points": 4358,
     "status": "MainList",
     "two_player": false,
     "song": 941913,
@@ -629,7 +629,7 @@
     "level_id": 62912799,
     "name": "Ashley Wave Trials",
     "position": 16,
-    "points": 4226,
+    "points": 4227,
     "status": "MainList",
     "two_player": false,
     "song": 383158,
@@ -711,7 +711,7 @@
     "level_id": 138704906,
     "name": "Ultra Paracosm",
     "position": 18,
-    "points": 4144,
+    "points": 4145,
     "status": "MainList",
     "two_player": false,
     "song": 469490,
@@ -794,7 +794,7 @@
     "level_id": 114283297,
     "name": "andromeda",
     "position": 20,
-    "points": 4066,
+    "points": 4067,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -839,7 +839,7 @@
     "level_id": 138781722,
     "name": "KILLSTEALER",
     "position": 21,
-    "points": 4028,
+    "points": 4029,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -880,7 +880,7 @@
     "level_id": 127997391,
     "name": "Subsuming Vortex",
     "position": 22,
-    "points": 3991,
+    "points": 3992,
     "status": "MainList",
     "two_player": false,
     "song": 512976,
@@ -920,7 +920,7 @@
     "level_id": 112313819,
     "name": "Anathema",
     "position": 23,
-    "points": 3955,
+    "points": 3956,
     "status": "MainList",
     "two_player": false,
     "song": 717444,
@@ -1128,7 +1128,7 @@
     "level_id": 110815379,
     "name": "Spectre",
     "position": 28,
-    "points": 3785,
+    "points": 3786,
     "status": "MainList",
     "two_player": false,
     "song": 786863,
@@ -1169,7 +1169,7 @@
     "level_id": 107805281,
     "name": "Menace",
     "position": 29,
-    "points": 3753,
+    "points": 3754,
     "status": "MainList",
     "two_player": false,
     "song": 1304920,
@@ -1255,7 +1255,7 @@
     "level_id": 91351939,
     "name": "Tunnel of Despair",
     "position": 31,
-    "points": 3691,
+    "points": 3692,
     "status": "MainList",
     "two_player": false,
     "song": 386900,
@@ -1297,7 +1297,7 @@
     "level_id": 86018142,
     "name": "Kyouki",
     "position": 32,
-    "points": 3661,
+    "points": 3662,
     "status": "MainList",
     "two_player": false,
     "song": 905108,
@@ -1416,7 +1416,7 @@
     "level_id": 130891319,
     "name": "cognitohazard",
     "position": 35,
-    "points": 3574,
+    "points": 3575,
     "status": "MainList",
     "two_player": false,
     "song": 10008831,
@@ -1459,7 +1459,7 @@
     "level_id": 93917076,
     "name": "The Lightning Rod",
     "position": 36,
-    "points": 3546,
+    "points": 3547,
     "status": "MainList",
     "two_player": false,
     "song": 935594,
@@ -1546,7 +1546,7 @@
     "level_id": 27690100,
     "name": "Slaughterhouse ",
     "position": 38,
-    "points": 3492,
+    "points": 3493,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -1676,7 +1676,7 @@
     "level_id": 130327668,
     "name": "BEING HOME",
     "position": 41,
-    "points": 3414,
+    "points": 3415,
     "status": "MainList",
     "two_player": false,
     "song": 1225278,
@@ -1720,7 +1720,7 @@
     "level_id": 93091893,
     "name": "Deimos (ItsHybrid)",
     "position": 42,
-    "points": 3389,
+    "points": 3390,
     "status": "MainList",
     "two_player": false,
     "song": 830628,
@@ -1761,7 +1761,7 @@
     "level_id": 114281093,
     "name": "CHIL",
     "position": 43,
-    "points": 3364,
+    "points": 3365,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -1803,7 +1803,7 @@
     "level_id": 134541844,
     "name": "zorin",
     "position": 44,
-    "points": 3340,
+    "points": 3341,
     "status": "MainList",
     "two_player": false,
     "song": 1172938,
@@ -1845,7 +1845,7 @@
     "level_id": 135148907,
     "name": "Prismline",
     "position": 45,
-    "points": 3316,
+    "points": 3317,
     "status": "MainList",
     "two_player": false,
     "song": 1006406,
@@ -2010,7 +2010,7 @@
     "level_id": 113959291,
     "name": "Silentlocked",
     "position": 49,
-    "points": 3224,
+    "points": 3225,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -2050,7 +2050,7 @@
     "level_id": 95851008,
     "name": "Eyes in the Water",
     "position": 50,
-    "points": 3202,
+    "points": 3203,
     "status": "MainList",
     "two_player": false,
     "song": 1053005,
@@ -2137,7 +2137,7 @@
     "level_id": 120289520,
     "name": "Snowbound",
     "position": 52,
-    "points": 3159,
+    "points": 3160,
     "status": "MainList",
     "two_player": false,
     "song": 1208210,
@@ -2181,7 +2181,7 @@
     "level_id": 75206202,
     "name": "Firework",
     "position": 53,
-    "points": 3138,
+    "points": 3139,
     "status": "MainList",
     "two_player": false,
     "song": 502268,
@@ -2269,7 +2269,7 @@
     "level_id": 113443235,
     "name": "Apocalyptic Trilogy",
     "position": 55,
-    "points": 3097,
+    "points": 3098,
     "status": "MainList",
     "two_player": false,
     "song": 1131998,
@@ -2312,7 +2312,7 @@
     "level_id": 144012996,
     "name": "Pinnacle of Life",
     "position": 56,
-    "points": 3077,
+    "points": 3078,
     "status": "MainList",
     "two_player": false,
     "song": 467267,
@@ -2351,7 +2351,7 @@
     "level_id": 109439644,
     "name": "KOSETSU",
     "position": 57,
-    "points": 3057,
+    "points": 3058,
     "status": "MainList",
     "two_player": false,
     "song": 971534,
@@ -19460,7 +19460,9 @@
     ],
     "version": "2.2",
     "tags": [
-      "Long"
+      "Long",
+      "Unbalanced",
+      "Wave"
     ]
   },
   {
@@ -21548,7 +21550,7 @@
     "two_player": false,
     "song": 1324445,
     "description": "A gimmicky and fast-paced Extreme Demon utilizing Passable blocks, orb-based gameplay and uniquely ethereal decoration. Its a \"true solo\"  with the creator having finished the entire song, gameplay, decoration and verification by himself.",
-    "edel_enjoyment": 80.68571429,
+    "edel_enjoyment": 78.72222222,
     "is_edel_pending": false,
     "gddl_tier": 28.045454545454547,
     "nlw_tier": "Remorseless",
@@ -24822,7 +24824,7 @@
     "two_player": false,
     "song": 547333,
     "description": "A 7 minute long extreme where giant humanoid spirits are released from their tombs, destroying the earth as they ascend. Widely praised for its atmosphere, storytelling, and song representation. The gameplay is very gimmicky, and features a very hard central section and an asymmetrical ship dual at the end.",
-    "edel_enjoyment": 91,
+    "edel_enjoyment": 91.33333333,
     "is_edel_pending": false,
     "gddl_tier": 27.333333333333332,
     "nlw_tier": "Extreme",
@@ -25920,7 +25922,7 @@
     "two_player": false,
     "song": 129910,
     "description": null,
-    "edel_enjoyment": 63.86956522,
+    "edel_enjoyment": 63.95714286,
     "is_edel_pending": false,
     "gddl_tier": 26.844444444444445,
     "nlw_tier": "Extreme",
@@ -32395,7 +32397,7 @@
     "two_player": false,
     "song": 751829,
     "description": "An early 2.1 extreme demon that took 8 years to be rated. The gameplay has scattered chokepoints, with the middle of the level being much harder than the rest of the level. ",
-    "edel_enjoyment": 47.9,
+    "edel_enjoyment": 48.29032258,
     "is_edel_pending": false,
     "gddl_tier": 25.058823529411764,
     "nlw_tier": "Very Hard",
@@ -46891,7 +46893,7 @@
     "two_player": false,
     "song": 478283,
     "description": "Skill-based clicksync design solo utilizing lots of cool complementary colors and satisfying fast-paced timings. Leans towards being ship/wave carried, but it has some difficult cube timings as well. Unfortunately had to be reverified after the previous verifier was exposed.",
-    "edel_enjoyment": 76.08571429,
+    "edel_enjoyment": 76,
     "is_edel_pending": false,
     "gddl_tier": 22.54794520547945,
     "nlw_tier": "Medium",
@@ -50945,7 +50947,7 @@
     "two_player": false,
     "song": -8,
     "description": null,
-    "edel_enjoyment": 63.83,
+    "edel_enjoyment": 63.93069307,
     "is_edel_pending": false,
     "gddl_tier": 21.84057971014493,
     "nlw_tier": "Easy",
@@ -56237,7 +56239,7 @@
     "two_player": false,
     "song": null,
     "description": "Cute love-themed level with amazing decoration and click-sync, flow based gameplay. Some transitions can be an issue for some.",
-    "edel_enjoyment": 52.925,
+    "edel_enjoyment": 53.82926829,
     "is_edel_pending": false,
     "gddl_tier": 21.892473118279568,
     "nlw_tier": "Easy",
@@ -59729,11 +59731,865 @@
     ]
   },
   {
+    "id": "71dfb425-8eae-4307-a205-7c00242b3089",
+    "level_id": 93271158,
+    "name": "Cosmic Cluster II",
+    "position": 1422,
+    "points": 76,
+    "status": "MainList",
+    "two_player": false,
+    "song": 580675,
+    "description": null,
+    "edel_enjoyment": 70.03030303,
+    "is_edel_pending": false,
+    "gddl_tier": 21.285714285714285,
+    "nlw_tier": "Beginner",
+    "creator": "AlrexX",
+    "verifier": "Rynoxious",
+    "verifications": [
+      {
+        "id": "d35c8a6b-48c8-43d6-89bf-d44816d7b8f3",
+        "submitted_by": {
+          "id": "dd6585cb-1733-4872-85e0-dd9ca8fb4392",
+          "username": "rynoxiouss",
+          "global_name": "Rynoxious"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=PuM3iaHdIo8",
+        "hide_video": false,
+        "achieved_at": "2023-08-10T20:57:05Z",
+        "created_at": "2026-02-19T22:22:40.796303Z",
+        "updated_at": "2026-02-19T22:22:40.796303Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "Learny",
+      "Overall"
+    ]
+  },
+  {
+    "id": "86af0a51-d53d-405f-8c16-11e76fc74aed",
+    "level_id": 114857275,
+    "name": "MORPHINE",
+    "position": 1423,
+    "points": 76,
+    "status": "MainList",
+    "two_player": false,
+    "song": 829777,
+    "description": null,
+    "edel_enjoyment": 72.33333333,
+    "is_edel_pending": false,
+    "gddl_tier": 21.692307692307693,
+    "nlw_tier": "Beginner",
+    "creator": "notged25",
+    "verifier": "✨꧁𝕴𝖙𝖘_𝕯𝖗𝖊𝖆𝖒𝖘꧂✨",
+    "verifications": [
+      {
+        "id": "992fd15b-cb47-4de3-88a5-89324eb75c6a",
+        "submitted_by": {
+          "id": "efaf2b35-3c45-4e98-9acf-2cdb28e344ca",
+          "username": "its_dreams",
+          "global_name": "✨꧁𝕴𝖙𝖘_𝕯𝖗𝖊𝖆𝖒𝖘꧂✨"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=jNO_YHjdCd0",
+        "hide_video": false,
+        "achieved_at": "2025-02-06T00:52:46Z",
+        "created_at": "2025-03-08T00:00:46Z",
+        "updated_at": "2025-03-08T00:00:46Z"
+      }
+    ],
+    "version": "2.2",
+    "tags": [
+      "Long",
+      "Chokepoints",
+      "Flow",
+      "Overall"
+    ]
+  },
+  {
+    "id": "8367a849-4dad-4371-9960-91c13d9e319d",
+    "level_id": 71734488,
+    "name": "Falling Maze",
+    "position": 1424,
+    "points": 75,
+    "status": "MainList",
+    "two_player": false,
+    "song": 216300,
+    "description": null,
+    "edel_enjoyment": 89.8125,
+    "is_edel_pending": false,
+    "gddl_tier": 21.133333333333333,
+    "nlw_tier": "Beginner",
+    "creator": "YoReid",
+    "verifier": "Aimbotter2123",
+    "verifications": [
+      {
+        "id": "3a85d761-528f-4c39-af44-3f30697478ba",
+        "submitted_by": {
+          "id": "a0bdc701-e4f8-4627-a98e-2ab5845e5453",
+          "username": "c455bc57e",
+          "global_name": "Aimbotter2123"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=v8JEyKOqbb8",
+        "hide_video": false,
+        "achieved_at": "2024-12-30T19:08:13Z",
+        "created_at": "2026-04-03T11:48:31.508090Z",
+        "updated_at": "2026-04-03T11:48:31.508090Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "Chokepoints",
+      "Gimmicky"
+    ]
+  },
+  {
+    "id": "7448b2e0-bdd0-47ae-9789-30f76ee8c25f",
+    "level_id": 59656281,
+    "name": "Hydratic",
+    "position": 1425,
+    "points": 75,
+    "status": "MainList",
+    "two_player": false,
+    "song": 725417,
+    "description": null,
+    "edel_enjoyment": 72.28125,
+    "is_edel_pending": false,
+    "gddl_tier": 20.74074074074074,
+    "nlw_tier": "Beginner",
+    "creator": "MaxyLAND",
+    "verifier": "MrSpaghetti",
+    "verifications": [
+      {
+        "id": "ba6d1ab3-6423-4960-8a7d-0eb0472c082a",
+        "submitted_by": {
+          "id": "309bf5e2-b3ca-4fb0-a1cd-6ec02b214fa6",
+          "username": "0dd3f22da",
+          "global_name": "MrSpaghetti"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=c6QHg2QRz5Q",
+        "hide_video": false,
+        "achieved_at": "2020-02-12T17:52:57Z",
+        "created_at": "2023-06-21T07:28:06Z",
+        "updated_at": "2023-06-21T07:28:06Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "Overall",
+      "Clicksync",
+      "Fast-Paced",
+      "Flow"
+    ]
+  },
+  {
+    "id": "95acf792-6f39-4132-929f-85429baabf4f",
+    "level_id": 94505292,
+    "name": "Yggdrasil",
+    "position": 1426,
+    "points": 74,
+    "status": "MainList",
+    "two_player": false,
+    "song": null,
+    "description": null,
+    "edel_enjoyment": 64.63636364,
+    "is_edel_pending": false,
+    "gddl_tier": 21.153846153846153,
+    "nlw_tier": "Beginner",
+    "creator": "Vismuth",
+    "verifier": "Koreaqwer",
+    "verifications": [
+      {
+        "id": "194342ff-53b4-4662-8636-b8f8a569b41a",
+        "submitted_by": {
+          "id": "8f43b234-6237-4a3d-8e86-ddbb976a5fff",
+          "username": "f9fcc9c2b",
+          "global_name": "Koreaqwer"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=puqDIaVnaUg",
+        "hide_video": false,
+        "achieved_at": "2023-09-16T06:00:51Z",
+        "created_at": "2024-01-21T03:46:00Z",
+        "updated_at": "2024-01-21T03:46:00Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "NONG",
+      "Clicksync",
+      "Fast-Paced",
+      "Learny",
+      "High CPS",
+      "Ship",
+      "Overall"
+    ]
+  },
+  {
+    "id": "33aaa0f5-c0bc-4f4e-a054-71b13be8d23f",
+    "level_id": 30157581,
+    "name": "Matilda the Machine",
+    "position": 1427,
+    "points": 74,
+    "status": "MainList",
+    "two_player": false,
+    "song": 667871,
+    "description": "Very raw Jeyzor level with extremely hard duals and a funny bossfight at the end.",
+    "edel_enjoyment": 67.85714286,
+    "is_edel_pending": false,
+    "gddl_tier": 21.076923076923077,
+    "nlw_tier": "Beginner",
+    "creator": "Jeyzor",
+    "verifier": "Jeyzor",
+    "verifications": [
+      {
+        "id": "9573d205-c5e6-495c-b865-8ea9b9baa1a9",
+        "submitted_by": {
+          "id": "89a49649-649a-4ce8-b851-d874d4101acd",
+          "username": "1b78add82",
+          "global_name": "Jeyzor"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=_ICKNhOQ4Tw",
+        "hide_video": false,
+        "achieved_at": "2017-02-21T19:36:24Z",
+        "created_at": "2022-11-16T22:30:57Z",
+        "updated_at": "2022-11-16T22:30:57Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "Learny",
+      "Bossfight",
+      "Duals"
+    ]
+  },
+  {
+    "id": "617a8bb7-d528-4f6e-b5c8-f910939ade36",
+    "level_id": 95471187,
+    "name": "Declassification",
+    "position": 1428,
+    "points": 74,
+    "status": "MainList",
+    "two_player": false,
+    "song": 968543,
+    "description": null,
+    "edel_enjoyment": 73.5,
+    "is_edel_pending": false,
+    "gddl_tier": 20.894736842105264,
+    "nlw_tier": "Beginner",
+    "creator": "OnlinE_Play2137",
+    "verifier": "OnlinE_Play2137",
+    "verifications": [
+      {
+        "id": "bb8291af-af55-4b59-b203-4cde79824026",
+        "submitted_by": {
+          "id": "0011b7d0-c6ce-40ae-898a-fc1126f7a140",
+          "username": "online_play",
+          "global_name": "OnlinE_Play2137"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=vvZaRLsAR5A&t=69s",
+        "hide_video": false,
+        "achieved_at": "2023-10-15T16:40:07Z",
+        "created_at": "2024-12-27T01:06:38Z",
+        "updated_at": "2024-12-27T01:06:38Z"
+      }
+    ],
+    "version": "2.2",
+    "tags": [
+      "Long",
+      "Fast-Paced",
+      "Overall"
+    ]
+  },
+  {
+    "id": "d98a451b-365f-4653-bb03-427af39fb7cd",
+    "level_id": 51393047,
+    "name": "Doop",
+    "position": 1429,
+    "points": 73,
+    "status": "MainList",
+    "two_player": false,
+    "song": null,
+    "description": "Megacollab featuring a variety of skillsets, but has a major difficulty spike in the final wave and ship. Has some long UFO gravity portal worms and a rather goofy song.",
+    "edel_enjoyment": 59.05479452,
+    "is_edel_pending": false,
+    "gddl_tier": 21.658536585365855,
+    "nlw_tier": "Easy",
+    "creator": "WormFodder",
+    "verifier": "WormFodder",
+    "verifications": [
+      {
+        "id": "06e1f136-c22f-47ed-9164-544f86889f62",
+        "submitted_by": {
+          "id": "148679ee-fa9c-4895-aefa-09dc3ad073e1",
+          "username": "d898faaee",
+          "global_name": "WormFodder"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=tL1mDVXVD7w",
+        "hide_video": false,
+        "achieved_at": "2025-08-27T03:36:53Z",
+        "created_at": "2022-11-17T22:57:22Z",
+        "updated_at": "2022-11-17T22:57:22Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "NONG",
+      "Clicksync",
+      "Learny",
+      "Overall"
+    ]
+  },
+  {
+    "id": "c866578c-c231-456b-a197-89ad6d7d8bf6",
+    "level_id": 79142469,
+    "name": "Phantasmagoria (Janucha)",
+    "position": 1430,
+    "points": 73,
+    "status": "MainList",
+    "two_player": false,
+    "song": 1022197,
+    "description": null,
+    "edel_enjoyment": 48.62962963,
+    "is_edel_pending": false,
+    "gddl_tier": 21.272727272727273,
+    "nlw_tier": "Beginner",
+    "creator": "Janucha",
+    "verifier": "Janucha",
+    "verifications": [
+      {
+        "id": "452b293b-ce02-408a-a156-9b76ee52567e",
+        "submitted_by": {
+          "id": "f05e3839-6d5a-4852-9aba-6c9822320bbe",
+          "username": "1565b5e92",
+          "global_name": "Janucha"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=l2MUWqEO0bY",
+        "hide_video": false,
+        "achieved_at": "2022-03-30T18:54:02Z",
+        "created_at": "2023-09-26T11:57:03Z",
+        "updated_at": "2023-09-26T11:57:03Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "Overall",
+      "Timings",
+      "Chokepoints",
+      "Cube"
+    ]
+  },
+  {
+    "id": "5b097d76-ff7b-4474-878e-d995e17ec863",
+    "level_id": 62463489,
+    "name": "Virtual Collapse",
+    "position": 1431,
+    "points": 73,
+    "status": "MainList",
+    "two_player": false,
+    "song": 746441,
+    "description": "A beginner extreme with fast-paced flowy and learny gameplay by TeamUprising that uses a mix of all gamemodes. The difficulty of the gameplay increases near the end. Its glow-style decoration is prominently pink, purple and blue in its coloring and has a technological theming. Has a high object count of 256k.",
+    "edel_enjoyment": 60.35714286,
+    "is_edel_pending": false,
+    "gddl_tier": 20.944444444444443,
+    "nlw_tier": "Beginner",
+    "creator": "TeamUprising",
+    "verifier": "Floppy",
+    "verifications": [
+      {
+        "id": "f4d30d19-a6a9-4a7f-8830-e617371f8b9d",
+        "submitted_by": {
+          "id": "fa3d297a-b584-43ac-ad71-eceb770af556",
+          "username": "555b2321b",
+          "global_name": "Floppy"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=38o9tSrPxn0",
+        "hide_video": false,
+        "achieved_at": "2020-07-01T20:00:00Z",
+        "created_at": "2023-05-30T14:27:24Z",
+        "updated_at": "2023-05-30T14:27:24Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "XL",
+      "Overall",
+      "Fast-Paced",
+      "Learny",
+      "Nerve Control"
+    ]
+  },
+  {
+    "id": "9e38d2bf-5fb0-45f7-92f5-789b759be90e",
+    "level_id": 59230188,
+    "name": "Thunder Alphabet",
+    "position": 1432,
+    "points": 72,
+    "status": "MainList",
+    "two_player": false,
+    "song": 607081,
+    "description": "Very similar to polish alphabet, but more fun and learny duals.",
+    "edel_enjoyment": 66.3125,
+    "is_edel_pending": false,
+    "gddl_tier": 21.20689655172414,
+    "nlw_tier": "Beginner",
+    "creator": "AxolotlCamellia",
+    "verifier": "BlazeRol",
+    "verifications": [
+      {
+        "id": "a2966a84-f331-4b14-bcba-a7d494203ef6",
+        "submitted_by": {
+          "id": "ab2e75b0-6130-4dce-b877-131890bfe4c8",
+          "username": "blazerol",
+          "global_name": "BlazeRol"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=AA8X-XFzrpQ",
+        "hide_video": false,
+        "achieved_at": "2020-01-16T22:47:09Z",
+        "created_at": "2025-05-30T20:23:03.968143Z",
+        "updated_at": "2025-05-30T20:23:03.968143Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "Overall",
+      "Fast-Paced",
+      "Timings",
+      "Chokepoints",
+      "Duals"
+    ]
+  },
+  {
+    "id": "25970a00-4e06-473b-8699-b3ce170ea0ae",
+    "level_id": 66851981,
+    "name": "Redemption",
+    "position": 1433,
+    "points": 72,
+    "status": "MainList",
+    "two_player": false,
+    "song": 574484,
+    "description": "Beginner extreme Sonic Wave remake built by Zest as redemption for hacking Sonic Wave three years prior. Features significantly altered gameplay compared to the other remakes, including ship and UFO sections at the drop in reference to the original pre-update Sonic Wave. Generally the most well received extreme sonic wave remake.",
+    "edel_enjoyment": 58.80392157,
+    "is_edel_pending": false,
+    "gddl_tier": 21.225352112676056,
+    "nlw_tier": "Beginner",
+    "creator": "Zest",
+    "verifier": "Zest",
+    "verifications": [
+      {
+        "id": "1e62d8e6-7239-46bd-a29e-df37e52196fb",
+        "submitted_by": {
+          "id": "fdd54606-4329-4b68-b9d3-9c53d94244e3",
+          "username": ".zest",
+          "global_name": "Zest"
+        },
+        "mobile": false,
+        "video_url": "https://youtu.be/fh40CXiI538",
+        "hide_video": false,
+        "achieved_at": "2021-02-03T22:36:09Z",
+        "created_at": "2024-12-08T07:08:13Z",
+        "updated_at": "2024-12-08T07:08:13Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "XL",
+      "Circles",
+      "Nerve Control",
+      "Wave"
+    ]
+  },
+  {
+    "id": "9af0b292-fc46-4197-96a4-20be44b7706d",
+    "level_id": 130627231,
+    "name": "Schizophrenia",
+    "position": 1434,
+    "points": 72,
+    "status": "MainList",
+    "two_player": false,
+    "song": 509397,
+    "description": null,
+    "edel_enjoyment": 51.25,
+    "is_edel_pending": false,
+    "gddl_tier": 21.142857142857142,
+    "nlw_tier": "Beginner",
+    "creator": "Majimellow",
+    "verifier": "kr4qqen",
+    "verifications": [
+      {
+        "id": "8bca78e8-c5b4-48e5-b221-5346e3ac1840",
+        "submitted_by": {
+          "id": "5007dcff-3e3c-41c7-9fd9-fb813dca0d4e",
+          "username": "b19fc3e7d",
+          "global_name": "kr4qqen"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=YHeIwe3QQ9Q",
+        "hide_video": false,
+        "achieved_at": "2026-01-12T17:09:45Z",
+        "created_at": "2026-08-16T00:23:56.831275Z",
+        "updated_at": "2026-08-16T00:23:56.831275Z"
+      }
+    ],
+    "version": "2.2",
+    "tags": [
+      "Long",
+      "Nerve Control",
+      "Overall"
+    ]
+  },
+  {
+    "id": "5c3ddc63-f675-4d61-8130-dacc5ed494b4",
+    "level_id": 21280210,
+    "name": "The Flawless",
+    "position": 1435,
+    "points": 71,
+    "status": "MainList",
+    "two_player": false,
+    "song": 490479,
+    "description": "Very old hell level that predates Yatagarasu, with precise timings and some fast ship parts. May not quite live up to its name.",
+    "edel_enjoyment": 51.0974026,
+    "is_edel_pending": false,
+    "gddl_tier": 21.01360544217687,
+    "nlw_tier": "Beginner",
+    "creator": "fin",
+    "verifier": "TrusTa",
+    "verifications": [
+      {
+        "id": "8a13e1de-bf13-4e90-ad8c-20ba38af655a",
+        "submitted_by": {
+          "id": "031645bc-75e8-4130-933c-68b01dda749d",
+          "username": "1b5af60cd",
+          "global_name": "TrusTa"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=RHOCE37dP2A",
+        "hide_video": false,
+        "achieved_at": "2016-07-01T18:27:59Z",
+        "created_at": "2022-11-16T22:30:57Z",
+        "updated_at": "2022-11-16T22:30:57Z"
+      }
+    ],
+    "version": "2.0",
+    "tags": [
+      "Long",
+      "Timings",
+      "Chokepoints",
+      "Ship",
+      "Overall"
+    ]
+  },
+  {
+    "id": "e08ccdd4-c75a-427a-9595-f7ff6fcfda92",
+    "level_id": 88172786,
+    "name": "Robi",
+    "position": 1436,
+    "points": 71,
+    "status": "MainList",
+    "two_player": false,
+    "song": 826384,
+    "description": null,
+    "edel_enjoyment": 60.72077922,
+    "is_edel_pending": false,
+    "gddl_tier": 21.12883435582822,
+    "nlw_tier": "Beginner",
+    "creator": "robianny",
+    "verifier": "Lcultist",
+    "verifications": [
+      {
+        "id": "15d1f0a9-8780-4624-ba16-1506410a4a47",
+        "submitted_by": {
+          "id": "23a574bd-f3f6-44ea-a9e1-a2a454096494",
+          "username": "f36aadf47",
+          "global_name": "Lcultist"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=fDY3Z7VEUng&t=0s",
+        "hide_video": false,
+        "achieved_at": "2023-01-29T19:40:18Z",
+        "created_at": "2023-06-03T03:22:32Z",
+        "updated_at": "2023-06-03T03:22:32Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Medium",
+      "Timings",
+      "Chokepoints",
+      "Slow-Paced",
+      "Ship"
+    ]
+  },
+  {
+    "id": "c5b709c5-a276-4a3f-81a7-fc06e5273c4f",
+    "level_id": 116039153,
+    "name": "SORRYNOTSORRY",
+    "position": 1437,
+    "points": 70,
+    "status": "MainList",
+    "two_player": false,
+    "song": 1267803,
+    "description": "Very pink level built as the creator's first finished deco project, a level where you must party without being caught by the eyeball police. Contains many different kinds of gameplay and is generally well received.",
+    "edel_enjoyment": 75.72727273,
+    "is_edel_pending": false,
+    "gddl_tier": 21.666666666666668,
+    "nlw_tier": "Beginner",
+    "creator": "culobTV",
+    "verifier": "culobTV",
+    "verifications": [
+      {
+        "id": "fae72ffb-4424-4e3b-8248-1ab865d43dd6",
+        "submitted_by": {
+          "id": "27cd5d0a-a178-4e98-ada8-558ee3c1be50",
+          "username": "culobtv",
+          "global_name": "culobTV"
+        },
+        "mobile": false,
+        "video_url": "https://youtu.be/JxeXU3s6gUE",
+        "hide_video": false,
+        "achieved_at": "2026-05-23T14:44:59.812294Z",
+        "created_at": "2026-05-23T14:44:59.812293Z",
+        "updated_at": "2026-05-23T14:44:59.812293Z"
+      }
+    ],
+    "version": "2.2",
+    "tags": [
+      "Long",
+      "Fast-Paced",
+      "Timings"
+    ]
+  },
+  {
+    "id": "5d01eb64-93c1-47c9-a5b9-1372ffa2a060",
+    "level_id": 116579233,
+    "name": "boson",
+    "position": 1438,
+    "points": 70,
+    "status": "MainList",
+    "two_player": false,
+    "song": 804048,
+    "description": null,
+    "edel_enjoyment": 75.91428571,
+    "is_edel_pending": false,
+    "gddl_tier": 21,
+    "nlw_tier": "Beginner",
+    "creator": "ZeroSR",
+    "verifier": "ZeroSR",
+    "verifications": [
+      {
+        "id": "452b82aa-22b0-45e4-a264-1e8908976391",
+        "submitted_by": {
+          "id": "637397d6-1216-4123-9bad-e2fe46ddce4c",
+          "username": "ee2f8f6f6",
+          "global_name": "ZeroSR"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=HLk2Q-dFg2E",
+        "hide_video": false,
+        "achieved_at": "2025-03-27T14:40:04Z",
+        "created_at": "2025-04-27T15:08:56Z",
+        "updated_at": "2025-04-27T15:08:56Z"
+      }
+    ],
+    "version": "2.2",
+    "tags": [
+      "Long",
+      "Fast-Paced",
+      "Timings",
+      "Learny"
+    ]
+  },
+  {
+    "id": "957de90d-4abb-4378-b3c8-a110bb4e25e9",
+    "level_id": 57023074,
+    "name": "Castling",
+    "position": 1439,
+    "points": 70,
+    "status": "MainList",
+    "two_player": false,
+    "song": 600642,
+    "description": "A fast paced level with multiple insane chokepoints, most notably the 4% 240hz frame perfect, the 69% blind click, and the wave gaps at 63% and 74%. Was somehow formerly rated Insane Demon, and became an insider meme on the Insane Demon List.",
+    "edel_enjoyment": 59.18181818,
+    "is_edel_pending": false,
+    "gddl_tier": 21.306451612903224,
+    "nlw_tier": "Beginner",
+    "creator": "Meroo",
+    "verifier": "-",
+    "verifications": [
+      {
+        "id": "c0a4fd0a-2948-4b87-9a1b-97f1457f3bc5",
+        "submitted_by": {
+          "id": "f9d6acb2-a54a-483f-8c21-993faf1e169f",
+          "username": "107ced24a",
+          "global_name": "-"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=0cMfW600dEo",
+        "hide_video": false,
+        "achieved_at": "2021-09-07T21:21:30Z",
+        "created_at": "2022-11-17T22:57:22Z",
+        "updated_at": "2022-11-17T22:57:22Z"
+      }
+    ],
+    "version": "2.1",
+    "tags": [
+      "Long",
+      "Fast-Paced",
+      "Timings",
+      "Chokepoints",
+      "Wave",
+      "Duals"
+    ]
+  },
+  {
+    "id": "9dc2761b-0589-458e-b1b0-cdec578dbc93",
+    "level_id": 137097482,
+    "name": "BROOKLYNBLOODPOP",
+    "position": 1440,
+    "points": 69,
+    "status": "MainList",
+    "two_player": false,
+    "song": null,
+    "description": "Bright rainbow design extreme known for its iconic hyperpop song and easily recognizable party-like visuals by StarkyTheSalad. The gameplay is well-received, consisting of learny & well-synced cube sections and clever fakes.",
+    "edel_enjoyment": 81.76595745,
+    "is_edel_pending": false,
+    "gddl_tier": 21.71875,
+    "nlw_tier": "Beginner",
+    "creator": "StarkytheSalad",
+    "verifier": "ivyteal",
+    "verifications": [
+      {
+        "id": "1d80e6d8-bd15-452b-978c-324143b3e050",
+        "submitted_by": {
+          "id": "8718daf3-cd56-49a4-9dd9-f40219b2b1db",
+          "username": "ivyteal_",
+          "global_name": "ivyteal"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=jngMzPsSEIA",
+        "hide_video": false,
+        "achieved_at": "2026-04-01T14:13:34Z",
+        "created_at": "2026-06-07T20:49:40.251694Z",
+        "updated_at": "2026-06-07T20:49:40.251694Z"
+      }
+    ],
+    "version": "2.2",
+    "tags": [
+      "XL",
+      "NONG",
+      "Learny",
+      "Nerve Control",
+      "Overall"
+    ]
+  },
+  {
+    "id": "04c826a1-fd07-4c43-9e39-483dcbadd65c",
+    "level_id": 19300593,
+    "name": "AcropoliX",
+    "position": 1441,
+    "points": 69,
+    "status": "MainList",
+    "two_player": false,
+    "song": 598349,
+    "description": null,
+    "edel_enjoyment": 43.46753247,
+    "is_edel_pending": false,
+    "gddl_tier": 21.06081081081081,
+    "nlw_tier": "Beginner",
+    "creator": "SoulsTRK",
+    "verifier": "SoulsTRK",
+    "verifications": [
+      {
+        "id": "ad10a5e9-576f-4e3f-87a7-2bd0b211c3f8",
+        "submitted_by": {
+          "id": "1c154cf4-8977-455f-bbed-ec2471d2ad2e",
+          "username": "22c4e3c17",
+          "global_name": "SoulsTRK"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=9GrlZLD8wZ0",
+        "hide_video": false,
+        "achieved_at": "2016-04-29T01:26:37Z",
+        "created_at": "2022-11-16T22:30:57Z",
+        "updated_at": "2022-11-16T22:30:57Z"
+      }
+    ],
+    "version": "2.0",
+    "tags": [
+      "Long",
+      "Timings",
+      "Unbalanced",
+      "Slow-Paced",
+      "Wave"
+    ]
+  },
+  {
+    "id": "100ecf7f-96ef-43a9-8f3f-33185b088609",
+    "level_id": 94892050,
+    "name": "EdenCity",
+    "position": 1442,
+    "points": 69,
+    "status": "MainList",
+    "two_player": false,
+    "song": 718319,
+    "description": "\nAn electric and futuristic city-themed collaboration with distinct parts, bright colors and a mixture of detailed designs and effects. The gameplay is regarded as being rather learny thanks to the complex dual gameplay. There are also chokepoints throughout, notably the dual ship at the 60% mark.",
+    "edel_enjoyment": 67.47826087,
+    "is_edel_pending": false,
+    "gddl_tier": 20.8,
+    "nlw_tier": "Beginner",
+    "creator": "NateFH",
+    "verifier": "NateFH",
+    "verifications": [
+      {
+        "id": "ae5e3294-db47-41d7-952c-d7184dde46c5",
+        "submitted_by": {
+          "id": "ede29415-4882-42a2-b5c2-8d919b77fdc7",
+          "username": "natefh",
+          "global_name": "NateFH"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=89nlKw2kn3Q",
+        "hide_video": false,
+        "achieved_at": "2023-09-28T16:30:10Z",
+        "created_at": "2025-04-27T15:20:27Z",
+        "updated_at": "2025-04-27T15:20:27Z"
+      }
+    ],
+    "version": "2.2",
+    "tags": [
+      "Long",
+      "Fast-Paced",
+      "Chokepoints",
+      "Nerve Control",
+      "UFO",
+      "Wave",
+      "Overall"
+    ]
+  },
+  {
     "id": "6bf4c9fd-f330-4374-a049-ab40abf82837",
     "level_id": 91386392,
     "name": "iridium",
-    "position": 1422,
-    "points": 76,
+    "position": 1443,
+    "points": 68,
     "status": "MainList",
     "two_player": false,
     "song": 614241,
@@ -59780,860 +60636,6 @@
       "Clicksync",
       "Overall",
       "Timings"
-    ]
-  },
-  {
-    "id": "71dfb425-8eae-4307-a205-7c00242b3089",
-    "level_id": 93271158,
-    "name": "Cosmic Cluster II",
-    "position": 1423,
-    "points": 76,
-    "status": "MainList",
-    "two_player": false,
-    "song": 580675,
-    "description": null,
-    "edel_enjoyment": 70.03030303,
-    "is_edel_pending": false,
-    "gddl_tier": 21.285714285714285,
-    "nlw_tier": "Beginner",
-    "creator": "AlrexX",
-    "verifier": "Rynoxious",
-    "verifications": [
-      {
-        "id": "d35c8a6b-48c8-43d6-89bf-d44816d7b8f3",
-        "submitted_by": {
-          "id": "dd6585cb-1733-4872-85e0-dd9ca8fb4392",
-          "username": "rynoxiouss",
-          "global_name": "Rynoxious"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=PuM3iaHdIo8",
-        "hide_video": false,
-        "achieved_at": "2023-08-10T20:57:05Z",
-        "created_at": "2026-02-19T22:22:40.796303Z",
-        "updated_at": "2026-02-19T22:22:40.796303Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "Learny",
-      "Overall"
-    ]
-  },
-  {
-    "id": "86af0a51-d53d-405f-8c16-11e76fc74aed",
-    "level_id": 114857275,
-    "name": "MORPHINE",
-    "position": 1424,
-    "points": 75,
-    "status": "MainList",
-    "two_player": false,
-    "song": 829777,
-    "description": null,
-    "edel_enjoyment": 72.33333333,
-    "is_edel_pending": false,
-    "gddl_tier": 21.692307692307693,
-    "nlw_tier": "Beginner",
-    "creator": "notged25",
-    "verifier": "✨꧁𝕴𝖙𝖘_𝕯𝖗𝖊𝖆𝖒𝖘꧂✨",
-    "verifications": [
-      {
-        "id": "992fd15b-cb47-4de3-88a5-89324eb75c6a",
-        "submitted_by": {
-          "id": "efaf2b35-3c45-4e98-9acf-2cdb28e344ca",
-          "username": "its_dreams",
-          "global_name": "✨꧁𝕴𝖙𝖘_𝕯𝖗𝖊𝖆𝖒𝖘꧂✨"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=jNO_YHjdCd0",
-        "hide_video": false,
-        "achieved_at": "2025-02-06T00:52:46Z",
-        "created_at": "2025-03-08T00:00:46Z",
-        "updated_at": "2025-03-08T00:00:46Z"
-      }
-    ],
-    "version": "2.2",
-    "tags": [
-      "Long",
-      "Chokepoints",
-      "Flow",
-      "Overall"
-    ]
-  },
-  {
-    "id": "8367a849-4dad-4371-9960-91c13d9e319d",
-    "level_id": 71734488,
-    "name": "Falling Maze",
-    "position": 1425,
-    "points": 75,
-    "status": "MainList",
-    "two_player": false,
-    "song": 216300,
-    "description": null,
-    "edel_enjoyment": 89.8125,
-    "is_edel_pending": false,
-    "gddl_tier": 21.133333333333333,
-    "nlw_tier": "Beginner",
-    "creator": "YoReid",
-    "verifier": "Aimbotter2123",
-    "verifications": [
-      {
-        "id": "3a85d761-528f-4c39-af44-3f30697478ba",
-        "submitted_by": {
-          "id": "a0bdc701-e4f8-4627-a98e-2ab5845e5453",
-          "username": "c455bc57e",
-          "global_name": "Aimbotter2123"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=v8JEyKOqbb8",
-        "hide_video": false,
-        "achieved_at": "2024-12-30T19:08:13Z",
-        "created_at": "2026-04-03T11:48:31.508090Z",
-        "updated_at": "2026-04-03T11:48:31.508090Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "Chokepoints",
-      "Gimmicky"
-    ]
-  },
-  {
-    "id": "7448b2e0-bdd0-47ae-9789-30f76ee8c25f",
-    "level_id": 59656281,
-    "name": "Hydratic",
-    "position": 1426,
-    "points": 74,
-    "status": "MainList",
-    "two_player": false,
-    "song": 725417,
-    "description": null,
-    "edel_enjoyment": 72.28125,
-    "is_edel_pending": false,
-    "gddl_tier": 20.74074074074074,
-    "nlw_tier": "Beginner",
-    "creator": "MaxyLAND",
-    "verifier": "MrSpaghetti",
-    "verifications": [
-      {
-        "id": "ba6d1ab3-6423-4960-8a7d-0eb0472c082a",
-        "submitted_by": {
-          "id": "309bf5e2-b3ca-4fb0-a1cd-6ec02b214fa6",
-          "username": "0dd3f22da",
-          "global_name": "MrSpaghetti"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=c6QHg2QRz5Q",
-        "hide_video": false,
-        "achieved_at": "2020-02-12T17:52:57Z",
-        "created_at": "2023-06-21T07:28:06Z",
-        "updated_at": "2023-06-21T07:28:06Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "Overall",
-      "Clicksync",
-      "Fast-Paced",
-      "Flow"
-    ]
-  },
-  {
-    "id": "95acf792-6f39-4132-929f-85429baabf4f",
-    "level_id": 94505292,
-    "name": "Yggdrasil",
-    "position": 1427,
-    "points": 74,
-    "status": "MainList",
-    "two_player": false,
-    "song": null,
-    "description": null,
-    "edel_enjoyment": 64.63636364,
-    "is_edel_pending": false,
-    "gddl_tier": 21.153846153846153,
-    "nlw_tier": "Beginner",
-    "creator": "Vismuth",
-    "verifier": "Koreaqwer",
-    "verifications": [
-      {
-        "id": "194342ff-53b4-4662-8636-b8f8a569b41a",
-        "submitted_by": {
-          "id": "8f43b234-6237-4a3d-8e86-ddbb976a5fff",
-          "username": "f9fcc9c2b",
-          "global_name": "Koreaqwer"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=puqDIaVnaUg",
-        "hide_video": false,
-        "achieved_at": "2023-09-16T06:00:51Z",
-        "created_at": "2024-01-21T03:46:00Z",
-        "updated_at": "2024-01-21T03:46:00Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "NONG",
-      "Clicksync",
-      "Fast-Paced",
-      "Learny",
-      "High CPS",
-      "Ship",
-      "Overall"
-    ]
-  },
-  {
-    "id": "33aaa0f5-c0bc-4f4e-a054-71b13be8d23f",
-    "level_id": 30157581,
-    "name": "Matilda the Machine",
-    "position": 1428,
-    "points": 74,
-    "status": "MainList",
-    "two_player": false,
-    "song": 667871,
-    "description": "Very raw Jeyzor level with extremely hard duals and a funny bossfight at the end.",
-    "edel_enjoyment": 67.85714286,
-    "is_edel_pending": false,
-    "gddl_tier": 21.076923076923077,
-    "nlw_tier": "Beginner",
-    "creator": "Jeyzor",
-    "verifier": "Jeyzor",
-    "verifications": [
-      {
-        "id": "9573d205-c5e6-495c-b865-8ea9b9baa1a9",
-        "submitted_by": {
-          "id": "89a49649-649a-4ce8-b851-d874d4101acd",
-          "username": "1b78add82",
-          "global_name": "Jeyzor"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=_ICKNhOQ4Tw",
-        "hide_video": false,
-        "achieved_at": "2017-02-21T19:36:24Z",
-        "created_at": "2022-11-16T22:30:57Z",
-        "updated_at": "2022-11-16T22:30:57Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "Learny",
-      "Bossfight",
-      "Duals"
-    ]
-  },
-  {
-    "id": "617a8bb7-d528-4f6e-b5c8-f910939ade36",
-    "level_id": 95471187,
-    "name": "Declassification",
-    "position": 1429,
-    "points": 73,
-    "status": "MainList",
-    "two_player": false,
-    "song": 968543,
-    "description": null,
-    "edel_enjoyment": 73.5,
-    "is_edel_pending": false,
-    "gddl_tier": 20.894736842105264,
-    "nlw_tier": "Beginner",
-    "creator": "OnlinE_Play2137",
-    "verifier": "OnlinE_Play2137",
-    "verifications": [
-      {
-        "id": "bb8291af-af55-4b59-b203-4cde79824026",
-        "submitted_by": {
-          "id": "0011b7d0-c6ce-40ae-898a-fc1126f7a140",
-          "username": "online_play",
-          "global_name": "OnlinE_Play2137"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=vvZaRLsAR5A&t=69s",
-        "hide_video": false,
-        "achieved_at": "2023-10-15T16:40:07Z",
-        "created_at": "2024-12-27T01:06:38Z",
-        "updated_at": "2024-12-27T01:06:38Z"
-      }
-    ],
-    "version": "2.2",
-    "tags": [
-      "Long",
-      "Fast-Paced",
-      "Overall"
-    ]
-  },
-  {
-    "id": "d98a451b-365f-4653-bb03-427af39fb7cd",
-    "level_id": 51393047,
-    "name": "Doop",
-    "position": 1430,
-    "points": 73,
-    "status": "MainList",
-    "two_player": false,
-    "song": null,
-    "description": "Megacollab featuring a variety of skillsets, but has a major difficulty spike in the final wave and ship. Has some long UFO gravity portal worms and a rather goofy song.",
-    "edel_enjoyment": 59.05479452,
-    "is_edel_pending": false,
-    "gddl_tier": 21.658536585365855,
-    "nlw_tier": "Easy",
-    "creator": "WormFodder",
-    "verifier": "WormFodder",
-    "verifications": [
-      {
-        "id": "06e1f136-c22f-47ed-9164-544f86889f62",
-        "submitted_by": {
-          "id": "148679ee-fa9c-4895-aefa-09dc3ad073e1",
-          "username": "d898faaee",
-          "global_name": "WormFodder"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=tL1mDVXVD7w",
-        "hide_video": false,
-        "achieved_at": "2025-08-27T03:36:53Z",
-        "created_at": "2022-11-17T22:57:22Z",
-        "updated_at": "2022-11-17T22:57:22Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "NONG",
-      "Clicksync",
-      "Learny",
-      "Overall"
-    ]
-  },
-  {
-    "id": "c866578c-c231-456b-a197-89ad6d7d8bf6",
-    "level_id": 79142469,
-    "name": "Phantasmagoria (Janucha)",
-    "position": 1431,
-    "points": 73,
-    "status": "MainList",
-    "two_player": false,
-    "song": 1022197,
-    "description": null,
-    "edel_enjoyment": 48.62962963,
-    "is_edel_pending": false,
-    "gddl_tier": 21.272727272727273,
-    "nlw_tier": "Beginner",
-    "creator": "Janucha",
-    "verifier": "Janucha",
-    "verifications": [
-      {
-        "id": "452b293b-ce02-408a-a156-9b76ee52567e",
-        "submitted_by": {
-          "id": "f05e3839-6d5a-4852-9aba-6c9822320bbe",
-          "username": "1565b5e92",
-          "global_name": "Janucha"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=l2MUWqEO0bY",
-        "hide_video": false,
-        "achieved_at": "2022-03-30T18:54:02Z",
-        "created_at": "2023-09-26T11:57:03Z",
-        "updated_at": "2023-09-26T11:57:03Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "Overall",
-      "Timings",
-      "Chokepoints",
-      "Cube"
-    ]
-  },
-  {
-    "id": "5b097d76-ff7b-4474-878e-d995e17ec863",
-    "level_id": 62463489,
-    "name": "Virtual Collapse",
-    "position": 1432,
-    "points": 72,
-    "status": "MainList",
-    "two_player": false,
-    "song": 746441,
-    "description": "A beginner extreme with fast-paced flowy and learny gameplay by TeamUprising that uses a mix of all gamemodes. The difficulty of the gameplay increases near the end. Its glow-style decoration is prominently pink, purple and blue in its coloring and has a technological theming. Has a high object count of 256k.",
-    "edel_enjoyment": 60.35714286,
-    "is_edel_pending": false,
-    "gddl_tier": 20.944444444444443,
-    "nlw_tier": "Beginner",
-    "creator": "TeamUprising",
-    "verifier": "Floppy",
-    "verifications": [
-      {
-        "id": "f4d30d19-a6a9-4a7f-8830-e617371f8b9d",
-        "submitted_by": {
-          "id": "fa3d297a-b584-43ac-ad71-eceb770af556",
-          "username": "555b2321b",
-          "global_name": "Floppy"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=38o9tSrPxn0",
-        "hide_video": false,
-        "achieved_at": "2020-07-01T20:00:00Z",
-        "created_at": "2023-05-30T14:27:24Z",
-        "updated_at": "2023-05-30T14:27:24Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "XL",
-      "Overall",
-      "Fast-Paced",
-      "Learny",
-      "Nerve Control"
-    ]
-  },
-  {
-    "id": "9e38d2bf-5fb0-45f7-92f5-789b759be90e",
-    "level_id": 59230188,
-    "name": "Thunder Alphabet",
-    "position": 1433,
-    "points": 72,
-    "status": "MainList",
-    "two_player": false,
-    "song": 607081,
-    "description": "Very similar to polish alphabet, but more fun and learny duals.",
-    "edel_enjoyment": 66.3125,
-    "is_edel_pending": false,
-    "gddl_tier": 21.20689655172414,
-    "nlw_tier": "Beginner",
-    "creator": "AxolotlCamellia",
-    "verifier": "BlazeRol",
-    "verifications": [
-      {
-        "id": "a2966a84-f331-4b14-bcba-a7d494203ef6",
-        "submitted_by": {
-          "id": "ab2e75b0-6130-4dce-b877-131890bfe4c8",
-          "username": "blazerol",
-          "global_name": "BlazeRol"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=AA8X-XFzrpQ",
-        "hide_video": false,
-        "achieved_at": "2020-01-16T22:47:09Z",
-        "created_at": "2025-05-30T20:23:03.968143Z",
-        "updated_at": "2025-05-30T20:23:03.968143Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "Overall",
-      "Fast-Paced",
-      "Timings",
-      "Chokepoints",
-      "Duals"
-    ]
-  },
-  {
-    "id": "25970a00-4e06-473b-8699-b3ce170ea0ae",
-    "level_id": 66851981,
-    "name": "Redemption",
-    "position": 1434,
-    "points": 72,
-    "status": "MainList",
-    "two_player": false,
-    "song": 574484,
-    "description": "Beginner extreme Sonic Wave remake built by Zest as redemption for hacking Sonic Wave three years prior. Features significantly altered gameplay compared to the other remakes, including ship and UFO sections at the drop in reference to the original pre-update Sonic Wave. Generally the most well received extreme sonic wave remake.",
-    "edel_enjoyment": 58.78,
-    "is_edel_pending": false,
-    "gddl_tier": 21.225352112676056,
-    "nlw_tier": "Beginner",
-    "creator": "Zest",
-    "verifier": "Zest",
-    "verifications": [
-      {
-        "id": "1e62d8e6-7239-46bd-a29e-df37e52196fb",
-        "submitted_by": {
-          "id": "fdd54606-4329-4b68-b9d3-9c53d94244e3",
-          "username": ".zest",
-          "global_name": "Zest"
-        },
-        "mobile": false,
-        "video_url": "https://youtu.be/fh40CXiI538",
-        "hide_video": false,
-        "achieved_at": "2021-02-03T22:36:09Z",
-        "created_at": "2024-12-08T07:08:13Z",
-        "updated_at": "2024-12-08T07:08:13Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "XL",
-      "Circles",
-      "Nerve Control",
-      "Wave"
-    ]
-  },
-  {
-    "id": "9af0b292-fc46-4197-96a4-20be44b7706d",
-    "level_id": 130627231,
-    "name": "Schizophrenia",
-    "position": 1435,
-    "points": 71,
-    "status": "MainList",
-    "two_player": false,
-    "song": 509397,
-    "description": null,
-    "edel_enjoyment": 51.25,
-    "is_edel_pending": false,
-    "gddl_tier": 21.142857142857142,
-    "nlw_tier": "Beginner",
-    "creator": "Majimellow",
-    "verifier": "kr4qqen",
-    "verifications": [
-      {
-        "id": "8bca78e8-c5b4-48e5-b221-5346e3ac1840",
-        "submitted_by": {
-          "id": "5007dcff-3e3c-41c7-9fd9-fb813dca0d4e",
-          "username": "b19fc3e7d",
-          "global_name": "kr4qqen"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=YHeIwe3QQ9Q",
-        "hide_video": false,
-        "achieved_at": "2026-01-12T17:09:45Z",
-        "created_at": "2026-08-16T00:23:56.831275Z",
-        "updated_at": "2026-08-16T00:23:56.831275Z"
-      }
-    ],
-    "version": "2.2",
-    "tags": [
-      "Long",
-      "Nerve Control",
-      "Overall"
-    ]
-  },
-  {
-    "id": "5c3ddc63-f675-4d61-8130-dacc5ed494b4",
-    "level_id": 21280210,
-    "name": "The Flawless",
-    "position": 1436,
-    "points": 71,
-    "status": "MainList",
-    "two_player": false,
-    "song": 490479,
-    "description": "Very old hell level that predates Yatagarasu, with precise timings and some fast ship parts. May not quite live up to its name.",
-    "edel_enjoyment": 51.0974026,
-    "is_edel_pending": false,
-    "gddl_tier": 21.01360544217687,
-    "nlw_tier": "Beginner",
-    "creator": "fin",
-    "verifier": "TrusTa",
-    "verifications": [
-      {
-        "id": "8a13e1de-bf13-4e90-ad8c-20ba38af655a",
-        "submitted_by": {
-          "id": "031645bc-75e8-4130-933c-68b01dda749d",
-          "username": "1b5af60cd",
-          "global_name": "TrusTa"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=RHOCE37dP2A",
-        "hide_video": false,
-        "achieved_at": "2016-07-01T18:27:59Z",
-        "created_at": "2022-11-16T22:30:57Z",
-        "updated_at": "2022-11-16T22:30:57Z"
-      }
-    ],
-    "version": "2.0",
-    "tags": [
-      "Long",
-      "Timings",
-      "Chokepoints",
-      "Ship",
-      "Overall"
-    ]
-  },
-  {
-    "id": "e08ccdd4-c75a-427a-9595-f7ff6fcfda92",
-    "level_id": 88172786,
-    "name": "Robi",
-    "position": 1437,
-    "points": 70,
-    "status": "MainList",
-    "two_player": false,
-    "song": 826384,
-    "description": null,
-    "edel_enjoyment": 60.72077922,
-    "is_edel_pending": false,
-    "gddl_tier": 21.12883435582822,
-    "nlw_tier": "Beginner",
-    "creator": "robianny",
-    "verifier": "Lcultist",
-    "verifications": [
-      {
-        "id": "15d1f0a9-8780-4624-ba16-1506410a4a47",
-        "submitted_by": {
-          "id": "23a574bd-f3f6-44ea-a9e1-a2a454096494",
-          "username": "f36aadf47",
-          "global_name": "Lcultist"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=fDY3Z7VEUng&t=0s",
-        "hide_video": false,
-        "achieved_at": "2023-01-29T19:40:18Z",
-        "created_at": "2023-06-03T03:22:32Z",
-        "updated_at": "2023-06-03T03:22:32Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Medium",
-      "Timings",
-      "Chokepoints",
-      "Slow-Paced",
-      "Ship"
-    ]
-  },
-  {
-    "id": "c5b709c5-a276-4a3f-81a7-fc06e5273c4f",
-    "level_id": 116039153,
-    "name": "SORRYNOTSORRY",
-    "position": 1438,
-    "points": 70,
-    "status": "MainList",
-    "two_player": false,
-    "song": 1267803,
-    "description": "Very pink level built as the creator's first finished deco project, a level where you must party without being caught by the eyeball police. Contains many different kinds of gameplay and is generally well received.",
-    "edel_enjoyment": 75.72727273,
-    "is_edel_pending": false,
-    "gddl_tier": 21.666666666666668,
-    "nlw_tier": "Beginner",
-    "creator": "culobTV",
-    "verifier": "culobTV",
-    "verifications": [
-      {
-        "id": "fae72ffb-4424-4e3b-8248-1ab865d43dd6",
-        "submitted_by": {
-          "id": "27cd5d0a-a178-4e98-ada8-558ee3c1be50",
-          "username": "culobtv",
-          "global_name": "culobTV"
-        },
-        "mobile": false,
-        "video_url": "https://youtu.be/JxeXU3s6gUE",
-        "hide_video": false,
-        "achieved_at": "2026-05-23T14:44:59.812294Z",
-        "created_at": "2026-05-23T14:44:59.812293Z",
-        "updated_at": "2026-05-23T14:44:59.812293Z"
-      }
-    ],
-    "version": "2.2",
-    "tags": [
-      "Long",
-      "Fast-Paced",
-      "Timings"
-    ]
-  },
-  {
-    "id": "5d01eb64-93c1-47c9-a5b9-1372ffa2a060",
-    "level_id": 116579233,
-    "name": "boson",
-    "position": 1439,
-    "points": 70,
-    "status": "MainList",
-    "two_player": false,
-    "song": 804048,
-    "description": null,
-    "edel_enjoyment": 75.91428571,
-    "is_edel_pending": false,
-    "gddl_tier": 21,
-    "nlw_tier": "Beginner",
-    "creator": "ZeroSR",
-    "verifier": "ZeroSR",
-    "verifications": [
-      {
-        "id": "452b82aa-22b0-45e4-a264-1e8908976391",
-        "submitted_by": {
-          "id": "637397d6-1216-4123-9bad-e2fe46ddce4c",
-          "username": "ee2f8f6f6",
-          "global_name": "ZeroSR"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=HLk2Q-dFg2E",
-        "hide_video": false,
-        "achieved_at": "2025-03-27T14:40:04Z",
-        "created_at": "2025-04-27T15:08:56Z",
-        "updated_at": "2025-04-27T15:08:56Z"
-      }
-    ],
-    "version": "2.2",
-    "tags": [
-      "Long",
-      "Fast-Paced",
-      "Timings",
-      "Learny"
-    ]
-  },
-  {
-    "id": "957de90d-4abb-4378-b3c8-a110bb4e25e9",
-    "level_id": 57023074,
-    "name": "Castling",
-    "position": 1440,
-    "points": 69,
-    "status": "MainList",
-    "two_player": false,
-    "song": 600642,
-    "description": "A fast paced level with multiple insane chokepoints, most notably the 4% 240hz frame perfect, the 69% blind click, and the wave gaps at 63% and 74%. Was somehow formerly rated Insane Demon, and became an insider meme on the Insane Demon List.",
-    "edel_enjoyment": 59.18181818,
-    "is_edel_pending": false,
-    "gddl_tier": 21.306451612903224,
-    "nlw_tier": "Beginner",
-    "creator": "Meroo",
-    "verifier": "-",
-    "verifications": [
-      {
-        "id": "c0a4fd0a-2948-4b87-9a1b-97f1457f3bc5",
-        "submitted_by": {
-          "id": "f9d6acb2-a54a-483f-8c21-993faf1e169f",
-          "username": "107ced24a",
-          "global_name": "-"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=0cMfW600dEo",
-        "hide_video": false,
-        "achieved_at": "2021-09-07T21:21:30Z",
-        "created_at": "2022-11-17T22:57:22Z",
-        "updated_at": "2022-11-17T22:57:22Z"
-      }
-    ],
-    "version": "2.1",
-    "tags": [
-      "Long",
-      "Fast-Paced",
-      "Timings",
-      "Chokepoints",
-      "Wave",
-      "Duals"
-    ]
-  },
-  {
-    "id": "9dc2761b-0589-458e-b1b0-cdec578dbc93",
-    "level_id": 137097482,
-    "name": "BROOKLYNBLOODPOP",
-    "position": 1441,
-    "points": 69,
-    "status": "MainList",
-    "two_player": false,
-    "song": null,
-    "description": "Bright rainbow design extreme known for its iconic hyperpop song and easily recognizable party-like visuals by StarkyTheSalad. The gameplay is well-received, consisting of learny & well-synced cube sections and clever fakes.",
-    "edel_enjoyment": 81.76595745,
-    "is_edel_pending": false,
-    "gddl_tier": 21.71875,
-    "nlw_tier": "Beginner",
-    "creator": "StarkytheSalad",
-    "verifier": "ivyteal",
-    "verifications": [
-      {
-        "id": "1d80e6d8-bd15-452b-978c-324143b3e050",
-        "submitted_by": {
-          "id": "8718daf3-cd56-49a4-9dd9-f40219b2b1db",
-          "username": "ivyteal_",
-          "global_name": "ivyteal"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=jngMzPsSEIA",
-        "hide_video": false,
-        "achieved_at": "2026-04-01T14:13:34Z",
-        "created_at": "2026-06-07T20:49:40.251694Z",
-        "updated_at": "2026-06-07T20:49:40.251694Z"
-      }
-    ],
-    "version": "2.2",
-    "tags": [
-      "XL",
-      "NONG",
-      "Learny",
-      "Nerve Control",
-      "Overall"
-    ]
-  },
-  {
-    "id": "04c826a1-fd07-4c43-9e39-483dcbadd65c",
-    "level_id": 19300593,
-    "name": "AcropoliX",
-    "position": 1442,
-    "points": 69,
-    "status": "MainList",
-    "two_player": false,
-    "song": 598349,
-    "description": null,
-    "edel_enjoyment": 43.46753247,
-    "is_edel_pending": false,
-    "gddl_tier": 21.06081081081081,
-    "nlw_tier": "Beginner",
-    "creator": "SoulsTRK",
-    "verifier": "SoulsTRK",
-    "verifications": [
-      {
-        "id": "ad10a5e9-576f-4e3f-87a7-2bd0b211c3f8",
-        "submitted_by": {
-          "id": "1c154cf4-8977-455f-bbed-ec2471d2ad2e",
-          "username": "22c4e3c17",
-          "global_name": "SoulsTRK"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=9GrlZLD8wZ0",
-        "hide_video": false,
-        "achieved_at": "2016-04-29T01:26:37Z",
-        "created_at": "2022-11-16T22:30:57Z",
-        "updated_at": "2022-11-16T22:30:57Z"
-      }
-    ],
-    "version": "2.0",
-    "tags": [
-      "Long",
-      "Timings",
-      "Unbalanced",
-      "Slow-Paced",
-      "Wave"
-    ]
-  },
-  {
-    "id": "100ecf7f-96ef-43a9-8f3f-33185b088609",
-    "level_id": 94892050,
-    "name": "EdenCity",
-    "position": 1443,
-    "points": 68,
-    "status": "MainList",
-    "two_player": false,
-    "song": 718319,
-    "description": "\nAn electric and futuristic city-themed collaboration with distinct parts, bright colors and a mixture of detailed designs and effects. The gameplay is regarded as being rather learny thanks to the complex dual gameplay. There are also chokepoints throughout, notably the dual ship at the 60% mark.",
-    "edel_enjoyment": 67.47826087,
-    "is_edel_pending": false,
-    "gddl_tier": 20.8,
-    "nlw_tier": "Beginner",
-    "creator": "NateFH",
-    "verifier": "NateFH",
-    "verifications": [
-      {
-        "id": "ae5e3294-db47-41d7-952c-d7184dde46c5",
-        "submitted_by": {
-          "id": "ede29415-4882-42a2-b5c2-8d919b77fdc7",
-          "username": "natefh",
-          "global_name": "NateFH"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=89nlKw2kn3Q",
-        "hide_video": false,
-        "achieved_at": "2023-09-28T16:30:10Z",
-        "created_at": "2025-04-27T15:20:27Z",
-        "updated_at": "2025-04-27T15:20:27Z"
-      }
-    ],
-    "version": "2.2",
-    "tags": [
-      "Long",
-      "Fast-Paced",
-      "Chokepoints",
-      "Nerve Control",
-      "UFO",
-      "Wave",
-      "Overall"
     ]
   },
   {
@@ -61292,7 +61294,7 @@
     "two_player": false,
     "song": 10007151,
     "description": "1.9 styled Flamewall inspired extreme, now in violet! Uses the final two minutes of the song, and features near non-stop fast paced gameplay, with a difficulty increase in the second half. Activating the LDM makes the decoration pure 1.9, while the full detail version has some 2.2 features. Enable shake at own risk...",
-    "edel_enjoyment": 64.72340426,
+    "edel_enjoyment": 64.9375,
     "is_edel_pending": false,
     "gddl_tier": 21.74,
     "nlw_tier": "Beginner",
@@ -64390,7 +64392,7 @@
     "two_player": false,
     "song": null,
     "description": "Oppa Gangnam Style! Traditional 1.9 style megacollab using the full song, making it over 3 minutes long and tough on the nerves. Features a rather mean last click...",
-    "edel_enjoyment": 76.14285714,
+    "edel_enjoyment": 75.93103448,
     "is_edel_pending": false,
     "gddl_tier": 20.122923588039868,
     "nlw_tier": "Beginner",
@@ -64761,7 +64763,7 @@
     "two_player": false,
     "song": 724710,
     "description": "Formerly a normal early 2.1 Extreme Demon, but due to some updates the level has pretty much become the equivalent to a griefed Minecraft server. Video showcase is of the latest version.",
-    "edel_enjoyment": 60.7244898,
+    "edel_enjoyment": 61.02020202,
     "is_edel_pending": false,
     "gddl_tier": 20.95384615384615,
     "nlw_tier": "Beginner",
@@ -65521,7 +65523,7 @@
     "two_player": false,
     "song": 1091343,
     "description": "The sequel to KISMET, this time around themed around cute bunnies! (i guess). Has a few double clicks and a lot hard waves/ships.",
-    "edel_enjoyment": 78.52542373,
+    "edel_enjoyment": 78.38333333,
     "is_edel_pending": false,
     "gddl_tier": null,
     "nlw_tier": "Beginner",
@@ -65932,7 +65934,7 @@
     "two_player": false,
     "song": 890355,
     "description": "An extreme similar to Reverence, with flowy gameplay and red and blue effecty glow decoration. The gameplay is learny and carried by the wave segments, with several bugs and chokepoints throughout the level. \n",
-    "edel_enjoyment": 57.92,
+    "edel_enjoyment": 58.01315789,
     "is_edel_pending": false,
     "gddl_tier": 20.15472481827622,
     "nlw_tier": "Beginner",
