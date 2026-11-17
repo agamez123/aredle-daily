@@ -327,7 +327,16 @@
     "version": "2.2",
     "tags": [
       "XL",
-      "Timings"
+      "Clicksync",
+      "Fast-Paced",
+      "Timings",
+      "Chokepoints",
+      "Learny",
+      "Flow",
+      "Nerve Control",
+      "Cube",
+      "Ship",
+      "Wave"
     ]
   },
   {
@@ -699,6 +708,7 @@
       "Chokepoints",
       "Unbalanced",
       "Mirror",
+      "Cube",
       "Ship"
     ]
   },
@@ -1073,6 +1083,9 @@
     "tags": [
       "Long",
       "Timings",
+      "Chokepoints",
+      "Unbalanced",
+      "Learny",
       "Gimmicky",
       "Overall"
     ]
@@ -1326,6 +1339,7 @@
       "Clicksync",
       "Fast-Paced",
       "Learny",
+      "High CPS",
       "Flow",
       "Overall"
     ]
@@ -1365,7 +1379,16 @@
     "version": "2.2",
     "tags": [
       "XL",
-      "NONG"
+      "NONG",
+      "Clicksync",
+      "Timings",
+      "Unbalanced",
+      "Learny",
+      "Flow",
+      "Nerve Control",
+      "Ship",
+      "Wave",
+      "Overall"
     ]
   },
   {
@@ -1404,6 +1427,10 @@
     "tags": [
       "Long",
       "Timings",
+      "Chokepoints",
+      "Learny",
+      "Gimmicky",
+      "Slow-Paced",
       "Duals"
     ]
   },
@@ -1485,9 +1512,13 @@
     "version": "2.1",
     "tags": [
       "Long",
+      "Timings",
+      "Unbalanced",
       "Learny",
       "High CPS",
-      "Gimmicky"
+      "Gimmicky",
+      "Ship",
+      "Overall"
     ]
   },
   {
@@ -1789,8 +1820,10 @@
       "Long",
       "Clicksync",
       "Fast-Paced",
+      "Timings",
       "Learny",
       "High CPS",
+      "Flow",
       "Overall"
     ]
   },
@@ -2036,9 +2069,12 @@
     "version": "2.2",
     "tags": [
       "Long",
-      "Wave",
+      "Fast-Paced",
+      "Chokepoints",
+      "Memory",
+      "High CPS",
       "Ship",
-      "Memory"
+      "Wave"
     ]
   },
   {
@@ -2165,6 +2201,7 @@
       "XL",
       "Fast-Paced",
       "Chokepoints",
+      "Unbalanced",
       "Learny",
       "High CPS",
       "Flow",
@@ -2207,8 +2244,12 @@
     "version": "2.1",
     "tags": [
       "XL",
+      "Clicksync",
       "Fast-Paced",
       "Timings",
+      "Chokepoints",
+      "High CPS",
+      "Flow",
       "Nerve Control",
       "Overall"
     ]
@@ -2313,7 +2354,7 @@
     "two_player": false,
     "song": 467267,
     "description": null,
-    "edel_enjoyment": 57.33333333,
+    "edel_enjoyment": 63,
     "is_edel_pending": true,
     "gddl_tier": 37,
     "nlw_tier": null,
@@ -2338,7 +2379,18 @@
     "version": "2.2",
     "tags": [
       "Long",
+      "Fast-Paced",
+      "Timings",
+      "Chokepoints",
+      "Unbalanced",
+      "Learny",
+      "High CPS",
+      "Gimmicky",
+      "Flow",
+      "Mirror",
       "Nerve Control",
+      "New Swing",
+      "Duals",
       "Overall"
     ]
   },
@@ -2418,6 +2470,7 @@
     ],
     "version": "2.2",
     "tags": [
+      "Long",
       "Clicksync",
       "Fast-Paced",
       "Timings",
@@ -2460,8 +2513,13 @@
     "version": "2.2",
     "tags": [
       "Long",
+      "Clicksync",
+      "Fast-Paced",
       "Timings",
-      "Chokepoints"
+      "Chokepoints",
+      "Learny",
+      "Flow",
+      "Overall"
     ]
   },
   {
@@ -2984,6 +3042,8 @@
       "NONG",
       "Timings",
       "Chokepoints",
+      "Unbalanced",
+      "Learny",
       "Slow-Paced",
       "Cube",
       "Ship"
@@ -3162,10 +3222,12 @@
     "tags": [
       "XL",
       "Timings",
+      "Chokepoints",
       "Unbalanced",
       "Nerve Control",
       "Ship",
       "UFO",
+      "Wave",
       "Old Swing",
       "Duals",
       "Overall"
@@ -3252,6 +3314,8 @@
       "Fast-Paced",
       "Timings",
       "Learny",
+      "High CPS",
+      "Gimmicky",
       "Nerve Control",
       "Overall"
     ]
@@ -3545,6 +3609,7 @@
       "Clicksync",
       "Fast-Paced",
       "Timings",
+      "Learny",
       "High CPS",
       "Nerve Control",
       "Wave",
@@ -3983,7 +4048,7 @@
     "two_player": false,
     "song": 722366,
     "description": "Well-received sequel to The Yandere. Inconsistent but incredible art and designs with parts almost 3 years old before being finished. Took over 130,000 attempts to be verified.",
-    "edel_enjoyment": 69.59459459,
+    "edel_enjoyment": 68.68421053,
     "is_edel_pending": false,
     "gddl_tier": 36,
     "nlw_tier": null,
@@ -4138,6 +4203,9 @@
     "tags": [
       "XXL+",
       "NONG",
+      "Chokepoints",
+      "Unbalanced",
+      "Learny",
       "Nerve Control",
       "Overall"
     ]
@@ -4218,11 +4286,16 @@
     "version": "2.2",
     "tags": [
       "Long",
-      "Overall",
       "Clicksync",
       "Fast-Paced",
+      "Timings",
+      "Chokepoints",
+      "Learny",
       "High CPS",
-      "Wave"
+      "Gimmicky",
+      "Flow",
+      "Wave",
+      "Overall"
     ]
   },
   {
@@ -5164,7 +5237,7 @@
     "two_player": false,
     "song": 829777,
     "description": "Claustrophobic and colourful sequel to the equally claustrophobic Cognition. Loses the old fashioned style song for a more upbeat Creo song, similar to Carcano. Surprisingly one of the most dropped extreme verifications, going through 6 verifiers.",
-    "edel_enjoyment": 66.75806452,
+    "edel_enjoyment": 66.44444444,
     "is_edel_pending": false,
     "gddl_tier": 35,
     "nlw_tier": null,
@@ -5319,7 +5392,10 @@
       "Timings",
       "High CPS",
       "Flow",
-      "Overall"
+      "Cube",
+      "Ball",
+      "UFO",
+      "Wave"
     ]
   },
   {
@@ -6036,6 +6112,7 @@
       "Clicksync",
       "Fast-Paced",
       "Chokepoints",
+      "Unbalanced",
       "Learny",
       "High CPS",
       "Flow",
@@ -6741,7 +6818,6 @@
     "version": "2.2",
     "tags": [
       "Medium",
-      "NONG",
       "Timings",
       "Cube",
       "Ball",
@@ -7551,6 +7627,7 @@
       "Timings",
       "Chokepoints",
       "Learny",
+      "Flow",
       "Duals",
       "Overall"
     ]
@@ -7711,9 +7788,17 @@
         "updated_at": "2026-08-16T00:23:20.699326Z"
       }
     ],
-    "version": null,
+    "version": "2.2",
     "tags": [
-      "NONG"
+      "Long",
+      "NONG",
+      "Clicksync",
+      "Fast-Paced",
+      "Chokepoints",
+      "Unbalanced",
+      "Flow",
+      "Ship",
+      "Wave"
     ]
   },
   {
@@ -8385,9 +8470,12 @@
     "version": "2.1",
     "tags": [
       "Long",
-      "Overall",
+      "Fast-Paced",
+      "Chokepoints",
+      "Unbalanced",
       "High CPS",
-      "Wave"
+      "Wave",
+      "Overall"
     ]
   },
   {
@@ -8730,6 +8818,7 @@
       "Fast-Paced",
       "Timings",
       "Learny",
+      "Flow",
       "Cube",
       "Overall"
     ]
@@ -8854,8 +8943,10 @@
       "Long",
       "Clicksync",
       "Fast-Paced",
+      "Learny",
       "High CPS",
       "Flow",
+      "Cube",
       "Overall"
     ]
   },
@@ -8939,6 +9030,9 @@
       "Timings",
       "Chokepoints",
       "Unbalanced",
+      "Learny",
+      "High CPS",
+      "Slow-Paced",
       "Mirror",
       "Cube",
       "Ship"
@@ -9123,6 +9217,7 @@
       "Clicksync",
       "Fast-Paced",
       "Learny",
+      "Memory",
       "High CPS",
       "Wave"
     ]
@@ -9424,8 +9519,7 @@
       "Chokepoints",
       "Learny",
       "High CPS",
-      "Wave",
-      "Overall"
+      "Wave"
     ]
   },
   {
@@ -9546,7 +9640,12 @@
     "tags": [
       "Long",
       "NONG",
+      "Fast-Paced",
       "Timings",
+      "Learny",
+      "High CPS",
+      "Gimmicky",
+      "Nerve Control",
       "Overall"
     ]
   },
@@ -9816,7 +9915,7 @@
     "two_player": false,
     "song": 884645,
     "description": "1.9PS Oblivion inspired megacollab with medium length clicksync gameplay, using Red Haze by Creo. Had a planned nerfdate that never ended up coming out.",
-    "edel_enjoyment": 72.86666667,
+    "edel_enjoyment": 73.9375,
     "is_edel_pending": false,
     "gddl_tier": 33,
     "nlw_tier": "Inexorable",
@@ -10446,9 +10545,12 @@
     "tags": [
       "Long",
       "Timings",
+      "Unbalanced",
       "Memory",
       "Gimmicky",
-      "Slow-Paced"
+      "Slow-Paced",
+      "Wave",
+      "Overall"
     ]
   },
   {
@@ -11273,7 +11375,6 @@
       "Chokepoints",
       "Learny",
       "High CPS",
-      "Gimmicky",
       "Cube",
       "Ship"
     ]
@@ -11663,7 +11764,7 @@
     "two_player": false,
     "song": 169589,
     "description": null,
-    "edel_enjoyment": 64.08695652,
+    "edel_enjoyment": 63.95833333,
     "is_edel_pending": false,
     "gddl_tier": 31.8,
     "nlw_tier": "Inexorable",
@@ -11915,7 +12016,7 @@
     "two_player": false,
     "song": null,
     "description": null,
-    "edel_enjoyment": 73.13043478,
+    "edel_enjoyment": 73.17021277,
     "is_edel_pending": false,
     "gddl_tier": 31.923076923076923,
     "nlw_tier": "Catastrophic",
@@ -12319,6 +12420,7 @@
       "Clicksync",
       "Fast-Paced",
       "Timings",
+      "Learny",
       "High CPS",
       "Flow",
       "Cube",
@@ -12336,7 +12438,7 @@
     "two_player": false,
     "song": 1101957,
     "description": "Very well received foggy level with fast muscle memory based gameplay and a simple randomiser at the end",
-    "edel_enjoyment": 82.34722222,
+    "edel_enjoyment": 81.21917808,
     "is_edel_pending": false,
     "gddl_tier": 31.88235294117647,
     "nlw_tier": "Catastrophic",
@@ -12806,7 +12908,7 @@
     "two_player": false,
     "song": null,
     "description": "Edge of the World remake hosted by Fusion425, taking almost 2 years to complete. Retains EOTW's upbeat song, gameplay, and flashy blue/purple space-themed visuals. Gameplay is very well-received!",
-    "edel_enjoyment": 83.25,
+    "edel_enjoyment": 83.38461538,
     "is_edel_pending": false,
     "gddl_tier": 32,
     "nlw_tier": "Catastrophic",
@@ -13293,6 +13395,8 @@
       "Clicksync",
       "Timings",
       "Chokepoints",
+      "Learny",
+      "Gimmicky",
       "Ship",
       "Overall"
     ]
@@ -13811,6 +13915,9 @@
     "tags": [
       "Long",
       "Fast-Paced",
+      "Timings",
+      "Chokepoints",
+      "Unbalanced",
       "Wave",
       "Overall"
     ]
@@ -13850,12 +13957,12 @@
     "version": "2.1",
     "tags": [
       "XL",
-      "Duals",
-      "Learny",
-      "Ship",
       "Timings",
       "Chokepoints",
-      "Nerve Control"
+      "Learny",
+      "Nerve Control",
+      "Duals",
+      "Overall"
     ]
   },
   {
@@ -14178,7 +14285,8 @@
       "Timings",
       "Chokepoints",
       "Learny",
-      "Duals"
+      "Duals",
+      "Overall"
     ]
   },
   {
@@ -15329,7 +15437,7 @@
     "two_player": false,
     "song": 223469,
     "description": null,
-    "edel_enjoyment": 74.34210526,
+    "edel_enjoyment": 74.48717949,
     "is_edel_pending": false,
     "gddl_tier": 30.571428571428573,
     "nlw_tier": "Terrifying",
@@ -15538,7 +15646,7 @@
     "two_player": false,
     "song": 469490,
     "description": "An early 2.1 collab between ViRuZ and TheRealSneaky. It's a Nine Circles level with purple and blue theming. It's known for its chokepoint heavy and awkward gameplay, especially at the beginning of the drop. Also contains a difficult ending.",
-    "edel_enjoyment": 59.38095238,
+    "edel_enjoyment": 58.453125,
     "is_edel_pending": false,
     "gddl_tier": 30.625,
     "nlw_tier": "Terrifying",
@@ -16539,6 +16647,7 @@
       "XL",
       "Circles",
       "Chokepoints",
+      "Unbalanced",
       "Nerve Control",
       "Wave"
     ]
@@ -16579,7 +16688,6 @@
     "tags": [
       "XL",
       "Circles",
-      "Timings",
       "Chokepoints",
       "Unbalanced",
       "Nerve Control",
@@ -16840,7 +16948,8 @@
       "1.9PS",
       "Long",
       "Chokepoints",
-      "Memory"
+      "Learny",
+      "Overall"
     ]
   },
   {
@@ -16878,12 +16987,9 @@
     "version": "2.0",
     "tags": [
       "XL",
-      "Timings",
       "Chokepoints",
       "Unbalanced",
       "Nerve Control",
-      "Ship",
-      "Old Swing",
       "Overall"
     ]
   },
@@ -16923,7 +17029,6 @@
     "tags": [
       "XL",
       "Timings",
-      "Gimmicky",
       "Nerve Control",
       "Cube"
     ]
@@ -17874,7 +17979,7 @@
     "two_player": false,
     "song": null,
     "description": "A 1.9GDPS Nine Circles level that was later uploaded on the 2.1 servers with some visual changes. Has also some similarities to the other \"vortex\" Nice Circles levels like the wave structuration and sync, feeling like if it was a sequel. It features a Rukkus' remixed version of \"Last Friday Night\". As a fun fact, it got rated in a Friday Night. \n",
-    "edel_enjoyment": 65.95,
+    "edel_enjoyment": 66.01639344,
     "is_edel_pending": false,
     "gddl_tier": 29.06451612903226,
     "nlw_tier": "Relentless",
@@ -17902,6 +18007,9 @@
       "Long",
       "NONG",
       "Circles",
+      "Fast-Paced",
+      "Chokepoints",
+      "Unbalanced",
       "Wave"
     ]
   },
@@ -17915,7 +18023,7 @@
     "two_player": false,
     "song": null,
     "description": "Nightning's magnum opus, serving as a collection of his thoughts and feelings during his creation process and taking inspiration from the \"Blurryface\" album by twenty one pilots. The decoration is entirely red, black and white, and the level builds up to a near-incomprehensible yet incredibly cathartic wave section at the song's climax. The only extreme to have its own ARG.",
-    "edel_enjoyment": 85.85526316,
+    "edel_enjoyment": 85.58441558,
     "is_edel_pending": false,
     "gddl_tier": 29.571428571428573,
     "nlw_tier": "Relentless",
@@ -17958,7 +18066,7 @@
     "two_player": false,
     "song": 726455,
     "description": "A mid 2018 megacollab that mainly focuses on asymmetrical duals. The gameplay is incredibly learny and fast paced with the duals requiring complex timings and learning.",
-    "edel_enjoyment": 70.61764706,
+    "edel_enjoyment": 70.88571429,
     "is_edel_pending": false,
     "gddl_tier": 28.916666666666668,
     "nlw_tier": "Relentless",
@@ -17984,8 +18092,11 @@
     "tags": [
       "XL",
       "Fast-Paced",
+      "Chokepoints",
+      "Learny",
       "Wave",
-      "Duals"
+      "Duals",
+      "Overall"
     ]
   },
   {
@@ -18292,7 +18403,7 @@
     "two_player": false,
     "song": 587168,
     "description": "Made for the MatMart Civilization event with a bossfight against one of the creators (EpicLooch) made through image2gd, although he can't actually damage you. Got a nerfdate later on to make it more timing based and to fix the balancing issues while still keeping it predrop heavy. ",
-    "edel_enjoyment": 81.76315789,
+    "edel_enjoyment": 82.1025641,
     "is_edel_pending": false,
     "gddl_tier": 29.11764705882353,
     "nlw_tier": "Relentless",
@@ -18578,7 +18689,7 @@
     "two_player": false,
     "song": 462681,
     "description": "Member of the RGB, themed around radioactivity. While it's shorter in length than the other two levels of the trilogy, it makes up for it by having some of the most difficult raw gameplay for its time. Its gameplay is very skill-based with many difficult ship and wave sections sprinkled throughout such as the iconic 85% slope corridor, alongside a distinctive memory cube maze right before the drop.",
-    "edel_enjoyment": 59.82312925,
+    "edel_enjoyment": 60.02702703,
     "is_edel_pending": false,
     "gddl_tier": 29.31304347826087,
     "nlw_tier": "Relentless",
@@ -19596,8 +19707,6 @@
     "version": "2.1",
     "tags": [
       "XL",
-      "Timings",
-      "High CPS",
       "Nerve Control",
       "Overall"
     ]
@@ -19654,7 +19763,7 @@
     "two_player": false,
     "song": 794165,
     "description": null,
-    "edel_enjoyment": 63.84761905,
+    "edel_enjoyment": 64,
     "is_edel_pending": false,
     "gddl_tier": 28.706666666666667,
     "nlw_tier": "Relentless",
@@ -19768,9 +19877,10 @@
     "tags": [
       "Long",
       "Chokepoints",
+      "Unbalanced",
+      "High CPS",
       "Wave",
-      "Old Swing",
-      "High CPS"
+      "Old Swing"
     ]
   },
   {
@@ -19972,7 +20082,6 @@
       "Timings",
       "Chokepoints",
       "Slow-Paced",
-      "Cube",
       "Ship",
       "Wave"
     ]
@@ -20070,7 +20179,7 @@
     "two_player": false,
     "song": 724710,
     "description": null,
-    "edel_enjoyment": 51.52631579,
+    "edel_enjoyment": 49.95,
     "is_edel_pending": false,
     "gddl_tier": 27.857142857142858,
     "nlw_tier": "Remorseless",
@@ -21045,7 +21154,9 @@
       "Learny",
       "Gimmicky",
       "Nerve Control",
+      "Cube",
       "Ship",
+      "Ball",
       "Duals"
     ]
   },
@@ -21628,7 +21739,9 @@
     "version": "2.2",
     "tags": [
       "Long",
+      "Timings",
       "Learny",
+      "Gimmicky",
       "Duals",
       "Overall"
     ]
@@ -21670,7 +21783,9 @@
       "Medium",
       "Fast-Paced",
       "Learny",
-      "Flow"
+      "Flow",
+      "Ship",
+      "Wave"
     ]
   },
   {
@@ -22246,10 +22361,8 @@
     "tags": [
       "Long",
       "NONG",
-      "Fast-Paced",
-      "Chokepoints",
+      "Unbalanced",
       "Memory",
-      "Mirror",
       "UFO",
       "Duals"
     ]
@@ -22344,7 +22457,7 @@
     "two_player": false,
     "song": 529291,
     "description": "A typical Renn241 extreme named after the player vaen, who verified and published the level. It is especially skill-based with the slow yet nerve-wracking 72% section being a main highlight. Its decoration uses a diverse colour palette and becomes a colourful mess during the drop despite the level's overall simplicity.",
-    "edel_enjoyment": 81.09259259,
+    "edel_enjoyment": 80.83636364,
     "is_edel_pending": false,
     "gddl_tier": 27.433333333333337,
     "nlw_tier": "Remorseless",
@@ -22411,6 +22524,8 @@
     "version": "2.1",
     "tags": [
       "XL",
+      "Timings",
+      "Chokepoints",
       "Unbalanced",
       "Nerve Control",
       "Ship",
@@ -22628,6 +22743,7 @@
       "XL",
       "Timings",
       "Chokepoints",
+      "Unbalanced",
       "Nerve Control",
       "Ship",
       "Overall"
@@ -23377,7 +23493,9 @@
       "Learny",
       "High CPS",
       "Gimmicky",
-      "Flow"
+      "Flow",
+      "Cube",
+      "Overall"
     ]
   },
   {
@@ -23390,7 +23508,7 @@
     "two_player": false,
     "song": 580950,
     "description": "Well known old level that was abandoned after one of its creators quit the game in 2016, but was revived and verified seemingly out of nowhere in 2020. The gameplay is generally well received, but it's very first half heavy. It's well known for its effecty background, with simple silhouette structures. The level is exactly 2 minutes and 11 seconds long, matching the level's name.",
-    "edel_enjoyment": 64.25714286,
+    "edel_enjoyment": 63.44444444,
     "is_edel_pending": false,
     "gddl_tier": 27.6,
     "nlw_tier": "Extreme",
@@ -23478,7 +23596,7 @@
       "Learny",
       "High CPS",
       "Cube",
-      "Wave"
+      "Overall"
     ]
   },
   {
@@ -23700,8 +23818,7 @@
       "Timings",
       "Learny",
       "High CPS",
-      "Cube",
-      "Wave"
+      "Cube"
     ]
   },
   {
@@ -23778,7 +23895,7 @@
     ],
     "version": "2.1",
     "tags": [
-      "XL",
+      "XXL+",
       "NONG",
       "Timings",
       "Chokepoints",
@@ -24082,7 +24199,7 @@
     "two_player": false,
     "song": 1002120,
     "description": "Well-received clicksync solo extreme aimed to be a more accessible level in Nexel's catalogue. Consists of a subdued color palette and an intense dual in the second half.",
-    "edel_enjoyment": 93,
+    "edel_enjoyment": 93.30434783,
     "is_edel_pending": false,
     "gddl_tier": 26,
     "nlw_tier": "Extreme",
@@ -24530,9 +24647,8 @@
     "version": "2.1",
     "tags": [
       "XL",
-      "Gimmicky",
-      "Memory",
       "Clicksync",
+      "Memory",
       "Nerve Control",
       "Ship"
     ]
@@ -24572,10 +24688,11 @@
     "version": "2.1",
     "tags": [
       "XL",
-      "High CPS",
       "Fast-Paced",
+      "High CPS",
       "Nerve Control",
-      "Wave"
+      "Wave",
+      "Overall"
     ]
   },
   {
@@ -24740,7 +24857,6 @@
       "Overall",
       "Chokepoints",
       "Learny",
-      "Gimmicky",
       "Nerve Control"
     ]
   },
@@ -25507,11 +25623,9 @@
     "version": "2.1",
     "tags": [
       "Long",
-      "Clicksync",
       "Chokepoints",
       "Learny",
       "Nerve Control",
-      "Ship",
       "Duals",
       "Overall"
     ]
@@ -25766,9 +25880,7 @@
       "Circles",
       "Clicksync",
       "Fast-Paced",
-      "Timings",
       "Chokepoints",
-      "Cube",
       "Wave"
     ]
   },
@@ -25848,7 +25960,6 @@
     "tags": [
       "Long",
       "Memory",
-      "Gimmicky",
       "Overall"
     ]
   },
@@ -26294,7 +26405,7 @@
     "two_player": false,
     "song": 574601,
     "description": null,
-    "edel_enjoyment": 93,
+    "edel_enjoyment": 92,
     "is_edel_pending": true,
     "gddl_tier": null,
     "nlw_tier": null,
@@ -27065,6 +27176,7 @@
     "version": "2.1",
     "tags": [
       "Long",
+      "Clicksync",
       "Timings",
       "Wave"
     ]
@@ -27518,8 +27630,8 @@
       "XL",
       "Timings",
       "Chokepoints",
-      "Learny",
-      "Nerve Control"
+      "Nerve Control",
+      "Overall"
     ]
   },
   {
@@ -27855,7 +27967,7 @@
     "two_player": false,
     "song": 469490,
     "description": "A nerfed remake of Hyper Paracosm with a more 2.1 modernized style rather than a raw nine circles decoration. The difficulty is concentrated in the latter parts of the drop rather than the beginning and, much like the original, it contains a lengthy ending from 65% onwards that serves as a massive nerve check. Used to be notorious for a misaligned dual section at 37% that has since been already fixed.",
-    "edel_enjoyment": 57.05607477,
+    "edel_enjoyment": 57.07407407,
     "is_edel_pending": false,
     "gddl_tier": 26.88157894736842,
     "nlw_tier": "Extreme",
@@ -27938,7 +28050,7 @@
     "two_player": false,
     "song": 69742,
     "description": null,
-    "edel_enjoyment": 73.58333333,
+    "edel_enjoyment": 73.77647059,
     "is_edel_pending": false,
     "gddl_tier": 26.85185185185185,
     "nlw_tier": "Extreme",
@@ -28009,7 +28121,6 @@
       "High CPS",
       "Fast-Paced",
       "Clicksync",
-      "Nerve Control",
       "Ship",
       "Wave"
     ]
@@ -28381,6 +28492,7 @@
       "Long",
       "Fast-Paced",
       "Timings",
+      "Ship",
       "Overall"
     ]
   },
@@ -28419,11 +28531,10 @@
     "version": "2.2",
     "tags": [
       "XXL",
-      "Timings",
-      "Ship",
       "Chokepoints",
-      "Learny",
-      "Nerve Control"
+      "Unbalanced",
+      "Nerve Control",
+      "Overall"
     ]
   },
   {
@@ -29417,6 +29528,7 @@
       "Clicksync",
       "Chokepoints",
       "Nerve Control",
+      "Duals",
       "Overall"
     ]
   },
@@ -29727,7 +29839,7 @@
     "two_player": false,
     "song": 462681,
     "description": "Nerfed and redecorated remake of Erebus made by Platnuu. This level leans into a more biohazard and toxic style theme instead of the generic green theming that the original has. The gameplay is pretty much the same as Erebus except it's easier, but it notably lacks the iconic last click of the original.",
-    "edel_enjoyment": 57.89247312,
+    "edel_enjoyment": 58.0212766,
     "is_edel_pending": false,
     "gddl_tier": 25.963636363636365,
     "nlw_tier": "Insane",
@@ -30095,6 +30207,7 @@
       "Long",
       "Memory",
       "High CPS",
+      "Gimmicky",
       "Cube",
       "Wave"
     ]
@@ -30756,7 +30869,7 @@
     "two_player": false,
     "song": null,
     "description": "Newgrounds-themed level with a gray and orange color scheme, and uses elements of the site such as bits of text, a big angry emoji, and tankmen to compliment the Newgrounds style. Known for its iconic song which disses BrokenDeck, and the drop parts using unique spider timings.",
-    "edel_enjoyment": 64.55263158,
+    "edel_enjoyment": 64.68831169,
     "is_edel_pending": false,
     "gddl_tier": 25.05263157894737,
     "nlw_tier": "Very Hard",
@@ -31292,7 +31405,7 @@
     "two_player": false,
     "song": 513917,
     "description": null,
-    "edel_enjoyment": 69.52,
+    "edel_enjoyment": 70.30769231,
     "is_edel_pending": false,
     "gddl_tier": 24.53846153846154,
     "nlw_tier": "Very Hard",
@@ -31675,7 +31788,6 @@
       "Fast-Paced",
       "Timings",
       "Chokepoints",
-      "Wave",
       "Overall"
     ]
   },
@@ -32237,7 +32349,7 @@
     "two_player": false,
     "song": 552058,
     "description": "2.1 megacollab hosted by LIEB with a prevalent sky theme throughout, infamous for Tob's steampunk themed part and the tight waves at the beginning of the drop. Despite being considered quite first-half heavy and having several blind clicks, it's still received positively by its victors",
-    "edel_enjoyment": 74.58415842,
+    "edel_enjoyment": 74.6372549,
     "is_edel_pending": false,
     "gddl_tier": 24.984848484848484,
     "nlw_tier": "Very Hard",
@@ -33757,7 +33869,7 @@
     "two_player": false,
     "song": 763176,
     "description": "The official sequel to Prismatic by CatGeo made by a different creator. The gameplay differs with its faster gameplay and difficult ship parts. The decoration has much more variation in it including a complete tone shift at 64%. 2nd Parfait extreme.",
-    "edel_enjoyment": 67.75757576,
+    "edel_enjoyment": 67.23529412,
     "is_edel_pending": false,
     "gddl_tier": 23.8,
     "nlw_tier": "Very Hard",
@@ -34001,6 +34113,8 @@
       "Long",
       "Circles",
       "Fast-Paced",
+      "Chokepoints",
+      "Nerve Control",
       "Wave"
     ]
   },
@@ -34985,7 +35099,7 @@
     "two_player": false,
     "song": 905109,
     "description": null,
-    "edel_enjoyment": 66.84615385,
+    "edel_enjoyment": 67.78571429,
     "is_edel_pending": false,
     "gddl_tier": 24.857142857142858,
     "nlw_tier": "Very Hard",
@@ -35092,6 +35206,7 @@
     "tags": [
       "XL",
       "Timings",
+      "Nerve Control",
       "Ship",
       "UFO"
     ]
@@ -35262,16 +35377,61 @@
     ]
   },
   {
-    "id": "c1a005f4-0fd2-41bf-b974-dbb17b4d4111",
-    "level_id": 43357575,
-    "name": "Game Over",
+    "id": "22536256-69dd-41b2-b87c-92979b473eb0",
+    "level_id": 83298273,
+    "name": "Fellow Phobia",
     "position": 837,
     "points": 387,
     "status": "MainList",
     "two_player": false,
+    "song": null,
+    "description": null,
+    "edel_enjoyment": 72.35714286,
+    "is_edel_pending": false,
+    "gddl_tier": 23,
+    "nlw_tier": "Medium",
+    "creator": "KydeR",
+    "verifier": "BigBoyChomp",
+    "verifications": [
+      {
+        "id": "ede063c9-f9aa-4fc8-b3fc-cde1af082707",
+        "submitted_by": {
+          "id": "9b7ec66c-faaf-4fff-88df-db7516418be1",
+          "username": "3988627a7",
+          "global_name": "BigBoyChomp"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=F5UZaBv-QhM",
+        "hide_video": false,
+        "achieved_at": "2022-08-31T23:00:08Z",
+        "created_at": "2023-07-05T12:02:05Z",
+        "updated_at": "2023-07-05T12:02:05Z"
+      }
+    ],
+    "version": null,
+    "tags": [
+      "1.9PS",
+      "XXL",
+      "NONG",
+      "Timings",
+      "Learny",
+      "Memory",
+      "Slow-Paced",
+      "Nerve Control",
+      "Duals"
+    ]
+  },
+  {
+    "id": "c1a005f4-0fd2-41bf-b974-dbb17b4d4111",
+    "level_id": 43357575,
+    "name": "Game Over",
+    "position": 838,
+    "points": 386,
+    "status": "MainList",
+    "two_player": false,
     "song": 657019,
     "description": " A very unorthodox level featuring an abundance of difficult timings in the first section, becoming a high-CPS wave consistency challenge in the second section that tests the player's stamina and spam skill.",
-    "edel_enjoyment": 41.04166667,
+    "edel_enjoyment": 41.4,
     "is_edel_pending": false,
     "gddl_tier": 24.186813186813183,
     "nlw_tier": "Fuck",
@@ -35309,7 +35469,7 @@
     "id": "9bc76c05-1902-4308-945d-3a534b30a81a",
     "level_id": 106945900,
     "name": "Project Nexus",
-    "position": 838,
+    "position": 839,
     "points": 386,
     "status": "MainList",
     "two_player": false,
@@ -35347,8 +35507,8 @@
     "id": "e05b645b-4ca4-4733-8d99-480998f07ce8",
     "level_id": 125658310,
     "name": "L0L K3K",
-    "position": 839,
-    "points": 386,
+    "position": 840,
+    "points": 385,
     "status": "MainList",
     "two_player": false,
     "song": 1302418,
@@ -35385,8 +35545,8 @@
     "id": "b62ea532-1c98-46a8-9822-d0023aaac7e9",
     "level_id": 100045298,
     "name": "DEOGEN",
-    "position": 840,
-    "points": 385,
+    "position": 841,
+    "points": 384,
     "status": "MainList",
     "two_player": false,
     "song": 471011,
@@ -35425,8 +35585,8 @@
     "id": "e039847d-03a4-4982-a39e-60f984ee453a",
     "level_id": 68311699,
     "name": "GewErbiX",
-    "position": 841,
-    "points": 384,
+    "position": 842,
+    "points": 383,
     "status": "MainList",
     "two_player": false,
     "song": 996383,
@@ -35468,7 +35628,7 @@
     "id": "ff2be038-b68f-4a07-ba99-1405128587e2",
     "level_id": 108362533,
     "name": "Europa",
-    "position": 842,
+    "position": 843,
     "points": 383,
     "status": "MainList",
     "two_player": false,
@@ -35501,6 +35661,7 @@
       "1.9PS",
       "Long",
       "Timings",
+      "Chokepoints",
       "Ship",
       "Wave"
     ]
@@ -35509,8 +35670,8 @@
     "id": "094b55ef-6610-4577-a02b-f5953b69f00b",
     "level_id": 104131396,
     "name": "THE J",
-    "position": 843,
-    "points": 383,
+    "position": 844,
+    "points": 382,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -35553,8 +35714,8 @@
     "id": "09cebd43-5f7e-4a56-8b54-eede7cbd212e",
     "level_id": 57390800,
     "name": "Glacial Torrent",
-    "position": 844,
-    "points": 382,
+    "position": 845,
+    "points": 381,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -35593,8 +35754,8 @@
     "id": "2f239387-5d90-4886-93e0-f88faf980c7a",
     "level_id": 100213638,
     "name": "MOTOR MOGOK",
-    "position": 845,
-    "points": 381,
+    "position": 846,
+    "points": 380,
     "status": "MainList",
     "two_player": false,
     "song": 315202,
@@ -35633,8 +35794,8 @@
     "id": "74b03f86-6d02-40d0-a379-18bfc4c89c84",
     "level_id": 92453242,
     "name": "Up and Down",
-    "position": 846,
-    "points": 380,
+    "position": 847,
+    "points": 379,
     "status": "MainList",
     "two_player": false,
     "song": 974063,
@@ -35679,7 +35840,7 @@
     "id": "a3583b34-a5bc-48d0-923d-e24ba4dbac3e",
     "level_id": 122489524,
     "name": "DeathWheel",
-    "position": 847,
+    "position": 848,
     "points": 379,
     "status": "MainList",
     "two_player": false,
@@ -35720,8 +35881,8 @@
     "id": "8fea873d-8e43-472b-b3bc-826d71af0db4",
     "level_id": 100083590,
     "name": "Begin",
-    "position": 848,
-    "points": 379,
+    "position": 849,
+    "points": 378,
     "status": "MainList",
     "two_player": false,
     "song": 98933,
@@ -35761,13 +35922,13 @@
     "id": "809e0b4c-0e8f-467b-af0e-2703cf63ba03",
     "level_id": 97235578,
     "name": "water demon",
-    "position": 849,
-    "points": 378,
+    "position": 850,
+    "points": 377,
     "status": "MainList",
     "two_player": false,
     "song": 927343,
     "description": "\n\nVery complex hexitine level that plays like a puzzle, and includes a difficult mirror section in the middle. The structuring and effects are unique and well-made, but the level is generally poorly received. Contains invisible hitboxes.",
-    "edel_enjoyment": 60.78571429,
+    "edel_enjoyment": 59.72413793,
     "is_edel_pending": false,
     "gddl_tier": 25,
     "nlw_tier": "Very Hard",
@@ -35802,8 +35963,8 @@
     "id": "ae99c7a9-3412-4ef0-aa9e-c8ff7dab4e7e",
     "level_id": 68731559,
     "name": "Untitled",
-    "position": 850,
-    "points": 377,
+    "position": 851,
+    "points": 376,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -35844,7 +36005,7 @@
     "id": "e66325ba-eca0-4068-8790-d40ab1d23f7b",
     "level_id": 23579781,
     "name": "Sysmique Locked",
-    "position": 851,
+    "position": 852,
     "points": 376,
     "status": "MainList",
     "two_player": false,
@@ -35886,8 +36047,8 @@
     "id": "bdb3b162-e297-4e48-bce1-c0ee9c57c016",
     "level_id": 114321891,
     "name": "Inside",
-    "position": 852,
-    "points": 376,
+    "position": 853,
+    "points": 375,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -35928,8 +36089,8 @@
     "id": "2df7aa81-d8d9-4a77-9912-bc8fbca11b50",
     "level_id": 65125096,
     "name": "Incandescent",
-    "position": 853,
-    "points": 375,
+    "position": 854,
+    "points": 374,
     "status": "MainList",
     "two_player": false,
     "song": 815774,
@@ -35966,8 +36127,8 @@
     "id": "de11b897-e713-4e53-91f6-6b4e11e6ed72",
     "level_id": 68848817,
     "name": "moment",
-    "position": 854,
-    "points": 374,
+    "position": 855,
+    "points": 373,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -36010,7 +36171,7 @@
     "id": "1902a258-cabd-4da5-bd51-cef1a02b6e96",
     "level_id": 59533451,
     "name": "Azurite (royen)",
-    "position": 855,
+    "position": 856,
     "points": 373,
     "status": "MainList",
     "two_player": false,
@@ -36051,8 +36212,8 @@
     "id": "c1d23639-8b81-4a91-bee6-f4cb2f8d882a",
     "level_id": 89678885,
     "name": "maddening",
-    "position": 856,
-    "points": 373,
+    "position": 857,
+    "points": 372,
     "status": "MainList",
     "two_player": false,
     "song": 572770,
@@ -36093,8 +36254,8 @@
     "id": "f0a81550-c519-4327-95a1-759633838400",
     "level_id": 65249411,
     "name": "Ecstasy (SleyGD)",
-    "position": 857,
-    "points": 372,
+    "position": 858,
+    "points": 371,
     "status": "MainList",
     "two_player": false,
     "song": 930438,
@@ -36133,8 +36294,8 @@
     "id": "3fc576f0-5caf-49a9-9c34-b74bb3c06d38",
     "level_id": 85292370,
     "name": "HELIX (GoldSource)",
-    "position": 858,
-    "points": 371,
+    "position": 859,
+    "points": 370,
     "status": "MainList",
     "two_player": false,
     "song": 82572,
@@ -36174,7 +36335,7 @@
     "id": "8025f87b-dbab-4ad9-86b1-37ee7002fa7d",
     "level_id": 60952893,
     "name": "Tempest Tornado",
-    "position": 859,
+    "position": 860,
     "points": 370,
     "status": "MainList",
     "two_player": false,
@@ -36214,8 +36375,8 @@
     "id": "0e6a13b5-3cf7-4750-9156-de516085146d",
     "level_id": 77008332,
     "name": "gravity",
-    "position": 860,
-    "points": 370,
+    "position": 861,
+    "points": 369,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -36258,8 +36419,8 @@
     "id": "7a68bd82-91d3-429b-933c-dbf58f49e5c4",
     "level_id": 10565740,
     "name": "Bloodbath",
-    "position": 861,
-    "points": 369,
+    "position": 862,
+    "points": 368,
     "status": "MainList",
     "two_player": false,
     "song": 467339,
@@ -36292,16 +36453,15 @@
       "Timings",
       "Chokepoints",
       "Nerve Control",
-      "Ship",
-      "UFO"
+      "Ship"
     ]
   },
   {
     "id": "b99d4feb-34a7-43a4-99f7-55c767c368bb",
     "level_id": 86687604,
     "name": "Helix (LEOPUS)",
-    "position": 862,
-    "points": 368,
+    "position": 863,
+    "points": 367,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -36341,7 +36501,7 @@
     "id": "87063938-2dfc-475b-b7a7-e6bd20660f09",
     "level_id": 101478916,
     "name": "Eon",
-    "position": 863,
+    "position": 864,
     "points": 367,
     "status": "MainList",
     "two_player": false,
@@ -36383,8 +36543,8 @@
     "id": "71acfb7a-ab1d-4d85-9a60-20d1c1a7fce2",
     "level_id": 108963146,
     "name": "OUTPUT SPRING",
-    "position": 864,
-    "points": 367,
+    "position": 865,
+    "points": 366,
     "status": "MainList",
     "two_player": false,
     "song": 888045,
@@ -36419,51 +36579,6 @@
       "Learny",
       "Nerve Control",
       "Overall"
-    ]
-  },
-  {
-    "id": "22536256-69dd-41b2-b87c-92979b473eb0",
-    "level_id": 83298273,
-    "name": "Fellow Phobia",
-    "position": 865,
-    "points": 366,
-    "status": "MainList",
-    "two_player": false,
-    "song": null,
-    "description": null,
-    "edel_enjoyment": 72.35714286,
-    "is_edel_pending": false,
-    "gddl_tier": 23,
-    "nlw_tier": "Medium",
-    "creator": "KydeR",
-    "verifier": "BigBoyChomp",
-    "verifications": [
-      {
-        "id": "ede063c9-f9aa-4fc8-b3fc-cde1af082707",
-        "submitted_by": {
-          "id": "9b7ec66c-faaf-4fff-88df-db7516418be1",
-          "username": "3988627a7",
-          "global_name": "BigBoyChomp"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=F5UZaBv-QhM",
-        "hide_video": false,
-        "achieved_at": "2022-08-31T23:00:08Z",
-        "created_at": "2023-07-05T12:02:05Z",
-        "updated_at": "2023-07-05T12:02:05Z"
-      }
-    ],
-    "version": null,
-    "tags": [
-      "1.9PS",
-      "XXL",
-      "NONG",
-      "Timings",
-      "Learny",
-      "Memory",
-      "Slow-Paced",
-      "Nerve Control",
-      "Duals"
     ]
   },
   {
@@ -36559,7 +36674,7 @@
     "two_player": false,
     "song": null,
     "description": "A faithful OMORI-themed megacollab hosted by Blueskii featuring tons of personality and references galore, including hidden cutscenes and a secret epilogue. The player traverses through various environments from the game, meeting friends and foes along the way. Contains spoilers for OMORI.",
-    "edel_enjoyment": 51.15,
+    "edel_enjoyment": 48.76190476,
     "is_edel_pending": false,
     "gddl_tier": 23.25925925925926,
     "nlw_tier": "Medium",
@@ -36681,7 +36796,7 @@
     "two_player": false,
     "song": null,
     "description": "Colorful skill-based extreme using a Metallica song with very high-cps clicksync gameplay. Contains a difficult predrop and an intimidating cube maze at 84%.",
-    "edel_enjoyment": 82.9,
+    "edel_enjoyment": 83.01960784,
     "is_edel_pending": false,
     "gddl_tier": 23.941176470588236,
     "nlw_tier": "Hard",
@@ -36709,6 +36824,7 @@
       "NONG",
       "Clicksync",
       "Fast-Paced",
+      "Learny",
       "High CPS",
       "Wave"
     ]
@@ -36723,7 +36839,7 @@
     "two_player": false,
     "song": 818078,
     "description": null,
-    "edel_enjoyment": 62.7125,
+    "edel_enjoyment": 62.80246914,
     "is_edel_pending": false,
     "gddl_tier": 23.925,
     "nlw_tier": "Hard",
@@ -37347,7 +37463,7 @@
     "two_player": false,
     "song": 1041124,
     "description": null,
-    "edel_enjoyment": 76.18518519,
+    "edel_enjoyment": 76.32142857,
     "is_edel_pending": false,
     "gddl_tier": 23.333333333333332,
     "nlw_tier": "Hard",
@@ -37599,7 +37715,7 @@
     "two_player": false,
     "song": null,
     "description": "The creator's \"magnum opus\" taking 2 years to be finished; a chaotic flashy blue-green level featuring, you guessed it, angels. This level has strict, fast and flowy gameplay all throughout its entirety leading up to a slower, more tranquil ending that serves as a chokepoint for some (notably the last ship). This level was started after a relative of the creator passed away, and the overall theme of the level is overcoming the distortions of life, much like the drop, to \"reach the clouds\", much like the ending.",
-    "edel_enjoyment": 81.67567568,
+    "edel_enjoyment": 82.58974359,
     "is_edel_pending": false,
     "gddl_tier": 23.214285714285715,
     "nlw_tier": "Hard",
@@ -37642,7 +37758,7 @@
     "two_player": false,
     "song": 587959,
     "description": "A pirate themed level with very raw gameplay and a bossfight at the end. Has a generally mixed reception due to the nature of its gameplay along with some transparent objects near the end.",
-    "edel_enjoyment": 58.1826087,
+    "edel_enjoyment": 58.54310345,
     "is_edel_pending": false,
     "gddl_tier": 23.82861896838602,
     "nlw_tier": "Hard",
@@ -37877,7 +37993,7 @@
     "two_player": false,
     "song": 599301,
     "description": "Timing extreme in Darwin's classic bright design/effect style. Zoink's easiest level",
-    "edel_enjoyment": 51.88888889,
+    "edel_enjoyment": 47.7,
     "is_edel_pending": false,
     "gddl_tier": 22.666666666666668,
     "nlw_tier": "Hard",
@@ -38700,11 +38816,9 @@
     "tags": [
       "Long",
       "NONG",
-      "Fast-Paced",
       "Timings",
       "Chokepoints",
       "Memory",
-      "Gimmicky",
       "Mirror",
       "Overall"
     ]
@@ -39597,7 +39711,7 @@
     "two_player": false,
     "song": 1120380,
     "description": null,
-    "edel_enjoyment": 47.88888889,
+    "edel_enjoyment": 49.1,
     "is_edel_pending": false,
     "gddl_tier": 24.5,
     "nlw_tier": "Hard",
@@ -39762,7 +39876,7 @@
     "two_player": false,
     "song": 877140,
     "description": "A long invisible level that follows a group of birds through a forest as the days pass by. The gameplay consist of mostly clicksync timings with some high cps parts present at the drops. Features visual indicators such as trigger orbs to guide the player in some parts.",
-    "edel_enjoyment": 90.86666667,
+    "edel_enjoyment": 90.63043478,
     "is_edel_pending": false,
     "gddl_tier": 24.125603864734305,
     "nlw_tier": "Hard",
@@ -40586,7 +40700,7 @@
     "two_player": false,
     "song": 490479,
     "description": "A collection of rejected Yatagarasu parts that took 6 years to get rated. It is the second level to feature Terron's bird. The level heavily relies on chokepoints and nerves.",
-    "edel_enjoyment": 58.17391304,
+    "edel_enjoyment": 57.41666667,
     "is_edel_pending": false,
     "gddl_tier": 23.142857142857142,
     "nlw_tier": "Medium",
@@ -42091,7 +42205,7 @@
     "two_player": false,
     "song": 810618,
     "description": null,
-    "edel_enjoyment": 69.74074074,
+    "edel_enjoyment": 68.5,
     "is_edel_pending": false,
     "gddl_tier": 24.352941176470587,
     "nlw_tier": "Hard",
@@ -45648,7 +45762,7 @@
     "two_player": false,
     "song": null,
     "description": null,
-    "edel_enjoyment": 22.85714286,
+    "edel_enjoyment": 32.5,
     "is_edel_pending": false,
     "gddl_tier": null,
     "nlw_tier": null,
@@ -46291,7 +46405,7 @@
     "two_player": false,
     "song": 525722,
     "description": null,
-    "edel_enjoyment": 60.21311475,
+    "edel_enjoyment": 60.61290323,
     "is_edel_pending": false,
     "gddl_tier": 22.25,
     "nlw_tier": "Medium",
@@ -46375,7 +46489,7 @@
     "two_player": false,
     "song": 10012543,
     "description": "ItsMeGeoGD's latest modern extreme! Features sync gameplay and some very fabulous wave gaps.",
-    "edel_enjoyment": 64.72727273,
+    "edel_enjoyment": 65.61764706,
     "is_edel_pending": false,
     "gddl_tier": 22.8,
     "nlw_tier": "Medium",
@@ -46583,7 +46697,7 @@
     "two_player": false,
     "song": 1000427,
     "description": null,
-    "edel_enjoyment": 69.0625,
+    "edel_enjoyment": 68.66153846,
     "is_edel_pending": false,
     "gddl_tier": 22.837209302325583,
     "nlw_tier": "Medium",
@@ -48854,7 +48968,7 @@
     "two_player": false,
     "song": 850267,
     "description": null,
-    "edel_enjoyment": 72.21428571,
+    "edel_enjoyment": 72.48275862,
     "is_edel_pending": false,
     "gddl_tier": 22.58823529411765,
     "nlw_tier": "Medium",
@@ -49799,6 +49913,7 @@
       "Long",
       "Timings",
       "Chokepoints",
+      "Unbalanced",
       "Duals"
     ]
   },
@@ -50014,7 +50129,7 @@
     "two_player": false,
     "song": 1382516,
     "description": "",
-    "edel_enjoyment": 63.53846154,
+    "edel_enjoyment": 64.33333333,
     "is_edel_pending": false,
     "gddl_tier": 22.066666666666663,
     "nlw_tier": "Easy",
@@ -52037,7 +52152,7 @@
     "two_player": false,
     "song": 707798,
     "description": null,
-    "edel_enjoyment": 60.2173913,
+    "edel_enjoyment": 60.31914894,
     "is_edel_pending": false,
     "gddl_tier": 21.96153846153846,
     "nlw_tier": "Easy",
@@ -52163,7 +52278,7 @@
     "two_player": false,
     "song": -7,
     "description": "Remake of Quadraric Function by Megadere, an old impossible level that was made in 2014. Features portal-dominated ship gameplay, hard cube timings, a graffiti-wall UFO spam, and an infamous blue orb spam at the very end of the level.",
-    "edel_enjoyment": 50.80392157,
+    "edel_enjoyment": 52.37735849,
     "is_edel_pending": false,
     "gddl_tier": 21.666666666666668,
     "nlw_tier": "Easy",
@@ -52235,6 +52350,7 @@
       "Learny",
       "Slow-Paced",
       "Ship",
+      "Robot",
       "Duals"
     ]
   },
@@ -52615,7 +52731,7 @@
     "two_player": false,
     "song": null,
     "description": "Collab hosted by Metalface221. Very unique sync-based level with bright effect decoration and one of the longest straight-flies of any rated extreme demon.",
-    "edel_enjoyment": 65,
+    "edel_enjoyment": 66.66666667,
     "is_edel_pending": false,
     "gddl_tier": 22,
     "nlw_tier": "Medium",
@@ -54208,7 +54324,7 @@
     "two_player": false,
     "song": 965586,
     "description": null,
-    "edel_enjoyment": 85.11111111,
+    "edel_enjoyment": 85.28571429,
     "is_edel_pending": false,
     "gddl_tier": 21.545454545454547,
     "nlw_tier": "Beginner",
@@ -54455,7 +54571,7 @@
     "two_player": false,
     "song": 1033592,
     "description": "Very chill and slow paced timing extreme divided into 7 parts with a very simple decoration and use of every gamemode in order except for the swing copter. Every part has decently gimmicky timings with a couple chokepoint clicks scattered around, and the first cube being generally considered to be the hardest part. It also took a few years to get rated.",
-    "edel_enjoyment": 70.84,
+    "edel_enjoyment": 70.84313725,
     "is_edel_pending": false,
     "gddl_tier": 21.625,
     "nlw_tier": "Easy",
@@ -54665,7 +54781,7 @@
     "two_player": false,
     "song": 668397,
     "description": null,
-    "edel_enjoyment": 66.50434783,
+    "edel_enjoyment": 66.52586207,
     "is_edel_pending": false,
     "gddl_tier": 21.24390243902439,
     "nlw_tier": "Beginner",
@@ -54745,7 +54861,7 @@
     "two_player": false,
     "song": 753218,
     "description": "Flamboyant My Hero Academia themed megacollab finished in 2019 hosted by ILRELL mixing art, modern, and design, in which every part is based off a quirk of a student. Memorable for its somewhat charming lack of cohesion and impressive roster of iconic early 2.1 creators. Gameplay is surprisingly high-quality and intuitive for its age.",
-    "edel_enjoyment": 86.95652174,
+    "edel_enjoyment": 87.5,
     "is_edel_pending": false,
     "gddl_tier": 21.65,
     "nlw_tier": "Easy",
@@ -55036,7 +55152,7 @@
     "two_player": false,
     "song": 875569,
     "description": null,
-    "edel_enjoyment": 80.24475524,
+    "edel_enjoyment": 80.46896552,
     "is_edel_pending": false,
     "gddl_tier": 21.662790697674417,
     "nlw_tier": "Easy",
@@ -55747,7 +55863,7 @@
     "two_player": false,
     "song": 664699,
     "description": null,
-    "edel_enjoyment": 78.95652174,
+    "edel_enjoyment": 79,
     "is_edel_pending": false,
     "gddl_tier": 21.166666666666668,
     "nlw_tier": "Beginner",
@@ -55994,7 +56110,7 @@
     "two_player": false,
     "song": 1418115,
     "description": "Arraegen's entry in the Zeronium CC2 Creator Contest! Uses player colors for the colors of the decoration.",
-    "edel_enjoyment": 89.7,
+    "edel_enjoyment": 88.85365854,
     "is_edel_pending": false,
     "gddl_tier": 21.66,
     "nlw_tier": "Easy",
@@ -56724,7 +56840,7 @@
     "two_player": false,
     "song": 1136828,
     "description": null,
-    "edel_enjoyment": 79.12068966,
+    "edel_enjoyment": 79.20338983,
     "is_edel_pending": false,
     "gddl_tier": 21.142857142857142,
     "nlw_tier": "Easy",
@@ -58453,7 +58569,7 @@
     "two_player": false,
     "song": 657081,
     "description": "A remake of Lit Fuse, in which the gameplay and decoration are practically identical to its predecessor. With the first half being much harder, this could be considered one of the most nerve-wracking entry extremes.",
-    "edel_enjoyment": 63.42857143,
+    "edel_enjoyment": 63.36,
     "is_edel_pending": false,
     "gddl_tier": 21.26923076923077,
     "nlw_tier": "Beginner",
@@ -59421,7 +59537,7 @@
     "two_player": false,
     "song": 952053,
     "description": null,
-    "edel_enjoyment": 67.55882353,
+    "edel_enjoyment": 68.48571429,
     "is_edel_pending": false,
     "gddl_tier": 21.25,
     "nlw_tier": "Beginner",
@@ -60901,7 +61017,7 @@
     "two_player": false,
     "song": 793089,
     "description": "Early 2.1 purple & yellow megacollab with memorably well-received gameplay for its time. Features typical glow decoration paired with a song from Terraria's Calamity Mod.",
-    "edel_enjoyment": 75.88297872,
+    "edel_enjoyment": 75.10526316,
     "is_edel_pending": false,
     "gddl_tier": 21.14814814814815,
     "nlw_tier": "Beginner",
@@ -61053,8 +61169,10 @@
     "tags": [
       "1.9PS",
       "Long",
+      "Timings",
       "Chokepoints",
-      "Timings"
+      "Wave",
+      "Overall"
     ]
   },
   {
@@ -61372,7 +61490,9 @@
     "version": "2.0",
     "tags": [
       "Long",
+      "Fast-Paced",
       "Chokepoints",
+      "Unbalanced",
       "Wave",
       "Duals"
     ]
@@ -62371,6 +62491,7 @@
     "tags": [
       "Long",
       "Timings",
+      "Chokepoints",
       "Unbalanced",
       "Old Swing",
       "Overall"
@@ -63081,7 +63202,7 @@
     "two_player": false,
     "song": 844658,
     "description": null,
-    "edel_enjoyment": 58.04347826,
+    "edel_enjoyment": 56.80851064,
     "is_edel_pending": false,
     "gddl_tier": 21.250996015936252,
     "nlw_tier": "Beginner",
@@ -63326,7 +63447,7 @@
     "two_player": false,
     "song": 987714,
     "description": null,
-    "edel_enjoyment": 76.89583333,
+    "edel_enjoyment": 76.34693878,
     "is_edel_pending": false,
     "gddl_tier": 20.63157894736842,
     "nlw_tier": "Beginner",
@@ -64282,7 +64403,7 @@
     "two_player": false,
     "song": 1146229,
     "description": null,
-    "edel_enjoyment": 78.02564103,
+    "edel_enjoyment": 78.075,
     "is_edel_pending": false,
     "gddl_tier": null,
     "nlw_tier": "Beginner",
@@ -65022,7 +65143,7 @@
     "two_player": false,
     "song": 971534,
     "description": null,
-    "edel_enjoyment": 63.07142857,
+    "edel_enjoyment": 58.86666667,
     "is_edel_pending": false,
     "gddl_tier": null,
     "nlw_tier": "Beginner",
@@ -65061,7 +65182,7 @@
     "two_player": false,
     "song": 349494,
     "description": "A 1.9 themed remake of Thinking Space with significantly easier gameplay. The level consists of much of the same gameplay with a few changes to spice up the gameplay. Staying true to the original, the level still contains the same second-half carried gameplay as Thinking Space. Has a very nice player color decoration.",
-    "edel_enjoyment": 66.95192308,
+    "edel_enjoyment": 67.26666667,
     "is_edel_pending": false,
     "gddl_tier": 20.577464788732396,
     "nlw_tier": "Beginner",
@@ -65480,7 +65601,7 @@
     "two_player": false,
     "song": 952053,
     "description": "A solo extreme themed around the game Outer Wilds. The gameplay is gimmicky with some hard timings and varying gravity, and there's a minigame section based on the game before the drop. ",
-    "edel_enjoyment": 89.69230769,
+    "edel_enjoyment": 89.50943396,
     "is_edel_pending": false,
     "gddl_tier": 20.92682926829268,
     "nlw_tier": "Beginner",
@@ -65618,7 +65739,7 @@
     "two_player": false,
     "song": 1091343,
     "description": "The sequel to KISMET, this time around themed around cute bunnies! (i guess). Has a few double clicks and a lot hard waves/ships.",
-    "edel_enjoyment": 77.98412698,
+    "edel_enjoyment": 77.89230769,
     "is_edel_pending": false,
     "gddl_tier": null,
     "nlw_tier": "Beginner",
@@ -65992,7 +66113,7 @@
     "two_player": false,
     "song": 786343,
     "description": "Four minute wave only extreme that gets faster and more intense as the level progresses. Despite being an all wave level, the majority of the difficulty comes from consistency and nerve control.",
-    "edel_enjoyment": 60.01612903,
+    "edel_enjoyment": 60.015625,
     "is_edel_pending": false,
     "gddl_tier": 20.222453222453225,
     "nlw_tier": "Beginner",
@@ -66464,7 +66585,7 @@
     "two_player": false,
     "song": 941405,
     "description": "Long and cute rainbow coloured extreme with an equally playful song. Mostly timing based, especially in the spider sections, but also features a hard dual and a challenge-like first wave. Has multiple double clicks.",
-    "edel_enjoyment": 59.05084746,
+    "edel_enjoyment": 58.93277311,
     "is_edel_pending": false,
     "gddl_tier": 20.283653846153847,
     "nlw_tier": "Beginner",
@@ -66839,7 +66960,7 @@
     "two_player": false,
     "song": 951139,
     "description": "Dorami hosted megacollab featuring parts inspired by old popular levels, in a similar style to Idols. Known for having very challenging dual chokepoints.",
-    "edel_enjoyment": 59.8490566,
+    "edel_enjoyment": 60.40740741,
     "is_edel_pending": false,
     "gddl_tier": 20.83018867924528,
     "nlw_tier": "Beginner",
@@ -66866,6 +66987,7 @@
       "Long",
       "Chokepoints",
       "Learny",
+      "Nerve Control",
       "Duals",
       "Overall"
     ]
@@ -67149,7 +67271,7 @@
     "two_player": false,
     "song": 689654,
     "description": ":3",
-    "edel_enjoyment": 75.4516129,
+    "edel_enjoyment": 74.34375,
     "is_edel_pending": false,
     "gddl_tier": 20.245283018867923,
     "nlw_tier": "Beginner",
@@ -67303,10 +67425,47 @@
     ]
   },
   {
+    "id": "21fe55c1-aae2-4009-84db-26339e39fc38",
+    "level_id": 141246340,
+    "name": "MUCKS",
+    "position": 1601,
+    "points": 16,
+    "status": "MainList",
+    "two_player": false,
+    "song": 32772,
+    "description": null,
+    "edel_enjoyment": 57.75,
+    "is_edel_pending": false,
+    "gddl_tier": null,
+    "nlw_tier": "Beginner",
+    "creator": "MrSpaghetti",
+    "verifier": "MrSpaghetti",
+    "verifications": [
+      {
+        "id": "2b593aee-ab2d-4728-8434-c9d3935a68df",
+        "submitted_by": {
+          "id": "309bf5e2-b3ca-4fb0-a1cd-6ec02b214fa6",
+          "username": "0dd3f22da",
+          "global_name": "MrSpaghetti"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=OOUiOAR-jT0",
+        "hide_video": false,
+        "achieved_at": "2026-11-05T06:40:26.324445Z",
+        "created_at": "2026-11-05T06:40:26.324445Z",
+        "updated_at": "2026-11-05T06:40:26.324445Z"
+      }
+    ],
+    "version": "2.2",
+    "tags": [
+      "Long"
+    ]
+  },
+  {
     "id": "bfe53348-b1ef-49ec-8fd0-a84a54d8e61a",
     "level_id": 141662502,
     "name": "Lone",
-    "position": 1601,
+    "position": 1602,
     "points": 16,
     "status": "MainList",
     "two_player": false,
@@ -67346,8 +67505,8 @@
     "id": "4ae3a456-db27-4152-8867-402141694994",
     "level_id": 94748298,
     "name": "The Winged Sword",
-    "position": 1602,
-    "points": 16,
+    "position": 1603,
+    "points": 15,
     "status": "MainList",
     "two_player": false,
     "song": 660937,
@@ -67387,7 +67546,7 @@
     "id": "f6063c8c-e7a9-47f1-9d60-668e69d9f3a2",
     "level_id": 113782971,
     "name": "PARADISE POINT",
-    "position": 1603,
+    "position": 1604,
     "points": 15,
     "status": "MainList",
     "two_player": false,
@@ -67426,7 +67585,7 @@
     "id": "0884e195-f512-475d-80ca-d85efba526f3",
     "level_id": 116935154,
     "name": "tran la luot",
-    "position": 1604,
+    "position": 1605,
     "points": 15,
     "status": "MainList",
     "two_player": false,
@@ -67467,8 +67626,8 @@
     "id": "aea56ddf-48dc-4da0-b4e5-0614d0052923",
     "level_id": 117061407,
     "name": "Jumping Demons",
-    "position": 1605,
-    "points": 15,
+    "position": 1606,
+    "points": 14,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -67508,7 +67667,7 @@
     "id": "1ee89a48-9498-4fa5-b9c9-198c861fc98f",
     "level_id": 102898797,
     "name": "Bleed",
-    "position": 1606,
+    "position": 1607,
     "points": 14,
     "status": "MainList",
     "two_player": false,
@@ -67550,7 +67709,7 @@
     "id": "34c7cd03-a711-4445-aa64-550c271d0bd7",
     "level_id": 85670310,
     "name": "Horros (2P)",
-    "position": 1607,
+    "position": 1608,
     "points": 14,
     "status": "MainList",
     "two_player": true,
@@ -67593,13 +67752,13 @@
     "id": "e4262593-1e53-4406-8d26-941b4fe0f905",
     "level_id": 109730342,
     "name": "the super hotdog",
-    "position": 1608,
-    "points": 14,
+    "position": 1609,
+    "points": 13,
     "status": "MainList",
     "two_player": false,
     "song": 1349365,
     "description": "A short and extremely silly rainbow level inspired by The Wiener. Features a hard first cube, clicksync gameplay, heavy shader and camera-trigger use, an incomprehensible spam dual, and, of course, the super hotdog itself. The high CPS/spammy nature of this level's gameplay can make this level difficult to approach if you are beating this as one of your first extreme demons. ",
-    "edel_enjoyment": 71.16438356,
+    "edel_enjoyment": 70.68707483,
     "is_edel_pending": false,
     "gddl_tier": 20.11184210526316,
     "nlw_tier": "Beginner",
@@ -67636,7 +67795,7 @@
     "id": "50dc826e-b3fd-4464-95fe-fab4d5137f77",
     "level_id": 127305966,
     "name": "Fallen Horizon",
-    "position": 1609,
+    "position": 1610,
     "points": 13,
     "status": "MainList",
     "two_player": false,
@@ -67675,13 +67834,13 @@
     "id": "f0607fff-ca7e-440f-9e15-3dae7a140615",
     "level_id": 61936205,
     "name": "SIGSEGV",
-    "position": 1610,
+    "position": 1611,
     "points": 13,
     "status": "MainList",
     "two_player": false,
     "song": 467065,
     "description": "An extended remake of the 30 second long \"Segmentation Fault.\" A highly unique extreme using only the cube gamemode but in unusual and gimmicky ways. This includes a maximum click section and many parts where an orb is taped to your cube. The strange gameplay is accompanied by appropriately unusual effects.",
-    "edel_enjoyment": 73.23880597,
+    "edel_enjoyment": 72.97058824,
     "is_edel_pending": false,
     "gddl_tier": 20.192982456140353,
     "nlw_tier": "Beginner",
@@ -67716,8 +67875,8 @@
     "id": "5225397b-ba97-40e0-b2c0-c7ff3cffd543",
     "level_id": 81148582,
     "name": "Sweater Weather",
-    "position": 1611,
-    "points": 13,
+    "position": 1612,
+    "points": 12,
     "status": "MainList",
     "two_player": false,
     "song": null,
@@ -67758,7 +67917,7 @@
     "id": "789d6695-8f55-40cc-9200-8c5662295b90",
     "level_id": 123912413,
     "name": "squeak",
-    "position": 1612,
+    "position": 1613,
     "points": 12,
     "status": "MainList",
     "two_player": false,
@@ -67800,7 +67959,7 @@
     "id": "e31148dd-811a-41b9-97ce-36060707882e",
     "level_id": 61079355,
     "name": "Acu",
-    "position": 1613,
+    "position": 1614,
     "points": 12,
     "status": "MainList",
     "two_player": false,
@@ -67842,7 +68001,7 @@
     "id": "25b00ea2-39f9-40b2-90ff-caf9f86943b3",
     "level_id": 125040851,
     "name": "Monitor",
-    "position": 1614,
+    "position": 1615,
     "points": 12,
     "status": "MainList",
     "two_player": false,
@@ -67882,8 +68041,8 @@
     "id": "a36b06ea-9973-40c3-a753-8fa5fe8735bc",
     "level_id": 114933189,
     "name": "Through The Decay",
-    "position": 1615,
-    "points": 12,
+    "position": 1616,
+    "points": 11,
     "status": "MainList",
     "two_player": false,
     "song": 1236581,
@@ -67924,7 +68083,7 @@
     "id": "b9b3d7ed-0cf1-4906-a367-414d59ae083a",
     "level_id": 60197839,
     "name": "Precipitance",
-    "position": 1616,
+    "position": 1617,
     "points": 11,
     "status": "MainList",
     "two_player": false,
@@ -67966,7 +68125,7 @@
     "id": "66ceb77d-900b-4fbb-95ea-cd567250eb0c",
     "level_id": 2374518,
     "name": "Red World",
-    "position": 1617,
+    "position": 1618,
     "points": 11,
     "status": "MainList",
     "two_player": false,
@@ -68008,8 +68167,8 @@
     "id": "d2dd87f6-7b00-44ae-bf8f-ca610e08df48",
     "level_id": 146399247,
     "name": "rauchkammer",
-    "position": 1618,
-    "points": 11,
+    "position": 1619,
+    "points": 10,
     "status": "MainList",
     "two_player": false,
     "song": 433359,
@@ -68044,43 +68203,6 @@
       "High CPS",
       "Ship",
       "Wave"
-    ]
-  },
-  {
-    "id": "21fe55c1-aae2-4009-84db-26339e39fc38",
-    "level_id": 141246340,
-    "name": "MUCKS",
-    "position": 1619,
-    "points": 10,
-    "status": "MainList",
-    "two_player": false,
-    "song": 32772,
-    "description": null,
-    "edel_enjoyment": 57.75,
-    "is_edel_pending": false,
-    "gddl_tier": null,
-    "nlw_tier": "Beginner",
-    "creator": "MrSpaghetti",
-    "verifier": "MrSpaghetti",
-    "verifications": [
-      {
-        "id": "2b593aee-ab2d-4728-8434-c9d3935a68df",
-        "submitted_by": {
-          "id": "309bf5e2-b3ca-4fb0-a1cd-6ec02b214fa6",
-          "username": "0dd3f22da",
-          "global_name": "MrSpaghetti"
-        },
-        "mobile": false,
-        "video_url": "https://www.youtube.com/watch?v=OOUiOAR-jT0",
-        "hide_video": false,
-        "achieved_at": "2026-11-05T06:40:26.324445Z",
-        "created_at": "2026-11-05T06:40:26.324445Z",
-        "updated_at": "2026-11-05T06:40:26.324445Z"
-      }
-    ],
-    "version": "2.2",
-    "tags": [
-      "Long"
     ]
   },
   {
