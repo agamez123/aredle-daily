@@ -40730,5 +40730,53 @@
       }
     ],
     "fetchedAt": "2026-11-12T12:40:29.166Z"
+  },
+  "b380be19-8f0a-4d65-9259-3107e338f895": {
+    "publisher": {
+      "id": "b409c7be-cf14-4a6c-8031-b687483a7699",
+      "username": "kiiwistrawberry",
+      "global_name": "KiiwiStrawberry"
+    },
+    "verifications": [
+      {
+        "id": "3b2bf369-d308-42df-b41c-5a536d883c31",
+        "submitted_by": {
+          "id": "9cfafb93-d142-4ca8-9674-715bb79028db",
+          "username": "morphirot",
+          "global_name": "Morphirot"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=_pOeF57hujY",
+        "hide_video": false,
+        "achieved_at": "2026-04-06T00:09:16Z",
+        "created_at": "2026-08-16T00:23:30.840216Z",
+        "updated_at": "2026-08-16T00:23:30.840216Z"
+      }
+    ],
+    "fetchedAt": "2026-11-18T13:00:29.060Z"
+  },
+  "b9d91c63-e893-412d-acda-0784291592c9": {
+    "publisher": {
+      "id": "898797bb-42d7-4612-9f10-6e13addabf71",
+      "username": "itzmeson",
+      "global_name": "ItzMeson"
+    },
+    "verifications": [
+      {
+        "id": "62bbf1bd-9265-4b94-abe7-add39098ad80",
+        "submitted_by": {
+          "id": "51c31516-d113-4d59-b1ac-3ad3e492f00e",
+          "username": "7bf0719b8",
+          "global_name": "NotHeco"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=gVwIqHV5Nqc",
+        "hide_video": false,
+        "achieved_at": "2025-04-25T13:06:21Z",
+        "created_at": "2026-08-16T00:23:55.387404Z",
+        "updated_at": "2026-08-16T00:23:55.387404Z"
+      }
+    ],
+    "fetchedAt": "2026-11-18T13:00:29.065Z"
   }
 }
