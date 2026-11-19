@@ -40778,5 +40778,101 @@
       }
     ],
     "fetchedAt": "2026-11-18T13:00:29.065Z"
+  },
+  "d17ea2ca-51ab-466f-a3d1-419a29927af5": {
+    "publisher": {
+      "id": "c33ddbdc-4f77-478e-adf7-0b41e736f950",
+      "username": "e1dd2b536",
+      "global_name": "Error_I"
+    },
+    "verifications": [
+      {
+        "id": "295cb4fc-cde5-4a38-99f0-a97836eca1e4",
+        "submitted_by": {
+          "id": "c33ddbdc-4f77-478e-adf7-0b41e736f950",
+          "username": "e1dd2b536",
+          "global_name": "Error_I"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=BYGZoS3gCIA",
+        "hide_video": false,
+        "achieved_at": "2026-11-03T21:48:48.781657Z",
+        "created_at": "2026-11-03T21:48:48.781657Z",
+        "updated_at": "2026-11-03T21:48:48.781657Z"
+      }
+    ],
+    "fetchedAt": "2026-11-19T13:00:20.160Z"
+  },
+  "6e6d19c1-2bb9-4fb0-8fa2-bbfdfd8e6ee1": {
+    "publisher": {
+      "id": "38fdecfe-dff7-410f-8701-a5ad2f546cde",
+      "username": "33da559d8",
+      "global_name": "setfu"
+    },
+    "verifications": [
+      {
+        "id": "0bb320c7-84c6-4f0e-9815-5612763739ef",
+        "submitted_by": {
+          "id": "364a3b55-143e-49b0-9351-5ff05fd05005",
+          "username": "ojack.",
+          "global_name": "Jack"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=7zDnvdfBkWQ",
+        "hide_video": false,
+        "achieved_at": "2026-05-30T15:42:47Z",
+        "created_at": "2026-11-11T00:24:08.764339Z",
+        "updated_at": "2026-11-11T00:24:08.764339Z"
+      }
+    ],
+    "fetchedAt": "2026-11-19T13:00:20.175Z"
+  },
+  "7e61e712-c044-4b68-a338-fe236d0bb8a9": {
+    "publisher": {
+      "id": "d9693c66-a820-402f-93ed-850e7faf9197",
+      "username": "nordgeez",
+      "global_name": "Nordgeez"
+    },
+    "verifications": [
+      {
+        "id": "32a70173-4d7d-45d2-84df-feac303acdf1",
+        "submitted_by": {
+          "id": "d9693c66-a820-402f-93ed-850e7faf9197",
+          "username": "nordgeez",
+          "global_name": "Nordgeez"
+        },
+        "mobile": false,
+        "video_url": "https://youtu.be/kgRMH7rGACw?si=eGY18bY-1bNzU14Q",
+        "hide_video": false,
+        "achieved_at": "2026-11-07T14:42:38.497110Z",
+        "created_at": "2026-11-07T14:42:38.497110Z",
+        "updated_at": "2026-11-07T14:42:38.497110Z"
+      }
+    ],
+    "fetchedAt": "2026-11-19T13:00:20.180Z"
+  },
+  "9203bf8c-dcad-4c1b-b8ba-febdc4f8a57e": {
+    "publisher": {
+      "id": "6e2177c5-baa5-4507-b672-c5110d7ac1c9",
+      "username": "zorpikgmd",
+      "global_name": "ZorpikGMD"
+    },
+    "verifications": [
+      {
+        "id": "4f04a716-ec4d-4f6e-a526-860ea6c6ef1d",
+        "submitted_by": {
+          "id": "6e2177c5-baa5-4507-b672-c5110d7ac1c9",
+          "username": "zorpikgmd",
+          "global_name": "ZorpikGMD"
+        },
+        "mobile": false,
+        "video_url": "https://youtu.be/MNCDMdmgO7E?si=tJhZrz7mBMy9OYRC",
+        "hide_video": false,
+        "achieved_at": "2026-11-10T16:48:30.238720Z",
+        "created_at": "2026-11-10T16:48:30.238720Z",
+        "updated_at": "2026-11-10T16:48:30.238720Z"
+      }
+    ],
+    "fetchedAt": "2026-11-19T13:00:20.790Z"
   }
 }
