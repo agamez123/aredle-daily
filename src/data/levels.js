@@ -442,7 +442,7 @@ export const LEVELS = [
     creator: "LordDivinity",
     verifier: "spcreat",
     version: "2.1",
-    tags: ["Long","NONG","Fast-Paced","Timings","Chokepoints","Unbalanced","Learny","Gimmicky","Wave","Old Swing","Duals"],
+    tags: ["Long","NONG","Fast-Paced","Timings","Chokepoints","Unbalanced","Learny","Gimmicky","Nerve Control","Wave","Old Swing","Duals"],
     description: "Originally meant to be a showcased impossible level built several years ago by LordDivinity, and eventually taken on and verified by spcreat. Using the same song as Killbot, the aesthetic is extremely flashy and intense, with the second and final drop comprising a large part of the level's difficulty.",
   },
   {
