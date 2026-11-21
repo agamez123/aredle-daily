@@ -40874,5 +40874,53 @@
       }
     ],
     "fetchedAt": "2026-11-19T13:00:20.790Z"
+  },
+  "5a7db296-3286-4056-8ed6-5dd92658125f": {
+    "publisher": {
+      "id": "4e3d9678-dcfa-4f85-aeb4-dc059936ce77",
+      "username": "kzlrgd",
+      "global_name": "KZLR"
+    },
+    "verifications": [
+      {
+        "id": "13a299e5-7691-4c96-9eda-6a9bc2dc463f",
+        "submitted_by": {
+          "id": "d325237c-6bf5-4fe3-817f-1cc49fb05f36",
+          "username": "ascendddd",
+          "global_name": "Ascended"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=JtWMtMFdK24",
+        "hide_video": false,
+        "achieved_at": "2026-10-22T19:38:47.817119Z",
+        "created_at": "2026-10-22T19:38:47.817119Z",
+        "updated_at": "2026-10-22T19:38:47.817119Z"
+      }
+    ],
+    "fetchedAt": "2026-11-21T12:37:13.554Z"
+  },
+  "70607b1e-a97c-444a-b598-dbeb9bb2f30b": {
+    "publisher": {
+      "id": "122633b8-12d2-4104-9272-ca673a1f865d",
+      "username": "adumme6",
+      "global_name": "adumme6"
+    },
+    "verifications": [
+      {
+        "id": "fbb28d0c-b8d6-4230-8460-73a0692af3b7",
+        "submitted_by": {
+          "id": "afbeaba8-67f2-4106-9c87-9e2698c98ebc",
+          "username": "2065bdba0",
+          "global_name": "rediio"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=WqVmhGKN0oE",
+        "hide_video": false,
+        "achieved_at": "2026-10-22T19:45:58.251778Z",
+        "created_at": "2026-10-22T19:45:58.251778Z",
+        "updated_at": "2026-10-22T19:45:58.251778Z"
+      }
+    ],
+    "fetchedAt": "2026-11-21T12:37:13.580Z"
   }
 }
