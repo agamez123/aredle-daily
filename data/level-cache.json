@@ -40922,5 +40922,67 @@
       }
     ],
     "fetchedAt": "2026-11-21T12:37:13.580Z"
+  },
+  "c0104eeb-f24e-431a-b070-6931d1e8adfe": {
+    "publisher": {
+      "id": "68ce0ef3-8985-48f0-b538-094b20d78d80",
+      "username": "hauntkami",
+      "global_name": "hauntkami"
+    },
+    "verifications": [
+      {
+        "id": "6f7d7295-77b1-4fa1-ad91-51a8d8545560",
+        "submitted_by": {
+          "id": "68ce0ef3-8985-48f0-b538-094b20d78d80",
+          "username": "hauntkami",
+          "global_name": "hauntkami"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=K1voiz3vvLs",
+        "hide_video": false,
+        "achieved_at": "2026-02-09T18:17:56Z",
+        "created_at": "2026-08-16T00:23:34.014405Z",
+        "updated_at": "2026-08-16T00:23:34.014405Z"
+      }
+    ],
+    "fetchedAt": "2026-11-22T12:32:59.225Z"
+  },
+  "24c0102b-6475-41c9-a36f-e8fa4f58197e": {
+    "publisher": {
+      "id": "68ce0ef3-8985-48f0-b538-094b20d78d80",
+      "username": "hauntkami",
+      "global_name": "hauntkami"
+    },
+    "verifications": [
+      {
+        "id": "5025861d-4413-4a22-98b6-309554f5a2e2",
+        "submitted_by": {
+          "id": "37a694c1-5d21-465d-bbd7-773c74d05ff2",
+          "username": "gecko4",
+          "global_name": "gecko"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=t1ype-gSFEI",
+        "hide_video": false,
+        "achieved_at": "2026-09-03T14:42:21.701905Z",
+        "created_at": "2026-09-03T14:42:21.701905Z",
+        "updated_at": "2026-09-03T14:42:21.701905Z"
+      },
+      {
+        "id": "c7736831-f392-4fcc-a015-b1843e96965b",
+        "submitted_by": {
+          "id": "b382d2f6-085a-4191-92ec-f2a3d52c60b1",
+          "username": "liathecat",
+          "global_name": "Lia"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=t1ype-gSFEI",
+        "hide_video": false,
+        "achieved_at": "2026-09-09T16:11:52.158127Z",
+        "created_at": "2026-09-09T16:11:52.158127Z",
+        "updated_at": "2026-09-09T16:11:52.158127Z"
+      }
+    ],
+    "fetchedAt": "2026-11-22T12:32:59.255Z"
   }
 }
