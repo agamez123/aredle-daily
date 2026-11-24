@@ -41104,5 +41104,77 @@
       }
     ],
     "fetchedAt": "2026-11-23T14:34:28.249Z"
+  },
+  "c7abd529-2627-4ec9-8059-b5c56ef44799": {
+    "publisher": {
+      "id": "d7cd1e9c-ae2c-4292-9f04-923d9455ff9a",
+      "username": "d8665d1be",
+      "global_name": "surveyor23"
+    },
+    "verifications": [
+      {
+        "id": "72702bfa-5c56-40a9-9e64-a5a3fb165118",
+        "submitted_by": {
+          "id": "d7cd1e9c-ae2c-4292-9f04-923d9455ff9a",
+          "username": "d8665d1be",
+          "global_name": "surveyor23"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=1p9mhO0Zy28",
+        "hide_video": false,
+        "achieved_at": "2026-11-03T21:53:15.883754Z",
+        "created_at": "2026-11-03T21:53:15.883754Z",
+        "updated_at": "2026-11-03T21:53:15.883754Z"
+      }
+    ],
+    "fetchedAt": "2026-11-24T14:50:38.511Z"
+  },
+  "4b832b8c-dc26-4f07-8637-1d6624d6aaa1": {
+    "publisher": {
+      "id": "9807d387-4a9c-4283-ad24-1c7b7ad7ccd9",
+      "username": "f73eca56e",
+      "global_name": "Hurooo"
+    },
+    "verifications": [
+      {
+        "id": "c4a43c0b-e845-4569-8a08-8f22f5026542",
+        "submitted_by": {
+          "id": "9807d387-4a9c-4283-ad24-1c7b7ad7ccd9",
+          "username": "f73eca56e",
+          "global_name": "Hurooo"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=qPxyqdjEDRg",
+        "hide_video": false,
+        "achieved_at": "2025-09-15T14:04:21Z",
+        "created_at": "2026-08-16T00:23:18.022682Z",
+        "updated_at": "2026-08-16T00:23:18.022682Z"
+      }
+    ],
+    "fetchedAt": "2026-11-24T14:50:38.548Z"
+  },
+  "d9180528-b57e-4616-a13d-0111903a3999": {
+    "publisher": {
+      "id": "49892477-0782-4910-b082-2beeac9237cf",
+      "username": "8dcbf6aba",
+      "global_name": "Dashiell10"
+    },
+    "verifications": [
+      {
+        "id": "2617f09c-bd53-4aef-b9dc-0cc2c4c17190",
+        "submitted_by": {
+          "id": "9d702711-66b5-48d3-a384-b2beb9bd59ce",
+          "username": "1628ffe0c",
+          "global_name": "Tride"
+        },
+        "mobile": false,
+        "video_url": "https://www.youtube.com/watch?v=zN2VcrTVKGA",
+        "hide_video": false,
+        "achieved_at": "2026-04-01T14:00:00Z",
+        "created_at": "2026-08-16T00:23:34.624611Z",
+        "updated_at": "2026-08-16T00:23:34.624611Z"
+      }
+    ],
+    "fetchedAt": "2026-11-24T14:50:38.597Z"
   }
 }
