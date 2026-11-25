@@ -4858,7 +4858,7 @@ export const LEVELS = [
     creator: "hechie",
     verifier: "Lia",
     version: "2.2",
-    tags: ["XL","Timings","Nerve Control","Cube"],
+    tags: ["XL","Timings","Learny","Nerve Control","Cube"],
     description: "An atmospheric megacollab where the player traverses through ancient ruins whilst shrouded by dense fog. The gameplay is cube only and is heavily timing-based without using any spikes. It progressively gets more fast-paced and colourful until the ending where the sun breaks through and the fog clears as you leave the ruins behind.",
   },
   {
@@ -9418,7 +9418,7 @@ export const LEVELS = [
     creator: "ASBCHazel",
     verifier: "Bosonic",
     version: "2.1",
-    tags: ["XL","NONG","Timings","Learny","Nerve Control","Overall"],
+    tags: ["XXL","NONG","Timings","Learny","Nerve Control","Overall"],
     description: null,
   },
   {
